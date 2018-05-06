@@ -5,6 +5,7 @@ import Router from 'vue-router'
 import Full from '@/containers/Full'
 
 // Views
+import A from '@/components/A';
 
 Vue.use(Router)
 
@@ -16,11 +17,11 @@ export default new Router({
       name: 'Home',
       component: Full,
       children: [
-        // {
-        //   path: 'dashboard',
-        //   name: 'Dashboard',
-        //   component: HelloWorld
-        // }
+        {
+          path: 'a',
+          name: 'A',
+          component: A
+        }
 
       ]
     }
