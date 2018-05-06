@@ -7,6 +7,7 @@
 <ol>
 <li>JQuery</li>
 <li>Bootstrap 4</li>
+<li>CoreUI</li>
 </ol>
 
 ```bash

@@ -5,7 +5,7 @@ import Router from 'vue-router'
 import Full from '@/containers/Full'
 
 // Views
-import A from '@/components/A';
+import Content from '@/components/Content'
 
 Vue.use(Router)
 
@@ -18,9 +18,9 @@ export default new Router({
       component: Full,
       children: [
         {
-          path: 'a',
-          name: 'A',
-          component: A
+          path: 'content',
+          name: 'Content',
+          component: Content
         }
 
       ]

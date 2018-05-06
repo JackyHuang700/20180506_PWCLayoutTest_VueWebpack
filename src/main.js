@@ -13,6 +13,12 @@ import jquery from 'jquery'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.css'
 
+// coreUI
+import 'pace'
+import 'pace-progress'
+import '@coreui/ajax/AJAX_Full_Project_GULP/src/js/app.js'
+import '@coreui/ajax/AJAX_Full_Project_GULP/src/css/style.min.css'
+
 import mock from './mock'
 require('jquery-mockjax')(jquery, window)
 mock.init_jquery()

@@ -1,18 +1,26 @@
 <template>
-  <div id="app">
-      <Navbar :narbarList="narbarList" />
-      <router-view></router-view>
+  <div class="app">
+    <!-- <Navbar :narbarList="narbarList" /> -->
+    <AppHeader />
+    <router-view></router-view>
+    <AppFooter />
   </div>
 </template>
 
 <script>
 // import { Header as AppHeader } from '../components/'
-import Navbar from '../components/Navbar'
+import {
+  Header as AppHeader,
+  Footer as AppFooter,
+  Navbar
+} from '../components/'
 
 export default {
   name: 'full',
   components: {
-    Navbar
+    Navbar,
+    AppHeader,
+    AppFooter
   },
   data () {
     return {
@@ -22,14 +30,8 @@ export default {
       ]
 
     }
-  },
-  computed: {
-
   }
 }
 </script>
-<style>
-
-</style>
 
 
