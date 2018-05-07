@@ -21,6 +21,6 @@ $simple-line-font-path: '~simple-line-icons/fonts/';
 @import url('https://fonts.googleapis.com/earlyaccess/notosanstc.css');
 /* @import './assets/font-google/notosanstc.css'; */
 body{
-  font-family: 'Noto Sans TC', sans-serif !important;
+  font-family: 'Noto Sans TC', sans-serif;
 }
 </style>

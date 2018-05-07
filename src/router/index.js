@@ -7,7 +7,8 @@ import Full from '@/containers/Full'
 // Views
 import {
   Content,
-  HomeIndex
+  HomeIndex,
+  HomeIndeV2
 } from '@/components'
 
 Vue.use(Router)
@@ -28,7 +29,7 @@ export default new Router({
         {
           path: 'homeindex',
           name: 'HomeIndex',
-          component: HomeIndex
+          component: HomeIndeV2
         }
 
       ]
