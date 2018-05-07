@@ -27,7 +27,10 @@
     "popper.js": "^1.14.3",
     "style-loader": "^0.21.0",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "font-awesome": "^4.7.0",
+    "simple-line-icons": "^2.4.1",
+    "bootstrap-vue": "0.20.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

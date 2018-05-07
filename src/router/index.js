@@ -5,7 +5,10 @@ import Router from 'vue-router'
 import Full from '@/containers/Full'
 
 // Views
-import Content from '@/components/Content'
+import {
+  Content,
+  HomeIndex
+} from '@/components'
 
 Vue.use(Router)
 
@@ -21,6 +24,11 @@ export default new Router({
           path: 'content',
           name: 'Content',
           component: Content
+        },
+        {
+          path: 'homeindex',
+          name: 'HomeIndex',
+          component: HomeIndex
         }
 
       ]

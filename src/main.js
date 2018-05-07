@@ -7,9 +7,7 @@ import router from './router'
 import $ from 'jquery'
 import jquery from 'jquery'
 
-// import footable from 'footable/dist/footable.all.min'
-// import 'footable/css/footable.standalone.min.css'
-
+// bootstrap
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.css'
 
@@ -19,7 +17,11 @@ import 'pace-progress'
 import '@coreui/ajax/AJAX_Full_Project_GULP/src/js/app.js'
 import '@coreui/ajax/AJAX_Full_Project_GULP/src/css/style.min.css'
 
+// bootstrap-vue
+import BootstrapVue from 'bootstrap-vue'
+
 import mock from './mock'
+Vue.use(BootstrapVue)
 require('jquery-mockjax')(jquery, window)
 mock.init_jquery()
 

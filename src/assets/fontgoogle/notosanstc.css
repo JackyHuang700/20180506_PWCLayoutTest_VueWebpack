@@ -1,0 +1,51 @@
+/*
+* Noto Sans TC (Chinese_traditional) http://www.google.com/fonts/earlyaccess
+ */
+ @font-face {
+  font-family: 'Noto Sans TC';
+  font-style: normal;
+  font-weight: 100;
+  src: url('./fontgoogle/NotoSansTC-Thin.woff2') format('woff2'),
+       url('./fontgoogle/NotoSansTC-Thin.woff') format('woff'),
+       url('./fontgoogle/NotoSansTC-Thin.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Noto Sans TC';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./fontgoogle/NotoSansTC-Light.woff2') format('woff2'),
+       url('./fontgoogle/NotoSansTC-Light.woff') format('woff'),
+       url('./fontgoogle/NotoSansTC-Light.otf') format('opentype');
+}
+@font-face {
+   font-family: 'Noto Sans TC';
+   font-style: normal;
+   font-weight: 400;
+   src: url('./fontgoogle/NotoSansTC-Regular.woff2') format('woff2'),
+        url('./fontgoogle/NotoSansTC-Regular.woff') format('woff'),
+        url('./fontgoogle/NotoSansTC-Regular.otf') format('opentype');
+ }
+@font-face {
+   font-family: 'Noto Sans TC';
+   font-style: normal;
+   font-weight: 500;
+   src: url('./fontgoogle/NotoSansTC-Medium.woff2') format('woff2'),
+        url('./fontgoogle/NotoSansTC-Medium.woff') format('woff'),
+        url('./fontgoogle/NotoSansTC-Medium.otf') format('opentype');
+ }
+@font-face {
+   font-family: 'Noto Sans TC';
+   font-style: normal;
+   font-weight: 700;
+   src: url('./fontgoogle/NotoSansTC-Bold.woff2') format('woff2'),
+        url('./fontgoogle/NotoSansTC-Bold.woff') format('woff'),
+        url('./fontgoogle/NotoSansTC-Bold.otf') format('opentype');
+ }
+@font-face {
+   font-family: 'Noto Sans TC';
+   font-style: normal;
+   font-weight: 900;
+   src: url('./fontgoogle/NotoSansTC-Black.woff2') format('woff2'),
+        url('./fontgoogle/NotoSansTC-Black.woff') format('woff'),
+        url('./fontgoogle/NotoSansTC-Black.otf') format('opentype');
+ }

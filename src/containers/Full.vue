@@ -1,34 +1,50 @@
 <template>
   <div class="app">
-    <!-- <Navbar :narbarList="narbarList" /> -->
-    <AppHeader />
-    <router-view></router-view>
-    <AppFooter />
+    <AppHeader/>
+    <div class="app-body">
+      <Sidebar :navItems="nav" />
+      <main class="main">
+        <breadcrumb :list="list" />
+        <div class="container-fluid">
+          <router-view></router-view>
+        </div>
+      </main>
+      <AppAside/>
+    </div>
+    <AppFooter/>
   </div>
 </template>
 
 <script>
-// import { Header as AppHeader } from '../components/'
+import nav from '../_nav'
 import {
   Header as AppHeader,
+  Sidebar,
+  Aside as AppAside,
   Footer as AppFooter,
-  Navbar
+  Breadcrumb
 } from '../components/'
 
 export default {
   name: 'full',
   components: {
-    Navbar,
     AppHeader,
-    AppFooter
+    Sidebar,
+    AppAside,
+    AppFooter,
+    Breadcrumb
   },
   data () {
     return {
-
-      narbarList: [
-
-      ]
-
+      nav: nav.items
+    }
+  },
+  computed: {
+    name () {
+      return this.$route.name
+    },
+    list () {
+      return this.$route.matched
     }
   }
 }

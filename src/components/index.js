@@ -1,11 +1,19 @@
-import Header from './Header'
-import Content from './Content'
-import Footer from './Footer'
-import Navbar from './Navbar'
+import Aside from './Aside.vue'
+import Breadcrumb from './Breadcrumb.vue'
+import Callout from './Callout.vue'
+import Footer from './Footer.vue'
+import Header from './Header.vue'
+import Sidebar from './Sidebar.vue'
+import Switch from './Switch.vue'
+import HomeIndex from './HomeIndex.vue'
 
 export {
-  Header,
-  Content,
+  Aside,
+  Breadcrumb,
+  Callout,
   Footer,
-  Navbar
+  Header,
+  Sidebar,
+  Switch,
+  HomeIndex
 }
