@@ -9,7 +9,7 @@
     </ol> -->
     <div class="container-fluid">
       <div class="row cards">
-        <div class="col-sm-3 col-12">
+        <div class="col-md-3 col-sm-6 col-12">
           <div class="card card--oil">
             <div class="card__svg-container">
               <div class="card__svg-wrapper img-position">
@@ -37,7 +37,7 @@
           </div>
         </div>
 
-        <div class="col-sm-3 col-12">
+        <div class="col-md-3 col-sm-6 col-12">
           <div class="card card--tree">
             <div class="card__svg-container">
               <div class="card__svg-wrapper img-position">
@@ -64,7 +64,7 @@
           </div>
         </div>
 
-        <div class="col-sm-3 col-12">
+        <div class="col-md-3 col-sm-6 col-12">
           <div class="card card--water">
             <div class="card__svg-container">
               <div class="card__svg-wrapper img-position">
@@ -93,7 +93,7 @@
           </div>
         </div>
 
-        <div class="col-sm-3 col-12">
+        <div class="col-md-3 col-sm-6 col-12">
           <div class="card card--water">
             <div class="card__svg-container">
               <div class="card__svg-wrapper img-position">
@@ -165,20 +165,6 @@ body {
   /* font-family: 'Raleway', sans-serif; */
 }
 
-@media screen and (max-width: 620px) {
-  html,
-  body {
-    font-size: 45%;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  html,
-  body {
-    font-size: 70%;
-  }
-}
-
 .forhtml {
   background: radial-gradient(to top, #aac1c7, #f7fbfb 80%) no-repeat center
     center fixed;
@@ -190,6 +176,7 @@ body {
   overflow-x: hidden;
 
   min-height: 100vh;
+
   color: #686e74;
 }
 
@@ -199,30 +186,15 @@ section {
   min-width: 58.9rem;
 
   max-width: 64rem;
-  width: 80vw;
-}
 
-@media screen and (max-width: 480px) {
-  section {
-    min-width: 19rem;
-  }
+  width: 80vw;
 }
 
 .title {
   /* font-weight: 900; */
   padding-top: 10vh;
+
   font-size: 2.5rem;
-}
-
-@media screen and (max-width: 480px) {
-  .title {
-    position: relative;
-
-    padding-top: 6vh;
-
-    text-align: center;
-    font-size: 3rem;
-  }
 }
 
 .title:after {
@@ -233,22 +205,12 @@ section {
   height: 0.3rem;
 
   background-color: #fbcd8a;
+
   content: '';
 
   -webkit-transform: translate(0.3rem, 2rem);
 
   transform: translate(0.3rem, 2rem);
-}
-
-@media screen and (max-width: 480px) {
-  .title:after {
-    position: absolute;
-    left: 50%;
-
-    -webkit-transform: translate(-50%, 2rem);
-
-    transform: translate(-50%, 2rem);
-  }
 }
 
 .cards {
@@ -263,24 +225,8 @@ section {
   -ms-flex-pack: justify;
 
   justify-content: space-between;
+
   padding-top: 6rem;
-}
-
-@media screen and (max-width: 480px) {
-  .cards {
-    -webkit-box-align: center;
-
-    align-items: center;
-
-    -ms-flex-align: center;
-    -webkit-box-orient: vertical;
-
-    -webkit-box-direction: normal;
-
-    -ms-flex-direction: column;
-
-    flex-direction: column;
-  }
 }
 
 .card {
@@ -303,6 +249,7 @@ section {
   margin-bottom: 3rem;
 
   min-width: 25%;
+
   width: 100%;
 
   height: 220px;
@@ -325,14 +272,6 @@ section {
   font-size: 1rem;
 }
 
-@media screen and (max-width: 480px) {
-  .card {
-    margin-bottom: 3rem;
-
-    width: 387px;
-  }
-}
-
 .card__svg-container {
   display: -webkit-box;
 
@@ -351,6 +290,7 @@ section {
   -ms-flex-pack: center;
 
   justify-content: center;
+
   height: 50%;
 }
 
@@ -372,6 +312,7 @@ section {
   align-items: center;
 
   -ms-flex-align: center;
+
   -webkit-box-flex: 1;
 
   -ms-flex-positive: 1;
@@ -388,11 +329,11 @@ section {
 .card__count-text {
   position: absolute;
 
-  width: 89%;
-
   top: 62px;
 
   left: 30px;
+
+  width: 89%;
 
   letter-spacing: 5px;
 
@@ -405,6 +346,7 @@ section {
   text-transform: uppercase;
 
   font-size: 5rem;
+
   /* font-weight: 300; */
 }
 
@@ -426,6 +368,7 @@ section {
   -ms-flex-pack: center;
 
   justify-content: center;
+
   margin: 0 auto;
 
   width: 90%;
@@ -442,11 +385,13 @@ section {
   height: 35px;
 
   line-height: 35px;
+
   /* border:  1px solid red; */
 }
 
 .card__stuff-icon {
   padding-top: 5px;
+
   width: 1.3rem;
 
   /* height:  1.3rem; */
@@ -457,6 +402,7 @@ section {
 
 .card__stuff-text {
   margin-left: 0.7rem;
+
   text-transform: uppercase;
 
   -webkit-transform: translate(0, -0.2rem);
@@ -476,6 +422,7 @@ section {
   width: 16rem;
 
   height: 5.625rem;
+
   content: '';
 
   -webkit-transform: translate(1.5rem, 22.5rem);
@@ -527,6 +474,7 @@ section {
 
 .title {
   position: relative;
+
   padding-top: 0;
   /* font-weight: 700; */
 }
@@ -541,6 +489,7 @@ section {
 
 .chart-title-style {
   border-radius: 7px;
+
   background-color: rgba(0, 209, 178, 0.7);
 
   box-shadow: 0 12px 20px -10px rgba(6, 8, 8, 0.28),
@@ -573,11 +522,79 @@ section {
   height: 22%;
 }
 
+@media screen and (max-width: 620px) {
+  html,
+  body {
+    font-size: 45%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html,
+  body {
+    font-size: 70%;
+  }
+}
+@media screen and (max-width: 480px) {
+  section {
+    min-width: 19rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    position: relative;
+
+    padding-top: 6vh;
+
+    text-align: center;
+
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .title:after {
+    position: absolute;
+
+    left: 50%;
+
+    -webkit-transform: translate(-50%, 2rem);
+
+    transform: translate(-50%, 2rem);
+  }
+}
+@media screen and (max-width: 480px) {
+  .cards {
+    -webkit-box-align: center;
+
+    align-items: center;
+
+    -ms-flex-align: center;
+
+    -webkit-box-orient: vertical;
+
+    -webkit-box-direction: normal;
+
+    -ms-flex-direction: column;
+
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    margin-bottom: 3rem;
+
+    width: 387px;
+  }
+}
+
 @media (max-width: 480px) {
   section {
     min-width: 12vh;
 
     max-width: 12vh;
+
     width: 12vh;
   }
 }
@@ -587,6 +604,7 @@ section {
     min-width: 25vh;
 
     max-width: 25vh;
+
     width: 25vh;
   }
 }
@@ -596,6 +614,7 @@ section {
     min-width: 20vh;
 
     max-width: 20vh;
+
     width: 20vh;
   }
 }
@@ -605,6 +624,7 @@ section {
     min-width: 33vh;
 
     max-width: 33vh;
+
     width: 33vh;
   }
 }
@@ -614,6 +634,7 @@ section {
     min-width: 40vh;
 
     max-width: 40vh;
+
     width: 40vh;
   }
 }
@@ -623,6 +644,7 @@ section {
     min-width: 54vh;
 
     max-width: 54vh;
+
     width: 54vh;
   }
 }
@@ -632,8 +654,6 @@ section {
   .card__stuff-text {
     letter-spacing: 7px;
   }
-
- 
 }
 @media screen and (max-width: 1023px) {
   .card__stuff-icon,
@@ -646,7 +666,6 @@ section {
 
     left: 30px;
   }
-
 }
 @media screen and (max-width: 767px) {
   .card__stuff-icon,
@@ -655,40 +674,38 @@ section {
   }
 
   .card__count-text {
-    letter-spacing: 2px;
     top: 62px;
 
     left: 15px;
+    letter-spacing: 2px;
   }
-
-   
 }
 @media screen and (max-width: 480px) {
+  .card {
+    width: 100%;
+  }
 
-.card{
-  width: 100%;
- 
-}
-
-.cards{
-   padding-top: 1rem;
-}
+  .cards {
+    padding-top: 1rem;
+  }
 
   .card__stuff-icon,
   .card__stuff-text {
     letter-spacing: 7px;
   }
 
- .card__stuff-text{
-   
- }
+  .card__stuff-text {
+  }
 
   .card__count-text {
-    letter-spacing: 2px;
-    width: 100%;
     top: 45px;
+
     left: 0;
+
+    width: 100%;
+
     text-align: center;
+    letter-spacing: 2px;
   }
 }
 </style>
