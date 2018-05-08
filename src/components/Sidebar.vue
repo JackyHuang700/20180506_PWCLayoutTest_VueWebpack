@@ -68,46 +68,57 @@ export default {
 </script>
 
 <style lang="css">
+* {
+  transition: all 0.3s linear;
+}
+
 .nav-link {
   cursor: pointer;
 }
 
-
 /* new write */
-.sidebar{
-  background: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(147, 199, 254, 0.49));
+.sidebar {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1),
+    rgba(147, 199, 254, 0.49)
+  );
 }
 
-.sidebar .nav-link{
+.sidebar .nav-link {
   color: #536c79;
 }
 
-.sidebar .nav-link:hover{
+.navbar .sidebar .dropdown-toggle:hover,
+.sidebar .nav-link:hover,
+.sidebar .navbar .dropdown-toggle:hover {
   background: #13a6da;
-  /* color: #fff; */
+  color: #fff;
 }
 
-.sidebar .nav-title{
+.sidebar .nav-title {
   color: black;
 }
 
-.sidebar .nav-dropdown.open{
+.sidebar .nav-dropdown.open {
   /* background: rgba(32, 168, 216, 0.611764705882353); */
   /* background: rgba(255, 255, 255, 0.36); */
-  background: rgba(147, 147, 147, 0.36);
+  background: rgba(19, 166, 218, 0.10823529411764706);
 }
 
-
-.sidebar .nav-dropdown.open .nav-link{
+.sidebar .nav-dropdown.open .nav-link {
   /* color: #fff; */
   /* color: rgba(188, 236, 252, 0.4117647058823529); */
   /* background: rgba(27, 175, 228, 0.5803921568627451); */
   color: #536c79;
 }
 
-
-.sidebar .nav-link:hover.nav-link:hover{
+.sidebar .nav-link:hover.nav-link:hover {
   color: #fff;
 }
 
+.sidebar .nav-link.active.active {
+  background: rgba(36, 160, 204, 0.5);
+  color: white;
+}
 </style>

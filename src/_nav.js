@@ -2,7 +2,7 @@ export default {
   items: [
     {
       name: 'Dashboard',
-      url: '/dashboard',
+      url: '/homeindex',
       icon: 'icon-speedometer',
       badge: {
         variant: 'primary',
@@ -15,12 +15,12 @@ export default {
     },
     {
       name: 'Components',
-      url: '/components',
+      url: '/homeindex',
       icon: 'icon-puzzle',
       children: [
         {
           name: 'Buttons',
-          url: '/components/buttons',
+          url: '/homeindex',
           icon: 'icon-puzzle'
         },
         {

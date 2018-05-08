@@ -20,7 +20,7 @@
             <div class="card__count-container p-2">
               <div class="card__count-text">
                 <span class="card__count-text--big">250</span>
-                <p>拋轉異常訂單</p>
+                <p class="card__content">拋轉異常訂單</p>
               </div>
             </div>
             <div class="card__stuff-container">
@@ -48,7 +48,7 @@
             <div class="card__count-container p-2">
               <div class="card__count-text">
                 <span class="card__count-text--big">10</span>
-                <p>已取消明細</p>
+                <p class="card__content">已取消明細</p>
               </div>
             </div>
             <div class="card__stuff-container">
@@ -75,7 +75,7 @@
             <div class="card__count-container p-2">
               <div class="card__count-text">
                 <span class="card__count-text--big">20</span>
-                <p>待沖帳收款單</p>
+                <p class="card__content">待沖帳收款單</p>
               </div>
             </div>
             <div class="card__stuff-container">
@@ -104,7 +104,7 @@
             <div class="card__count-container p-2">
               <div class="card__count-text">
                 <span class="card__count-text--big">20</span>
-                <p>待處理客訴單</p>
+                <p class="card__content">待處理客訴單</p>
               </div>
             </div>
             <div class="card__stuff-container">
@@ -335,6 +335,8 @@ section {
 
   width: 89%;
 
+  text-align: center;
+
   letter-spacing: 5px;
 
   -webkit-transform: translate(0, -0.5rem);
@@ -345,9 +347,14 @@ section {
 .card__count-text--big {
   text-transform: uppercase;
 
-  font-size: 5rem;
+  font-weight: 700;
 
-  /* font-weight: 300; */
+  font-size: 5rem;
+}
+
+.card__content {
+  display: inline-block;
+  font-weight: 500;
 }
 
 .card__stuff-container {
@@ -476,6 +483,7 @@ section {
   position: relative;
 
   padding-top: 0;
+
   /* font-weight: 700; */
 }
 
@@ -520,6 +528,12 @@ section {
 
 .card__svg-container {
   height: 22%;
+}
+
+.link-style {
+  color: rgba(19, 133, 218, 0.7294117647058823);
+
+  font-weight: 600;
 }
 
 @media screen and (max-width: 620px) {
@@ -647,12 +661,27 @@ section {
 
     width: 54vh;
   }
+
+  .card__stuff-icon,
+  .card__stuff-text {
+    letter-spacing: 7.5px;
+  }
+
+  .card__count-text {
+    top: 75px;
+
+    left: 10px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
   .card__stuff-icon,
   .card__stuff-text {
-    letter-spacing: 7px;
+    letter-spacing: 6.5px;
+  }
+
+  .card__count-text {
+    text-align: left;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -661,10 +690,16 @@ section {
     letter-spacing: 4px;
   }
 
+  .card__content {
+    display: block;
+  }
+
   .card__count-text {
     top: 62px;
 
     left: 30px;
+
+    text-align: left;
   }
 }
 @media screen and (max-width: 767px) {
@@ -677,6 +712,7 @@ section {
     top: 62px;
 
     left: 15px;
+
     letter-spacing: 2px;
   }
 }
@@ -694,9 +730,6 @@ section {
     letter-spacing: 7px;
   }
 
-  .card__stuff-text {
-  }
-
   .card__count-text {
     top: 45px;
 
@@ -705,6 +738,7 @@ section {
     width: 100%;
 
     text-align: center;
+
     letter-spacing: 2px;
   }
 }
