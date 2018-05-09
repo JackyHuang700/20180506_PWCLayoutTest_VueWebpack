@@ -17,7 +17,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/dashboard',
+      redirect: '/homeindex',
       name: 'Home',
       component: Full,
       children: [
