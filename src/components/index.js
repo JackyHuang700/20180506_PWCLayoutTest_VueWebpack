@@ -7,6 +7,8 @@ import Sidebar from './Sidebar.vue'
 import Switch from './Switch.vue'
 import HomeIndex from './HomeIndex.vue'
 import HomeIndeV2 from './HomeIndeV2.vue'
+import OrderIndex2 from './OrderIndex2.vue'
+import OrderIndex2_1 from './OrderIndex2_1.vue'
 
 export {
   Aside,
@@ -17,5 +19,7 @@ export {
   Sidebar,
   Switch,
   HomeIndex,
-  HomeIndeV2
+  HomeIndeV2,
+  OrderIndex2,
+  OrderIndex2_1
 }

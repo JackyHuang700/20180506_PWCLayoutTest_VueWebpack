@@ -8,7 +8,9 @@ import Full from '@/containers/Full'
 import {
   Content,
   HomeIndex,
-  HomeIndeV2
+  HomeIndeV2,
+  OrderIndex2,
+  OrderIndex2_1
 } from '@/components'
 
 Vue.use(Router)
@@ -30,6 +32,16 @@ export default new Router({
           path: 'homeindex',
           name: 'HomeIndex',
           component: HomeIndeV2
+        },
+        {
+          path: 'orderindex2',
+          name: 'OrderIndex2',
+          component: OrderIndex2
+        },
+        {
+          path: 'orderindex2_1',
+          name: 'OrderIndex2_1',
+          component: OrderIndex2_1
         }
 
       ]
