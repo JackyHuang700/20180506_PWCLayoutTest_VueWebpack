@@ -75,7 +75,7 @@ var dataTableList = {
     ]
   },
   {
-    'id': '1',
+    'id': '11',
     'name': 'Tiger Nixon',
     'position': 'System Architect',
     'salary': '$320,800',
@@ -224,7 +224,7 @@ var dataTableList = {
     ]
   },
   {
-    'id': '1',
+    'id': '12',
     'name': 'Tiger Nixon',
     'position': 'System Architect',
     'salary': '$320,800',
@@ -299,7 +299,7 @@ var dataTableList = {
     ]
   },
   {
-    'id': '1',
+    'id': '13',
     'name': 'Tiger Nixon',
     'position': 'System Architect',
     'salary': '$320,800',
@@ -374,7 +374,7 @@ var dataTableList = {
     ]
   },
   {
-    'id': '1',
+    'id': '14',
     'name': 'Tiger Nixon',
     'position': 'System Architect',
     'salary': '$320,800',

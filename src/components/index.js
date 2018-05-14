@@ -9,6 +9,7 @@ import HomeIndex from './HomeIndex.vue'
 import HomeIndeV2 from './HomeIndeV2.vue'
 import OrderIndex2 from './OrderIndex2.vue'
 import OrderIndex2_1 from './OrderIndex2_1.vue'
+import Form from './Form.vue'
 
 export {
   Aside,
@@ -21,5 +22,6 @@ export {
   HomeIndex,
   HomeIndeV2,
   OrderIndex2,
-  OrderIndex2_1
+  OrderIndex2_1,
+  Form
 }

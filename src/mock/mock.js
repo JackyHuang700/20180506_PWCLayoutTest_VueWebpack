@@ -6,6 +6,8 @@ import MockAdapter from 'axios-mock-adapter'
 
 import { dataTableList } from './data/OrderIndex2Data'
 import {
+  apiDataTableDataTableGet,
+  apiDataTableDataTableUpdate,
   apiDataTableDataTableGetAll
 } from '../api/api'
 
@@ -41,6 +43,46 @@ export default {
         // )
         // 回應
         this.responseText = dataTableList
+      }
+    })
+
+    $.mockjax({
+      type: 'GET',
+      url: apiDataTableDataTableGet,
+      status: 200,
+      dataType: 'json',
+      responseTime: 500,
+      contentType: 'application/json',
+      response: function (settings) {
+        // console.log('settings:', settings)
+        const {
+          id
+        } = settings.data
+
+        // const updateData = dataTableList['data'].slice(0, 1)
+        const updateData = dataTableList['data'].find(c => c.id === `${id}`)
+        const resp = {
+          status: 'succcess',
+          data: updateData
+        }
+        this.responseText = resp
+      }
+    })
+
+    $.mockjax({
+      type: 'POST',
+      url: apiDataTableDataTableUpdate,
+      status: 200,
+      dataType: 'json',
+      responseTime: 500,
+      contentType: 'application/json',
+      response: function (settings) {
+        console.log('接收到update的資料了', settings)
+
+        const resp = {
+          status: 'succcess'
+        }
+        this.responseText = resp
       }
     })
   }
