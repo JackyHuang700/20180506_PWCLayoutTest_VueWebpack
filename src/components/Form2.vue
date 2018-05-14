@@ -7,61 +7,23 @@
           <div class="card-body">
 
             <form action="" method="post" id="commentForm2">
-
-              <input type="hidden" name="id" id="id" value="">
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="name" class=" col-form-label-sm text-right">收款編號</label>
-                  <input type="text" class="form-control form-control-sm" id="name" name="name" placeholder="" />
-
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="position" class=" col-form-label-sm text-right">客戶</label>
-                  <input type="text" class="form-control form-control-sm" id="position" name="position" placeholder="" />
-                </div>
-              </div>
-
               <div class="form-group row">
                 <label for="position" class="col-sm-2 col-form-label">Email</label>
                 <div class="col-sm-10">
-                  <input type="email" class="form-control" id="position" placeholder="Email">
+                  <input type="text" class="form-control" id="position" name="position" value="">
                 </div>
               </div>
               <div class="form-group row">
-                <label for="name" class="col-sm-2 col-form-label">Password</label>
+                <label for="salary" class="col-sm-2 col-form-label">Password</label>
                 <div class="col-sm-10">
-                  <input type="password" class="form-control" id="name" placeholder="Password">
+                  <input type="text" class="form-control" id="salary" name="salary" placeholder="" value="">
                 </div>
               </div>
 
-              <div class="form-group">
-                <label for="inputAddress">Address</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+              <div class="col-12 text-right">
+                <input class="submit btn btn-primary" type="submit" value="Submit">
+                <input class="submit btn btn-danger" type="button" value="Reset" id="reset">
               </div>
-
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="salary" class="col-form-label-sm text-right">收款日期</label>
-                  <input type="text" class="form-control form-control-sm" id="salary" name="salary" placeholder="" />
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="start_date" class="col-form-label-sm text-right">支付方式</label>
-                  <input type="text" class="form-control form-control-sm" id="start_date" name="start_date" placeholder="" />
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="office" class="col-form-label-sm text-right">備註</label>
-                <textarea class="form-control" id="office" name="office" rows="3">備註備註備註備註</textarea>
-              </div>
-
-              <div class="form-group">
-                <div class="col-12 text-right">
-                  <input class="submit btn btn-primary" type="submit" value="Submit">
-                  <input class="submit btn btn-danger" type="button" value="Reset" id="reset">
-                </div>
-              </div>
-
             </form>
 
           </div>
@@ -92,7 +54,7 @@ export default {
         alert('Ajax request 發生錯誤')
       },
       success: function (response) {
-        // console.log('取道資料了:', response)
+        console.log('取道資料了:', response)
         var data = response.data
         for (var key in data) {
           // console.log('key:', key, ', value:', data[key])

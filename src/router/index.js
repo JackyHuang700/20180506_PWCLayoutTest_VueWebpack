@@ -11,7 +11,8 @@ import {
   HomeIndeV2,
   OrderIndex2,
   OrderIndex2_1,
-  Form
+  Form,
+  Form2
 } from '@/components'
 
 Vue.use(Router)
@@ -48,6 +49,11 @@ export default new Router({
           path: 'form',
           name: 'Form',
           component: Form
+        },
+        {
+          path: 'form2',
+          name: 'Form2',
+          component: Form2
         }
 
       ]

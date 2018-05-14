@@ -74,6 +74,11 @@ export default {
       name: '表單',
       url: '/form',
       icon: 'icon-star'
+    },
+    {
+      name: '表單2',
+      url: '/form2',
+      icon: 'icon-star'
     }]
   }
     // {
