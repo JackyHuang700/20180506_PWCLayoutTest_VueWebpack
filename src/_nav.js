@@ -80,6 +80,16 @@ export default {
       url: '/form2',
       icon: 'icon-star'
     }]
+  },
+  {
+    name: 'Order',
+    url: '/order',
+    children: [{
+      name: '新建/編輯/瀏覽訂單(三欄)',
+      url: '/Order',
+      icon: 'icon-star'
+    }
+    ]
   }
     // {
     //   name: 'Icons',

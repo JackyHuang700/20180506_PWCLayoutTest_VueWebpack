@@ -6,6 +6,7 @@ import Full from '@/containers/Full'
 
 // Views
 import {
+  Order,
   Content,
   HomeIndex,
   HomeIndeV2,
@@ -54,6 +55,11 @@ export default new Router({
           path: 'form2',
           name: 'Form2',
           component: Form2
+        },
+        {
+          path: 'order',
+          name: 'Order',
+          component: Order
         }
 
       ]

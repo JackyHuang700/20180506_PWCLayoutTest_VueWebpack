@@ -2,6 +2,7 @@
   <div>
     <div class="container">
       <div class="row">
+
         <div class="col-12 mt-4">
           <div class="card">
             <div class="card-header">
@@ -160,7 +161,7 @@ export default {
         },
         'ajax': apiDataTableDataTableGetAll,
         'columns': [
-          { },
+          {},
           { 'data': 'start_date' },
           { 'data': 'name' },
           { 'data': 'position' },
@@ -195,6 +196,19 @@ export default {
                   </div>
                 </div>
               `
+
+              // template 2
+              // ('<div class="btn-group">' +
+              //                           '<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">' +
+              //                               '操作' +
+              //                           '</button>' +
+              //                           '<div class="dropdown-menu">' +
+              //                           '    <a class="dropdown-item" href="/AccountManagement/RolesManagement?UserKey=' + row.id + '">角色管理</a>' +
+              //                           '    <a class="dropdown-item" href="/aa/bb?id=' + row.id + '">瀏覽</a>' +
+              //                           '    <a class="dropdown-item" href="/aa/bb?id=' + row.id + '">編輯</a>' +
+              //                           '    <a class="dropdown-item" href="/aa/bb?id=' + row.id + '">刪除</a>' +
+              //                           '</div>' +
+              //                           '</div>')
             }
           }
         ],
