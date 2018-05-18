@@ -12,6 +12,8 @@ import {
   HomeIndeV2,
   OrderIndex2,
   OrderIndex2_1,
+  ComplaintsIndex,
+  ComplaintsCreate,
   Form,
   Form2
 } from '@/components'
@@ -55,6 +57,16 @@ export default new Router({
           path: 'form2',
           name: 'Form2',
           component: Form2
+        },
+        {
+          path: 'complaintsIndex',
+          name: 'ComplaintsIndex',
+          component: ComplaintsIndex
+        },
+        {
+          path: 'complaintsCreate',
+          name: 'ComplaintsCreate',
+          component: ComplaintsCreate
         },
         {
           path: 'order',

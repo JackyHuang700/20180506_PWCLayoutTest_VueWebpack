@@ -79,7 +79,8 @@ export default {
       name: '表單2',
       url: '/form2',
       icon: 'icon-star'
-    }]
+    }
+    ]
   },
   {
     name: 'Order',
@@ -87,6 +88,35 @@ export default {
     children: [{
       name: '新建/編輯/瀏覽訂單(三欄)',
       url: '/Order',
+      icon: 'icon-star'
+    }]
+  },
+  {
+    name: '收款單管理',
+    url: '/ReceiptIndex',
+    children: [{
+      name: '收款單管理',
+      url: '/ReceiptIndex',
+      icon: 'icon-star'
+    },
+    {
+      name: '收款單沖帳',
+      url: '/',
+      icon: 'icon-star'
+    }
+    ]
+  },
+  {
+    name: '客訴管理',
+    url: '/complaintsIndex',
+    children: [{
+      name: '客訴管理首頁',
+      url: '/ComplaintsIndex',
+      icon: 'icon-star'
+    },
+    {
+      name: '新增客訴單',
+      url: '/ComplaintsCreate',
       icon: 'icon-star'
     }
     ]
