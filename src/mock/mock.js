@@ -5,10 +5,12 @@ import MockAdapter from 'axios-mock-adapter'
 // import 'jquery-mockjax'
 
 import { dataTableList } from './data/OrderIndex2Data'
+import { dataTableList as ComplaintsData } from './data/ComplaintsData'
 import {
   apiDataTableDataTableGet,
   apiDataTableDataTableUpdate,
-  apiDataTableDataTableGetAll
+  apiDataTableDataTableGetAll,
+  apiDataTableComplaintsGetAll
 } from '../api/api'
 
 export default {
@@ -17,6 +19,7 @@ export default {
   },
 
   // jquery mock
+  //
   init_jquery () {
     $.mockjax({
       type: 'GET',
@@ -43,6 +46,20 @@ export default {
         // )
         // 回應
         this.responseText = dataTableList
+      }
+    })
+
+    // 客訴單列表資料
+    $.mockjax({
+      type: 'GET',
+      url: apiDataTableComplaintsGetAll,
+      status: 200,
+      dataType: 'json',
+      responseTime: 750,
+      contentType: 'application/json',
+      response: function (settings) {
+        // 回應
+        this.responseText = ComplaintsData
       }
     })
 

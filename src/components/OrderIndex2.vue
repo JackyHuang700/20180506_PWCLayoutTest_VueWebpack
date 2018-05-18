@@ -82,6 +82,7 @@
                       <input type="text" class="form-control" id="searchInput" placeholder="searchInput">
                     </div>
                   </div>
+                  
                 </div>
               </div>
             </div>
@@ -117,6 +118,9 @@
 <script>
 import 'datatables.net'
 import 'datatables.net-bs4'
+import {
+  language
+} from '../config/dataTable'
 import {
   apiDataTableDataTableGetAll
 } from '../api/api'
@@ -203,46 +207,7 @@ export default {
             'defaultContent': '<button type="button" class="btn btn-primary details-control">明細</button>'
           }
         ],
-        'language': {
-
-          'processing': '處理中...',
-
-          'loadingRecords': '載入中...',
-
-          'lengthMenu': '顯示 _MENU_ 項結果',
-
-          'zeroRecords': '沒有符合的結果',
-
-          'info': '顯示第 _START_ 至 _END_ 項結果，共 _TOTAL_ 項',
-
-          'infoEmpty': '顯示第 0 至 0 項結果，共 0 項',
-
-          'infoFiltered': '(從 _MAX_ 項結果中過濾)',
-
-          'infoPostFix': '',
-
-          'search': '搜尋:',
-
-          'paginate': {
-
-            'first': '第一頁',
-
-            'previous': '上一頁',
-
-            'next': '下一頁',
-
-            'last': '最後一頁'
-
-          },
-
-          'aria': {
-
-            'sortAscending': ': 升冪排列',
-
-            'sortDescending': ': 降冪排列'
-
-          }
-        }
+        'language': language
       })
 
       // Add event listener for opening and closing details
