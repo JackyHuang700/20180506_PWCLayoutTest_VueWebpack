@@ -7,6 +7,7 @@ import Full from '@/containers/Full'
 // Views
 import {
   Order,
+  Order2,
   Content,
   HomeIndex,
   HomeIndeV2,
@@ -14,6 +15,7 @@ import {
   OrderIndex2_1,
   ComplaintsIndex,
   ComplaintsCreate,
+  CollectDetail,
   Form,
   Form2
 } from '@/components'
@@ -69,9 +71,19 @@ export default new Router({
           component: ComplaintsCreate
         },
         {
+          path: 'collectDetail',
+          name: 'CollectDetail',
+          component: CollectDetail
+        },
+        {
           path: 'order',
           name: 'Order',
           component: Order
+        },
+        {
+          path: 'order2',
+          name: 'Order2',
+          component: Order2
         }
 
       ]

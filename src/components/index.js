@@ -11,12 +11,15 @@ import OrderIndex2 from './OrderIndex2.vue'
 import OrderIndex2_1 from './OrderIndex2_1.vue'
 import Form from './Form.vue'
 import Form2 from './Form2.vue'
+import CollectDetail from './CollectDetail.vue'
 import Order from './Order.vue'
+import Order2 from './Order2.vue'
 import ComplaintsIndex from './ComplaintsIndex.vue'
 import ComplaintsCreate from './ComplaintsCreate.vue'
 
 export {
   Order,
+  Order2,
   Aside,
   Breadcrumb,
   Callout,
@@ -30,6 +33,7 @@ export {
   OrderIndex2_1,
   ComplaintsIndex,
   ComplaintsCreate,
+  CollectDetail,
   Form,
   Form2
 }

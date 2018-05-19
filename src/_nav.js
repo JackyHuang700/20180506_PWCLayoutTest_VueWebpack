@@ -89,6 +89,10 @@ export default {
       name: '新建/編輯/瀏覽訂單(三欄)',
       url: '/Order',
       icon: 'icon-star'
+    }, {
+      name: '新建/編輯/瀏覽訂單',
+      url: '/Order2',
+      icon: 'icon-star'
     }]
   },
   {
@@ -102,6 +106,16 @@ export default {
     {
       name: '收款單沖帳',
       url: '/',
+      icon: 'icon-star'
+    }
+    ]
+  },
+  {
+    name: '收款瀏覽',
+    url: '/CollectDetail',
+    children: [{
+      name: '收款瀏覽',
+      url: '/CollectDetail',
       icon: 'icon-star'
     }
     ]
