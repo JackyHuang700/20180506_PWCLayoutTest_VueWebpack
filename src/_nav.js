@@ -134,6 +134,16 @@ export default {
       icon: 'icon-star'
     }
     ]
+  },
+  {
+    name: '收款管理',
+    url: '/collectionbalance',
+    children: [{
+      name: '收款單沖帳',
+      url: '/Collectionbalance',
+      icon: 'icon-star'
+    }
+    ]
   }
     // {
     //   name: 'Icons',

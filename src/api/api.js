@@ -5,6 +5,7 @@ export const apiDataTableDataTableGetAll = '/api/dataTable/DataTableGetAll'
 export const apiDataTableDataTableGet = '/api/dataTable/DataTableGet'
 export const apiDataTableDataTableUpdate = '/api/dataTable/DataTableUpdate'
 export const apiDataTableComplaintsGetAll = '/api/dataTable/ComplaintsGetAll'
+export const apiDataTableCollectionGetAll = '/api/dataTable/CollectionGetAll'
 
 export const methodGetSelect2Select24GetAll = params => {
   return axios.get(apiDataTableDataTableGetAll, {

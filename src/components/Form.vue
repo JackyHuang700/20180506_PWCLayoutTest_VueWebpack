@@ -181,16 +181,5 @@ export default {
 </script>
 <style>
 @import 'izitoast/dist/css/iziToast.min.css';
-
-.errorLabel {
-  color: red;
-}
-
-input.error {
-  border: 2px solid rgba(255, 0, 0, 0.5019607843137255);
-}
-
-label.error {
-  color: #f00;
-}
+@import '../assets/jquery-validation/jquery-validation.css';
 </style>

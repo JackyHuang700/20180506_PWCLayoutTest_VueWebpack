@@ -6,10 +6,12 @@ import MockAdapter from 'axios-mock-adapter'
 
 import { dataTableList } from './data/OrderIndex2Data'
 import { dataTableList as ComplaintsData } from './data/ComplaintsData'
+import { dataTableList as CollectionData } from './data/CollectionData'
 import {
   apiDataTableDataTableGet,
   apiDataTableDataTableUpdate,
   apiDataTableDataTableGetAll,
+  apiDataTableCollectionGetAll,
   apiDataTableComplaintsGetAll
 } from '../api/api'
 
@@ -60,6 +62,20 @@ export default {
       response: function (settings) {
         // 回應
         this.responseText = ComplaintsData
+      }
+    })
+
+    // 收款維護單列表資料
+    $.mockjax({
+      type: 'GET',
+      url: apiDataTableCollectionGetAll,
+      status: 200,
+      dataType: 'json',
+      responseTime: 750,
+      contentType: 'application/json',
+      response: function (settings) {
+        // 回應
+        this.responseText = CollectionData
       }
     })
 

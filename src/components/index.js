@@ -16,6 +16,7 @@ import Order from './Order.vue'
 import Order2 from './Order2.vue'
 import ComplaintsIndex from './ComplaintsIndex.vue'
 import ComplaintsCreate from './ComplaintsCreate.vue'
+import Collectionbalance from './Collectionbalance.vue'
 
 export {
   Order,
@@ -33,6 +34,7 @@ export {
   OrderIndex2_1,
   ComplaintsIndex,
   ComplaintsCreate,
+  Collectionbalance,
   CollectDetail,
   Form,
   Form2

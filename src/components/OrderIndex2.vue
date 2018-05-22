@@ -135,10 +135,10 @@ export default {
       console.log(d)
       d = d || []
 
-      var tr_template = ''
+      var trTemplate = ''
       if (d.length) {
         d.map(function (data) {
-          tr_template +=
+          trTemplate +=
             '  <tr>' +
             '      <td>' + data.a + '</td>' +
             '      <td>' + data.b + '</td>' +
@@ -174,7 +174,7 @@ export default {
         '        <td scope="col">交貨日期</td>' +
         '        <td scope="col">&nbsp;</td>' +
         '    </tr>' +
-        tr_template +
+        trTemplate +
         '    </table>'
     }
 
