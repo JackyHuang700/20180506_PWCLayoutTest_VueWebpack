@@ -3,12 +3,12 @@
     <div class="row">
       <div class="col-12">
 
-        <div class="card">
+        <!--<div class="card">
           <div class="card-header">asdf
           </div>
           <div class="card-body">
 
-            <!-- <table class="table table-striped">
+             <table class="table table-striped">
               <thead>
                 <tr>
                   <th scope="col">#</th>
@@ -41,10 +41,10 @@
                   <td class="text-right totalMoney">0.00</td>
                 </tr>
               </tbody>
-            </table> -->
-
+            </table> 
           </div>
-        </div>
+        </div>-->
+
 
         <div class="card">
           <div class="card-header">
@@ -53,8 +53,8 @@
           </div>
           <div class="card-body">
 
-            <button type="button" class="btn btn-success">已匹配收款單</button>
-            <button type="button" class="btn btn-success">未匹配收款單</button>
+            <button type="button" class="btn btn-success" id="match">已匹配收款單</button>
+            <button type="button" class="btn btn-success" id="noMatch">未匹配收款單</button>
 
           </div>
         </div>
@@ -254,7 +254,8 @@ import {
   language
 } from '../config/dataTable'
 import {
-  apiDataTableCollectionGetAll
+  apiDataTableCollectionGetAll,
+  apiDataTableCollectionGetAll2
 } from '../api/api'
 export default {
   name: 'collectionbalance',
@@ -305,6 +306,11 @@ export default {
         ],
         'language': language
       })
+
+      console.log('table ', table)
+      console.log('table ', table.ajax)
+      console.log('table ', table.ajax.url())
+      console.log('table ', table.ajax.url('/api/dataTable/CollectionGetAll').load())
 
       // 沖帳明細
       $('#example tbody').on('click', '.details-control', function () {
@@ -369,6 +375,14 @@ export default {
           '  </tr>' + trTemplate +
           '</table>')
       }
+
+      // asdfa
+      document.getElementById('match').addEventListener('click', function () {
+        table.ajax.url(apiDataTableCollectionGetAll).load()
+      })
+      document.getElementById('noMatch').addEventListener('click', function () {
+        table.ajax.url(apiDataTableCollectionGetAll2).load()
+      })
     })
 
     // 計算沖帳金額

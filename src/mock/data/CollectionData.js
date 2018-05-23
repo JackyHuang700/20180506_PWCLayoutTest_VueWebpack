@@ -203,6 +203,12 @@ var dataTableList = {
   ]
 }
 
+const dataTableList2 = JSON.parse(JSON.stringify(dataTableList))
+for (var item in dataTableList2['data']) {
+  dataTableList2['data'][item].d = `${dataTableList2['data'][item].d}123123123`
+}
+
 export {
-  dataTableList
+  dataTableList,
+  dataTableList2
 }
