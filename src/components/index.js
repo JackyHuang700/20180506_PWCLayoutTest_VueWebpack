@@ -18,8 +18,10 @@ import ComplaintsIndex from './ComplaintsIndex.vue'
 import ComplaintsCreate from './ComplaintsCreate.vue'
 import Collectionbalance from './Collectionbalance.vue'
 import Collectionbalance2 from './Collectionbalance2.vue'
+import Supplier from './Supplier.vue'
 
 export {
+  Supplier,
   Order,
   Order2,
   Aside,

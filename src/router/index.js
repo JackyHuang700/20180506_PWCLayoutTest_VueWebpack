@@ -19,7 +19,8 @@ import {
   Collectionbalance,
   Collectionbalance2,
   Form,
-  Form2
+  Form2,
+  Supplier
 } from '@/components'
 
 Vue.use(Router)
@@ -96,6 +97,11 @@ export default new Router({
           path: 'order2',
           name: 'Order2',
           component: Order2
+        },
+        {
+          path: 'supplier',
+          name: 'Supplier',
+          component: Supplier
         }
 
       ]

@@ -149,6 +149,21 @@ export default {
       icon: 'icon-star'
     }
     ]
+  },
+  {
+    name: '供應商管理',
+    url: '/Supplier',
+    children: [{
+      name: '建立供應商',
+      url: '/Supplier',
+      icon: 'icon-star'
+    },
+    {
+      name: '供應商清單',
+      url: '/Supplier',
+      icon: 'icon-star'
+    }
+    ]
   }
     // {
     //   name: 'Icons',
