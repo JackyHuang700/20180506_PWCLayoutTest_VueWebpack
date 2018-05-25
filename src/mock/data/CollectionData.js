@@ -7,6 +7,7 @@ var dataTableList = {
     'd': '美元',
     'e': '138.95',
     'f': '130.00',
+    'l': '1801010010',
     'g': 'COCO$171202003',
     'h': 'Stripe信用卡',
     'i': 'Chloe Bartlett',
@@ -47,6 +48,7 @@ var dataTableList = {
     'd': '美元',
     'e': '706.00',
     'f': '68.00',
+    'l': '1801010010',
     'g': 'COCO$171203001',
     'h': 'Stripe信用卡',
     'i': 'Jocelyn Smith',
@@ -87,6 +89,7 @@ var dataTableList = {
     'd': '美元',
     'e': '183.49',
     'f': '0.00',
+    'l': '1801010010',
     'g': 'COCO$171203002',
     'h': 'Stripe信用卡',
     'i': 'Emily Benso',
@@ -127,6 +130,7 @@ var dataTableList = {
     'd': '美元',
     'e': '138.95',
     'f': '0.00',
+    'l': '1801010010',
     'g': 'COCO$171204003',
     'h': 'Stripe信用卡',
     'i': 'Chereez Koen',
@@ -167,6 +171,7 @@ var dataTableList = {
     'd': '美元',
     'e': '334.04',
     'f': '0.00',
+    'l': '1801010010',
     'g': 'COCO$171204004',
     'h': 'Stripe信用卡',
     'i': 'Pimanmas Ratmool',
@@ -206,6 +211,9 @@ var dataTableList = {
 const dataTableList2 = JSON.parse(JSON.stringify(dataTableList))
 for (var item in dataTableList2['data']) {
   dataTableList2['data'][item].d = `${dataTableList2['data'][item].d}123123123`
+
+  // 移除某欄位
+  // delete dataTableList2['data'][item]['l']
 }
 
 export {

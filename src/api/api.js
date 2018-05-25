@@ -1,6 +1,7 @@
 import axios from 'axios'
 
 // select2
+export const apiSelect2Select24GetAll = '/api/Select2/Select24GetAll'
 export const apiDataTableDataTableGetAll = '/api/dataTable/DataTableGetAll'
 export const apiDataTableDataTableGet = '/api/dataTable/DataTableGet'
 export const apiDataTableDataTableUpdate = '/api/dataTable/DataTableUpdate'

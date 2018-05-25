@@ -144,7 +144,7 @@ export default {
       icon: 'icon-star'
     },
     {
-      name: '編輯收款單',
+      name: '檢視收款單',
       url: '/Collectionbalance2',
       icon: 'icon-star'
     }
