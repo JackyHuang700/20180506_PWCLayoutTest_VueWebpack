@@ -142,6 +142,11 @@ export default {
       name: '收款單沖帳',
       url: '/Collectionbalance',
       icon: 'icon-star'
+    },
+    {
+      name: '編輯收款單',
+      url: '/Collectionbalance2',
+      icon: 'icon-star'
     }
     ]
   }

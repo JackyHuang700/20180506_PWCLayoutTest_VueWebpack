@@ -17,6 +17,7 @@ import {
   ComplaintsCreate,
   CollectDetail,
   Collectionbalance,
+  Collectionbalance2,
   Form,
   Form2
 } from '@/components'
@@ -80,6 +81,11 @@ export default new Router({
           path: 'collectionbalance',
           name: 'Collectionbalance',
           component: Collectionbalance
+        },
+        {
+          path: 'collectionbalance2',
+          name: 'Collectionbalance2',
+          component: Collectionbalance2
         },
         {
           path: 'order',
