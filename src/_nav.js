@@ -160,7 +160,7 @@ export default {
     },
     {
       name: '供應商清單',
-      url: '/Supplier',
+      url: '/Supplier2',
       icon: 'icon-star'
     }
     ]

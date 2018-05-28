@@ -222,7 +222,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
+                    <!-- <tr>
                       <th class="align-middle" scope="row">收款單: 2171128001</th>
                       <td class="align-middle">菲律宾比索</td>
                       <td class="text-right align-middle originalMoney">123456.00</td>
@@ -241,7 +241,7 @@
                         <input type="text" class="form-control text-right collectionMoney" value="0" />
                       </td>
                       <td class="text-right align-middle totalMoney">0.00</td>
-                    </tr>
+                    </tr> -->
                   </tbody>
                 </table>
 
@@ -256,14 +256,14 @@
         </div>
 
         <!-- 沖帳Modal -->
-        <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
           <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">
-                  沖帳明細:
-                  <b id="exampleModalLabelText"></b>
-                  編輯
+                <h5 class="modal-title" id="exampleModalLabel2">
+                  收款單:
+                  <b id="exampleModalLabelText2"></b>
+                  沖帳
                 </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
@@ -284,7 +284,7 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <th scope="row" class="align-middle">收款單: 2171128001</th>
+                      <th scope="row" class="align-middle">收款單: JE-2017-12-0364-3</th>
                       <td class="align-middle">菲律宾比索</td>
                       <td class="text-right align-middle originalMoney">123456.00</td>
                       <td class="text-right align-middle offsetMoney">100000</td>
@@ -383,7 +383,19 @@ export default {
             'data': 'a',
             'orderable': false,
             'render': function (data, type, row, meta) {
-              return ('<a  data-toggle="modal" data-target="#exampleModal2" class="btn btn-warning" href="//?=' + row.id + '">沖帳</a>')
+              var appendTemplate = (
+                'data-a="{{templateAA}}" data-b="{{templateBB}}" data-c="{{templateCC}}" data-d="{{templateDD}}" data-e="{{templateEE}}" data-f="{{templateFF}}" data-g="{{templateGG}}" data-h="{{templateHH}}" data-i="{{templateII}}"'
+              ).replace('{{templateAA}}', row.a)
+                .replace('{{templateBB}}', row.b)
+                .replace('{{templateCC}}', row.c)
+                .replace('{{templateDD}}', row.d)
+                .replace('{{templateEE}}', row.e)
+                .replace('{{templateFF}}', row.f)
+                .replace('{{templateGG}}', row.g)
+                .replace('{{templateHH}}', row.h)
+                .replace('{{templateII}}', row.i)
+
+              return ('<a data-toggle="modal" data-target="#exampleModal2" class="btn btn-warning" href="//?=' + row.id + '"' + ' ' + appendTemplate + '>沖帳</a>')
             }
           }
         ],
@@ -413,10 +425,22 @@ export default {
         var trTemplate = ''
         if (d.length) {
           d.map(function (data) {
+            var appendTemplate = (
+              'data-a="{{templateAA}}" data-b="{{templateBB}}" data-c="{{templateCC}}" data-d="{{templateDD}}" data-e="{{templateEE}}" data-f="{{templateFF}}" data-g="{{templateGG}}" data-h="{{templateHH}}" data-i="{{templateII}}"'
+            ).replace('{{templateAA}}', data.a)
+              .replace('{{templateBB}}', data.b)
+              .replace('{{templateCC}}', data.c)
+              .replace('{{templateDD}}', data.d)
+              .replace('{{templateEE}}', data.e)
+              .replace('{{templateFF}}', data.f)
+              .replace('{{templateGG}}', data.g)
+              .replace('{{templateHH}}', data.h)
+              .replace('{{templateII}}', data.i)
+
             trTemplate += (
               '<tr>' +
               '  <td>' +
-              '     <a href="//?=" data-toggle="modal" data-target="#exampleModal" data-a="' + data.a + '" data-b="' + data.b + '" data-c="' + data.c + '" data-d="' + data.d + '" data-e="' + data.e + '" data-f="' + data.f + '" data-g="' + data.g + '" data-h="' + data.h + '" data-i="' + data.i + '">' + data.a + '</a>' +
+              '     <a href="//?=" data-toggle="modal" data-target="#exampleModal" ' + appendTemplate + '>' + data.a + '</a>' +
               '  </td>' +
               '  <td>' +
               '     <a href="//?=" target="_blank">' + data.b + '</a>' +
@@ -505,7 +529,7 @@ export default {
       }
     })
 
-    // 計算沖帳金額
+    // [沖帳明細] - 計算沖帳金額
     function collectionMoneyAddEventListener (e) {
       var self = e.target
       var tdList = self.parentElement.parentElement
@@ -518,13 +542,13 @@ export default {
         var originalMoneyDom = tdList.getElementsByClassName('originalMoney')[0]
         var offsetMoneyDom = tdList.getElementsByClassName('offsetMoney')[0]
 
-        console.log(IsNumeric(originalMoneyDom.innerText))
-        console.log(IsNumeric(offsetMoneyDom.innerText))
+        // console.log(IsNumeric(originalMoneyDom.innerText), originalMoneyDom.innerText)
+        // console.log(IsNumeric(offsetMoneyDom.innerText), offsetMoneyDom.innerText)
 
         if (IsNumeric(originalMoneyDom.innerText) && IsNumeric(offsetMoneyDom.innerText) && IsNumeric(self.value)) {
-          originalMoney = parseInt(originalMoneyDom.innerText)
-          offsetMoney = parseInt(offsetMoneyDom.innerText)
-          collectionMoney = parseInt(self.value)
+          originalMoney = originalMoneyDom.innerText.replace(',', '')
+          offsetMoney = offsetMoneyDom.innerText.replace(',', '')
+          collectionMoney = self.value.replace(',', '')
           valid = true
         }
       }
@@ -538,11 +562,53 @@ export default {
         self.value = 0
       }
 
-      tdList.getElementsByClassName('totalMoney')[0].innerText = totalMoney
+      tdList.getElementsByClassName('totalMoney')[0].innerText = totalMoney.toFixed(2)
+    }
+
+    // [沖帳] - 計算沖帳金額
+    function collectionMoneyAddEventListener2 (e) {
+      var self = e.target
+      var trList = self.parentElement.parentElement
+      var originalMoney = 0
+      var offsetMoney = 0
+      var collectionMoney = 0
+      var totalMoney = 0
+      var valid = false
+
+      if (trList.tagName === 'TR') {
+        var originalMoneyDom = trList.getElementsByClassName('originalMoney2')[0]
+        var offsetMoneyDom = trList.getElementsByClassName('offsetMoney2')[0]
+
+        if (IsNumeric(originalMoneyDom.innerText) && IsNumeric(offsetMoneyDom.innerText) && IsNumeric(self.value)) {
+          originalMoney = parseInt(originalMoneyDom.innerText.replace(',', ''))
+          offsetMoney = parseInt(offsetMoneyDom.innerText.replace(',', ''))
+          collectionMoney = parseInt(self.value.replace(',', ''))
+          valid = true
+        }
+      }
+
+      if (valid) {
+        if (collectionMoney > originalMoney) {
+          collectionMoney = originalMoney - offsetMoney
+          self.value = 0
+          totalMoney = 0
+        } else {
+          totalMoney = originalMoney - offsetMoney - collectionMoney
+        }
+
+        // 去除開頭零
+        self.value = collectionMoney
+      } else {
+        self.value = 0
+      }
+
+      trList.getElementsByClassName('totalMoney2')[0].innerText = totalMoney.toFixed(2)
     }
 
     // 驗證是否為數字
     function IsNumeric (input) {
+      input = input.replace(',', '')
+
       var RE = /^-{0,1}\d*\.{0,1}\d+$/
       return (RE.test(input))
     }
@@ -552,7 +618,7 @@ export default {
     //   collectionMoneyList[item].dispatchEvent(new Event('input'))
     // }
 
-    // 攔截modal open 事件
+    // [冲帐明细] - 攔截modal open 事件
     $(document).on('show.bs.modal', '#exampleModal', function (event) {
       var modal = $(this)
       var self = this
@@ -569,25 +635,33 @@ export default {
       var dataI = button.data('i')
       var tbodyTemplate = (
         '<tr>' +
-        '  <th scope="row">收款單: ' + dataF + ' </th>' +
-        '  <td>' + dataG + '</td>' +
-        '  <td class="text-right originalMoney">' + dataH + '</td>' +
+        '  <th scope="row">收款單: {{templateAA}} </th>' +
+        '  <td>{{templateBB}}</td>' +
+        '  <td class="text-right originalMoney">{{templateCC}}</td>' +
         '  <td class="text-right offsetMoney">100000</td>' +
         '  <td>' +
-        '    <input type="text" class="form-control text-right collectionMoney" value="' + dataI + '" />' +
+        '    <input type="text" class="form-control text-right collectionMoney" value="{{templateDD}}" />' +
         '  </td>' +
         '  <td class="text-right totalMoney">0.0</td>' +
         '</tr>' +
         '<tr>' +
-        '  <th scope="row">訂單: ' + dataB + '</th>' +
-        '  <td>' + dataC + '</td>' +
-        '  <td class="text-right originalMoney">' + dataD + '</td>' +
+        '  <th scope="row">訂單: {{templateEE}}</th>' +
+        '  <td>{{templateFF}}</td>' +
+        '  <td class="text-right originalMoney">{{templateGG}}</td>' +
         '  <td class="text-right offsetMoney">113.47</td>' +
         '  <td>' +
-        '    <input type="text" class="form-control text-right collectionMoney" value="' + dataE + '" />' +
+        '    <input type="text" class="form-control text-right collectionMoney" value="{{templateHH}}" />' +
         '  </td>' +
         '  <td class="text-right totalMoney">0.0</td>' +
-        '</tr>')
+        '</tr>'
+      ).replace('{{templateAA}}', dataF)
+        .replace('{{templateBB}}', dataG)
+        .replace('{{templateCC}}', dataH)
+        .replace('{{templateDD}}', dataI)
+        .replace('{{templateEE}}', dataB)
+        .replace('{{templateFF}}', dataC)
+        .replace('{{templateGG}}', dataD)
+        .replace('{{templateHH}}', dataE)
 
       modal.find('#exampleModalLabelText').text(dataA)
       if (tbodyDom) {
@@ -599,7 +673,48 @@ export default {
           collectionMoneyList[i].addEventListener('input', collectionMoneyAddEventListener, false)
         }
       }
-      // modal.find('.modal-body input').val(recipient)
+    })
+
+    // [沖帳] - 攔截modal open 事件
+    $(document).on('show.bs.modal', '#exampleModal2', function (event) {
+      var modal = $(this)
+      var self = this
+      var button = $(event.relatedTarget)
+      var dataA = button.data('a')
+      var dataB = button.data('b')
+      var dataC = button.data('c')
+      var dataD = button.data('d')
+      var dataE = button.data('e')
+      var dataF = button.data('f')
+      var dataG = button.data('g')
+      var dataH = button.data('h')
+      var dataI = button.data('i')
+      var trDom = self.querySelectorAll('tbody tr')[0]
+      modal.find('#exampleModalLabelText2').text(dataC)
+      var trTemplate = (
+        '<th scope="row" class="align-middle">收款單: {{templateAA}}</th>' +
+        '<td class="align-middle">{{templateBB}}</td>' +
+        '<td class="text-right align-middle originalMoney2">{{templateCC}}</td>' +
+        '<td class="text-right align-middle offsetMoney2">{{templateDD}}</td>' +
+        '<td class="align-middle">' +
+        '  <input type="text" class="form-control text-right collectionMoney2" value="0" />' +
+        '</td>' +
+        '<td class="text-right totalMoney2">{{templateEE}}</td>'
+      ).replace('{{templateAA}}', dataC)
+        .replace('{{templateBB}}', dataD)
+        .replace('{{templateCC}}', dataE)
+        .replace('{{templateDD}}', dataF)
+        .replace('{{templateEE}}', (dataE - dataF).toFixed(2))
+
+      if (trDom) {
+        trDom.innerHTML = trTemplate
+
+        /// 計算沖帳金額
+        var collectionMoneyList = document.getElementsByClassName('collectionMoney2')
+        for (var i = 0; i < collectionMoneyList.length; i++) {
+          collectionMoneyList[i].addEventListener('input', collectionMoneyAddEventListener2, false)
+        }
+      }
     })
   }
 }

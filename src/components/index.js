@@ -19,9 +19,11 @@ import ComplaintsCreate from './ComplaintsCreate.vue'
 import Collectionbalance from './Collectionbalance.vue'
 import Collectionbalance2 from './Collectionbalance2.vue'
 import Supplier from './Supplier.vue'
+import Supplier2 from './Supplier2.vue'
 
 export {
   Supplier,
+  Supplier2,
   Order,
   Order2,
   Aside,
