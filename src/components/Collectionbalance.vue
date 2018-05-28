@@ -497,7 +497,7 @@ export default {
           delay: 250,
           data: function (params) {
             return {
-              queryStr: params.term, // search term
+              queryStr: params.term,
               pageNo: params.page
             }
           },
@@ -516,10 +516,10 @@ export default {
         allowClear: true,
         multiple: false,
         dropdownParent: $('#sel_menu3').parent(),
-        escapeMarkup: function (markup) { return markup }, // let our custom formatter work
+        escapeMarkup: function (markup) { return markup },
         minimumInputLength: 1,
-        templateResult: formatRepoProvince, // omitted for brevity, see the source of this page
-        templateSelection: formatRepoProvince // omitted for brevity, see the source of this page
+        templateResult: formatRepoProvince,
+        templateSelection: formatRepoProvince
       })
 
       // 製作下拉式選單
@@ -529,7 +529,7 @@ export default {
       }
     })
 
-    // [沖帳明細] - 計算沖帳金額
+    // [沖帳明細]、[沖帳] - 計算沖帳金額
     function collectionMoneyAddEventListener (e) {
       var self = e.target
       var tdList = self.parentElement.parentElement
@@ -546,40 +546,6 @@ export default {
         // console.log(IsNumeric(offsetMoneyDom.innerText), offsetMoneyDom.innerText)
 
         if (IsNumeric(originalMoneyDom.innerText) && IsNumeric(offsetMoneyDom.innerText) && IsNumeric(self.value)) {
-          originalMoney = originalMoneyDom.innerText.replace(',', '')
-          offsetMoney = offsetMoneyDom.innerText.replace(',', '')
-          collectionMoney = self.value.replace(',', '')
-          valid = true
-        }
-      }
-
-      if (valid) {
-        totalMoney = (originalMoney - 0) + (offsetMoney - 0) - collectionMoney
-        // 去除開頭零
-        self.value = collectionMoney
-      } else {
-        // toastr.error('違法輸入')
-        self.value = 0
-      }
-
-      tdList.getElementsByClassName('totalMoney')[0].innerText = totalMoney.toFixed(2)
-    }
-
-    // [沖帳] - 計算沖帳金額
-    function collectionMoneyAddEventListener2 (e) {
-      var self = e.target
-      var trList = self.parentElement.parentElement
-      var originalMoney = 0
-      var offsetMoney = 0
-      var collectionMoney = 0
-      var totalMoney = 0
-      var valid = false
-
-      if (trList.tagName === 'TR') {
-        var originalMoneyDom = trList.getElementsByClassName('originalMoney2')[0]
-        var offsetMoneyDom = trList.getElementsByClassName('offsetMoney2')[0]
-
-        if (IsNumeric(originalMoneyDom.innerText) && IsNumeric(offsetMoneyDom.innerText) && IsNumeric(self.value)) {
           originalMoney = parseInt(originalMoneyDom.innerText.replace(',', ''))
           offsetMoney = parseInt(offsetMoneyDom.innerText.replace(',', ''))
           collectionMoney = parseInt(self.value.replace(',', ''))
@@ -588,21 +554,33 @@ export default {
       }
 
       if (valid) {
-        if (collectionMoney > originalMoney) {
-          collectionMoney = originalMoney - offsetMoney
-          self.value = 0
-          totalMoney = 0
-        } else {
-          totalMoney = originalMoney - offsetMoney - collectionMoney
-        }
+        switch (self.validType) {
+          case 'type':
+            totalMoney = (originalMoney - 0) + (offsetMoney - 0) - collectionMoney
+            // 去除開頭零
+            self.value = collectionMoney
+            break
+          case 'type2':
+            if (collectionMoney > originalMoney) {
+              collectionMoney = originalMoney - offsetMoney
+              self.value = 0
+              totalMoney = 0
+            } else {
+              totalMoney = originalMoney - offsetMoney - collectionMoney
+            }
 
-        // 去除開頭零
-        self.value = collectionMoney
+            // 去除開頭零
+            self.value = collectionMoney
+            break
+          default:
+            break
+        }
       } else {
+        // toastr.error('違法輸入')
         self.value = 0
       }
 
-      trList.getElementsByClassName('totalMoney2')[0].innerText = totalMoney.toFixed(2)
+      tdList.getElementsByClassName('totalMoney')[0].innerText = totalMoney.toFixed(2)
     }
 
     // 驗證是否為數字
@@ -671,6 +649,7 @@ export default {
         var collectionMoneyList = document.getElementsByClassName('collectionMoney')
         for (var i = 0; i < collectionMoneyList.length; i++) {
           collectionMoneyList[i].addEventListener('input', collectionMoneyAddEventListener, false)
+          collectionMoneyList[i].validType = 'type'
         }
       }
     })
@@ -694,12 +673,12 @@ export default {
       var trTemplate = (
         '<th scope="row" class="align-middle">收款單: {{templateAA}}</th>' +
         '<td class="align-middle">{{templateBB}}</td>' +
-        '<td class="text-right align-middle originalMoney2">{{templateCC}}</td>' +
-        '<td class="text-right align-middle offsetMoney2">{{templateDD}}</td>' +
+        '<td class="text-right align-middle originalMoney">{{templateCC}}</td>' +
+        '<td class="text-right align-middle offsetMoney">{{templateDD}}</td>' +
         '<td class="align-middle">' +
-        '  <input type="text" class="form-control text-right collectionMoney2" value="0" />' +
+        '  <input type="text" class="form-control text-right collectionMoney" value="0" />' +
         '</td>' +
-        '<td class="text-right totalMoney2">{{templateEE}}</td>'
+        '<td class="text-right totalMoney">{{templateEE}}</td>'
       ).replace('{{templateAA}}', dataC)
         .replace('{{templateBB}}', dataD)
         .replace('{{templateCC}}', dataE)
@@ -710,9 +689,10 @@ export default {
         trDom.innerHTML = trTemplate
 
         /// 計算沖帳金額
-        var collectionMoneyList = document.getElementsByClassName('collectionMoney2')
+        var collectionMoneyList = document.getElementsByClassName('collectionMoney')
         for (var i = 0; i < collectionMoneyList.length; i++) {
-          collectionMoneyList[i].addEventListener('input', collectionMoneyAddEventListener2, false)
+          collectionMoneyList[i].addEventListener('input', collectionMoneyAddEventListener, false)
+          collectionMoneyList[i].validType = 'type2'
         }
       }
     })
