@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div class="container-fluid mt-4">
     <div class="row">
       <div class="col-12">
         <div class="card">
@@ -12,17 +12,34 @@
             <div class="form-row">
               <div class="form-group col-md-3">
                 <label for="input1">關聯訂單(必填)</label>
-                <input type="text" class="form-control" id="input1" placeholder="">
+                <input type="text" class="form-control" id="input1" placeholder="" value="1712010003 (3932)">
               </div>
               <div class="form-group col-md-3">
                 <label for="input2">客诉编号(必填)</label>
-                <input type="text" class="form-control" id="input2" placeholder="">
+                <input type="text" class="form-control" id="input2" placeholder="" readonly value="CP-1712010003">
               </div>
+
+              <div class="form-group col-md-6 d-none d-sm-block">
+              </div>
+
               <div class="form-group col-md-3">
                 <label for="input3">客訴目標</label>
-                <input type="text" class="form-control" id="input3" placeholder="">
+                <select id="input3" class="form-control">
+                  <option selected>1712010003</option>
+                  <option selected>1712010003-01</option>
+                  <option selected>1712010003-02</option>
+                </select>
               </div>
+
               <div class="form-group col-md-3">
+                <label for="inputState">解决方案 </label>
+                <select id="inputState" class="form-control">
+                  <option selected>Choose...</option>
+                  <option>退費</option>
+                </select>
+              </div>
+
+              <div class="form-group col-md-12">
                 <label for="inputState">客訴原因 </label>
                 <select id="inputState" class="form-control">
                   <option selected>Choose...</option>
@@ -42,19 +59,28 @@
                   <label class="custom-file-label" for="customFile">Choose file</label>
                 </div>
               </div>
-              <div class="form-group col-md-3">
-                <label for="inputState">解决方案 </label>
-                <select id="inputState" class="form-control">
-                  <option selected>Choose...</option>
-                  <option>退費</option>
-                </select>
-              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">
+            <i aria-hidden="true" class="fa fa-wpforms"></i>
+            狀態
+          </div>
+          <div class="card-body">
+
+            <div class="form-row">
+
               <div class="form-group col-md-3">
                 <label for="inputState">處理狀態 </label>
-                <select id="inputState" class="form-control">
-                  <option selected>Choose...</option>
-                  <option>退費</option>
-                </select>
+                <div class="alert-secondary form-control" role="alert">
+                  待處理
+                </div>
               </div>
               <div class="form-group col-md-3">
                 <label for="inputState">審核人</label>
@@ -74,14 +100,16 @@
                   <option>拋轉成功</option>
                 </select>
               </div>
-              <div class="form-group col-md-12 text-right">
-                <button type="submit" class="btn btn-success">存檔</button>
-              </div>
             </div>
+
           </div>
         </div>
-
       </div>
+
+      <div class="col-12 text-right">
+        <button type="submit" class="btn btn-success col-3">存檔</button>
+      </div>
+
     </div>
   </div>
 </template>
