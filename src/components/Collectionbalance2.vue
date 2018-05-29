@@ -169,6 +169,10 @@
         </div>
       </div>
 
+        <div class="col-12 text-right">
+            <button type="button" class="btn btn-success col-3" onclick="window.close();">關閉</button>
+        </div>
+
     </div>
   </div>
 </template>

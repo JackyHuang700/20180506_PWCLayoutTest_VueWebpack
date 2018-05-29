@@ -62,7 +62,7 @@
                 <tr>
                   <th scope="col" class="align-middle">#</th>
                   <th scope="col" class="align-middle">代碼</th>
-                  <th scope="col" class="align-middle">統一稅籍ID</th>
+                  <th scope="col" class="align-middle">稅籍ID</th>
                   <th scope="col" class="align-middle">聯絡人</th>
                   <th scope="col" class="align-middle">操作</th>
                 </tr>
@@ -83,8 +83,9 @@ import {
   language
 } from '../config/dataTable'
 import {
-  apiDataTableSidebarGetAll
+  apiDataTableCopyTemplateGetAll
 } from '../api/api'
+
 export default {
   name: 'supplier',
   created () { },
@@ -95,7 +96,7 @@ export default {
           selector: 'td:not(:first-child)',
           style: 'os'
         },
-        'ajax': apiDataTableSidebarGetAll,
+        'ajax': apiDataTableCopyTemplateGetAll,
         'columns': [
           {},
           { 'data': 'mainData_1' },
@@ -162,7 +163,7 @@ export default {
               '  <td>{{subData_2}}</td>' +
               '  <td>{{subData_3}}</td>' +
               '</tr>'
-            ).replace('{{subData_1}}', '')
+            ).replace('{{subdata_1}}', '')
               .replace('{{subData_2}}', '')
               .replace('{{subData_3}}', '')
           })

@@ -6,12 +6,16 @@ import MockAdapter from 'axios-mock-adapter'
 
 import { dataTableList } from './data/OrderIndex2Data'
 import { dataTableList as ComplaintsData } from './data/ComplaintsData'
+import { dataTableList as SupplierData } from './data/SupplierData'
+import { dataTableList as CopyTemplateData } from './data/CopyTemplateData'
 import { select2List } from './data/select2List'
 import {
   dataTableList as CollectionData,
   dataTableList2 as CollectionData2
 } from './data/CollectionData'
 import {
+  apiDataTableSidebarGetAll,
+  apiDataTableCopyTemplateGetAll,
   apiSelect2Select24GetAll,
   apiDataTableDataTableGet,
   apiDataTableDataTableUpdate,
@@ -78,6 +82,34 @@ export default {
         // )
         // 回應
         this.responseText = dataTableList
+      }
+    })
+
+    // CopyTemplateData列表資料
+    $.mockjax({
+      type: 'GET',
+      url: apiDataTableCopyTemplateGetAll,
+      status: 200,
+      dataType: 'json',
+      responseTime: 750,
+      contentType: 'application/json',
+      response: function (settings) {
+        // 回應
+        this.responseText = CopyTemplateData
+      }
+    })
+
+    // 供應商列表資料
+    $.mockjax({
+      type: 'GET',
+      url: apiDataTableSidebarGetAll,
+      status: 200,
+      dataType: 'json',
+      responseTime: 750,
+      contentType: 'application/json',
+      response: function (settings) {
+        // 回應
+        this.responseText = SupplierData
       }
     })
 

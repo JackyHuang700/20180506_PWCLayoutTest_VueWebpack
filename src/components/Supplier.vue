@@ -119,7 +119,7 @@
           <div class="card-body">
 
             <div class="form-row">
-              <div class="form-group col-sm-3">
+              <div class="form-group col-sm-12">
                 <label for="">備註</label>
                 <textarea class="form-control" name="" id="" cols="250" rows="30" placeholder="請輸入"></textarea>
               </div>

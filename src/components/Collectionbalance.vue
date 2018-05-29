@@ -3,60 +3,6 @@
     <div class="row">
       <div class="col-12">
 
-        <!-- <div class="card">
-          <div class="card-header">asdf
-          </div>
-          <div class="card-body">
-
-             <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">幣種</th>
-                  <th scope="col" class="text-right">原始金額</th>
-                  <th scope="col" class="text-right">已沖金額</th>
-                  <th scope="col" class="text-right">沖帳金額</th>
-                  <th scope="col" class="text-right">待沖餘額</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">收款單: 2171128001</th>
-                  <td>菲律宾比索</td>
-                  <td class="text-right originalMoney">123456.00</td>
-                  <td class="text-right offsetMoney">100000</td>
-                  <td>
-                    <input type="text" class="form-control text-right collectionMoney" value="100" />
-                  </td>
-                  <td class="text-right totalMoney">0.00</td>
-                </tr>
-                <tr>
-                  <th scope="row">訂單: 1801010003</th>
-                  <td>美元</td>
-                  <td class="text-right originalMoney">116.78</td>
-                  <td class="text-right offsetMoney">113.47</td>
-                  <td>
-                    <input type="text" class="form-control text-right collectionMoney" value="0" />
-                  </td>
-                  <td class="text-right totalMoney">0.00</td>
-                </tr>
-              </tbody>
-            </table> 
-          </div>
-        </div> -->
-
-        <!-- <div class="card">
-          <div class="card-header">asdf
-          </div>
-          <div class="card-body">
-
-            <select id="sel_menu3" class="js-data-example-ajax form-control">
-              <option value="" selected="selected">请选择</option>
-            </select>
-
-          </div>
-        </div> -->
-
         <div class="card">
           <div class="card-header">
             <i aria-hidden="true" class="fa fa-wpforms"></i>
@@ -222,26 +168,6 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <!-- <tr>
-                      <th class="align-middle" scope="row">收款單: 2171128001</th>
-                      <td class="align-middle">菲律宾比索</td>
-                      <td class="text-right align-middle originalMoney">123456.00</td>
-                      <td class="text-right align-middle offsetMoney">100000</td>
-                      <td class="align-middle">
-                        <input type="text" class="form-control text-right collectionMoney" value="100" />
-                      </td>
-                      <td class="text-right align-middle totalMoney">0.00</td>
-                    </tr>
-                    <tr>
-                      <th class="align-middle" scope="row">訂單: 1801010003</th>
-                      <td class="align-middle">美元</td>
-                      <td class="text-right align-middle originalMoney">116.78</td>
-                      <td class="text-right align-middle offsetMoney">113.47</td>
-                      <td>
-                        <input type="text" class="form-control text-right collectionMoney" value="0" />
-                      </td>
-                      <td class="text-right align-middle totalMoney">0.00</td>
-                    </tr> -->
                   </tbody>
                 </table>
 
@@ -368,7 +294,18 @@ export default {
           { 'data': 'h' },
           {}
         ],
-        'order': [[0, 'asc']],
+        'order': [
+          [1, 'asc'],
+          [2, 'asc'],
+          [3, 'asc'],
+          [4, 'asc'],
+          [5, 'asc'],
+          [6, 'asc'],
+          [7, 'asc'],
+          [8, 'asc'],
+          [9, 'asc'],
+          [10, 'asc']
+        ],
         'columnDefs': [
           {
             'targets': 0,
@@ -376,6 +313,17 @@ export default {
             'orderable': false,
             'render': function (data, type, row, meta) {
               return ('<button type="button" class="btn btn-primary details-control">沖帳明細</button>')
+            }
+          },
+          {
+            'targets': 3,
+            'data': 'id',
+            'orderable': false,
+            'render': function (data, type, row, meta) {
+              return (
+                '<a href="/Receipt/Detail?ReceipId={{ReceipId}}" target="_blank">{{receiptNumber}}</a>'
+              ).replace('{{receiptNumber}}', '')
+                .replace('{{ReceipId}}', '')
             }
           },
           {
@@ -449,14 +397,14 @@ export default {
               '  <td>' + data.d + '</td>' +
               '  <td>' + data.e + '</td>' +
               '  <td>' +
-              '     <a href="//?=" target="_blank">' + data.f + '</a>' +
+              '     <a href="/Receipt/Detail?ReceipId={{ReceipId}}" target="_blank">' + data.f + '</a>' +
               '  </td>' +
               '  <td>' + data.g + '</td>' +
               '  <td>' + data.h + '</td>' +
               '  <td>' + data.i + '</td>' +
               '  <td>' + data.j + '</td>' +
               '  <td>' + data.k + '</td>' +
-              '</tr>')
+              '</tr>').replace('{{ReceipId}}', data.id)
           })
         }
 
@@ -661,10 +609,10 @@ export default {
       var button = $(event.relatedTarget)
       var dataA = button.data('a')
       var dataB = button.data('b')
-      var dataC = button.data('c')
-      var dataD = button.data('d')
-      var dataE = button.data('e')
-      var dataF = button.data('f')
+      var dataC = button.data('c') || ''
+      var dataD = button.data('d') || ''
+      var dataE = button.data('e') || 0
+      var dataF = button.data('f') || 0
       var dataG = button.data('g')
       var dataH = button.data('h')
       var dataI = button.data('i')
