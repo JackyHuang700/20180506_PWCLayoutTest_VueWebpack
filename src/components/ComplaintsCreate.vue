@@ -16,7 +16,7 @@
               </div>
               <div class="form-group col-md-3">
                 <label for="input2">客诉编号(必填)</label>
-                <input type="text" class="form-control complaintNum" id="input2" placeholder="" readonly value="CP-1712010003">
+                <input type="text" class="form-control complaintNum" id="input2" placeholder="" readonly value="">
               </div>
 
               <div class="form-group col-md-6 d-none d-md-block">
