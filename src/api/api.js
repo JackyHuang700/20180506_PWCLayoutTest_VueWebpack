@@ -10,6 +10,7 @@ export const apiDataTableCollectionGetAll = '/api/dataTable/CollectionGetAll'
 export const apiDataTableCollectionGetAll2 = '/api/dataTable/CollectionGetAll2'
 export const apiDataTableSidebarGetAll = '/api/dataTable/SidebarGetAll'
 export const apiDataTableCopyTemplateGetAll = '/api/dataTable/CopyTemplateGetAll'
+export const apiDataJQueryUIJQueryUIGetAll = '/api/JQueryUI/JQueryUIGetAll'
 
 export const methodGetSelect2Select24GetAll = params => {
   return axios.get(apiDataTableDataTableGetAll, {

@@ -12,11 +12,11 @@
             <div class="form-row">
               <div class="form-group col-md-3">
                 <label for="input1">關聯訂單(必填)</label>
-                <input type="text" class="form-control" id="input1" placeholder="" value="1712010003 (3932)">
+                <input type="text" class="form-control orderNum" id="input1" placeholder="" value="">
               </div>
               <div class="form-group col-md-3">
                 <label for="input2">客诉编号(必填)</label>
-                <input type="text" class="form-control" id="input2" placeholder="" readonly value="CP-1712010003">
+                <input type="text" class="form-control complaintNum" id="input2" placeholder="" readonly value="CP-1712010003">
               </div>
 
               <div class="form-group col-md-6 d-none d-sm-block">
@@ -24,10 +24,7 @@
 
               <div class="form-group col-md-3">
                 <label for="input3">客訴目標</label>
-                <select id="input3" class="form-control">
-                  <option selected>1712010003</option>
-                  <option selected>1712010003-01</option>
-                  <option selected>1712010003-02</option>
+                <select id="input3" class="form-control complaintTarget">
                 </select>
               </div>
 
@@ -114,13 +111,79 @@
   </div>
 </template>
 <script>
+import 'jquery-ui/ui/widgets/autocomplete'
+import {
+  apiDataJQueryUIJQueryUIGetAll
+} from '../api/api'
 export default {
   name: 'complaintsCreate',
 
   created () { },
-  mounted () { },
-  methods: {}
+  mounted () {
+    // autocomplete
+    (function () {
+      function autocompleteAjax (searchData, callback) {
+        $.ajax({
+          url: apiDataJQueryUIJQueryUIGetAll,
+          type: 'GET',
+          data: searchData,
+          error: function () {
+            console.log('error')
+          },
+          success: function (e) {
+            if (callback) {
+              callback(e)
+            }
+          }
+        })
+      }
+
+      // 快取
+      var cache = {}
+      var autocompleteDom = document.getElementsByClassName('orderNum')[0]
+      var complaintNumDom = document.getElementsByClassName('complaintNum')[0]
+      var complaintTargetDom = document.getElementsByClassName('complaintTarget')[0]
+      $(autocompleteDom).autocomplete({
+        source: function (request, response) {
+          var term = request.term
+          if (term in cache) {
+            response(cache)
+          } else {
+            autocompleteAjax(request, function (resp) {
+              cache[term] = resp
+              response(resp)
+            })
+          }
+        },
+        select: function (event, ui) {
+          $(autocompleteDom).val(ui.item.order)
+          $(complaintNumDom).val('CP-' + ui.item.order)
+
+          // add select
+          for (let index = (complaintTargetDom.options.length - 1); index >= 0; index--) {
+            complaintTargetDom.remove(index)
+          }
+          for (let index = 0; index < ui.item.complaintsTarget.length; index++) {
+            var option = document.createElement('option')
+            option.text = ui.item.complaintsTarget[index]
+            option.value = ui.item.complaintsTarget[index]
+            complaintTargetDom.add(option)
+          }
+
+          return false
+        }
+      }).autocomplete('instance')._renderItem = function (ul, item) {
+        return $('<li>')
+          .append('<div>' + item.order + '</div>')
+          .appendTo(ul)
+      }
+    }());
+    (function () {
+
+    }())
+  }
 }
 </script>
-<style lang="css" scoped>
+<style lang="css">
+@import 'jquery-ui/themes/base/all.css';
 </style>

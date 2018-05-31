@@ -8,12 +8,14 @@ import { dataTableList } from './data/OrderIndex2Data'
 import { dataTableList as ComplaintsData } from './data/ComplaintsData'
 import { dataTableList as SupplierData } from './data/SupplierData'
 import { dataTableList as CopyTemplateData } from './data/CopyTemplateData'
+import { dataTableList as ComplaintsCreateData } from './data/ComplaintsCreateData'
 import { select2List } from './data/select2List'
 import {
   dataTableList as CollectionData,
   dataTableList2 as CollectionData2
 } from './data/CollectionData'
 import {
+  apiDataJQueryUIJQueryUIGetAll,
   apiDataTableSidebarGetAll,
   apiDataTableCopyTemplateGetAll,
   apiSelect2Select24GetAll,
@@ -62,6 +64,11 @@ export default {
       {
         url: apiDataTableCollectionGetAll,
         list: CollectionData
+      },
+      // 建立客訴單
+      {
+        url: apiDataJQueryUIJQueryUIGetAll,
+        list: ComplaintsCreateData
       }
     ]
 
@@ -103,7 +110,6 @@ export default {
         }
       }
     })
-
 
     $.mockjax({
       type: 'GET',
