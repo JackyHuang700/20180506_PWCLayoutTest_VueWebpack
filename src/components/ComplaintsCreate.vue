@@ -19,7 +19,7 @@
                 <input type="text" class="form-control complaintNum" id="input2" placeholder="" readonly value="CP-1712010003">
               </div>
 
-              <div class="form-group col-md-6 d-none d-sm-block">
+              <div class="form-group col-md-6 d-none d-md-block">
               </div>
 
               <div class="form-group col-md-3">
