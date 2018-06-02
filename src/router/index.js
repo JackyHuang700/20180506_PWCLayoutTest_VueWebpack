@@ -8,6 +8,7 @@ import Full from '@/containers/Full'
 import {
   Order,
   Order2,
+  Order3,
   Content,
   HomeIndex,
   HomeIndeV2,
@@ -98,6 +99,11 @@ export default new Router({
           path: 'order2',
           name: 'Order2',
           component: Order2
+        },
+        {
+          path: 'order3',
+          name: 'Order3',
+          component: Order3
         },
         {
           path: 'supplier',

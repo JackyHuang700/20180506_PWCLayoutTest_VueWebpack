@@ -14,6 +14,7 @@ import Form2 from './Form2.vue'
 import CollectDetail from './CollectDetail.vue'
 import Order from './Order.vue'
 import Order2 from './Order2.vue'
+import Order3 from './Order3.vue'
 import ComplaintsIndex from './ComplaintsIndex.vue'
 import ComplaintsCreate from './ComplaintsCreate.vue'
 import Collectionbalance from './Collectionbalance.vue'
@@ -26,6 +27,7 @@ export {
   Supplier2,
   Order,
   Order2,
+  Order3,
   Aside,
   Breadcrumb,
   Callout,

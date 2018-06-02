@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar">
+  <div class="sidebar d-print-none">
     <nav class="sidebar-nav">
       <div slot="header"></div>
       <ul class="nav">
@@ -121,4 +121,5 @@ export default {
   background: rgba(36, 160, 204, 0.5);
   color: white;
 }
+
 </style>

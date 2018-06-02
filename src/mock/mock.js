@@ -36,35 +36,6 @@ export default {
   //
   init_jquery () {
     var mockjaxList = [
-      {
-        url: apiDataTableDataTableGetAll,
-        list: dataTableList
-      },
-      // CopyTemplateData列表資料
-      {
-        url: apiDataTableCopyTemplateGetAll,
-        list: CopyTemplateData
-      },
-      // 供應商列表資料
-      {
-        url: apiDataTableSidebarGetAll,
-        list: SupplierData
-      },
-      // 客訴單列表資料
-      {
-        url: apiDataTableComplaintsGetAll,
-        list: ComplaintsData
-      },
-      // 客訴單列表資料
-      {
-        url: apiDataTableCollectionGetAll2,
-        list: CollectionData2
-      },
-      // 收款維護單列表資料
-      {
-        url: apiDataTableCollectionGetAll,
-        list: CollectionData
-      },
       // 建立客訴單
       {
         url: apiDataJQueryUIJQueryUIGetAll,
@@ -86,6 +57,103 @@ export default {
         }
       })
     }
+
+    $.mockjax({
+      type: 'GET',
+      url: apiDataTableDataTableGetAll,
+      status: 200,
+      dataType: 'json',
+      responseTime: 750,
+      contentType: 'application/json',
+      response: function (settings) {
+        console.info('settings: ', settings)
+        // var { draw, start, length } = settings.data
+        // var { value, regex } = settings.data.search
+
+        // console.log('start', start)
+        // console.log('length', length)
+
+        // var newDataTableList = JSON.parse(JSON.stringify(dataTableList))
+        // newDataTableList.draw = draw
+        // newDataTableList.data = paginationToDataTable(
+        //   newDataTableList.data,
+        //   value || '',
+        //   start || 0,
+        //   length || 10
+        // )
+        // 回應
+        this.responseText = dataTableList
+      }
+    })
+
+    // CopyTemplateData列表資料
+    $.mockjax({
+      type: 'GET',
+      url: apiDataTableCopyTemplateGetAll,
+      status: 200,
+      dataType: 'json',
+      responseTime: 750,
+      contentType: 'application/json',
+      response: function (settings) {
+        // 回應
+        this.responseText = CopyTemplateData
+      }
+    })
+
+    // 供應商列表資料
+    $.mockjax({
+      type: 'GET',
+      url: apiDataTableSidebarGetAll,
+      status: 200,
+      dataType: 'json',
+      responseTime: 750,
+      contentType: 'application/json',
+      response: function (settings) {
+        // 回應
+        this.responseText = SupplierData
+      }
+    })
+
+    // 客訴單列表資料
+    $.mockjax({
+      type: 'GET',
+      url: apiDataTableComplaintsGetAll,
+      status: 200,
+      dataType: 'json',
+      responseTime: 750,
+      contentType: 'application/json',
+      response: function (settings) {
+        // 回應
+        this.responseText = ComplaintsData
+      }
+    })
+    // 客訴單列表資料
+    $.mockjax({
+      type: 'GET',
+      url: apiDataTableCollectionGetAll2,
+      status: 200,
+      dataType: 'json',
+      responseTime: 750,
+      contentType: 'application/json',
+      response: function (settings) {
+        // 回應
+        this.responseText = CollectionData2
+      }
+    })
+
+    // 收款維護單列表資料
+    $.mockjax({
+      type: 'GET',
+      url: apiDataTableCollectionGetAll,
+      status: 200,
+      dataType: 'json',
+      responseTime: 750,
+      contentType: 'application/json',
+      response: function (settings) {
+        // 回應
+        this.responseText = CollectionData
+      }
+    })
 
     // select2
     $.mockjax({

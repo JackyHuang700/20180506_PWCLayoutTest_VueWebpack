@@ -93,7 +93,12 @@ export default {
       name: '新建/編輯/瀏覽訂單',
       url: '/Order2',
       icon: 'icon-star'
-    }]
+    }, {
+      name: '訂製單',
+      url: '/Order3',
+      icon: 'icon-star'
+    }
+    ]
   },
   {
     name: '收款單管理',
