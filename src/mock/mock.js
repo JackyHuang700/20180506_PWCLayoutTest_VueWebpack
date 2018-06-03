@@ -9,12 +9,18 @@ import { dataTableList as ComplaintsData } from './data/ComplaintsData'
 import { dataTableList as SupplierData } from './data/SupplierData'
 import { dataTableList as CopyTemplateData } from './data/CopyTemplateData'
 import { dataTableList as ComplaintsCreateData } from './data/ComplaintsCreateData'
+import {
+  dataTableList as PurchaseData,
+  dataTableList2 as PurchaseAutoCompleteData
+} from './data/PurchaseData'
 import { select2List } from './data/select2List'
 import {
   dataTableList as CollectionData,
   dataTableList2 as CollectionData2
 } from './data/CollectionData'
 import {
+  apiDataTablePurchase,
+  apiDataTablePurchaseAutoComplete,
   apiDataJQueryUIJQueryUIGetAll,
   apiDataTableSidebarGetAll,
   apiDataTableCopyTemplateGetAll,
@@ -152,6 +158,42 @@ export default {
       response: function (settings) {
         // 回應
         this.responseText = CollectionData
+      }
+    })
+
+    // 採購列表資料
+    $.mockjax({
+      type: 'GET',
+      url: apiDataTablePurchase,
+      status: 200,
+      dataType: 'json',
+      responseTime: 750,
+      contentType: 'application/json',
+      response: function (settings) {
+        // 回應
+        this.responseText = PurchaseData
+      }
+    })
+
+    // 採購的下拉式選單
+    $.mockjax({
+      type: 'GET',
+      url: apiDataTablePurchaseAutoComplete,
+      status: 200,
+      dataType: 'json',
+      responseTime: 750,
+      contentType: 'application/json',
+      response: function (settings) {
+        var {
+          term
+        } = settings.data
+
+        var results = PurchaseAutoCompleteData.filter(function (item) {
+          return item.value.toLowerCase().indexOf(term.toLowerCase()) > -1
+        }).splice(0, 10)
+
+        // 回應
+        this.responseText = results
       }
     })
 

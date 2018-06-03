@@ -21,8 +21,12 @@ import Collectionbalance from './Collectionbalance.vue'
 import Collectionbalance2 from './Collectionbalance2.vue'
 import Supplier from './Supplier.vue'
 import Supplier2 from './Supplier2.vue'
+import Purchase from './Purchase.vue'
+import Purchase2 from './Purchase2.vue'
 
 export {
+  Purchase,
+  Purchase2,
   Supplier,
   Supplier2,
   Order,

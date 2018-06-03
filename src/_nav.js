@@ -169,6 +169,22 @@ export default {
       icon: 'icon-star'
     }
     ]
+  },
+  {
+    name: '採購管理',
+    url: '/Purchase',
+    children: [
+      {
+        name: '採購清單',
+        url: '/Purchase',
+        icon: 'icon-star'
+      },
+      {
+        name: '建立採購單',
+        url: '/Purchase2',
+        icon: 'icon-star'
+      }
+    ]
   }
     // {
     //   name: 'Icons',

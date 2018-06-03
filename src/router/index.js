@@ -6,6 +6,8 @@ import Full from '@/containers/Full'
 
 // Views
 import {
+  Purchase,
+  Purchase2,
   Order,
   Order2,
   Order3,
@@ -104,6 +106,16 @@ export default new Router({
           path: 'order3',
           name: 'Order3',
           component: Order3
+        },
+        {
+          path: 'purchase',
+          name: 'Purchase',
+          component: Purchase
+        },
+        {
+          path: 'purchase2',
+          name: 'Purchase2',
+          component: Purchase2
         },
         {
           path: 'supplier',
