@@ -10,7 +10,7 @@
           </div>
           <div class="card-body">
 
-            <a type="button" class="btn btn-primary" href="//">建立</a>
+            <a class="btn btn-primary" href="/Supplier/Create">建立</a>
 
           </div>
         </div>

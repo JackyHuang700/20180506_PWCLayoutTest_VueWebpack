@@ -1,59 +1,27 @@
 <template>
-  <div class="container-fluid">
+  <div class="container-fluid mt-4">
     <div class="row">
 
       <div class="col-12">
         <div class="card">
           <div class="card-header">
-            <i class="fa fa-wpforms" aria-hidden="true"></i>
-            操作
+            <i class="fa fa-wpforms" aria-hidden="true"></i>快捷鍵
           </div>
           <div class="card-body">
 
-            <a type="button" class="btn btn-primary" href="//">建立</a>
+            <button type="button" class="btn btn-primary buyingState" data-param="">全部</button>
+            <button type="button" class="btn btn-primary buyingState" data-param="1">已採買</button>
+            <button type="button" class="btn btn-primary buyingState" data-param="0">未採買</button>
 
           </div>
+
         </div>
       </div>
 
       <div class="col-12">
         <div class="card">
           <div class="card-header">
-            <i class="fa fa-wpforms" aria-hidden="true"></i>
-            進階查詢
-          </div>
-          <div class="card-body">
-
-            <div class="form-row">
-              <div class="form-group col-sm-3">
-                <label for="" class="">...</label>
-                <input type="text" class="form-control form-control-sm" id="" name="" placeholder="" />
-
-              </div>
-              <div class="form-group col-sm-3">
-                <label for="" class="">...</label>
-                <input type="text" class="form-control" id="" name="" placeholder="" />
-              </div>
-              <div class="form-group col-sm-3">
-                <label for="" class="">...</label>
-                <input type="text" class="form-control form-control-sm" id="" name="" placeholder="" />
-
-              </div>
-              <div class="form-group col-sm-3">
-                <label for="" class="">...</label>
-                <input type="text" class="form-control" id="" name="" placeholder="" />
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12">
-        <div class="card">
-          <div class="card-header">
-            <i class="fa fa-wpforms" aria-hidden="true"></i>
-            供應商清單
+            <i class="fa fa-wpforms" aria-hidden="true"></i>採購單清單
           </div>
           <div class="card-body">
 
@@ -61,20 +29,22 @@
               <thead>
                 <tr>
                   <th scope="col" class="align-middle">#</th>
-                  <th scope="col" class="align-middle">物料編號</th>
-                  <th scope="col" class="align-middle">WEB訂單編號(唯一碼)</th>
-                  <th scope="col" class="align-middle">原物料採購備註</th>
-                  <th scope="col" class="align-middle">採購條碼號</th>
-                  <th scope="col" class="align-middle">物料描述</th>
-                  <th scope="col" class="align-middle">材料顏色名稱</th>
-                  <th scope="col" class="align-middle">數量</th>
-                  <th scope="col" class="align-middle">未清數量</th>
+                  <th scope="col" class="align-middle">採購編號</th>
+                  <th scope="col" class="align-middle">供應商</th>
+                  <th scope="col" class="align-middle">採購人員</th>
+                  <th scope="col" class="align-middle">總金額</th>
+                  <th scope="col" class="align-middle">幣種</th>
+                  <th scope="col" class="align-middle">採買狀態</th>
                 </tr>
               </thead>
             </table>
 
           </div>
         </div>
+      </div>
+
+      <div class="col-12  text-right">
+        <a href="//" class="btn btn-danger col-2">返回</a>
       </div>
 
     </div>
@@ -94,23 +64,38 @@ export default {
   name: 'purchase',
   created () { },
   mounted () {
+    // dataTables
     (function () {
+      var buyingState = ''
+
+      var buyingStateList = document.getElementsByClassName('buyingState')
+      for (var i = 0; i < buyingStateList.length; i++) {
+        buyingStateList[i].addEventListener('click', ChangeParameter, false)
+      }
+
       var table = $('#example').DataTable({
         'select': {
           selector: 'td:not(:first-child)',
           style: 'os'
         },
-        'ajax': apiDataTablePurchase,
+        'paging': false,
+        'searching': false,
+        'info': false,
+        'ajax': {
+          url: apiDataTablePurchase,
+          type: 'Get',
+          data: function () {
+            return GetSearchParameter()
+          }
+        },
         'columns': [
           {},
-          { 'data': 'mainData_1' },
-          { 'data': 'mainData_2' },
-          { 'data': 'mainData_3' },
-          { 'data': 'mainData_4' },
-          { 'data': 'mainData_5' },
-          { 'data': 'mainData_6' },
-          { 'data': 'mainData_7' },
-          {}
+          { 'data': 'purchaseNumber' },
+          { 'data': 'supplierName' },
+          { 'data': 'purchaserUserId' },
+          { 'data': 'allMoney' },
+          { 'data': 'currCode' },
+          { 'data': 'buyingState' }
         ],
         'order': [
           [1, 'asc']
@@ -118,26 +103,31 @@ export default {
         'columnDefs': [
           {
             'targets': 0,
-            'data': 'id',
+            'data': '',
             'orderable': false,
             'render': function (data, type, row, meta) {
               return ('<button type="button" class="btn btn-primary details-control">展開明細</button>')
             }
           },
           {
-            'targets': -1,
-            'data': 'id',
+            'targets': 6,
+            'data': '',
             'orderable': false,
             'render': function (data, type, row, meta) {
-              return (
-                '<div class="btn-group">' +
-                '<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">操作</button>' +
-                '<div class="dropdown-menu">' +
-                '  <a class="dropdown-item" href="//?={{id}}">編輯</a>' +
-                '  <a class="dropdown-item" href="//?={{id}}">刪除</a>' +
-                '</div>' +
-                '</div>'
-              ).replace('{{id}}', '')
+              var template = ''
+              switch (row.buyingState) {
+                case '0':
+                  template = '<div class="alert alert-danger text-center" role="alert">未採買</div>'
+                  break
+                case '1':
+                  template = '<div class="alert alert-primary text-center" role="alert">已採買</div>'
+                  break
+
+                default:
+                  break
+              }
+
+              return (template)
             }
           }
         ],
@@ -158,7 +148,7 @@ export default {
         }
       })
 
-      // 沖帳明細
+      // 明細
       function childRows (d) {
         d = d || []
 
@@ -167,24 +157,61 @@ export default {
           d.map(function (data) {
             trTemplate += (
               '<tr>' +
-              '  <td>{{subData_1}}</td>' +
-              '  <td>{{subData_2}}</td>' +
-              '  <td>{{subData_3}}</td>' +
+              '  <td>{{purchaseCode}}</td>' +
+              '  <td>{{materialsName}}</td>' +
+              '  <td>{{price}}</td>' +
+              '  <td>{{currCode}}</td>' +
+              '  <td>{{quantity}}</td>' +
+              '  <td>{{sumMoney}}</td>' +
+              '  <td>{{remark}}</td>' +
               '</tr>'
-            ).replace('{{subData_1}}', '')
-              .replace('{{subData_2}}', '')
-              .replace('{{subData_3}}', '')
+            ).replace('{{purchaseCode}}', data.purchaseCode)
+              .replace('{{materialsName}}', data.materialsName)
+              .replace('{{price}}', data.price)
+              .replace('{{currCode}}', data.currCode)
+              .replace('{{quantity}}', data.quantity)
+              .replace('{{sumMoney}}', data.sumMoney)
+              .replace('{{remark}}', data.remark)
           })
         }
 
         return (
           '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;" class="table table-striped">' +
           '  <tr>' +
-          '    <td scope="col">....</td>' +
-          '    <td scope="col">....</td>' +
-          '    <td scope="col">....</td>' +
+          '    <td scope="col">採購條碼</td>' +
+          '    <td scope="col">原物料名稱</td>' +
+          '    <td scope="col">單價</td>' +
+          '    <td scope="col">幣種</td>' +
+          '    <td scope="col">數量</td>' +
+          '    <td scope="col">總價</td>' +
+          '    <td scope="col">備註</td>' +
           '  </tr>' + trTemplate +
           '</table>')
+      }
+
+      // 搜尋參數
+      function GetSearchParameter () {
+        return {
+          buyingState: buyingState
+        }
+      }
+
+      // 置換參數
+      function ChangeParameter (e) {
+        var self = e.target
+        buyingState = self.getAttribute('data-param')
+        ReLoadDataSource()
+      }
+
+      // 重新載入當前資料
+      function ReLoadDataSource () {
+        // 判斷是否已初始化 DataTable
+        if ($.fn.dataTable.isDataTable('#example')) {
+          var table = $('#example').DataTable()
+
+          // 重載資料
+          table.ajax.reload()
+        }
       }
     }())
   }
@@ -192,4 +219,8 @@ export default {
 </script>
 <style lang="css">
 @import 'datatables.net-bs4/css/dataTables.bootstrap4.css';
+
+#example_wrapper {
+  padding: 0;
+}
 </style>

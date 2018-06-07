@@ -1,60 +1,42 @@
 <template>
-  <div class="container-fluid">
+  <div class="coantiner-fluid">
     <div class="row">
-
       <div class="col-12">
-        <div class="card">
-          <div class="card-header">
-            <i class="fa fa-wpforms" aria-hidden="true"></i>
-            操作
-          </div>
-          <div class="card-body">
-
-            <a type="button" class="btn btn-primary" href="//">建立</a>
-
-          </div>
-        </div>
+        <h2 class="text-center mb-4">訂單流程管理</h2>
       </div>
-
       <div class="col-12">
         <div class="card">
           <div class="card-header">
-            <i class="fa fa-wpforms" aria-hidden="true"></i>
-            進階查詢
+            <i class="fa fa-wpforms" aria-hidden="true"></i>訂單詳細資訊
           </div>
           <div class="card-body">
 
             <div class="form-row">
               <div class="form-group col-sm-3">
-                <label for="" class="">...</label>
-                <input type="text" class="form-control form-control-sm" id="" name="" placeholder="" />
-
+                <label for="template1">...</label>
+                <input type="text" class="form-control" id="template1" name="template1" placeholder="" readonly>
               </div>
               <div class="form-group col-sm-3">
-                <label for="" class="">...</label>
-                <input type="text" class="form-control" id="" name="" placeholder="" />
+                <label for="template6">...</label>
+                <select id="template6" name="template6" class="form-control" readonly>
+                  <option selected>Choose...</option>
+                  <option>...</option>
+                </select>
               </div>
               <div class="form-group col-sm-3">
-                <label for="" class="">...</label>
-                <input type="text" class="form-control form-control-sm" id="" name="" placeholder="" />
-
-              </div>
-              <div class="form-group col-sm-3">
-                <label for="" class="">...</label>
-                <input type="text" class="form-control" id="" name="" placeholder="" />
+                <label for="template5">..</label>
+                <textarea name="template5" id="template5" cols="30" rows="3" class="form-control" readonly></textarea>
               </div>
             </div>
 
           </div>
-           <div class="card-footer"></div>
+          <div class="card-footer"></div>
         </div>
       </div>
-
       <div class="col-12">
         <div class="card">
           <div class="card-header">
-            <i class="fa fa-wpforms" aria-hidden="true"></i>
-            供應商清單
+            <i class="fa fa-wpforms" aria-hidden="true"></i>...清單
           </div>
           <div class="card-body">
 
@@ -71,7 +53,54 @@
             </table>
 
           </div>
-           <div class="card-footer"></div>
+          <div class="card-footer"></div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+
+                <div class="form-group row">
+                  <div class="form-group col-sm-3">
+                    <label for="template1">...</label>
+                    <input type="text" class="form-control" id="template1" name="template1" placeholder="" readonly>
+                  </div>
+                  <div class="form-group col-sm-3">
+                    <label for="template6">...</label>
+                    <select id="template6" name="template6" class="form-control" readonly>
+                      <option selected>Choose...</option>
+                      <option>...</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-sm-3">
+                    <label for="template5">..</label>
+                    <textarea name="template5" id="template5" cols="30" rows="3" class="form-control" readonly></textarea>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-sm-3">
+                    <label for="template1">...</label>
+                    <input type="text" class="form-control" id="template1" name="template1" placeholder="">
+                  </div>
+                </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -87,12 +116,11 @@ import {
 import {
   apiDataTableCopyTemplateGetAll
 } from '../api/api'
-
 export default {
-  name: 'supplier',
+  name: 'orderprocessmanagement',
   created () { },
   mounted () {
-    // dataTables
+    // dataTable
     (function () {
       var table = $('#example').DataTable({
         'select': {
@@ -128,6 +156,7 @@ export default {
                 '<div class="btn-group">' +
                 '<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">操作</button>' +
                 '<div class="dropdown-menu">' +
+                '  <a class="dropdown-item" href="//?={{id}}" data-toggle="modal" data-target="#exampleModalCenter">asdfa</a>' +
                 '  <a class="dropdown-item" href="//?={{id}}">編輯</a>' +
                 '  <a class="dropdown-item" href="//?={{id}}">刪除</a>' +
                 '</div>' +
@@ -153,7 +182,7 @@ export default {
         }
       })
 
-      // 明細
+      // 沖帳明細
       function childRows (d) {
         d = d || []
 
@@ -181,10 +210,18 @@ export default {
           '  </tr>' + trTemplate +
           '</table>')
       }
+    }());
+    //
+    (function () {
+
+    }());
+    //
+    (function () {
+
     }())
   }
 }
 </script>
-<style lang="css">
+<style lang="css" >
 @import 'datatables.net-bs4/css/dataTables.bootstrap4.css';
 </style>

@@ -11,7 +11,7 @@
             <div class="card-body">
 
               <div class="form-row">
-                <div class="form-group col-md-3">
+                <div class="form-group col-sm-3">
                   <label for="template1">快速挑選供應商</label>
                   <input type="text" class="form-control supplierSearch" id="template1" name="template1" placeholder="">
                 </div>
@@ -29,23 +29,23 @@
             <div class="card-body">
 
               <div class="form-row">
-                <div class="form-group col-md-3">
+                <div class="form-group col-sm-3">
                   <label for="template1">供應商</label>
                   <input type="text" class="form-control supplier" id="template1" name="template1" placeholder="">
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-sm-3">
                   <label for="template2">名稱</label>
                   <input type="text" class="form-control supplierName" id="template2" name="template2" placeholder="">
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-sm-3">
                   <label for="template3">聯絡人</label>
                   <input type="text" class="form-control" id="template3" name="template3" placeholder="">
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-sm-3">
                   <label for="template4">供應商參考</label>
                   <input type="text" class="form-control" id="template4" name="template4" placeholder="">
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-sm-3">
                   <label for="template4">業務夥伴幣別</label>
                   <select id="template4" name="template4" class="form-control">
                     <option selected>本國幣別</option>
@@ -68,126 +68,126 @@
             <div class="card-body">
 
               <div class="form-row">
-                <div class="form-group col-md-3">
+                <div class="form-group col-sm-3">
                   <label for="template1">單據內部標識</label>
                   <input type="text" class="form-control" name="" id="template1" placeholder="">
                 </div>
-                <div class="form-group col-md-9 d-none d-sm-block"></div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-sm-9 d-none d-sm-block"></div>
+                <div class="form-group col-sm-3">
                   <label for="template2">行編號</label>
                   <input type="text" class="form-control" name="" id="template2" placeholder="">
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-sm-3">
                   <label for="template3">行狀態</label>
                   <input type="text" class="form-control" name="" id="template3" placeholder="">
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-sm-3">
                   <label for="template3">行總計</label>
                   <input type="text" class="form-control" name="" id="template3" placeholder="">
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-sm-3">
                   <label for="template4">行總計（外幣）</label>
                   <input type="text" class="form-control" name="" id="template4" placeholder="">
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-sm-3">
                   <label for="template3">行交貨日期</label>
                   <input type="text" class="form-control" name="" id="template3" placeholder="">
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-sm-3">
                   <label for="template2">每行稅率</label>
                   <input type="text" class="form-control" name="" id="template2" placeholder="">
                 </div>
-                <div class="form-group col-md-6 d-none d-sm-block"></div>
+                <div class="form-group col-sm-6 d-none d-sm-block"></div>
 
-                <div class="form-group col-md-3">
+                <div class="form-group col-sm-3">
                   <label for="template4">物料編號</label>
                   <input type="text" class="form-control" name="" id="template4" placeholder="">
                 </div>
 
-                <div class="form-group col-md-3">
+                <div class="form-group col-sm-3">
                   <label for="template2">數量</label>
                   <input type="text" class="form-control" name="" id="template2" placeholder="">
                 </div>
 
-                <div class="form-group col-md-3">
+                <div class="form-group col-sm-3">
                   <label for="template4">剩餘未清數量</label>
                   <input type="text" class="form-control" name="" id="template4" placeholder="">
                 </div>
-                <div class="form-group col-md-12">
+                <div class="form-group col-sm-12">
                   <label for="template1">物料/服務描述</label>
                   <textarea name="" id="template1" cols="30" rows="10" class="form-control"></textarea>
                 </div>
 
-                <div class="form-group col-md-3">
+                <div class="form-group col-sm-3">
                   <label for="template1">價格貨幣</label>
                   <input type="text" class="form-control" name="" id="template1" placeholder="">
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-sm-3">
                   <label for="template2">貨幣匯率</label>
                   <input type="text" class="form-control" name="" id="template2" placeholder="">
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-sm-3">
                   <label for="PriceBefDi">單價(折扣前)</label>
                   <input type="text" class="form-control" name="PriceBefDi" id="PriceBefDi" placeholder="" value="0">
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-sm-3">
                   <label for="DiscPrcnt">每行折扣 %</label>
                   <input type="text" class="form-control" name="DiscPrcnt" id="DiscPrcnt" placeholder="" value="0">
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-sm-3">
                   <label for="Price">價格(未稅)</label>
                   <input type="text" class="form-control" name="Price" id="Price" placeholder="" value="0" readonly>
                 </div>
 
-                <div class="form-group col-md-3">
+                <div class="form-group col-sm-3">
                   <label for="template3">稅定義</label>
                   <input type="text" class="form-control" name="" id="template3" placeholder="">
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-sm-3">
                   <label for="template4">含稅單價</label>
                   <input type="text" class="form-control" name="" id="template4" placeholder="">
                 </div>
 
-                <div class="form-group col-md-3">
+                <div class="form-group col-sm-3">
                   <label for="template1">總稅額</label>
                   <input type="text" class="form-control" name="" id="template1" placeholder="">
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-sm-3">
                   <label for="template2">稅額（外幣）</label>
                   <input type="text" class="form-control" name="" id="template2" placeholder="">
                 </div>
 
-                <div class="form-group col-md-3">
+                <div class="form-group col-sm-3">
                   <label for="template1">供應商目錄編號</label>
                   <input type="text" class="form-control" name="" id="template1" placeholder="">
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-sm-3">
                   <label for="template2">倉庫編號</label>
                   <input type="text" class="form-control" name="" id="template2" placeholder="">
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-sm-3">
                   <label for="template3">計量單位代碼</label>
                   <input type="text" class="form-control" name="" id="template3" placeholder="">
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-sm-3">
                   <label for="template4">WEB訂單編號(唯一碼)</label>
                   <input type="text" class="form-control" name="" id="template4" placeholder="">
                 </div>
 
-                <div class="form-group col-md-12">
+                <div class="form-group col-sm-12">
                   <label for="template1">使用位置以及備註</label>
                   <textarea name="" id="template1" cols="30" rows="10" class="form-control"></textarea>
                 </div>
 
-                <div class="form-group col-md-3">
+                <div class="form-group col-sm-3">
                   <label for="template2">材料顏色名稱</label>
                   <input type="text" class="form-control" name="" id="template2" placeholder="">
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-sm-3">
                   <label for="template3">採購條碼號</label>
                   <input type="text" class="form-control" name="" id="template3" placeholder="">
                 </div>
-                <div class="form-group col-md-12">
+                <div class="form-group col-sm-12">
                   <label for="template4">原物料採購備註</label>
                   <textarea name="" id="template4" cols="30" rows="10" class="form-control"></textarea>
                 </div>
@@ -198,6 +198,7 @@
         </div>
         <div class="col-12 text-right">
           <button type="submit" class="btn btn-success col-3">儲存</button>
+          <button type="button" class="btn btn-danger col-1" onclick="javascript:location.href='/Purchase/Index'">取消</button>
         </div>
       </form>
     </div>

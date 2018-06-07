@@ -185,8 +185,10 @@ export default {
       contentType: 'application/json',
       response: function (settings) {
         var {
-          term
+          term,
+          buyingState
         } = settings.data
+        console.log(buyingState)
 
         var results = PurchaseAutoCompleteData.filter(function (item) {
           return item.value.toLowerCase().indexOf(term.toLowerCase()) > -1

@@ -183,6 +183,22 @@ export default {
         name: '建立採購單',
         url: '/Purchase2',
         icon: 'icon-star'
+      },
+      {
+        name: '採購原物料建立',
+        url: '/Materials',
+        icon: 'icon-star'
+      }
+    ]
+  },
+  {
+    name: '訂單流程管理',
+    url: '/OrderProcessManagement',
+    children: [
+      {
+        name: '訂單流程管理',
+        url: '/OrderProcessManagement',
+        icon: 'icon-star'
       }
     ]
   }

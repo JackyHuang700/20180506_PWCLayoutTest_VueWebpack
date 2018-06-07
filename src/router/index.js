@@ -8,6 +8,8 @@ import Full from '@/containers/Full'
 import {
   Purchase,
   Purchase2,
+  Materials,
+  OrderProcessManagement,
   Order,
   Order2,
   Order3,
@@ -116,6 +118,16 @@ export default new Router({
           path: 'purchase2',
           name: 'Purchase2',
           component: Purchase2
+        },
+        {
+          path: 'materials',
+          name: 'Materials',
+          component: Materials
+        },
+        {
+          path: 'orderprocessmanagement',
+          name: 'OrderProcessManagement',
+          component: OrderProcessManagement
         },
         {
           path: 'supplier',
