@@ -36,17 +36,23 @@
       <div class="col-12">
         <div class="card">
           <div class="card-header">
-            <i class="fa fa-wpforms" aria-hidden="true"></i>...清單
+            <i class="fa fa-wpforms" aria-hidden="true"></i>訂單細詳品項清單
           </div>
           <div class="card-body">
 
             <table id="example" cellspacing="0" width="100%" class="table table-gray-100 table-hover display">
               <thead>
                 <tr>
-                  <th scope="col" class="align-middle">#</th>
-                  <th scope="col" class="align-middle">代碼</th>
-                  <th scope="col" class="align-middle">稅籍ID</th>
-                  <th scope="col" class="align-middle">聯絡人</th>
+                  <th scope="col" class="align-middle">明細編號</th>
+                  <th scope="col" class="align-middle">產品名稱</th>
+                  <th scope="col" class="align-middle">正面圖</th>
+                  <th scope="col" class="align-middle">KU代碼</th>
+                  <th scope="col" class="align-middle">顏色代碼</th>
+                  <th scope="col" class="align-middle">產品尺寸</th>
+                  <th scope="col" class="align-middle">明細總計</th>
+                  <th scope="col" class="align-middle">交貨日期</th>
+                  <th scope="col" class="align-middle">訂購數量</th>
+                  <th scope="col" class="align-middle">供應策略</th>
                   <th scope="col" class="align-middle">操作</th>
                 </tr>
               </thead>
@@ -54,53 +60,6 @@
 
           </div>
           <div class="card-footer"></div>
-        </div>
-      </div>
-
-      <div class="col-12">
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-
-                <div class="form-group row">
-                  <div class="form-group col-sm-3">
-                    <label for="template1">...</label>
-                    <input type="text" class="form-control" id="template1" name="template1" placeholder="" readonly>
-                  </div>
-                  <div class="form-group col-sm-3">
-                    <label for="template6">...</label>
-                    <select id="template6" name="template6" class="form-control" readonly>
-                      <option selected>Choose...</option>
-                      <option>...</option>
-                    </select>
-                  </div>
-                  <div class="form-group col-sm-3">
-                    <label for="template5">..</label>
-                    <textarea name="template5" id="template5" cols="30" rows="3" class="form-control" readonly></textarea>
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="form-group col-sm-3">
-                    <label for="template1">...</label>
-                    <input type="text" class="form-control" id="template1" name="template1" placeholder="">
-                  </div>
-                </div>
-
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -114,7 +73,7 @@ import {
   language
 } from '../config/dataTable'
 import {
-  apiDataTableCopyTemplateGetAll
+// apiOrderProcessManagementGetThisOrderDetail
 } from '../api/api'
 export default {
   name: 'orderprocessmanagement',
@@ -127,41 +86,64 @@ export default {
           selector: 'td:not(:first-child)',
           style: 'os'
         },
-        'ajax': apiDataTableCopyTemplateGetAll,
+        'ajax': {
+          'url': '/OrderProcessManagement/GetThisOrderDetail',
+          'data': function () {
+            return {
+              aaa: 'asdfasfdadf'
+            }
+          }
+        },
         'columns': [
-          {},
-          { 'data': 'mainData_1' },
-          { 'data': 'mainData_2' },
-          { 'data': 'mainData_3' },
+          { 'data': 'detailNumber' },
+          { 'data': 'productName' },
+          { 'data': 'productImg' },
+          { 'data': 'sKUCode' },
+          { 'data': 'colorCode' },
+          { 'data': 'productSize' },
+          { 'data': 'total' },
+          { 'data': 'deliveryDate' },
+          { 'data': 'quantity' },
+          { 'data': 'supplyStrategy' },
           {}
         ],
         'order': [
-          [1, 'asc']
+          [1, 'asc'],
+          [2, 'asc'],
+          [3, 'asc'],
+          [4, 'asc'],
+          [5, 'asc'],
+          [6, 'asc'],
+          [7, 'asc'],
+          [8, 'asc'],
+          [9, 'asc']
         ],
         'columnDefs': [
           {
-            'targets': 0,
-            'data': 'id',
-            'orderable': false,
-            'render': function (data, type, row, meta) {
-              return ('<button type="button" class="btn btn-primary details-control">展開明細</button>')
-            }
-          },
-          {
             'targets': -1,
-            'data': 'id',
+            'data': '',
             'orderable': false,
             'render': function (data, type, row, meta) {
+              var aDomList = ''
+              switch (row.supplyStrategy) {
+                case '0':
+                case 0:
+                  aDomList += '<a class="dropdown-item" href="OrderProcessManagement/Create?id={{id}}">建立</a>'
+                  break
+                default:
+                  aDomList += '<a class="dropdown-item" href="OrderProcessManagement/Update?id={{id}}">更新</a>'
+                  aDomList += '<a class="dropdown-item" href="OrderProcessManagement/Detail?id={{id}}">詳細</a>'
+                  break
+              }
+
               return (
                 '<div class="btn-group">' +
                 '<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">操作</button>' +
                 '<div class="dropdown-menu">' +
-                '  <a class="dropdown-item" href="//?={{id}}" data-toggle="modal" data-target="#exampleModalCenter">asdfa</a>' +
-                '  <a class="dropdown-item" href="//?={{id}}">編輯</a>' +
-                '  <a class="dropdown-item" href="//?={{id}}">刪除</a>' +
+                 aDomList +
                 '</div>' +
                 '</div>'
-              ).replace('{{id}}', '')
+              ).replace('{{id}}', row.id)
             }
           }
         ],

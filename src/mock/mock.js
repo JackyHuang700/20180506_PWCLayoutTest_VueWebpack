@@ -9,6 +9,7 @@ import { dataTableList as ComplaintsData } from './data/ComplaintsData'
 import { dataTableList as SupplierData } from './data/SupplierData'
 import { dataTableList as CopyTemplateData } from './data/CopyTemplateData'
 import { dataTableList as ComplaintsCreateData } from './data/ComplaintsCreateData'
+import { dataTableList as OrderProcessManagementData } from './data/OrderProcessManagementData'
 import {
   dataTableList as PurchaseData,
   dataTableList2 as PurchaseAutoCompleteData
@@ -30,7 +31,8 @@ import {
   apiDataTableDataTableGetAll,
   apiDataTableCollectionGetAll,
   apiDataTableCollectionGetAll2,
-  apiDataTableComplaintsGetAll
+  apiDataTableComplaintsGetAll,
+  apiOrderProcessManagementGetThisOrderDetail
 } from '../api/api'
 
 export default {
@@ -89,6 +91,21 @@ export default {
         // )
         // 回應
         this.responseText = dataTableList
+      }
+    })
+
+    // OrderProcessManagementData列表資料
+    $.mockjax({
+      type: 'GET',
+      url: apiOrderProcessManagementGetThisOrderDetail,
+      status: 200,
+      dataType: 'json',
+      responseTime: 750,
+      contentType: 'application/json',
+      response: function (settings) {
+        console.log(settings)
+        // 回應
+        this.responseText = OrderProcessManagementData
       }
     })
 

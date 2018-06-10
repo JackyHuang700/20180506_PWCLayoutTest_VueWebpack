@@ -13,6 +13,7 @@ export const apiDataTablePurchase = '/api/dataTable/Purchase'
 export const apiDataTablePurchaseAutoComplete = '/api/dataTable/PurchaseAutoComplete'
 export const apiDataTableCopyTemplateGetAll = '/api/dataTable/CopyTemplateGetAll'
 export const apiDataJQueryUIJQueryUIGetAll = '/api/JQueryUI/JQueryUIGetAll'
+export const apiOrderProcessManagementGetThisOrderDetail = '/OrderProcessManagement/GetThisOrderDetail'
 
 export const methodGetSelect2Select24GetAll = params => {
   return axios.get(apiDataTableDataTableGetAll, {
