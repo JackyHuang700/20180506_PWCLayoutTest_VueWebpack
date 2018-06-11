@@ -199,6 +199,11 @@ export default {
         name: '訂單流程管理',
         url: '/OrderProcessManagement',
         icon: 'icon-star'
+      },
+      {
+        name: '訂單asfasfdasdf',
+        url: '/OrderProcessManagement2',
+        icon: 'icon-star'
       }
     ]
   }

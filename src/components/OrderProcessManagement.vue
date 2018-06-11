@@ -81,7 +81,7 @@ export default {
   mounted () {
     // dataTable
     (function () {
-      var table = $('#example').DataTable({
+      $('#example').DataTable({
         'select': {
           selector: 'td:not(:first-child)',
           style: 'os'
@@ -90,7 +90,7 @@ export default {
           'url': '/OrderProcessManagement/GetThisOrderDetail',
           'data': function () {
             return {
-              aaa: 'asdfasfdadf'
+              aa: 'bb'
             }
           }
         },
@@ -108,6 +108,7 @@ export default {
           {}
         ],
         'order': [
+          [0, 'asc'],
           [1, 'asc'],
           [2, 'asc'],
           [3, 'asc'],
@@ -115,8 +116,7 @@ export default {
           [5, 'asc'],
           [6, 'asc'],
           [7, 'asc'],
-          [8, 'asc'],
-          [9, 'asc']
+          [8, 'asc']
         ],
         'columnDefs': [
           {
@@ -128,11 +128,11 @@ export default {
               switch (row.supplyStrategy) {
                 case '0':
                 case 0:
-                  aDomList += '<a class="dropdown-item" href="OrderProcessManagement/Create?id={{id}}">建立</a>'
+                  aDomList += '<a class="dropdown-item" href="OrderProcessManagement/Create?id={{supplyStrategy}}">建立</a>'
                   break
                 default:
-                  aDomList += '<a class="dropdown-item" href="OrderProcessManagement/Update?id={{id}}">更新</a>'
-                  aDomList += '<a class="dropdown-item" href="OrderProcessManagement/Detail?id={{id}}">詳細</a>'
+                  aDomList += '<a class="dropdown-item" href="OrderProcessManagement/Update?id={{supplyStrategy}}">更新</a>'
+                  aDomList += '<a class="dropdown-item" href="OrderProcessManagement/Detail?id={{supplyStrategy}}">詳細</a>'
                   break
               }
 
@@ -143,63 +143,12 @@ export default {
                  aDomList +
                 '</div>' +
                 '</div>'
-              ).replace('{{id}}', row.id)
+              ).replace('{{supplyStrategy}}', row.supplyStrategy)
             }
           }
         ],
         'language': language
       })
-
-      // 明細
-      $('#example tbody').on('click', '.details-control', function () {
-        var tr = $(this).closest('tr')
-        var row = table.row(tr)
-
-        if (row.child.isShown()) {
-          row.child.hide()
-          tr.removeClass('shown')
-        } else {
-          row.child(childRows(row.data().detail)).show()
-          tr.addClass('shown')
-        }
-      })
-
-      // 沖帳明細
-      function childRows (d) {
-        d = d || []
-
-        var trTemplate = ''
-        if (d.length) {
-          d.map(function (data) {
-            trTemplate += (
-              '<tr>' +
-              '  <td>{{subData_1}}</td>' +
-              '  <td>{{subData_2}}</td>' +
-              '  <td>{{subData_3}}</td>' +
-              '</tr>'
-            ).replace('{{subData_1}}', '')
-              .replace('{{subData_2}}', '')
-              .replace('{{subData_3}}', '')
-          })
-        }
-
-        return (
-          '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;" class="table table-striped">' +
-          '  <tr>' +
-          '    <td scope="col">....</td>' +
-          '    <td scope="col">....</td>' +
-          '    <td scope="col">....</td>' +
-          '  </tr>' + trTemplate +
-          '</table>')
-      }
-    }());
-    //
-    (function () {
-
-    }());
-    //
-    (function () {
-
     }())
   }
 }

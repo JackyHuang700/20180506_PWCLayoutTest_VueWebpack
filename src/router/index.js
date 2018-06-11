@@ -10,6 +10,7 @@ import {
   Purchase2,
   Materials,
   OrderProcessManagement,
+  OrderProcessManagement2,
   Order,
   Order2,
   Order3,
@@ -128,6 +129,11 @@ export default new Router({
           path: 'orderprocessmanagement',
           name: 'OrderProcessManagement',
           component: OrderProcessManagement
+        },
+        {
+          path: 'orderprocessmanagement2',
+          name: 'OrderProcessManagement2',
+          component: OrderProcessManagement2
         },
         {
           path: 'supplier',

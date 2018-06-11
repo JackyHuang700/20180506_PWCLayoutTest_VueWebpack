@@ -25,11 +25,13 @@ import Purchase from './Purchase.vue'
 import Purchase2 from './Purchase2.vue'
 import Materials from './Materials.vue'
 import OrderProcessManagement from './OrderProcessManagement.vue'
+import OrderProcessManagement2 from './OrderProcessManagement2.vue'
 
 export {
   Purchase,
   Purchase2,
   OrderProcessManagement,
+  OrderProcessManagement2,
   Materials,
   Supplier,
   Supplier2,
