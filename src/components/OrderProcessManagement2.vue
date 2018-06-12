@@ -4,7 +4,7 @@
       <div class="col-12">
         <div class="card">
           <div class="card-header">
-            <i class="fa fa-wpforms" aria-hidden="true"></i>
+            <i class="fa fa-wpforms" aria-hidden="true"></i>產品資訊
           </div>
           <div class="card-body">
 
@@ -48,7 +48,7 @@
           </div>
           <div class="card-body">
             <div class="col-12">
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">開啟視窗</button>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">原物料選擇</button>
             </div>
             <div class="col-12">
               <table id="bonTable" class="display" width="100%" cellspacing="0">
@@ -80,6 +80,10 @@
             <button type="button" class="btn btn-primary btn-lg">產生採購單</button>
           </div>
         </div>
+      </div>
+      <div class="col-12 text-right">
+        <button type="button" class="btn btn-success col-sm-2 mb-3">建立</button>
+        <a href="//" class="btn btn-danger col-sm-1 mb-3">返回</a>
       </div>
 
       <div class="col-12">
