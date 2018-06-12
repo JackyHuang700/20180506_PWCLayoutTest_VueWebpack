@@ -10,20 +10,20 @@
 
             <div class="form-row">
               <div class="form-group col-sm-3">
-                <label for="template1">...</label>
-                <input type="text" class="form-control" id="template1" name="template1" placeholder="" readonly>
+                <label for="template1">銷售單號</label>
+                <input type="text" class="form-control" id="..." name="..." placeholder="" value="1800001" readonly>
               </div>
               <div class="form-group col-sm-3">
-                <label for="template6">...</label>
-                <select id="template6" name="template6" class="form-control" readonly>
-                  <option selected>Choose...</option>
-                  <option>...</option>
-                </select>
+                <label for="...">明細編號</label>
+                <input type="text" class="form-control" id="..." name="..." placeholder="" value="1800001-001" readonly>
               </div>
               <div class="form-group col-sm-3">
+                <label for="...">產品名稱</label>
+                <input type="text" class="form-control" id="..." name="..." placeholder="" value="Ace花邊裙擺" readonly>
               </div>
-
               <div class="form-group col-sm-3">
+                <label for="template1">正面圖</label>
+                <img src="http://fakeimg.pl/304x236/" class="img-thumbnail form-control" alt="Cinque Terre" width="304" height="236">
               </div>
 
               <div class="form-group col-sm-3">
@@ -54,9 +54,13 @@
               <table id="bonTable" class="display" width="100%" cellspacing="0">
                 <thead>
                   <tr>
-                    <th class="text-center">...</th>
-                    <th class="text-center">...</th>
-                    <th class="text-center">...</th>
+                    <th class="text-center">物料編號</th>
+                    <th class="text-center">物料名稱</th>
+                    <th class="text-center">單價</th>
+                    <th class="text-center">幣種</th>
+                    <th class="text-center">單位</th>
+                    <th class="text-center">庫存數量</th>
+                    <th class="text-center">需求量</th>
                     <th class="text-center">操作</th>
                   </tr>
                 </thead>
@@ -107,8 +111,8 @@
                   <table id="supplierDataShowTable" cellspacing="0" width="100%" class="table table-gray-100 table-hover display">
                     <thead>
                       <tr>
-                        <th scope="col" class="align-middle">明細編號</th>
-                        <th scope="col" class="align-middle">操作</th>
+                        <th scope="col" class="align-middle">#</th>
+                        <th scope="col" class="align-middle">供應商名稱</th>
                       </tr>
                     </thead>
                   </table>
@@ -118,7 +122,6 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
-                <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
               </div>
             </div>
           </div>
@@ -240,21 +243,48 @@ export default {
         $('#supplierDataShowTable tbody').on('click', '.details-control', function (e) {
           $('#exampleModal').modal('hide')
 
-          // var rowHtml =  "<tr>" +
-          //             "  <td>" +
-          //             "    <input class='form-control' type='text' value='2' data-name='mainName_1' readonly/>" +
-          //             "  </td>" +
-          //             "  <td>" +
-          //             "    <input class='form-control' type='text' value='DVap' data-name='mainName_2' readonly/>" +
-          //             "  </td>" +
-          //             "  <td>" +
-          //             "    <input class='form-control' type='text' value='22' data-name='mainName_3' />" +
-          //             "  </td>" +
-          //             "  <td></td>" +
-          //             "</tr"
+          var optionList
+          var min = 1
+          var max = 34
+          // set option
+          for (var i = min; i <= max; i++) {
+            optionList += (
+              '<option value={{value}}>{{text}}</option>'
+            ).replace('{{value}}', i)
+              .replace('{{text}}', i)
+          }
 
-          bomTable.row.add($()).draw()
-          // UpdateIndex()
+          var rowHtml = (
+            '<tr>' +
+            '  <td>' +
+            "    <input class='form-control' type='text' value='23569310-124' data-name='mainName_1' readonly/>" +
+            '  </td>' +
+            '  <td>' +
+            "    <input class='form-control' type='text' value='15MM伸縮帶' data-name='mainName_2' readonly/>" +
+            '  </td>' +
+            '  <td>' +
+            "    <input class='form-control' type='text' value='20' data-name='mainName_2' readonly/>" +
+            '  </td>' +
+            '  <td>' +
+            "    <input class='form-control' type='text' value='台幣' data-name='mainName_2' readonly/>" +
+            '  </td>' +
+            '  <td>' +
+            "    <input class='form-control' type='text' value='條' data-name='mainName_2' readonly/>" +
+            '  </td>' +
+            '  <td>' +
+            "    <input class='form-control' type='text' value='34' data-name='mainName_2' readonly/>" +
+            '  </td>' +
+            '  <td>' +
+            "<select class='form-control' data-name='mainName_31'>" +
+              optionList +
+            '</select>' +
+            '  </td>' +
+            '  <td></td>' +
+            '</tr>'
+          )
+
+          bomTable.row.add($(rowHtml)).draw()
+          UpdateIndex()
         })
 
         var bomTable = $(bonTableDom).DataTable({
@@ -269,6 +299,14 @@ export default {
             data: 'place'
           }, {
             data: 'name'
+          }, {
+            data: 'name2'
+          }, {
+            data: 'name3'
+          }, {
+            data: 'name4'
+          }, {
+            data: 'name5'
           }, {
 
           }],
