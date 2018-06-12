@@ -196,13 +196,18 @@ export default {
     url: '/OrderProcessManagement',
     children: [
       {
-        name: '訂單流程管理',
+        name: 'Detail',
         url: '/OrderProcessManagement',
         icon: 'icon-star'
       },
       {
         name: '訂單asfasfdasdf',
         url: '/OrderProcessManagement2',
+        icon: 'icon-star'
+      },
+      {
+        name: 'Index',
+        url: '/OrderProcessManagement3',
         icon: 'icon-star'
       }
     ]

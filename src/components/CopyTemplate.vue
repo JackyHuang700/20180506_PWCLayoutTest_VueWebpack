@@ -113,7 +113,7 @@ export default {
         'columnDefs': [
           {
             'targets': 0,
-            'data': 'id',
+            'data': '',
             'orderable': false,
             'render': function (data, type, row, meta) {
               return ('<button type="button" class="btn btn-primary details-control">展開明細</button>')
@@ -121,7 +121,7 @@ export default {
           },
           {
             'targets': -1,
-            'data': 'id',
+            'data': '',
             'orderable': false,
             'render': function (data, type, row, meta) {
               return (

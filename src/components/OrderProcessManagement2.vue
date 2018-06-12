@@ -20,6 +20,22 @@
                   <option>...</option>
                 </select>
               </div>
+              <div class="form-group col-sm-3">
+              </div>
+
+              <div class="form-group col-sm-3">
+              </div>
+
+              <div class="form-group col-sm-3">
+                <label for="template7">供應商策略</label>
+                <select id="template7" name="template7" class="form-control" readonly>
+                  <option selected>Choose...</option>
+                  <option>自製</option>
+                  <option>外購</option>
+                  <option></option>
+                </select>
+              </div>
+
             </div>
 
           </div>
@@ -27,10 +43,10 @@
         </div>
 
       </div>
-      <div class="col-12">
+      <div class="col-12 BomTable">
         <div class="card">
           <div class="card-header">
-            <i class="fa fa-wpforms" aria-hidden="true"></i>動態新增
+            <i class="fa fa-wpforms" aria-hidden="true"></i>建立Bom表
           </div>
           <div class="card-body"></div>
           <div class="card-footer"></div>
@@ -55,7 +71,11 @@
 export default {
   name: 'orderprocessmanagement2',
   created () { },
-  mounted () { }
+  mounted () {
+    (function () {}(
+
+    ))
+  }
 }
 </script>
 <style lang="css">
