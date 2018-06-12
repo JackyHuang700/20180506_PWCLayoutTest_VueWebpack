@@ -15,6 +15,45 @@ let dataTableList = {
   ]
 }
 
+let dataTableList2 = {
+  data: [
+    {
+      mainData_1: '1',
+      mainData_2: '2',
+      supplier: 'a',
+      rawmater: 'a',
+      detail: [
+        {
+          subData_1: '1'
+        }
+      ]
+    },
+    {
+      mainData_1: '1',
+      mainData_2: '2',
+      supplier: 'b',
+      rawmater: 'b',
+      detail: [
+        {
+          subData_1: '1'
+        }
+      ]
+    },
+    {
+      mainData_1: '1',
+      mainData_2: '2',
+      supplier: 'c',
+      rawmater: 'c',
+      detail: [
+        {
+          subData_1: '1'
+        }
+      ]
+    }
+  ]
+}
+
 export {
-  dataTableList
+  dataTableList,
+  dataTableList2
 }

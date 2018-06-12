@@ -9,7 +9,10 @@ import { dataTableList as ComplaintsData } from './data/ComplaintsData'
 import { dataTableList as SupplierData } from './data/SupplierData'
 import { dataTableList as CopyTemplateData } from './data/CopyTemplateData'
 import { dataTableList as ComplaintsCreateData } from './data/ComplaintsCreateData'
-import { dataTableList as OrderProcessManagementData } from './data/OrderProcessManagementData'
+import {
+  dataTableList as OrderProcessManagementData,
+  dataTableList2 as OrderProcessManagementData2
+} from './data/OrderProcessManagementData'
 import {
   dataTableList as PurchaseData,
   dataTableList2 as PurchaseAutoCompleteData
@@ -25,6 +28,7 @@ import {
   apiDataJQueryUIJQueryUIGetAll,
   apiDataTableSidebarGetAll,
   apiDataTableCopyTemplateGetAll,
+  apiOrderProcessManagementSubDetail,
   apiSelect2Select24GetAll,
   apiDataTableDataTableGet,
   apiDataTableDataTableUpdate,
@@ -103,9 +107,39 @@ export default {
       responseTime: 750,
       contentType: 'application/json',
       response: function (settings) {
-        console.log(settings)
         // 回應
         this.responseText = OrderProcessManagementData
+      }
+    })
+
+    //
+    $.mockjax({
+      type: 'GET',
+      url: apiOrderProcessManagementSubDetail,
+      status: 200,
+      dataType: 'json',
+      responseTime: 750,
+      contentType: 'application/json',
+      response: function (settings) {
+        let {
+          supplier,
+          rawmaterial
+        } = settings.data
+        console.log('settings.data', settings.data)
+
+        var newList = OrderProcessManagementData2.data.filter(c => {
+          return c.supplier.indexOf(supplier) || c.rawmater.indexOf(rawmaterial)
+        })
+
+        // 更新資料
+        if (newList.length) {
+          OrderProcessManagementData2.data = newList
+        }
+
+        console.log('newList', newList)
+        // debugger
+        // 回應
+        this.responseText = OrderProcessManagementData2
       }
     })
 
