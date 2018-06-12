@@ -1,5 +1,5 @@
 <template>
-  <div class="coantiner-fluid">
+  <div class="container-fluid mt-4">
     <div class="row">
       <div class="col-12">
         <div class="card">
@@ -23,7 +23,7 @@
               </div>
               <div class="form-group col-sm-3">
                 <label for="template1">正面圖</label>
-                <img src="http://fakeimg.pl/304x236/" class="img-thumbnail form-control" alt="Cinque Terre" width="304" height="236">
+                <img src="http://fakeimg.pl/304x136/" class="img-thumbnail form-control" alt="Cinque Terre" width="304" height="236">
               </div>
 
               <div class="form-group col-sm-3">
@@ -47,9 +47,10 @@
             <i class="fa fa-wpforms" aria-hidden="true"></i>建立Bom表
           </div>
           <div class="card-body">
-            <div class="col-12">
+            <div class="col-12 mb-3">
               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">原物料選擇</button>
             </div>
+            <hr class="mb-3">
             <div class="col-12">
               <table id="bonTable" class="display" width="100%" cellspacing="0">
                 <thead>
@@ -92,7 +93,7 @@
           <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabel">原物料選擇</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
