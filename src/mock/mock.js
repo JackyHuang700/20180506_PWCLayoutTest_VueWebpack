@@ -47,28 +47,32 @@ export default {
   // jquery mock
   //
   init_jquery () {
-    var mockjaxList = [
-      // 建立客訴單
-      {
-        url: apiDataJQueryUIJQueryUIGetAll,
-        list: ComplaintsCreateData
-      }
-    ]
+    // 建立客訴單
+    $.mockjax({
+      type: 'GET',
+      url: apiDataJQueryUIJQueryUIGetAll,
+      status: 200,
+      dataType: 'json',
+      responseTime: 750,
+      contentType: 'application/json',
+      response: function (settings) {
+        var {
+          queryStr,
+          pageNo
+        } = settings.data
 
-    for (var item in mockjaxList) {
-      $.mockjax({
-        type: 'GET',
-        url: mockjaxList[item].url,
-        status: 200,
-        dataType: 'json',
-        responseTime: 750,
-        contentType: 'application/json',
-        response: function (settings) {
-          // 回應
-          this.responseText = mockjaxList[item].list
+        var items = pagination(ComplaintsCreateData, queryStr, pageNo || 1)
+        for (var i in items[0]) {
+          items[0][i]['loading'] = false
         }
-      })
-    }
+
+        // 回應
+        this.responseText = {
+          items: items,
+          total_count: ComplaintsCreateData.length
+        }
+      }
+    })
 
     $.mockjax({
       type: 'GET',

@@ -12,7 +12,11 @@
             <div class="form-row">
               <div class="form-group col-md-3">
                 <label for="input1">關聯訂單(必填)</label>
-                <input type="text" class="form-control orderNum" id="input1" placeholder="" value="">
+
+                <select id="" class="js-data-example-ajax form-control orderNum">
+                  <option value="" selected="selected">請選擇</option>
+                </select>
+
               </div>
               <div class="form-group col-md-3">
                 <label for="input2">客诉编号(必填)</label>
@@ -111,79 +115,76 @@
   </div>
 </template>
 <script>
-import 'jquery-ui/ui/widgets/autocomplete'
 import {
   apiDataJQueryUIJQueryUIGetAll
 } from '../api/api'
+import 'select2/dist/js/select2.full.min.js'
+import { select2Module } from '../config/select2.js'
 export default {
   name: 'complaintsCreate',
-
   created () { },
   mounted () {
-    // autocomplete
+    // select2
     (function () {
-      function autocompleteAjax (searchData, callback) {
-        $.ajax({
-          url: apiDataJQueryUIJQueryUIGetAll,
-          type: 'GET',
-          data: searchData,
-          error: function () {
-            console.log('error')
-          },
-          success: function (e) {
-            if (callback) {
-              callback(e)
-            }
-          }
-        })
-      }
-
-      // 快取
-      var cache = {}
       var autocompleteDom = document.getElementsByClassName('orderNum')[0]
       var complaintNumDom = document.getElementsByClassName('complaintNum')[0]
       var complaintTargetDom = document.getElementsByClassName('complaintTarget')[0]
-      $(autocompleteDom).autocomplete({
-        source: function (request, response) {
-          var term = request.term
-          if (term in cache) {
-            response(cache)
-          } else {
-            autocompleteAjax(request, function (resp) {
-              cache[term] = resp
-              response(resp)
-            })
-          }
+
+      // 远程筛选
+      $(autocompleteDom).select2({
+        ajax: {
+          url: apiDataJQueryUIJQueryUIGetAll,
+          dataType: 'json',
+          delay: 250,
+          data: function (params) {
+            return {
+              term: params.term, // search term
+              pageNo: params.page
+            }
+          },
+          // 收到伺服器回應
+          processResults: function (data, params) {
+            params.page = params.page || 1
+            return {
+              results: data.items[0],
+              pagination: {
+                more: (params.page * 10) < data.total_count
+              }
+            }
+          },
+          cache: true
         },
-        select: function (event, ui) {
-          $(autocompleteDom).val(ui.item.order)
-          $(complaintNumDom).val('CP-' + ui.item.order)
+        escapeMarkup: function (markup) { return markup },
+        minimumInputLength: 1,
+        templateResult: formatRepoProvince,
+        templateSelection: formatRepoProvince,
+        language: select2Module.language
+      })
 
-          // add select
-          for (let index = (complaintTargetDom.options.length - 1); index >= 0; index--) {
-            complaintTargetDom.remove(index)
-          }
-          for (let index = 0; index < ui.item.complaintsTarget.length; index++) {
-            var option = document.createElement('option')
-            option.text = ui.item.complaintsTarget[index]
-            option.value = ui.item.complaintsTarget[index]
-            complaintTargetDom.add(option)
-          }
+      // 製作下拉式選單
+      function formatRepoProvince (repo) {
+        if (repo['loading'] === undefined || repo.loading) return repo.text
 
-          return false
+        $(autocompleteDom).val(repo.order)
+        $(complaintNumDom).val('CP-' + repo.order)
+
+        // add select
+        for (let index = (complaintTargetDom.options.length - 1); index >= 0; index--) {
+          complaintTargetDom.remove(index)
         }
-      }).autocomplete('instance')._renderItem = function (ul, item) {
-        return $('<li>')
-          .append('<div>' + item.order + '</div>')
-          .appendTo(ul)
-      }
-    }());
-    (function () {
+        for (let index = 0; index < repo.complaintsTarget.length; index++) {
+          var option = document.createElement('option')
+          option.text = repo.complaintsTarget[index]
+          option.value = repo.complaintsTarget[index]
+          complaintTargetDom.add(option)
+        }
 
+        return '<div>' + repo.order + '</div>'
+      }
     }())
   }
 }
 </script>
 <style lang="css">
-@import 'jquery-ui/themes/base/all.css';
+@import 'select2/dist/css/select2.min.css';
 </style>
