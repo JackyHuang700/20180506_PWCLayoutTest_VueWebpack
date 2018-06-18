@@ -73,7 +73,7 @@
                     <button type="button" class="btn btn-primary">查詢</button>
                   </div>
                 </div>
-                
+
               </div>
             </div>
           </div>
@@ -94,6 +94,7 @@
                   <th scope="col">客訴目標</th>
                   <th scope="col">客訴原因</th>
                   <th scope="col">客訴說明</th>
+                  <th scope="col">圖片</th>
                   <th scope="col">操作</th>
                   <th scope="col">操作</th>
                 </tr>
@@ -134,6 +135,7 @@ export default {
           { 'data': 'e' },
           { 'data': 'f' },
           { 'data': 'g' },
+          { 'data': 'g' },
           { 'data': 'h' },
           {}
         ],
@@ -156,8 +158,24 @@ export default {
             }
           },
           {
+            'targets': -2,
+            'data': '',
+            'orderable': false,
+            'render': function (data, type, row, meta) {
+              var imageModule = new ImageModule()
+              var url = imageModule.getImageUrl({
+                title: 'http://fakeimg.pl/250x100/',
+                params: {
+
+                }
+              })
+              console.log('render', url)
+              return ('<img src="' + url + '" alt="">')
+            }
+          },
+          {
             'targets': -1,
-            'data': 'a',
+            'data': '',
             'orderable': false,
             'render': function (data, type, row, meta) {
               return (
@@ -175,7 +193,49 @@ export default {
         ],
         'language': language
       })
-    })
+    });
+
+    (function (window, document) {
+      window.imageModule = ImageModule
+    })(window, document)
+
+    // 圖片空字串處理
+    var ImageModule = function () {
+      this.getImageUrl = function (imgObj) {
+        var urlStr = ''
+        var validTitle = (imgObj.title === '' || imgObj.title === 'undefined')
+        var valid = !validTitle
+
+        if (valid) {
+          urlStr = imgObj.title + '?'
+
+          if (imgObj.params.length !== 0) {
+            for (var key in imgObj.params) {
+              if (imgObj.hasOwnProperty(key)) {
+                urlStr += key + '=' + imgObj[key]
+              }
+            }
+          }
+        }
+
+        return urlStr
+      }
+    }
+
+    // (function () {
+    //   function GetImageUrl (imgObj) {
+    //     var urlStr = ''
+    //     var validTitle = (imgObj.title === '' || imgObj.title === 'undefined')
+    //     var validParam = false
+
+    //     var valid = validTitle && true
+    //     if (valid) {
+    //       urlStr = 'http://fakeimg.pl/250x100/'
+    //     }
+
+    //     return urlStr
+    //   }
+    // }())
   },
   methods: {}
 }

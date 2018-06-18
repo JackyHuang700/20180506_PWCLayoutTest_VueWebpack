@@ -211,6 +211,18 @@ export default {
         icon: 'icon-star'
       }
     ]
+  },
+  {
+    name: '上傳測試',
+    url: '/FileUpload',
+    children: [
+      {
+        name: '圖片上傳測試',
+        url: '/FileUpload',
+        icon: 'icon-star'
+      }
+
+    ]
   }
     // {
     //   name: 'Icons',

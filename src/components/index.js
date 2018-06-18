@@ -27,6 +27,7 @@ import Materials from './Materials.vue'
 import OrderProcessManagement from './OrderProcessManagement.vue'
 import OrderProcessManagement2 from './OrderProcessManagement2.vue'
 import OrderProcessManagement3 from './OrderProcessManagement3.vue'
+import FileUpload from './FileUpload.vue'
 
 export {
   Purchase,
@@ -55,6 +56,7 @@ export {
   ComplaintsCreate,
   Collectionbalance,
   Collectionbalance2,
+  FileUpload,
   CollectDetail,
   Form,
   Form2

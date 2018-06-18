@@ -28,7 +28,8 @@ import {
   Form,
   Form2,
   Supplier,
-  Supplier2
+  Supplier2,
+  FileUpload
 } from '@/components'
 
 Vue.use(Router)
@@ -150,6 +151,11 @@ export default new Router({
           path: 'supplier2',
           name: 'Supplier2',
           component: Supplier2
+        },
+        {
+          path: 'fileupload',
+          name: 'FileUpload',
+          component: FileUpload
         }
 
       ]
