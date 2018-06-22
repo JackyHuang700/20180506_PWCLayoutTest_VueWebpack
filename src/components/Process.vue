@@ -97,7 +97,7 @@ import {
 } from '../api/api'
 
 export default {
-  name: 'copytemplate',
+  name: 'process',
   created () { },
   mounted () {
     // dataTables

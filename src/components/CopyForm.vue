@@ -42,8 +42,9 @@
            <div class="card-footer"></div>
         </div>
       </div>
-      <div class="col-12 text-right">
-        <button type="submit" class="btn btn-success col-3">儲存</button>
+      <div class="col-12 text-right mb-4">
+        <button type="submit" class="btn btn-success col-2">儲存</button>
+        <button type="button" class="btn btn-danger col-1">取消</button>
       </div>
     </div>
   </div>

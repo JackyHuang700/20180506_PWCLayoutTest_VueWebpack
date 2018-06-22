@@ -15,6 +15,7 @@ export const apiDataTableCopyTemplateGetAll = '/api/dataTable/CopyTemplateGetAll
 export const apiDataJQueryUIJQueryUIGetAll = '/api/JQueryUI/JQueryUIGetAll'
 export const apiOrderProcessManagementGetThisOrderDetail = '/OrderProcessManagement/GetThisOrderDetail'
 export const apiOrderProcessManagementSubDetail = '/api/OrderProcessManagement/SubDetail'
+export const apiProDuctIndex = '/api/Product/Index'
 
 export const methodGetSelect2Select24GetAll = params => {
   return axios.get(apiDataTableDataTableGetAll, {

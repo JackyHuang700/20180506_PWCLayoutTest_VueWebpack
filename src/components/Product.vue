@@ -30,20 +30,12 @@
                   <div class="col-sm-12 mb-2">
                     <div class="form-row">
                       <div class="form-group col-md-3">
-                        <label class="float-left" for="inputText">Email</label>
-                        <input type="text" class="form-control" id="inputText" placeholder="Email">
+                        <label class="float-left" for="inputText">產品號碼</label>
+                        <input type="text" class="form-control" id="inputText" placeholder="">
                       </div>
                       <div class="form-group col-md-3">
-                        <label class="float-left" for="inputText2">Password</label>
-                        <input type="text" class="form-control" id="inputText2" placeholder="Password">
-                      </div>
-                      <div class="form-group col-md-3">
-                        <label class="float-left" for="inputText3">Password</label>
-                        <input type="text" class="form-control" id="inputText3" placeholder="Password">
-                      </div>
-                      <div class="form-group col-md-3">
-                        <label class="float-left" for="inputText4">Password</label>
-                        <input type="text" class="form-control" id="inputText4" placeholder="Password">
+                        <label class="float-left" for="inputText2">生產工單號碼</label>
+                        <input type="text" class="form-control" id="inputText2" placeholder="">
                       </div>
                     </div>
                   </div>
@@ -69,10 +61,15 @@
             <table id="example" cellspacing="0" width="100%" class="table table-gray-100 table-hover display">
               <thead>
                 <tr>
-                  <th scope="col" class="align-middle">#</th>
-                  <th scope="col" class="align-middle">代碼</th>
-                  <th scope="col" class="align-middle">稅籍ID</th>
-                  <th scope="col" class="align-middle">聯絡人</th>
+                  <th scope="col" class="align-middle">生產工單號碼</th>
+                  <th scope="col" class="align-middle">銷售訂單</th>
+                  <th scope="col" class="align-middle">產品號碼</th>
+                  <th scope="col" class="align-middle">產品說明</th>
+                  <th scope="col" class="align-middle">計畫數量</th>
+                  <th scope="col" class="align-middle">使用者</th>
+                  <th scope="col" class="align-middle">開始日期</th>
+                  <th scope="col" class="align-middle">到期日</th>
+                  <th scope="col" class="align-middle">狀態</th>
                   <th scope="col" class="align-middle">操作</th>
                 </tr>
               </thead>
@@ -93,11 +90,11 @@ import {
   language
 } from '../config/dataTable'
 import {
-  apiDataTableCopyTemplateGetAll
+  apiProDuctIndex
 } from '../api/api'
 
 export default {
-  name: 'copytemplate',
+  name: 'product',
   created () { },
   mounted () {
     // dataTables
@@ -107,26 +104,23 @@ export default {
           selector: 'td:not(:first-child)',
           style: 'os'
         },
-        'ajax': apiDataTableCopyTemplateGetAll,
+        'ajax': apiProDuctIndex,
         'columns': [
-          {},
-          { 'data': 'mainData_1' },
+          { 'data': 'mainData_5' },
+          { 'data': 'mainData_9' },
           { 'data': 'mainData_2' },
           { 'data': 'mainData_3' },
+          { 'data': 'mainData_4' },
+          { 'data': 'mainData_8' },
+          { 'data': 'mainData_6' },
+          { 'data': 'mainData_7' },
+          { 'data': 'mainData_1' },
           {}
         ],
         'order': [
           [1, 'asc']
         ],
         'columnDefs': [
-          {
-            'targets': 0,
-            'data': '',
-            'orderable': false,
-            'render': function (data, type, row, meta) {
-              return ('<button type="button" class="btn btn-primary details-control">展開明細</button>')
-            }
-          },
           {
             'targets': -1,
             'data': '',
@@ -148,47 +142,47 @@ export default {
       })
 
       // 明細
-      $('#example tbody').on('click', '.details-control', function () {
-        var tr = $(this).closest('tr')
-        var row = table.row(tr)
+      // $('#example tbody').on('click', '.details-control', function () {
+      //   var tr = $(this).closest('tr')
+      //   var row = table.row(tr)
 
-        if (row.child.isShown()) {
-          row.child.hide()
-          tr.removeClass('shown')
-        } else {
-          row.child(childRows(row.data().detail)).show()
-          tr.addClass('shown')
-        }
-      })
+      //   if (row.child.isShown()) {
+      //     row.child.hide()
+      //     tr.removeClass('shown')
+      //   } else {
+      //     row.child(childRows(row.data().detail)).show()
+      //     tr.addClass('shown')
+      //   }
+      // })
 
-      // 明細
-      function childRows (d) {
-        d = d || []
+      // // 明細
+      // function childRows (d) {
+      //   d = d || []
 
-        var trTemplate = ''
-        if (d.length) {
-          d.map(function (data) {
-            trTemplate += (
-              '<tr>' +
-              '  <td>{{subData_1}}</td>' +
-              '  <td>{{subData_2}}</td>' +
-              '  <td>{{subData_3}}</td>' +
-              '</tr>'
-            ).replace('{{subData_1}}', '')
-              .replace('{{subData_2}}', '')
-              .replace('{{subData_3}}', '')
-          })
-        }
+      //   var trTemplate = ''
+      //   if (d.length) {
+      //     d.map(function (data) {
+      //       trTemplate += (
+      //         '<tr>' +
+      //         '  <td>{{subData_1}}</td>' +
+      //         '  <td>{{subData_2}}</td>' +
+      //         '  <td>{{subData_3}}</td>' +
+      //         '</tr>'
+      //       ).replace('{{subData_1}}', '')
+      //         .replace('{{subData_2}}', '')
+      //         .replace('{{subData_3}}', '')
+      //     })
+      //   }
 
-        return (
-          '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;" class="table table-striped">' +
-          '  <tr>' +
-          '    <td scope="col">....</td>' +
-          '    <td scope="col">....</td>' +
-          '    <td scope="col">....</td>' +
-          '  </tr>' + trTemplate +
-          '</table>')
-      }
+      //   return (
+      //     '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;" class="table table-striped">' +
+      //     '  <tr>' +
+      //     '    <td scope="col">基礎數量</td>' +
+      //     '    <td scope="col">計畫數量</td>' +
+      //     '    <td scope="col">說明</td>' +
+      //     '  </tr>' + trTemplate +
+      //     '</table>')
+      // }
     }())
   }
 }

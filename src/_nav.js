@@ -54,6 +54,22 @@ export default {
     //   ]
     // },
   {
+    name: 'CopyTemplate',
+    url: '/CopyForm',
+    children: [
+      {
+        name: 'copyform',
+        url: '/CopyForm',
+        icon: 'icon-star'
+      },
+      {
+        name: 'copytemplate',
+        url: '/CopyTemplate',
+        icon: 'icon-star'
+      }
+    ]
+  },
+  {
     name: 'orderIndex2',
     url: '/OrderIndex2',
     icon: 'icon-puzzle',
@@ -219,6 +235,40 @@ export default {
       {
         name: '圖片上傳測試',
         url: '/FileUpload',
+        icon: 'icon-star'
+      }
+
+    ]
+  },
+  {
+    name: '生產',
+    url: '/Product',
+    children: [
+      {
+        name: '生產首頁',
+        url: '/Product',
+        icon: 'icon-star'
+      },
+      {
+        name: '生產建立',
+        url: '/Product2',
+        icon: 'icon-star'
+      }
+
+    ]
+  },
+  {
+    name: '工序',
+    url: '/Process',
+    children: [
+      {
+        name: '工序首頁',
+        url: '/Process',
+        icon: 'icon-star'
+      },
+      {
+        name: '工序建立',
+        url: '/Process2',
         icon: 'icon-star'
       }
 

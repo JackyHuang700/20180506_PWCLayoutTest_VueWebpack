@@ -16,6 +16,12 @@ import {
   Order2,
   Order3,
   Content,
+  Product,
+  Product2,
+  Process,
+  Process2,
+  CopyForm,
+  CopyTemplate,
   HomeIndex,
   HomeIndeV2,
   OrderIndex2,
@@ -156,6 +162,36 @@ export default new Router({
           path: 'fileupload',
           name: 'FileUpload',
           component: FileUpload
+        },
+        {
+          path: 'product',
+          name: 'Product',
+          component: Product
+        },
+        {
+          path: 'product2',
+          name: 'Product2',
+          component: Product2
+        },
+        {
+          path: 'process',
+          name: 'Process',
+          component: Process
+        },
+        {
+          path: 'process2',
+          name: 'Process2',
+          component: Process2
+        },
+        {
+          path: 'copyform',
+          name: 'CopyForm',
+          component: CopyForm
+        },
+        {
+          path: 'copytemplate',
+          name: 'CopyTemplate',
+          component: CopyTemplate
         }
 
       ]

@@ -28,8 +28,20 @@ import OrderProcessManagement from './OrderProcessManagement.vue'
 import OrderProcessManagement2 from './OrderProcessManagement2.vue'
 import OrderProcessManagement3 from './OrderProcessManagement3.vue'
 import FileUpload from './FileUpload.vue'
+import CopyForm from './CopyForm.vue'
+import CopyTemplate from './CopyTemplate.vue'
+import Product from './Product.vue'
+import Product2 from './Product2.vue'
+import Process from './Process.vue'
+import Process2 from './Process2.vue'
 
 export {
+  Product,
+  Product2,
+  Process,
+  Process2,
+  CopyForm,
+  CopyTemplate,
   Purchase,
   Purchase2,
   OrderProcessManagement,
