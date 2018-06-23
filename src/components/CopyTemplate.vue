@@ -62,7 +62,7 @@
         <div class="card">
           <div class="card-header">
             <i class="fa fa-wpforms" aria-hidden="true"></i>
-            清單
+            列表
           </div>
           <div class="card-body">
 
