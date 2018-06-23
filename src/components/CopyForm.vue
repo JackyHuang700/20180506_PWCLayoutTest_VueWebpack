@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid mt-4">
+  <div class="container-fluid my-4">
     <div class="row">
       <div class="col-12">
         <div class="card">
@@ -42,9 +42,9 @@
            <div class="card-footer"></div>
         </div>
       </div>
-      <div class="col-12 text-right mb-4">
-        <button type="submit" class="btn btn-success col-2">儲存</button>
-        <button type="button" class="btn btn-danger col-1">取消</button>
+      <div class="col-12 text-right">
+        <button type="submit" class="btn btn-success col-sm-2 mb-3">儲存</button>
+        <button type="button" class="btn btn-danger col-sm-1 mb-3">取消</button>
       </div>
     </div>
   </div>

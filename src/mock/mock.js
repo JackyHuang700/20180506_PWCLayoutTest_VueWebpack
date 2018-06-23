@@ -10,6 +10,7 @@ import { dataTableList as SupplierData } from './data/SupplierData'
 import { dataTableList as CopyTemplateData } from './data/CopyTemplateData'
 import { dataTableList as ComplaintsCreateData } from './data/ComplaintsCreateData'
 import { dataTableList as ProductDataIndexData } from './data/ProductData'
+import { dataTableList as ProcessDataInsertData } from './data/ProcessData'
 import {
   dataTableList as OrderProcessManagementData,
   dataTableList2 as OrderProcessManagementData2
@@ -38,6 +39,7 @@ import {
   apiDataTableCollectionGetAll2,
   apiDataTableComplaintsGetAll,
   apiOrderProcessManagementGetThisOrderDetail,
+  apiProcess3Insert,
   apiProDuctIndex
 } from '../api/api'
 
@@ -49,6 +51,20 @@ export default {
   // jquery mock
   //
   init_jquery () {
+    // 工序狀態管理
+    $.mockjax({
+      type: 'GET',
+      url: apiProcess3Insert,
+      status: 200,
+      dataType: 'json',
+      responseTime: 150,
+      contentType: 'application/json',
+      response: function (setting) {
+        // 回應
+        this.responseText = ProcessDataInsertData
+      }
+    })
+
     // 建立客訴單
     $.mockjax({
       type: 'GET',

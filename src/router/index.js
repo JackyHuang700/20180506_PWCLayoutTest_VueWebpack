@@ -20,6 +20,7 @@ import {
   Product2,
   Process,
   Process2,
+  Process3,
   CopyForm,
   CopyTemplate,
   HomeIndex,
@@ -182,6 +183,11 @@ export default new Router({
           path: 'process2',
           name: 'Process2',
           component: Process2
+        },
+        {
+          path: 'process3',
+          name: 'Process3',
+          component: Process3
         },
         {
           path: 'copyform',

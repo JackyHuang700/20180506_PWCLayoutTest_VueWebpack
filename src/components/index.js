@@ -34,12 +34,14 @@ import Product from './Product.vue'
 import Product2 from './Product2.vue'
 import Process from './Process.vue'
 import Process2 from './Process2.vue'
+import Process3 from './Process3.vue'
 
 export {
   Product,
   Product2,
   Process,
   Process2,
+  Process3,
   CopyForm,
   CopyTemplate,
   Purchase,
