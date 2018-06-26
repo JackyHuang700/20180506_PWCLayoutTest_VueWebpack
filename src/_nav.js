@@ -275,6 +275,11 @@ export default {
         name: '工序狀態管理',
         url: '/Process3',
         icon: 'icon-star'
+      },
+      {
+        name: '生產工序清單',
+        url: '/Process4',
+        icon: 'icon-star'
       }
 
     ]

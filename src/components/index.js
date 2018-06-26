@@ -35,6 +35,7 @@ import Product2 from './Product2.vue'
 import Process from './Process.vue'
 import Process2 from './Process2.vue'
 import Process3 from './Process3.vue'
+import Process4 from './Process4.vue'
 
 export {
   Product,
@@ -42,6 +43,7 @@ export {
   Process,
   Process2,
   Process3,
+  Process4,
   CopyForm,
   CopyTemplate,
   Purchase,
