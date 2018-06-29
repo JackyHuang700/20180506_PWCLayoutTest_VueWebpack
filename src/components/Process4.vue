@@ -30,20 +30,24 @@
                   <div class="col-sm-12 mb-2">
                     <div class="form-row">
                       <div class="form-group col-md-3">
-                        <label class="float-left" for="inputText">Email</label>
-                        <input type="text" class="form-control" id="inputText" placeholder="Email">
+                        <label class="float-left" for="inputText">代碼</label>
+                        <input type="text" class="form-control" id="inputText" placeholder="">
                       </div>
                       <div class="form-group col-md-3">
-                        <label class="float-left" for="inputText2">Password</label>
-                        <input type="text" class="form-control" id="inputText2" placeholder="Password">
+                        <label class="float-left" for="inputText2">名稱</label>
+                        <input type="text" class="form-control" id="inputText2" placeholder="">
                       </div>
                       <div class="form-group col-md-3">
-                        <label class="float-left" for="inputText3">Password</label>
-                        <input type="text" class="form-control" id="inputText3" placeholder="Password">
+                        <label class="float-left" for="inputText3">工作次序</label>
+                        <input type="text" class="form-control" id="inputText3" placeholder="">
                       </div>
-                      <div class="form-group col-md-3">
-                        <label class="float-left" for="inputText4">Password</label>
-                        <input type="text" class="form-control" id="inputText4" placeholder="Password">
+                      <div class="form-group col-sm-3">
+                        <label for="inputText4">啟用</label>
+                        <select id="inputText4" name="inputText4" class="form-control">
+                          <option selected>未選擇</option>
+                          <option>Y</option>
+                          <option>N</option>
+                        </select>
                       </div>
                     </div>
                   </div>
@@ -72,8 +76,9 @@
                   <th scope="col" class="align-middle">#</th>
                   <th scope="col" class="align-middle">代碼</th>
                   <th scope="col" class="align-middle">名稱</th>
-                  <th scope="col" class="align-middle"></th>
-                  <th scope="col" class="align-middle">###</th>
+                  <th scope="col" class="align-middle">工作次序</th>
+                  <th scope="col" class="align-middle">啟用</th>
+                  <th scope="col" class="align-middle">操作</th>
                 </tr>
               </thead>
             </table>
@@ -102,7 +107,7 @@ export default {
   mounted () {
     // dataTables
     (function () {
-      $('#example').DataTable({
+      var table = $('#example').DataTable({
         'select': {
           selector: 'td:not(:first-child)',
           style: 'os'
@@ -113,6 +118,7 @@ export default {
           { 'data': 'mainData_1' },
           { 'data': 'mainData_2' },
           { 'data': 'mainData_3' },
+          { 'data': 'mainData_4' },
           {}
         ],
         'order': [
@@ -128,6 +134,31 @@ export default {
             }
           },
           {
+            'targets': 4,
+            'data': '',
+            'orderable': false,
+            'render': function (data, type, row, meta) {
+              var cssClass = ''
+              var msg = ''
+              switch (data) {
+                case 'N':
+                  msg = '停用中'
+                  cssClass = 'danger'
+                  break
+                case 'Y':
+                  msg = '啟用中'
+                  cssClass = 'success'
+                  break
+                default:
+                  msg = ''
+                  cssClass = ''
+                  break
+              }
+
+              return ('<div class="alert alert-' + cssClass + ' role="alert">' + msg + '</div>')
+            }
+          },
+          {
             'targets': -1,
             'data': '',
             'orderable': false,
@@ -140,12 +171,56 @@ export default {
                 '  <a class="dropdown-item" href="//?={{id}}">刪除</a>' +
                 '</div>' +
                 '</div>'
-              ).replace('{{id}}', '')
+              ).replace(/{{id}}/g, '')
             }
           }
         ],
         'language': language
       })
+
+      // 明細
+      $('#example tbody').on('click', '.details-control', function () {
+        var tr = $(this).closest('tr')
+        var row = table.row(tr)
+
+        if (row.child.isShown()) {
+          row.child.hide()
+          tr.removeClass('shown')
+        } else {
+          row.child(childRows(row.data().detail)).show()
+          tr.addClass('shown')
+        }
+      })
+
+      // 明細
+      function childRows (d) {
+        d = d || []
+
+        var trTemplate = ''
+        if (d.length) {
+          d.map(function (data, index) {
+            trTemplate += (
+              '<tr>' +
+              '  <td>{{subData_1}}</td>' +
+              '  <td>{{subData_2}}</td>' +
+              '  <td>{{subData_3}}</td>' +
+              '</tr>'
+            ).replace(/{{subData_1}}/g, (index + 1))
+              .replace(/{{subData_2}}/g, '')
+              .replace(/{{subData_3}}/g, '')
+          })
+        }
+
+        return (
+          '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;" class="table table-striped">' +
+          '  <tr>' +
+          '    <td scope="col">#</td>' +
+          '    <td scope="col">代碼</td>' +
+          '    <td scope="col">名稱</td>' +
+          '  </tr>' +
+          trTemplate +
+          '</table>')
+      }
     }())
   }
 }

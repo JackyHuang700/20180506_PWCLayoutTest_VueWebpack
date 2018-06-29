@@ -345,18 +345,26 @@ export default {
         function UpdateIndex () {
           var domIndex = 0
           var domIndexAdd = false
-          var aaDom = bonTableDom
-          var trDomList = aaDom.querySelectorAll('tr')
+          var dynamicTable = bonTableDom
+          var trDomList = dynamicTable.querySelectorAll('tr')
           for (let trIndex = 0; trIndex < trDomList.length; trIndex++) {
             var tr = trDomList[trIndex]
             if (tr.firstElementChild != null) {
               var tdDomList = tr.querySelectorAll('td')
-              for (let tdIndex = 0; tdIndex < tdDomList.length; tdIndex++) {
+              for (var tdIndex = 0; tdIndex < tdDomList.length; tdIndex++) {
                 var tdDom = tdDomList[tdIndex]
                 var inputDom = tdDom.querySelector('input')
-                if (inputDom) {
-                  var inputDomName = inputDom.getAttribute('data-name')
-                  inputDom.name = inputDomName + '[' + domIndex + ']'
+                var spanDom = tdDom.querySelector('span')
+                var selectDom = tdDom.querySelector('select')
+                if (inputDom && spanDom) {
+                  UpdateIndex_FixInput(inputDom, domIndex)
+                  UpdateIndex_FixSpan(spanDom, domIndex)
+                  domIndexAdd = true
+                } else if (inputDom || selectDom) {
+                  UpdateIndex_FixInput(inputDom, domIndex)
+                  domIndexAdd = true
+                } else if (spanDom) {
+                  UpdateIndex_FixSpan(spanDom, domIndex)
                   domIndexAdd = true
                 }
               }
@@ -366,6 +374,16 @@ export default {
               domIndexAdd = false
             }
           }
+        }
+
+        //
+        function UpdateIndex_FixInput (inputDom, domIndex) {
+          var inputDomName = inputDom.getAttribute('data-name')
+          var inputDomTitleName = inputDom.getAttribute('data-titleName')
+          inputDom.name = inputDomTitleName + '[' + domIndex + '].' + inputDomName
+        }
+        function UpdateIndex_FixSpan (spanDom, domIndex) {
+          spanDom.innerText = domIndex + 1
         }
       })
     }())

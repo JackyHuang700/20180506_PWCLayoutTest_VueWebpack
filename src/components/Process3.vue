@@ -4,30 +4,28 @@
       <div class="col-12 mt-4">
         <div class="card">
           <div class="card-header">
-            <i class="fa fa-wpforms" aria-hidden="true"></i>共序及狀態設定
+            <i class="fa fa-wpforms" aria-hidden="true"></i>工序
           </div>
           <div class="card-body">
             <div class="form-row">
               <div class="form-group col-sm-3">
-                <label for="template1">工序代碼</label>
-                <input type="text" class="form-control" id="template1" name="template1" placeholder="">
+                <label for="template1">代碼</label>
+                <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="WCH">
               </div>
               <div class="form-group col-sm-3">
-                <label for="template2">工序名稱</label>
-                <input type="text" class="form-control" id="template2" name="template2" placeholder="">
+                <label for="template2">名稱</label>
+                <input type="text" class="form-control" id="template2" name="template2" placeholder="" value="車花">
               </div>
               <div class="form-group col-sm-3">
-                <label for="template6">OpType</label>
-                <select id="template6" name="template6" class="form-control">
-                  <option selected>WCJ - 裁減</option>
-                  <option>WCW - 車位</option>
-                </select>
+                <label for="template3">工作次序</label>
+                <input type="text" class="form-control" id="template3" name="template3" placeholder="" value="1">
               </div>
+              <div class="form-group col-sm-3">&nbsp;</div>
               <div class="form-group col-sm-3">
-                <label for="template7">是否啟用</label>
+                <label for="template7">狀態</label>
                 <select id="template7" name="template7" class="form-control">
-                  <option selected>Y</option>
-                  <option>N</option>
+                  <option selected>啟用</option>
+                  <option>不啟用</option>
                 </select>
               </div>
             </div>
@@ -37,53 +35,16 @@
       <div class="col-12 mt-4">
         <div class="card">
           <div class="card-header">
-            <i class="fa fa-wpforms" aria-hidden="true"></i>共序及狀態設定
+            <i class="fa fa-wpforms" aria-hidden="true"></i>狀態名稱設定
           </div>
           <div class="card-body">
 
-            <div class="form-row">
-              <div class="form-group col-sm-3">
-                <label for="testInput">代碼</label>
-                <select id="testInput" name="testInput" class="form-control">
-                  <option selected>S000011 - 開始</option>
-                  <option>S000012 - 完成</option>
-                </select>
-              </div>
-              <div class="form-group col-sm-3">
-                <label for="testInput2">名稱</label>
-                <select id="testInput2" name="testInput2" class="form-control">
-                  <option selected>開始 - 開始</option>
-                  <option>完成 - 完成</option>
-                </select>
-              </div>
-              <div class="form-group col-sm-3">
-                <label for="testInput3">OpType</label>
-                <select id="testInput3" name="testInput3" class="form-control">
-                  <option selected>WCJ - 裁減</option>
-                  <option>WCW - 車位</option>
-                </select>
-              </div>
-              <div class="form-group col-sm-3">
-                <label for="testInput4">是否啟用</label>
-                <select id="testInput4" name="testInput4" class="form-control">
-                  <option selected>Y</option>
-                  <option>N</option>
-                </select>
-              </div>
-            </div>
-
-            <button id="addRow" class="btn btn-primary">新增</button>
-            <hr>
-            <br/>
             <table id="example" class="display" width="100%" cellspacing="0">
               <thead>
                 <tr>
-                  <th class="text-center">#</th>
-                  <th class="text-center">狀態代碼</th>
-                  <th class="text-center">狀態名稱</th>
-                  <th class="text-center">EndProcess</th>
-                  <th class="text-center">是否啟用</th>
-                  <th class="text-center">操作</th>
+                  <th>#</th>
+                  <th>代碼</th>
+                  <th>名稱</th>
                 </tr>
               </thead>
             </table>
@@ -113,10 +74,6 @@ export default {
   created () { },
   mounted () {
     (function () {
-      // input group
-      var form_input1 = document.getElementById('testInput')
-      var form_input2 = document.getElementById('testInput2')
-
       $(document).ready(function () {
         var dt = $('#example').dataTable()
         dt.fnDestroy()
@@ -124,7 +81,7 @@ export default {
 
       $(document).ready(function () {
         // dataTable
-        var table = $('#example').DataTable({
+        $('#example').DataTable({
           ajax: apiProcess3Insert,
           bPaginate: false,
           searching: false,
@@ -136,12 +93,6 @@ export default {
             data: 'place'
           }, {
             data: 'name'
-          }, {
-            data: 'name'
-          }, {
-            data: 'name'
-          }, {
-
           }],
           columnDefs: [
             {
@@ -149,66 +100,26 @@ export default {
               'data': '',
               'orderable': false,
               'render': function (data, type, row, meta) {
-                return ('<span class="badge badge-secondary text-white Index">1</span>')
+                return ('<span class="badge badge-secondary text-white Index"></span>')
               }
             },
             {
-              'targets': -1,
+              'targets': 2,
               'data': '',
               'orderable': false,
               'render': function (data, type, row, meta) {
-                return ('<i class="fa fa-minus-square text-red" aria-hidden="true"></i>')
+                return (' <input type="text" class="form-control" data-titleName="model" data-name="name" id="" name="" placeholder="">')
               }
             }
           ],
-          // 刪除單筆資料
-          'initComplete': function (oSettings) {
-            $(this).on('click', 'i.fa.fa-minus-square', function (e) {
-              var confirm2 = confirm('確定刪除?')
-              if (confirm2) {
-                table.row($(this).closest('tr')).remove().draw()
-                UpdateIndex()
-              }
-            })
+          'drawCallback': function (settings) {
+            (function () {
+              UpdateIndexCount()
+              UpdateIndex()
+            })()
           },
           'language': language
         })
-
-        // 添加新增按鈕
-        $('#addRow').on('click', function () {
-          var rowHtml = (
-            '<tr>' +
-            '  <td>' +
-            '    <input class="form-control" data-titleName="{{data-titleName}}" type="text" value="2" data-name="mainName_1" />' +
-            '  </td>' +
-            '  <td>' +
-            '    <input class="form-control" data-titleName="{{data-titleName}}" type="text" value="DVap" data-name="mainName_2" />' +
-            '  </td>' +
-            '  <td>' +
-            '    <input class="form-control" data-titleName="{{data-titleName}}" type="text" value="22" data-name="mainName_3" />' +
-            '  </td>' +
-            '  <td> ' +
-            '   <select id="template66" name="template66" class="form-control">' +
-            '    <option selected>Y</option>' +
-            '    <option>N</option>' +
-            '   </select>' +
-            '  </td>' +
-            '  <td> ' +
-            '   <select id="template77" name="template77" class="form-control">' +
-            '    <option selected>Y</option>' +
-            '    <option>N</option>' +
-            '   </select>' +
-            '  </td>' +
-            '  <td></td>' +
-            '</tr>'
-          ).replace(/{{data-titleName}}/g, 'BomTable')
-
-          table.row.add($(rowHtml)).draw()
-          UpdateIndex()
-          UpdateIndexCount()
-        })
-        // test
-        // Test_Click()
 
         // 更新Table底下所有Index
         function UpdateIndex () {
@@ -254,7 +165,6 @@ export default {
         function UpdateIndex_FixSpan (spanDom, domIndex) {
           spanDom.innerText = domIndex + 1
         }
-
         function UpdateIndexCount () {
           var indexDomList = document.getElementsByClassName('Index')
           for (var i = 0; i < indexDomList.length; ++i) {
@@ -262,19 +172,8 @@ export default {
             indexDom.innerHTML = i + 1
           }
         }
-
-        // clear form
-        function ClearForm () {
-          form_input1.value = ''
-          form_input2.value = ''
-        }
       })
     }())
-
-    // test
-    function Test_Click () {
-      document.getElementById('addRow').click()
-    }
   }
 }
 </script>

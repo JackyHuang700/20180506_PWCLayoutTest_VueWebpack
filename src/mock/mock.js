@@ -17,7 +17,8 @@ import {
 } from './data/OrderProcessManagementData'
 import {
   dataTableList as PurchaseData,
-  dataTableList2 as PurchaseAutoCompleteData
+  dataTableList2 as PurchaseAutoCompleteData,
+  dataTableList3 as Purchase3InsertData
 } from './data/PurchaseData'
 import { select2List } from './data/select2List'
 import {
@@ -40,6 +41,7 @@ import {
   apiDataTableComplaintsGetAll,
   apiOrderProcessManagementGetThisOrderDetail,
   apiProcess3Insert,
+  apiPurchase3Insert,
   apiProDuctIndex
 } from '../api/api'
 
@@ -51,6 +53,20 @@ export default {
   // jquery mock
   //
   init_jquery () {
+    // 採購分單
+    $.mockjax({
+      type: 'GET',
+      url: apiPurchase3Insert,
+      status: 200,
+      dataType: 'json',
+      responseTime: 150,
+      contentType: 'application/json',
+      response: function (setting) {
+        // 回應
+        this.responseText = Purchase3InsertData
+      }
+    })
+
     // 工序狀態管理
     $.mockjax({
       type: 'GET',

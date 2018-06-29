@@ -44,7 +44,7 @@
       </div>
       <div class="col-12 text-right">
         <button type="submit" class="btn btn-success col-sm-2 mb-3">儲存</button>
-        <button type="button" class="btn btn-danger col-sm-1 mb-3">取消</button>
+        <a href="" class="btn btn-danger col-sm-1 mb-3">返回</a>
       </div>
     </div>
   </div>

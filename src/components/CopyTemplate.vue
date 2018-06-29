@@ -140,11 +140,12 @@ export default {
                 '  <a class="dropdown-item" href="//?={{id}}">刪除</a>' +
                 '</div>' +
                 '</div>'
-              ).replace('{{id}}', '')
+              ).replace(/{{id}}/g, '')
             }
           }
         ],
         'language': language
+        // 'language': dataTablesModule.language()
       })
 
       // 明細
@@ -167,16 +168,16 @@ export default {
 
         var trTemplate = ''
         if (d.length) {
-          d.map(function (data) {
+          d.map(function (data, index) {
             trTemplate += (
               '<tr>' +
               '  <td>{{subData_1}}</td>' +
               '  <td>{{subData_2}}</td>' +
               '  <td>{{subData_3}}</td>' +
               '</tr>'
-            ).replace('{{subData_1}}', '')
-              .replace('{{subData_2}}', '')
-              .replace('{{subData_3}}', '')
+            ).replace(/{{subData_1}}/g, '')
+              .replace(/{{subData_2}}/g, '')
+              .replace(/{{subData_3}}/g, '')
           })
         }
 

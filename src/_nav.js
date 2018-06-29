@@ -201,6 +201,11 @@ export default {
         icon: 'icon-star'
       },
       {
+        name: '採購分單',
+        url: '/Purchase3',
+        icon: 'icon-star'
+      },
+      {
         name: '採購原物料建立',
         url: '/Materials',
         icon: 'icon-star'
