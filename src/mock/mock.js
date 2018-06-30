@@ -62,6 +62,9 @@ export default {
       responseTime: 150,
       contentType: 'application/json',
       response: function (setting) {
+        console.log('setting', setting)
+        console.log('setting.data', setting.data)
+
         // 回應
         this.responseText = Purchase3InsertData
       }

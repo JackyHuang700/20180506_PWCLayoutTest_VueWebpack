@@ -102,6 +102,10 @@ export default {
     }());
     // datatables
     (function () {
+      var receiveAjaxDataList = []
+      var sendAjaxDataList = []
+      var index = 0
+
       $(document).ready(function () {
         var dt = $('#example').dataTable()
         dt.fnDestroy()
@@ -110,7 +114,19 @@ export default {
       $(document).ready(function () {
         // dataTable
         $('#example').DataTable({
-          ajax: apiPurchase3Insert,
+          ajax: {
+            'url': apiPurchase3Insert,
+            'dataSrc': function (json) {
+              receiveAjaxDataList = json.data
+              return json.data
+            },
+            data: function () {
+              return {
+                OrderNumber: 123
+              }
+            }
+          },
+
           bPaginate: false,
           searching: false,
           order: [
@@ -148,7 +164,11 @@ export default {
                     break
                 }
 
-                return ('<input class="form-check-input" type="checkbox" id="" {{checked}}/>').replace(/{{checked}}/g, inputValue)
+                var tag = ('<input class="form-check-input addList" type="checkbox" id="" data-index="{{index}}" {{checked}}/>')
+                  .replace(/{{checked}}/g, inputValue)
+                  .replace(/{{index}}/g, index)
+                index = index + 1
+                return tag
               }
             },
             {
@@ -156,8 +176,12 @@ export default {
               'data': '',
               'orderable': false,
               'render': function (data, type, row, meta) {
-                return ('<img src="{{src}}" alt="Smiley face" height="42" width="42">')
-                // .replace(/{{src}}/g, )
+                if (row.haveTailored) {
+                  return ('<img src="/Tailored/GetTailoredImg?file={{src}}" alt="" height="42" width="42"')
+                    .replace(/{{src}}/g, row.productImg)
+                } else {
+                  return ('<img src="http://fakeimg.pl/42x42/" alt="" height="42" width="42"')
+                }
               }
             },
             {
@@ -165,13 +189,33 @@ export default {
               'data': '',
               'orderable': false,
               'render': function (data, type, row, meta) {
-                return ('<a target="_blank" href="{{link}}">{{text}}</a>')
-                // .replace(//g, )
+                if (row.haveTailored) {
+                  return ('<a target="_blank" href="{{link}}">{{text}}</a>')
+                    .replace(/{{link}}/g, row.tailoredNumber)
+                    .replace(/{{text}}/g, row.tailoredNumber)
+                } else {
+                  return ('無')
+                }
               }
             }
           ],
           'language': language
-        // 'language': dataTablesModule.language()
+          // 'language': dataTablesModule.language()
+        })
+
+        // 添加清單
+        $(document).on('click', '.addList', function (e) {
+          var self = e.target
+          var index = self.getAttribute('data-index')
+
+          if (self.checked) {
+            var pushData = receiveAjaxDataList[index]
+            pushData['deleteIndex'] = index
+            sendAjaxDataList.push(pushData)
+          } else {
+            var deleteIndex = receiveAjaxDataList.map(function (e) { return e.deleteIndex }).indexOf(index)
+            sendAjaxDataList.splice(deleteIndex, 1)
+          }
         })
       })
     }())
