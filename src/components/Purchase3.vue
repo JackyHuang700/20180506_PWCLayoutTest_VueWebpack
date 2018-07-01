@@ -164,7 +164,16 @@ export default {
                     break
                 }
 
-                var tag = ('<input class="form-check-input addList" type="checkbox" id="" data-index="{{index}}" {{checked}}/>')
+                var tag = (
+                  '<div class="custom-control custom-checkbox">' +
+                  '  <input type="checkbox" class="custom-control-input" id="{{checkboxId}}" data-index="{{index}}" {{checked}}>' +
+                  '  <label class="custom-control-label" for="{{checkboxId}}"></label>' +
+                  '</div>'
+                ).replace(/{{checked}}/g, inputValue)
+                  .replace(/{{index}}/g, index)
+                  .replace(/{{checkboxId}}/g, ('checkbox' + index))
+
+                var tag2 = ('<input class="form-check-input addList" type="checkbox" id="" data-index="{{index}}" {{checked}}/>')
                   .replace(/{{checked}}/g, inputValue)
                   .replace(/{{index}}/g, index)
                 index = index + 1
@@ -224,4 +233,10 @@ export default {
 </script>
 <style lang="css">
 @import 'datatables.net-bs4/css/dataTables.bootstrap4.css';
+
+/* 另外添加 */
+#example_wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
 </style>
