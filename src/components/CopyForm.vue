@@ -28,18 +28,24 @@
               <div class="form-group col-sm-3">
                 <label for="template6">...</label>
                 <select id="template6" name="template6" class="form-control">
-                  <option selected>Choose...</option>
+                  <option selected>所有</option>
+                  <option>...</option>
                   <option>...</option>
                 </select>
               </div>
+              <div class="form-group col-sm-3">
+                <label for="template5">單據內部標識</label>
+                <input type="text" class="form-control" name="template5" id="template5" placeholder="">
+              </div>
+              <div class="form-group col-sm-9 d-none d-sm-block"></div>
               <div class="form-group col-sm-12">
                 <label for="template5">..</label>
                 <textarea name="template5" id="template5" cols="30" rows="10" class="form-control"></textarea>
               </div>
             </div>
-            
+
           </div>
-           <div class="card-footer"></div>
+          <div class="card-footer"></div>
         </div>
       </div>
       <div class="col-12 text-right">
