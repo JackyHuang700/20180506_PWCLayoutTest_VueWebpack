@@ -1,0 +1,43 @@
+.custom-file-label {
+  overflow: hidden;
+}
+
+.closeImgBtn {
+  color: white;
+  font-size: 16px;
+  opacity: .35;
+}
+
+.closeImgBtn-position {
+  transition: opacity 0.5s ease-out;
+  top: -16px;
+  right: -12px;
+}
+
+.closeImgBtn:hover,
+.closeImgBtn:focus {
+  background-color: transparent;
+  /* border: 1px solid red; */
+  border-radius: 50%;
+  color: red;
+}
+
+.closeImgBtn:hover > span {
+  /* background-color: #fff; */
+  /* color: red; */
+  opacity: 1;
+  border-radius: 50%;
+
+
+}
+
+.closeImgBtn > span {
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  line-height: 18px;
+  background-color: red;
+  border-radius: 50%;
+  color: #fff;
+  /* border: 1px solid #fff; */
+}

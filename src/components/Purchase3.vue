@@ -166,7 +166,7 @@ export default {
 
                 var tag = (
                   '<div class="custom-control custom-checkbox">' +
-                  '  <input type="checkbox" class="custom-control-input" id="{{checkboxId}}" data-index="{{index}}" {{checked}}>' +
+                  '  <input type="checkbox" class="custom-control-input addList" id="{{checkboxId}}" data-index="{{index}}" {{checked}}>' +
                   '  <label class="custom-control-label" for="{{checkboxId}}"></label>' +
                   '</div>'
                 ).replace(/{{checked}}/g, inputValue)

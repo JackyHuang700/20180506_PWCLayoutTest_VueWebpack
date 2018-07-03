@@ -142,11 +142,17 @@ export default {
     (function () {
       $('.custom-file-input').on('change', function (e) {
         var self = e.target
-        // 設定顯示路徑
-        $(this).next().after().text($(this).val().split('\\').slice(-1)[0])
-
         // 設定圖片
         var showImgDom = self.parentElement.parentElement.getElementsByClassName('showImg')[0]
+
+        // 儲存舊路徑
+        var getOldSrc = showImgDom.getAttribute('src')
+        if (getOldSrc) {
+          showImgDom.setAttribute('data-oldSrc', getOldSrc)
+        }
+
+        // 設定顯示路徑
+        $(this).next().after().text($(this).val().split('\\').slice(-1)[0])
 
         if (this.files && this.files[0]) {
           var reader = new FileReader()
@@ -178,7 +184,8 @@ export default {
           }
           customfileinputDom.value = ''
           customfilelabelDom.innerText = '請選擇...'
-          showImgDom.setAttribute('src', 'https://fakeimg.pl/610x226/?text=Choose%20file&font=museo')
+          var oldSrc = showImgDom.getAttribute('data-oldSrc')
+          showImgDom.setAttribute('src', oldSrc)
         }
       });
 
@@ -205,47 +212,5 @@ export default {
 }
 </script>
 <style lang="css" >
-.custom-file-label {
-  overflow: hidden;
-}
-
-.closeImgBtn {
-  color: white;
-  font-size: 16px;
-  opacity: .35;
-}
-
-.closeImgBtn-position {
-  transition: opacity 0.5s ease-out;
-  top: -16px;
-  right: -12px;
-}
-
-.closeImgBtn:hover,
-.closeImgBtn:focus {
-  background-color: transparent;
-  /* border: 1px solid red; */
-  border-radius: 50%;
-  color: red;
-}
-
-.closeImgBtn:hover > span {
-  /* background-color: #fff; */
-  /* color: red; */
-  opacity: 1;
-  border-radius: 50%;
-
-
-}
-
-.closeImgBtn > span {
-  display: inline-block;
-  width: 21px;
-  height: 21px;
-  line-height: 18px;
-  background-color: red;
-  border-radius: 50%;
-  color: #fff;
-  /* border: 1px solid #fff; */
-}
+@import '../assets/jquery-validation/jquery-validation.css';
 </style>

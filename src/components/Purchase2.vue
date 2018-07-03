@@ -3,7 +3,7 @@
     <div class="row">
       <form method="post" id="form1" action="">
 
-        <div class="col-12">
+        <!-- <div class="col-12">
           <div class="card">
             <div class="card-header">
               <i class="fa fa-wpforms" aria-hidden="true"></i>
@@ -58,100 +58,6 @@
 
             </div>
           </div>
-        </div>
-
-        <!-- <div class="col-12">
-          <div class="card">
-            <div class="card-header">
-              <i class="fa fa-wpforms" aria-hidden="true"></i>採購單 - 棄用
-            </div>
-            <div class="card-body">
-
-              <div class="form-row">
-           
-
-                <div class="form-group col-sm-12">
-                  <label for="template1">物料/服務描述</label>
-                  <textarea name="" id="template1" cols="30" rows="10" class="form-control"></textarea>
-                </div>
-
-                <div class="form-group col-sm-3">
-                  <label for="template1">價格貨幣</label>
-                  <input type="text" class="form-control" name="" id="template1" placeholder="">
-                </div>
-                <div class="form-group col-sm-3">
-                  <label for="template2">貨幣匯率</label>
-                  <input type="text" class="form-control" name="" id="template2" placeholder="">
-                </div>
-                <div class="form-group col-sm-3">
-                  <label for="PriceBefDi">單價(折扣前)</label>
-                  <input type="text" class="form-control" name="PriceBefDi" id="PriceBefDi" placeholder="" value="0">
-                </div>
-                <div class="form-group col-sm-3">
-                  <label for="DiscPrcnt">每行折扣 %</label>
-                  <input type="text" class="form-control" name="DiscPrcnt" id="DiscPrcnt" placeholder="" value="0">
-                </div>
-                <div class="form-group col-sm-3">
-                  <label for="Price">價格(未稅)</label>
-                  <input type="text" class="form-control" name="Price" id="Price" placeholder="" value="0" readonly>
-                </div>
-
-                <div class="form-group col-sm-3">
-                  <label for="template3">稅定義</label>
-                  <input type="text" class="form-control" name="" id="template3" placeholder="">
-                </div>
-                <div class="form-group col-sm-3">
-                  <label for="template4">含稅單價</label>
-                  <input type="text" class="form-control" name="" id="template4" placeholder="">
-                </div>
-
-                <div class="form-group col-sm-3">
-                  <label for="template1">總稅額</label>
-                  <input type="text" class="form-control" name="" id="template1" placeholder="">
-                </div>
-                <div class="form-group col-sm-3">
-                  <label for="template2">稅額（外幣）</label>
-                  <input type="text" class="form-control" name="" id="template2" placeholder="">
-                </div>
-
-                <div class="form-group col-sm-3">
-                  <label for="template1">供應商目錄編號</label>
-                  <input type="text" class="form-control" name="" id="template1" placeholder="">
-                </div>
-                <div class="form-group col-sm-3">
-                  <label for="template2">倉庫編號</label>
-                  <input type="text" class="form-control" name="" id="template2" placeholder="">
-                </div>
-                <div class="form-group col-sm-3">
-                  <label for="template3">計量單位代碼</label>
-                  <input type="text" class="form-control" name="" id="template3" placeholder="">
-                </div>
-                <div class="form-group col-sm-3">
-                  <label for="template4">WEB訂單編號(唯一碼)</label>
-                  <input type="text" class="form-control" name="" id="template4" placeholder="">
-                </div>
-
-                <div class="form-group col-sm-12">
-                  <label for="template1">使用位置以及備註</label>
-                  <textarea name="" id="template1" cols="30" rows="10" class="form-control"></textarea>
-                </div>
-
-                <div class="form-group col-sm-3">
-                  <label for="template2">材料顏色名稱</label>
-                  <input type="text" class="form-control" name="" id="template2" placeholder="">
-                </div>
-                <div class="form-group col-sm-3">
-                  <label for="template3">採購條碼號</label>
-                  <input type="text" class="form-control" name="" id="template3" placeholder="">
-                </div>
-                <div class="form-group col-sm-12">
-                  <label for="template4">原物料採購備註</label>
-                  <textarea name="" id="template4" cols="30" rows="10" class="form-control"></textarea>
-                </div>
-              </div>
-
-            </div>
-          </div>
         </div> -->
 
         <!-- 新版 -->
@@ -169,7 +75,10 @@
 
                 <div class="form-group col-sm-3">
                   <label for="Printed">已打印</label>
-                  <input type="text" class="form-control" name="Printed" id="Printed" placeholder="">
+                  <select id="Printed" name="Printed" class="form-control">
+                    <option selected>是</option>
+                    <option>否</option>
+                  </select>
                 </div>
                 <div class="form-group col-sm-3">
                   <label for="DocStatus">單據狀態</label>
@@ -177,16 +86,13 @@
                 </div>
                 <div class="form-group col-sm-3">
                   <label for="DocDate">過賬日期</label>
-                  <input type="text" class="form-control" name="DocDate" id="DocDate" placeholder="">
+                  <input type="text" class="form-control" name="DocDate" id="DocDate" placeholder="" value="2018-7-3">
                 </div>
                 <div class="form-group col-sm-3">
                   <label for="DocDueDate">到期日</label>
-                  <input type="text" class="form-control" name="DocDueDate" id="DocDueDate" placeholder="">
+                  <input type="text" class="form-control" name="DocDueDate" id="DocDueDate" placeholder="" value="2018-7-3">
                 </div>
-                <div class="form-group col-sm-3">
-                  <label for="Comments">備註</label>
-                  <textarea name="Comments" id="Comments" cols="30" rows="10" class="form-control"></textarea>
-                </div>
+
                 <div class="form-group col-sm-3">
                   <label for="SlpCode">採購員</label>
                   <select id="SlpCode" name="SlpCode" class="form-control">
@@ -216,14 +122,19 @@
 
                 <!-- 只會有其中一種情況 -->
                 <div class="form-group col-sm-3">
-                  <label for="Canceled">已取消</label>
-                  <input type="text" class="form-control" name="Canceled" id="Canceled" placeholder="" readonly>
+                  <label for="Canceled">狀態</label>
+                  <input type="text" class="form-control" name="Canceled" id="Canceled" placeholder="" value="已取消" readonly>
                 </div>
-                <div class="form-group col-sm-3">
-                  <label for="Confirmed">已確認</label>
-                  <input type="text" class="form-control" name="Confirmed" id="Confirmed" placeholder="" readonly>
-                </div>
+                <!-- <div class="form-group col-sm-3">
+                  <label for="Confirmed">狀態</label>
+                  <input type="text" class="form-control" name="Confirmed" id="Confirmed" placeholder="" value="已確認" readonly>
+                </div> -->
                 <!-- 只會有其中一種情況 -->
+                <div class="form-group col-sm-3 d-none d-sm-block"></div>
+                <div class="form-group col-sm-3">
+                  <label for="Comments">備註</label>
+                  <textarea name="Comments" id="Comments" cols="30" rows="10" class="form-control"></textarea>
+                </div>
 
               </div>
             </div>
@@ -445,13 +356,16 @@ export default {
     // }());
     // dataTable
     (function () {
-      var table = $('#example').DataTable({
+      $('#example').DataTable({
         'select': {
           selector: 'td:not(:first-child)',
           style: 'os'
         },
         'ajax': apiDataTableCopyTemplateGetAll,
+        // 'ajax': '/DemoTestPurchaseInsertAPI/',
         'scrollX': true,
+        'bPaginate': false,
+        'searching': false,
         'columns': [
           { 'data': 'mainData_1' },
           { 'data': 'mainData_1' },
@@ -495,7 +409,6 @@ export default {
 @import 'datatables.net-bs4/css/dataTables.bootstrap4.css';
 
 div.dataTables_wrapper {
-  width: 84vw;
   margin: 0 auto;
 }
 
@@ -506,6 +419,23 @@ div.dataTables_wrapper {
 
 #example th {
   min-width: 130px;
+}
+
+@media (min-width: 1201px) {
+  div.dataTables_wrapper {
+    width: 77vw;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  div.dataTables_wrapper {
+    width: 72vw;
+  }
+}
+@media screen and (max-width: 1023px) {
+  div.dataTables_wrapper {
+    width: 70vw;
+  }
 }
 
 /* #example th:nth-child(1) {

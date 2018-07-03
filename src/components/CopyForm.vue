@@ -37,7 +37,9 @@
                 <label for="template5">單據內部標識</label>
                 <input type="text" class="form-control" name="template5" id="template5" placeholder="">
               </div>
+              <!-- 空白 -->
               <div class="form-group col-sm-9 d-none d-sm-block"></div>
+              <!-- 空白 -->
               <div class="form-group col-sm-12">
                 <label for="template5">..</label>
                 <textarea name="template5" id="template5" cols="30" rows="10" class="form-control"></textarea>

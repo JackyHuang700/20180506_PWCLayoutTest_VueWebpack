@@ -108,6 +108,9 @@ export default {
           style: 'os'
         },
         'ajax': apiDataTableCopyTemplateGetAll,
+        'scrollX': true,
+        // 'bPaginate': false,
+        // 'searching': false,
         'columns': [
           {},
           { 'data': 'mainData_1' },
@@ -196,4 +199,35 @@ export default {
 </script>
 <style lang="css">
 @import 'datatables.net-bs4/css/dataTables.bootstrap4.css';
+
+
+div.dataTables_wrapper {
+  margin: 0 auto;
+}
+
+/* 另外添加 */
+#example_wrapper {
+  overflow-x: auto;
+}
+
+#example th {
+  min-width: 130px;
+}
+
+@media (min-width: 1201px) {
+  div.dataTables_wrapper {
+    width: 77vw;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  div.dataTables_wrapper {
+    width: 72vw;
+  }
+}
+@media screen and (max-width: 1023px) {
+  div.dataTables_wrapper {
+    width: 70vw;
+  }
+}
 </style>
