@@ -230,7 +230,7 @@
         <div class="card">
           <div class="card-header">
             <i aria-hidden="true" class="fa fa-wpforms"></i>
-            回覆列表
+            審核列表
           </div>
           <div class="card-body">
             <table id="example2" cellspacing="0" width="100%" class="table table-gray-100 table-hover display">
@@ -526,34 +526,6 @@ export default {
 @import '../assets/FileUpload/FileUpload.css';
 @import 'datatables.net-bs4/css/dataTables.bootstrap4.css';
 
-/* 另外添加 */
-/* #example_wrapper,
-#example2_wrapper {
-  overflow-x: auto;
-} */
+@import '../assets/dataTables/dataTables.css';
 
-#example th,
-#example2 th,
-#example3 th,
-#example4 th,
-#example5 th {
-  min-width: 130px;
-}
-
-@media (min-width: 1201px) {
-  div.example_wrapper div.example2_wrapper {
-    width: 77vw;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  div.example_wrapper div.example2_wrapper {
-    width: 72vw;
-  }
-}
-@media screen and (max-width: 1023px) {
-  div.example_wrapper div.example2_wrapper {
-    width: 70vw;
-  }
-}
 </style>

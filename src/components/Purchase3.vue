@@ -233,10 +233,5 @@ export default {
 </script>
 <style lang="css">
 @import 'datatables.net-bs4/css/dataTables.bootstrap4.css';
-
-/* 另外添加 */
-#example_wrapper {
-  width: 100%;
-  /* overflow-x: auto; */
-}
+@import '../assets/dataTables/dataTables.css';
 </style>
