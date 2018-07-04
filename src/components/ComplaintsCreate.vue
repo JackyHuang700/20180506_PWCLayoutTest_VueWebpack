@@ -108,26 +108,6 @@
       </div> -->
 
       <!-- new form -->
-      <div class="col-12">
-        <div class="card">
-          <div class="card-header">
-            <i aria-hidden="true" class="fa fa-wpforms"></i>
-            訂單內容
-          </div>
-          <div class="card-body">
-            <div class="form-row">
-              <div class="form-group col-sm-3">
-                <label for="template4">客訴單號</label>
-                <input type="text" class="form-control" id="template4" name="template4" placeholder="">
-              </div>
-              <div class="form-group col-sm-3">
-                <label for="template4">客訴代號</label>
-                <input type="text" class="form-control" id="template4" name="template4" placeholder="" readonly>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       <div class="col-12">
         <div class="card">
@@ -138,19 +118,16 @@
           <div class="card-body">
             <div class="form-row">
               <div class="form-group col-sm-3">
-                <label for="template4">關聯訂單號碼</label>
-                <input type="text" class="form-control" id="template4" name="template4" placeholder="">
+                <label for="template4">客訴編號</label>
+                <input type="text" class="form-control" id="template4" name="template4" placeholder="" readonly>
               </div>
               <div class="form-group col-sm-3">
                 <label for="template4">關聯訂單</label>
                 <input type="text" class="form-control" id="template4" name="template4" placeholder="">
               </div>
+
               <div class="form-group col-sm-3">
-                <label for="template4">客戶名稱</label>
-                <input type="text" class="form-control" id="template4" name="template4" placeholder="">
-              </div>
-              <div class="form-group col-sm-3">
-                <label for="template6">客訴原因別</label>
+                <label for="template6">客訴原因</label>
                 <select id="template6" name="template6" class="form-control">
                   <option selected>所有</option>
                   <option>...</option>
@@ -158,34 +135,59 @@
                 </select>
               </div>
               <div class="form-group col-sm-3">
-                <label for="template4">原因別</label>
-                <input type="text" class="form-control" id="template4" name="template4" placeholder="請輸入原因">
-              </div>
-              <div class="form-group col-sm-3">
                 <label for="template3">客訴日期</label>
-                <input type="text" class="form-control" id="template3" name="template3" placeholder="">
+                <input type="text" class="form-control" id="template3" name="template3" placeholder="" value="2018-7-3">
               </div>
-              <div class="form-group col-sm-6 d-none d-sm-block"></div>
 
               <div class="form-group col-sm-6">
                 <label for="template5">客訴內容</label>
                 <textarea name="template5" id="template5" cols="30" rows="14" class="form-control" placeholder="請輸入內容"></textarea>
               </div>
-              <div class="form-group col-sm-6">
-                <label for="customFile">相關檔案</label>
+            </div>
+            <hr>
+            <div class="form-row" id="FilesDOM">
+              <div class="form-group col-sm-12">
+                <button type="button" class="btn btn-primary" id="AddFileBtn">加入附件</button>
+              </div>
+              <div class="form-group col-sm-3">
+                <label for="customFile">附檔</label>
                 <div class="position-relative">
                   <button type="button" class="close closeImgBtn position-absolute closeImgBtn-position" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
-                  <img alt="" class="img-thumbnail round mb-3 img-fluid showImg" src="https://fakeimg.pl/1010x226/?text=Choose%20file&font=museo">
+                  <img alt="" class="img-thumbnail round mb-3 img-fluid showImg" src="https://fakeimg.pl/610x226/?text=Choose%20file&font=museo">
                 </div>
                 <div class="custom-file">
                   <input type="hidden" class="urlHidden" name="PositiveUrl" id="PositiveUrl" value="">
-                  <input type="file" class="custom-file-input" id="PositiveFile" name="PositiveFile">
-                  <label class="custom-file-label" for="PositiveFile">請選擇...</label>
+                  <input type="file" class="custom-file-input" id="Annex_1" name="Annex_1">
+                  <label class="custom-file-label" for="Annex_1">請選擇...</label>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">
+            <i aria-hidden="true" class="fa fa-wpforms"></i>
+            客戶資訊
+          </div>
+          <div class="card-body">
+            <div class="form-row">
+              <div class="form-group col-sm-3">
+                <label for="template4">客戶代號</label>
+                <input type="text" class="form-control" id="template4" name="template4" placeholder="" readonly>
+              </div>
+              <div class="form-group col-sm-3">
+                <label for="template4">客戶名稱</label>
+                <input type="text" class="form-control" id="template4" name="template4" placeholder="" readonly>
+              </div>
+              <div class="form-group col-sm-3">
+                <label for="template4">Email</label>
+                <input type="text" class="form-control" id="template4" name="template4" placeholder="" readonly>
+              </div>
             </div>
           </div>
         </div>
@@ -228,73 +230,10 @@
         <div class="card">
           <div class="card-header">
             <i aria-hidden="true" class="fa fa-wpforms"></i>
-            組長審核回覆列表
+            回覆列表
           </div>
           <div class="card-body">
             <table id="example2" cellspacing="0" width="100%" class="table table-gray-100 table-hover display">
-              <thead>
-                <tr>
-                  <th scope="col" class="align-middle">次序</th>
-                  <th scope="col" class="align-middle">完成日期</th>
-                  <th scope="col" class="align-middle">審核人</th>
-                  <th scope="col" class="align-middle">審核訊息</th>
-                  <th scope="col" class="align-middle">狀態</th>
-                </tr>
-              </thead>
-            </table>
-          </div>
-        </div>
-      </div>
-      <div class="col-12">
-        <div class="card">
-          <div class="card-header">
-            <i aria-hidden="true" class="fa fa-wpforms"></i>
-            業務總監回覆列表
-          </div>
-          <div class="card-body">
-            <table id="example3" cellspacing="0" width="100%" class="table table-gray-100 table-hover display">
-              <thead>
-                <tr>
-                  <th scope="col" class="align-middle">次序</th>
-                  <th scope="col" class="align-middle">完成日期</th>
-                  <th scope="col" class="align-middle">審核人</th>
-                  <th scope="col" class="align-middle">審核訊息</th>
-                  <th scope="col" class="align-middle">狀態</th>
-                </tr>
-              </thead>
-            </table>
-          </div>
-        </div>
-      </div>
-      <div class="col-12">
-        <div class="card">
-          <div class="card-header">
-            <i aria-hidden="true" class="fa fa-wpforms"></i>
-            採購回覆列表
-          </div>
-          <div class="card-body">
-            <table id="example4" cellspacing="0" width="100%" class="table table-gray-100 table-hover display">
-              <thead>
-                <tr>
-                  <th scope="col" class="align-middle">次序</th>
-                  <th scope="col" class="align-middle">完成日期</th>
-                  <th scope="col" class="align-middle">審核人</th>
-                  <th scope="col" class="align-middle">審核訊息</th>
-                  <th scope="col" class="align-middle">狀態</th>
-                </tr>
-              </thead>
-            </table>
-          </div>
-        </div>
-      </div>
-      <div class="col-12">
-        <div class="card">
-          <div class="card-header">
-            <i aria-hidden="true" class="fa fa-wpforms"></i>
-            老闆回覆列表
-          </div>
-          <div class="card-body">
-            <table id="example5" cellspacing="0" width="100%" class="table table-gray-100 table-hover display">
               <thead>
                 <tr>
                   <th scope="col" class="align-middle">次序</th>
@@ -490,85 +429,9 @@ export default {
       })
     }());
 
-    (function () {
-      $('#example3').DataTable({
-        'select': {
-          selector: 'td:not(:first-child)',
-          style: 'os'
-        },
-        'ajax': apiDataTableCopyTemplateGetAll,
-        // 'ajax': '/Demo/TestComplaintInsert2API',
-        'scrollX': true,
-        'bPaginate': false,
-        'searching': false,
-        'columns': [
-          { 'data': 'mainData_1' },
-          { 'data': 'mainData_2' },
-          { 'data': 'mainData_3' },
-          { 'data': 'mainData_3' },
-          { 'data': 'mainData_3' }
-        ],
-        'order': [
-          [1, 'asc']
-        ],
-        'language': language
-        // 'language': dataTablesModule.language()
-      })
-    }());
-    (function () {
-      $('#example4').DataTable({
-        'select': {
-          selector: 'td:not(:first-child)',
-          style: 'os'
-        },
-        'ajax': apiDataTableCopyTemplateGetAll,
-        // 'ajax': '/Demo/TestComplaintInsert2API',
-        'scrollX': true,
-        'bPaginate': false,
-        'searching': false,
-        'columns': [
-          { 'data': 'mainData_1' },
-          { 'data': 'mainData_2' },
-          { 'data': 'mainData_3' },
-          { 'data': 'mainData_3' },
-          { 'data': 'mainData_3' }
-        ],
-        'order': [
-          [1, 'asc']
-        ],
-        'language': language
-        // 'language': dataTablesModule.language()
-      })
-    }());
-    (function () {
-      $('#example5').DataTable({
-        'select': {
-          selector: 'td:not(:first-child)',
-          style: 'os'
-        },
-        'ajax': apiDataTableCopyTemplateGetAll,
-        // 'ajax': '/Demo/TestComplaintInsert2API',
-        'scrollX': true,
-        'bPaginate': false,
-        'searching': false,
-        'columns': [
-          { 'data': 'mainData_1' },
-          { 'data': 'mainData_2' },
-          { 'data': 'mainData_3' },
-          { 'data': 'mainData_3' },
-          { 'data': 'mainData_3' }
-        ],
-        'order': [
-          [1, 'asc']
-        ],
-        'language': language
-        // 'language': dataTablesModule.language()
-      })
-    }());
-
     /* change picture url */
     (function () {
-      $('.custom-file-input').on('change', function (e) {
+      $(document).on('change', '.custom-file-input', function (e) {
         var self = e.target
         // 設定圖片
         var showImgDom = self.parentElement.parentElement.getElementsByClassName('showImg')[0]
@@ -592,7 +455,7 @@ export default {
         }
       })
 
-      $('.closeImgBtn').on('click', function (e) {
+      $(document).on('click', '.closeImgBtn', function (e) {
         var self = e.target
 
         if (self.tagName === 'SPAN') {
@@ -616,6 +479,33 @@ export default {
           showImgDom.setAttribute('src', oldSrc)
         }
       });
+      // 動態添加FileUpload
+      (function () {
+        var FileTemplate = (
+          '<div class="form-group col-sm-3">' +
+          '     <label for="">附檔</label>' +
+          '     <div class="position-relative">' +
+          '         <button type="button" class="close closeImgBtn position-absolute closeImgBtn-position" aria-label="Close">' +
+          '             <span aria-hidden="true">&times;</span>' +
+          '         </button>' +
+          '         <img alt="" class="img-thumbnail round mb-3 img-fluid showImg" src="https://fakeimg.pl/610x226/?text=Choose%20file&font=museo">' +
+          '     </div>' +
+          '     <div class="custom-file">' +
+          '         <input type="file" class="custom-file-input" id="{{Aims}}_{{Index}}" name="{{Aims}}_{{Index}}" aria-describedby="fileHelp">' +
+          '         <label class="custom-file-label" for="{{Aims}}_{{Index}}">請選擇...</label>' +
+          '     </div>' +
+          ' </div>')
+
+        $(document).on('click', '#AddFileBtn', CreateFileTemplate)
+        function CreateFileTemplate () {
+          var AimsKey = 'Annex'
+          var AimsDOM = $('#FilesDOM')
+          var Index = AimsDOM.children('div').length + 1
+          var Template = FileTemplate.replace(/{{Aims}}/g, AimsKey).replace(/{{Index}}/g, Index)
+
+          AimsDOM.append(Template)
+        }
+      }());
 
       // update view use，show Image
       (function ShowImg () {
@@ -637,13 +527,10 @@ export default {
 @import 'datatables.net-bs4/css/dataTables.bootstrap4.css';
 
 /* 另外添加 */
-#example_wrapper,
-#example2_wrapper,
-#example3_wrapper,
-#example4_wrapper,
-#example5_wrapper {
+/* #example_wrapper,
+#example2_wrapper {
   overflow-x: auto;
-}
+} */
 
 #example th,
 #example2 th,
@@ -654,30 +541,18 @@ export default {
 }
 
 @media (min-width: 1201px) {
-  div.example_wrapper
-    div.example2_wrapper
-    div.example3_wrapper
-    div.example4_wrapper
-    div.example5_wrapper {
+  div.example_wrapper div.example2_wrapper {
     width: 77vw;
   }
 }
 
 @media screen and (max-width: 1200px) {
-  div.example_wrapper
-    div.example2_wrapper
-    div.example3_wrapper
-    div.example4_wrapper
-    div.example5_wrapper {
+  div.example_wrapper div.example2_wrapper {
     width: 72vw;
   }
 }
 @media screen and (max-width: 1023px) {
-  div.example_wrapper
-    div.example2_wrapper
-    div.example3_wrapper
-    div.example4_wrapper
-    div.example5_wrapper {
+  div.example_wrapper div.example2_wrapper {
     width: 70vw;
   }
 }

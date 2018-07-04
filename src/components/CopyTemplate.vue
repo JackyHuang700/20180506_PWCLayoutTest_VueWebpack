@@ -206,9 +206,9 @@ div.dataTables_wrapper {
 }
 
 /* 另外添加 */
-#example_wrapper {
+/* #example_wrapper {
   overflow-x: auto;
-}
+} */
 
 #example th {
   min-width: 130px;

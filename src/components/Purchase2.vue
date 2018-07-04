@@ -69,29 +69,14 @@
             <div class="card-body">
               <div class="form-row">
                 <div class="form-group col-sm-3">
-                  <label for="DocNum">單據編號</label>
+                  <label for="DocNum">採購編號</label>
                   <input type="text" class="form-control" name="DocNum" id="DocNum" placeholder="">
                 </div>
 
-                <div class="form-group col-sm-3">
-                  <label for="Printed">已打印</label>
-                  <select id="Printed" name="Printed" class="form-control">
-                    <option selected>是</option>
-                    <option>否</option>
-                  </select>
-                </div>
-                <div class="form-group col-sm-3">
-                  <label for="DocStatus">單據狀態</label>
-                  <input type="text" class="form-control" name="DocStatus" id="DocStatus" placeholder="">
-                </div>
-                <div class="form-group col-sm-3">
-                  <label for="DocDate">過賬日期</label>
-                  <input type="text" class="form-control" name="DocDate" id="DocDate" placeholder="" value="2018-7-3">
-                </div>
-                <div class="form-group col-sm-3">
-                  <label for="DocDueDate">到期日</label>
-                  <input type="text" class="form-control" name="DocDueDate" id="DocDueDate" placeholder="" value="2018-7-3">
-                </div>
+                <!-- <div class="form-group col-sm-3">
+                  <label for="U_WEBSO_ID">唯一碼</label>
+                  <input type="text" class="form-control" name="U_WEBSO_ID" id="U_WEBSO_ID" placeholder="">
+                </div> -->
 
                 <div class="form-group col-sm-3">
                   <label for="SlpCode">採購員</label>
@@ -99,6 +84,7 @@
                     <option selected>黃菌</option>
                   </select>
                 </div>
+                <div class="form-group col-sm-6 d-none d-sm-block"></div>
 
                 <div class="form-group col-sm-3">
                   <label for="U_bes_Released">採購公告</label>
@@ -108,9 +94,33 @@
                   </select>
                 </div>
                 <div class="form-group col-sm-3">
-                  <label for="U_WEBSO_ID">唯一碼</label>
-                  <input type="text" class="form-control" name="U_WEBSO_ID" id="U_WEBSO_ID" placeholder="">
+                  <label for="Printed">採購類別</label>
+                  <select id="Printed" name="Printed" class="form-control">
+                    <option value="" selected>外發</option>
+                    <option value="">自製</option>
+                  </select>
                 </div>
+
+                <div class="form-group col-sm-6 d-none d-sm-block"></div>
+
+                <!-- <div class="form-group col-sm-3">
+                  <label for="DocStatus">單據狀態</label>
+                  <input type="text" class="form-control" name="DocStatus" id="DocStatus" placeholder="">
+                </div> -->
+                <div class="form-group col-sm-3">
+                  <label for="DocDate">過賬日期</label>
+                  <input type="text" class="form-control" name="DocDate" id="DocDate" placeholder="" value="2018-7-3">
+                </div>
+                <div class="form-group col-sm-3">
+                  <label for="DocDueDate">到期日</label>
+                  <input type="text" class="form-control" name="DocDueDate" id="DocDueDate" placeholder="" value="2018-7-3">
+                </div>
+                <div class="form-group col-sm-3">
+                  <label for="DocDueDate2">交貨日期</label>
+                  <input type="text" class="form-control" name="DocDueDate2" id="DocDueDate2" placeholder="" value="2018-7-3">
+                </div>
+                <div class="form-group col-sm-3 d-none d-sm-block"></div>
+
                 <div class="form-group col-sm-3">
                   <label for="U_PrcCode">成本中心部門</label>
                   <input type="text" class="form-control" name="U_PrcCode" id="U_PrcCode" placeholder="">
@@ -119,6 +129,7 @@
                   <label for="U_PrcCom">成本中心 - 公司別</label>
                   <input type="text" class="form-control" name="U_PrcCom" id="U_PrcCom" placeholder="">
                 </div>
+                <div class="form-group col-sm-6 d-none d-sm-block"></div>
 
                 <!-- 只會有其中一種情況 -->
                 <div class="form-group col-sm-3">
@@ -130,7 +141,14 @@
                   <input type="text" class="form-control" name="Confirmed" id="Confirmed" placeholder="" value="已確認" readonly>
                 </div> -->
                 <!-- 只會有其中一種情況 -->
-                <div class="form-group col-sm-3 d-none d-sm-block"></div>
+                <div class="form-group col-sm-3">
+                  <label for="Printed">已打印</label>
+                  <select id="Printed" name="Printed" class="form-control" readonly>
+                    <option selected>是</option>
+                    <option>否</option>
+                  </select>
+                </div>
+                <div class="form-group col-sm-6 d-none d-sm-block"></div>
                 <div class="form-group col-sm-3">
                   <label for="Comments">備註</label>
                   <textarea name="Comments" id="Comments" cols="30" rows="10" class="form-control"></textarea>
@@ -152,30 +170,23 @@
               <table id="example" cellspacing="0" width="100%" class="table table-gray-100 table-hover display">
                 <thead>
                   <tr>
-                    <th scope="col" class="align-middle">單據內部標識</th>
+                    <th scope="col" class="align-middle">採購條碼</th>
+                    <th scope="col" class="align-middle">供應商</th>
                     <th scope="col" class="align-middle">物料編號</th>
-                    <th scope="col" class="align-middle">物料/服務描述</th>
+                    <th scope="col" class="align-middle">物料服務描述</th>
                     <th scope="col" class="align-middle">數量</th>
-                    <th scope="col" class="align-middle">行交貨日期</th>
-                    <th scope="col" class="align-middle">剩餘未清數量</th>
-                    <th scope="col" class="align-middle">價格貨幣</th>
-                    <th scope="col" class="align-middle">貨幣匯率</th>
-                    <th scope="col" class="align-middle">單價（折扣前）</th>
-                    <th scope="col" class="align-middle">每行折扣％</th>
-                    <th scope="col" class="align-middle">價格（未稅）</th>
-                    <th scope="col" class="align-middle">每行稅率</th>
-                    <th scope="col" class="align-middle">稅定義</th>
+                    <th scope="col" class="align-middle">未清數量</th>
+                    <th scope="col" class="align-middle">單位</th>
+                    <th scope="col" class="align-middle">貨幣</th>
+                    <th scope="col" class="align-middle">單價</th>
+                    <th scope="col" class="align-middle">折扣</th>
+                    <th scope="col" class="align-middle">價格</th>
+                    <th scope="col" class="align-middle">稅別</th>
+                    <th scope="col" class="align-middle">稅率</th>
                     <th scope="col" class="align-middle">含稅單價</th>
-                    <th scope="col" class="align-middle">總稅額</th>
-                    <th scope="col" class="align-middle">稅額（外幣）</th>
-                    <th scope="col" class="align-middle">供應商目錄編號</th>
-                    <th scope="col" class="align-middle">倉庫編號</th>
-                    <th scope="col" class="align-middle">計量單位代碼</th>
-                    <th scope="col" class="align-middle">WEB訂單編號（唯一碼</th>
-                    <th scope="col" class="align-middle">使用位置以及備註</th>
-                    <th scope="col" class="align-middle">材料顏色名稱</th>
-                    <th scope="col" class="align-middle">採購條碼號</th>
-                    <th scope="col" class="align-middle">原物料採購備註</th>
+                    <th scope="col" class="align-middle">總計</th>
+                    <th scope="col" class="align-middle">材料顏色</th>
+                    <th scope="col" class="align-middle">使用位置</th>
                   </tr>
                 </thead>
               </table>
@@ -184,21 +195,38 @@
           </div>
         </div>
 
-        <!-- <div class="col-12">
+        <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <i class="fa fa-wpforms" aria-hidden="true"></i>計算總額
+              <i class="fa fa-wpforms" aria-hidden="true"></i>統計總額
             </div>
             <div class="card-body">
               <div class="form-row">
                 <div class="form-group col-sm-3">
-                  <label for="Printed"></label>
-                  <input type="text" class="form-control" name="Printed" id="Printed" placeholder="">
+                  <label for="testInput">折扣前總計</label>
+                  <input type="text" class="form-control text-right" name="testInput" id="testInput" placeholder="" readonly value="0">
+                </div>
+                <div class="form-group col-sm-3">
+                  <label for="testInput2">折扣</label>
+                  <input type="text" class="form-control text-right" name="testInput2" id="testInput2" placeholder="" readonly>
+                </div>
+              <div class="form-group col-sm-6 d-none d-sm-block"></div>                
+                <div class="form-group col-sm-3">
+                  <label for="testInput3">運費</label>
+                  <input type="text" class="form-control text-right" name="testInput3" id="testInput3" placeholder="" readonly>
+                </div>
+                <div class="form-group col-sm-3">
+                  <label for="testInput4">稅額</label>
+                  <input type="text" class="form-control text-right" name="testInput4" id="testInput4" placeholder="" readonly>
+                </div>
+                <div class="form-group col-sm-3">
+                  <label for="testInput5">到期付款總計</label>
+                  <input type="text" class="form-control text-right" name="testInput5" id="testInput5" placeholder="" readonly value="0">
                 </div>
               </div>
             </div>
           </div>
-        </div> -->
+        </div>
 
         <div class="col-12 text-right">
           <button type="submit" class="btn btn-success col-sm-2 mb-3">儲存</button>
@@ -368,7 +396,6 @@ export default {
         'searching': false,
         'columns': [
           { 'data': 'mainData_1' },
-          { 'data': 'mainData_1' },
           { 'data': 'mainData_2' },
           { 'data': 'mainData_3' },
           { 'data': 'mainData_1' },
@@ -384,13 +411,7 @@ export default {
           { 'data': 'mainData_2' },
           { 'data': 'mainData_3' },
           { 'data': 'mainData_1' },
-          { 'data': 'mainData_2' },
-          { 'data': 'mainData_3' },
-          { 'data': 'mainData_3' },
-          { 'data': 'mainData_1' },
-          { 'data': 'mainData_2' },
-          { 'data': 'mainData_3' },
-          { 'data': 'mainData_1' }
+          { 'data': 'mainData_2' }
         ],
         'order': [
           [1, 'asc']
@@ -413,9 +434,9 @@ div.dataTables_wrapper {
 }
 
 /* 另外添加 */
-#example_wrapper {
+/* #example_wrapper {
   overflow-x: auto;
-}
+} */
 
 #example th {
   min-width: 130px;

@@ -237,6 +237,6 @@ export default {
 /* 另外添加 */
 #example_wrapper {
   width: 100%;
-  overflow-x: auto;
+  /* overflow-x: auto; */
 }
 </style>
