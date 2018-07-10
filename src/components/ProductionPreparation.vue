@@ -118,6 +118,7 @@
                                 <th scope="col" class="text-center">計量單位名稱</th>
                                 <th scope="col" class="text-center">倉庫</th>
                                 <th scope="col" class="text-center">發貨方法</th>
+                                <th scope="col" class="text-center">已撿貨數量</th>
                                 <th scope="col" class="text-center">出貨數量</th>
                                 <th scope="col" class="text-center">操作</th>
                               </tr>
@@ -237,7 +238,7 @@ export default {
     // dataTables - 列表Modal
     (function () {
       dataTableObj2 = $(dataTable2Dom).DataTable({
-        'ajax': apiProductionPreparationIndex,
+        // 'ajax': apiProductionPreparationIndex,
         'scrollX': true,
         'bPaginate': false,
         'searching': false,
@@ -253,29 +254,12 @@ export default {
           { data: 'uomCode' },
           { data: 'warehouse' },
           { data: 'issueType' },
+          { data: 'pickQty' },
           { data: 'issuedQty' },
           {}
         ],
         'order': [
           [1, 'asc']
-        ],
-        'columnDefs': [
-          {
-            'targets': 0,
-            'data': '',
-            'orderable': false,
-            'render': function (data, type, row, meta) {
-              return ('<span class="badge badge-pill badge-primary"></span>')
-            }
-          },
-          {
-            'targets': -1,
-            'data': '',
-            'orderable': false,
-            'render': function (data, type, row, meta) {
-              return ('<i class="fa fa-minus-square text-red" aria-hidden="true"></i>')
-            }
-          }
         ],
         // 刪除單筆資料
         'initComplete': function (oSettings) {
@@ -290,6 +274,58 @@ export default {
         'language': language
         // 'language': dataTablesModule.language()
       })
+
+      // use ajax
+      $.ajax({
+        url: apiProductionPreparationIndex,
+        // data: {
+
+        // }
+        type: 'GET',
+        dataType: 'json',
+        success: function (data) {
+          for (var i in data.data) {
+            var rowHtml = (
+              '<tr>' +
+              '  <td class="text-center">' +
+              '   <span class="badge badge-pill badge-primary"></span>' +
+              '  </td>' +
+              '  <td class="text-center">' +
+              '  </td>' +
+              '  <td class="text-center">' +
+              '  </td>' +
+              '  <td class="text-center">' +
+              '  </td>' +
+              '  <td class="text-center">' +
+              '   <input type="text" class="form-control text-right detailPlannedQty" value="{{detailPlannedQty}}" data-titleName="{{titleName}}" readonly />' +
+              '  </td>' +
+              '  <td class="text-center">' +
+              '  </td>' +
+              '  <td class="text-center">' +
+              '  </td>' +
+              '  <td class="text-center">' +
+              '  </td>' +
+              '  <td class="text-center">' +
+              '   <input type="text" class="form-control text-right pickQty" value="0" data-titleName="{{titleName}}" />' +
+              '  </td>' +
+              '  <td class="text-center">' +
+              '  </td>' +
+              '  <td class="text-center">' +
+              '   <i class="fa fa-minus-square text-red" aria-hidden="true"></i>' +
+              '  </td>' +
+              '</tr>'
+            ).replace(/{{titleName}}/g, 'POMetarialTable')
+              .replace(/{{detailPlannedQty}}/g, data.data[i].detailPlannedQty)
+              .replace(/{{}}/g, '')
+
+            dataTableObj2.row.add($(rowHtml)).draw()
+            UpdateIndex(dataTable2Dom)
+          }
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+          // toastr.error('獲取生產工單原物料表失敗');
+        }
+      })
     }());
     // Modal Button Event
     (function () {
@@ -298,9 +334,17 @@ export default {
 
       $(updateBtnDom).on('click', ConfirmWindows)
       $(maintainBtnDom).on('click', ConfirmWindows)
-      $(document).on('blur', '.alreadyPickUp', function (e) {
+      $(document).on('blur', '.pickQty', function (e) {
         var self = e.target
-        console.log('aaaaaaaaaaaaaa')
+        var trDom = self.parentElement.parentElement
+        var detailPlannedQtyDom = trDom.getElementsByClassName('detailPlannedQty')[0]
+
+        // 處理空值
+        // 處理負數
+
+        if ((self.value - 0) > (detailPlannedQtyDom.value - 0)) {
+          self.value = detailPlannedQtyDom.value
+        }
       })
 
       function ConfirmWindows (e) {
@@ -358,19 +402,6 @@ export default {
     // 共用
     function UpdateIndex_FixSpan (spanDom, domIndex) {
       spanDom.innerText = domIndex + 1
-    }
-
-    // 共用
-    function BaseQtyTemplate (baseQty) {
-      if (baseQty === 'undefined' || baseQty === undefined) {
-        baseQty = 0
-      }
-
-      var dom = (
-        "<input class='form-control baseQty' type='text' value={{baseQty}} data-titleName='POFlowTable' data-name='baseQty' id='' name=''>"
-      ).replace(/{{baseQty}}/g, baseQty)
-
-      return dom
     }
   }
 }
