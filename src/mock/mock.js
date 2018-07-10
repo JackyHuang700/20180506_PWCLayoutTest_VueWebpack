@@ -9,7 +9,11 @@ import { dataTableList as ComplaintsData } from './data/ComplaintsData'
 import { dataTableList as SupplierData } from './data/SupplierData'
 import { dataTableList as CopyTemplateData } from './data/CopyTemplateData'
 import { dataTableList as ComplaintsCreateData } from './data/ComplaintsCreateData'
-import { dataTableList as ProductDataIndexData } from './data/ProductData'
+import {
+  dataTableList as ProductDataIndexData,
+  dataTableList2 as ProductDataIndexData2,
+  dataTableList3 as ProductDataIndexData3
+} from './data/ProductData'
 import { dataTableList as ProcessDataInsertData } from './data/ProcessData'
 import {
   dataTableList as OrderProcessManagementData,
@@ -42,7 +46,9 @@ import {
   apiOrderProcessManagementGetThisOrderDetail,
   apiProcess3Insert,
   apiPurchase3Insert,
-  apiProDuctIndex
+  apiProDuctIndex,
+  apiProductionPreparationIndex,
+  apiProductionPreparationIndex2
 } from '../api/api'
 
 export default {
@@ -209,6 +215,34 @@ export default {
       response: function (settings) {
         // 回應
         this.responseText = ProductDataIndexData
+      }
+    })
+
+    // 生產備料
+    $.mockjax({
+      type: 'GET',
+      url: apiProductionPreparationIndex,
+      status: 200,
+      dataType: 'json',
+      responseTime: 750,
+      contentType: 'application/json',
+      response: function (settings) {
+        // 回應
+        this.responseText = ProductDataIndexData2
+      }
+    })
+
+    // 生產備料
+    $.mockjax({
+      type: 'GET',
+      url: apiProductionPreparationIndex2,
+      status: 200,
+      dataType: 'json',
+      responseTime: 750,
+      contentType: 'application/json',
+      response: function (settings) {
+        // 回應
+        this.responseText = ProductDataIndexData3
       }
     })
 

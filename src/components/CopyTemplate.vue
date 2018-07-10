@@ -30,20 +30,20 @@
                   <div class="col-sm-12 mb-2">
                     <div class="form-row">
                       <div class="form-group col-md-3">
-                        <label class="float-left" for="inputText">Email</label>
-                        <input type="text" class="form-control" id="inputText" placeholder="Email">
+                        <label class="float-left" for="inputText">編號</label>
+                        <input type="text" class="form-control" id="inputText" placeholder="">
                       </div>
                       <div class="form-group col-md-3">
-                        <label class="float-left" for="inputText2">Password</label>
-                        <input type="text" class="form-control" id="inputText2" placeholder="Password">
+                        <label class="float-left" for="inputText2">編號</label>
+                        <input type="text" class="form-control" id="inputText2" placeholder="">
                       </div>
                       <div class="form-group col-md-3">
-                        <label class="float-left" for="inputText3">Password</label>
-                        <input type="text" class="form-control" id="inputText3" placeholder="Password">
+                        <label class="float-left" for="inputText3">到期日(起)</label>
+                        <input type="text" class="form-control" id="inputText3" placeholder="">
                       </div>
                       <div class="form-group col-md-3">
-                        <label class="float-left" for="inputText4">Password</label>
-                        <input type="text" class="form-control" id="inputText4" placeholder="Password">
+                        <label class="float-left" for="inputText4">到期日(迄)</label>
+                        <input type="text" class="form-control" id="inputText4" placeholder="">
                       </div>
                     </div>
                   </div>
@@ -102,7 +102,8 @@ export default {
   mounted () {
     // dataTables
     (function () {
-      var table = $('#example').DataTable({
+      //
+      var dataTableObj = $('#example').DataTable({
         'select': {
           selector: 'td:not(:first-child)',
           style: 'os'
@@ -154,7 +155,7 @@ export default {
       // 明細
       $('#example tbody').on('click', '.details-control', function () {
         var tr = $(this).closest('tr')
-        var row = table.row(tr)
+        var row = dataTableObj.row(tr)
 
         if (row.child.isShown()) {
           row.child.hide()
@@ -200,34 +201,5 @@ export default {
 <style lang="css">
 @import 'datatables.net-bs4/css/dataTables.bootstrap4.css';
 
-
-div.dataTables_wrapper {
-  margin: 0 auto;
-}
-
-/* 另外添加 */
-/* #example_wrapper {
-  overflow-x: auto;
-} */
-
-#example th {
-  min-width: 130px;
-}
-
-@media (min-width: 1201px) {
-  div.dataTables_wrapper {
-    width: 77vw;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  div.dataTables_wrapper {
-    width: 72vw;
-  }
-}
-@media screen and (max-width: 1023px) {
-  div.dataTables_wrapper {
-    width: 70vw;
-  }
-}
+@import '../assets/dataTables/dataTables.css';
 </style>

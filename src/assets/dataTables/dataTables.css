@@ -1,11 +1,10 @@
-/* RWD */
 
 .dataTables_wrapper.dataTables_wrapper {
   margin: 0 auto;
   padding: 0 0;
 }
 
-.dataTables_wrapper th {
+.dataTables_wrapper.dataTables_wrapper th {
   min-width: 130px;
 }
 

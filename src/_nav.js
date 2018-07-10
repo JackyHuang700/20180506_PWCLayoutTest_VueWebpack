@@ -56,17 +56,16 @@ export default {
   {
     name: 'CopyTemplate',
     url: '/CopyForm',
-    children: [
-      {
-        name: 'copyform',
-        url: '/CopyForm',
-        icon: 'icon-star'
-      },
-      {
-        name: 'copytemplate',
-        url: '/CopyTemplate',
-        icon: 'icon-star'
-      }
+    children: [{
+      name: 'copyform',
+      url: '/CopyForm',
+      icon: 'icon-star'
+    },
+    {
+      name: 'copytemplate',
+      url: '/CopyTemplate',
+      icon: 'icon-star'
+    }
     ]
   },
   {
@@ -113,8 +112,7 @@ export default {
       name: '訂製單',
       url: '/Order3',
       icon: 'icon-star'
-    }
-    ]
+    }]
   },
   {
     name: '收款單管理',
@@ -138,8 +136,7 @@ export default {
       name: '收款瀏覽',
       url: '/CollectDetail',
       icon: 'icon-star'
-    }
-    ]
+    }]
   },
   {
     name: '客訴管理',
@@ -189,104 +186,102 @@ export default {
   {
     name: '採購管理',
     url: '/Purchase',
-    children: [
-      {
-        name: '採購清單',
-        url: '/Purchase',
-        icon: 'icon-star'
-      },
-      {
-        name: '建立採購單',
-        url: '/Purchase2',
-        icon: 'icon-star'
-      },
-      {
-        name: '採購分單',
-        url: '/Purchase3',
-        icon: 'icon-star'
-      },
-      {
-        name: '採購原物料建立',
-        url: '/Materials',
-        icon: 'icon-star'
-      }
+    children: [{
+      name: '採購清單',
+      url: '/Purchase',
+      icon: 'icon-star'
+    },
+    {
+      name: '建立採購單',
+      url: '/Purchase2',
+      icon: 'icon-star'
+    },
+    {
+      name: '採購分單',
+      url: '/Purchase3',
+      icon: 'icon-star'
+    },
+    {
+      name: '採購原物料建立',
+      url: '/Materials',
+      icon: 'icon-star'
+    }
     ]
   },
   {
     name: '訂單流程管理',
     url: '/OrderProcessManagement',
-    children: [
-      {
-        name: 'Detail',
-        url: '/OrderProcessManagement',
-        icon: 'icon-star'
-      },
-      {
-        name: '訂單asfasfdasdf',
-        url: '/OrderProcessManagement2',
-        icon: 'icon-star'
-      },
-      {
-        name: 'Index',
-        url: '/OrderProcessManagement3',
-        icon: 'icon-star'
-      }
+    children: [{
+      name: 'Detail',
+      url: '/OrderProcessManagement',
+      icon: 'icon-star'
+    },
+    {
+      name: '訂單asfasfdasdf',
+      url: '/OrderProcessManagement2',
+      icon: 'icon-star'
+    },
+    {
+      name: 'Index',
+      url: '/OrderProcessManagement3',
+      icon: 'icon-star'
+    }
     ]
   },
   {
     name: '上傳測試',
     url: '/FileUpload',
-    children: [
-      {
-        name: '圖片上傳測試',
-        url: '/FileUpload',
-        icon: 'icon-star'
-      }
+    children: [{
+      name: '圖片上傳測試',
+      url: '/FileUpload',
+      icon: 'icon-star'
+    }
 
     ]
   },
   {
     name: '生產',
     url: '/Product',
-    children: [
-      {
-        name: '生產首頁',
-        url: '/Product',
-        icon: 'icon-star'
-      },
-      {
-        name: '生產建立',
-        url: '/Product2',
-        icon: 'icon-star'
-      }
-
+    children: [{
+      name: '生產首頁',
+      url: '/Product',
+      icon: 'icon-star'
+    },
+    {
+      name: '生產建立',
+      url: '/Product2',
+      icon: 'icon-star'
+    },
+    {
+      name: '生產備料_Index',
+      url: '/ProductionPreparation',
+      icon: 'icon-star'
+    }
     ]
   },
   {
     name: '工序',
     url: '/Process',
-    children: [
-      {
-        name: '工序首頁',
-        url: '/Process',
-        icon: 'icon-star'
-      },
-      {
-        name: '工序建立',
-        url: '/Process2',
-        icon: 'icon-star'
-      },
-      {
-        name: '工序狀態管理',
-        url: '/Process3',
-        icon: 'icon-star'
-      },
-      {
-        name: '生產工序清單',
-        url: '/Process4',
-        icon: 'icon-star'
-      }
-
+    children: [{
+      name: '工序首頁',
+      url: '/Process',
+      icon: 'icon-star'
+    },
+    {
+      name: '工序建立',
+      url: '/Process2',
+      icon: 'icon-star'
+    },
+    {
+      name: '工序狀態管理',
+      url: '/Process3',
+      icon: 'icon-star'
+    },
+    {
+      name: '生產工序清單',
+      url: '/Process4',
+      icon: 'icon-star'
+    }
     ]
   }
     // {

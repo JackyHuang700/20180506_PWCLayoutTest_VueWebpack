@@ -37,8 +37,10 @@ import Process from './Process.vue'
 import Process2 from './Process2.vue'
 import Process3 from './Process3.vue'
 import Process4 from './Process4.vue'
+import ProductionPreparation from './ProductionPreparation.vue'
 
 export {
+  ProductionPreparation,
   Product,
   Product2,
   Process,
