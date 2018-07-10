@@ -256,6 +256,11 @@ export default {
       name: '生產備料_Index',
       url: '/ProductionPreparation',
       icon: 'icon-star'
+    },
+    {
+      name: '生產報工',
+      url: '/Product3',
+      icon: 'icon-star'
     }
     ]
   },

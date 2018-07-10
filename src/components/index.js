@@ -33,6 +33,7 @@ import CopyForm from './CopyForm.vue'
 import CopyTemplate from './CopyTemplate.vue'
 import Product from './Product.vue'
 import Product2 from './Product2.vue'
+import Product3 from './Product3.vue'
 import Process from './Process.vue'
 import Process2 from './Process2.vue'
 import Process3 from './Process3.vue'
@@ -43,6 +44,7 @@ export {
   ProductionPreparation,
   Product,
   Product2,
+  Product3,
   Process,
   Process2,
   Process3,

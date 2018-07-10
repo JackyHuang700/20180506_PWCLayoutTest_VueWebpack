@@ -20,6 +20,7 @@ import {
   Content,
   Product,
   Product2,
+  Product3,
   Process,
   Process2,
   Process3,
@@ -186,6 +187,11 @@ export default new Router({
           path: 'product2',
           name: 'Product2',
           component: Product2
+        },
+        {
+          path: 'product3',
+          name: 'Product3',
+          component: Product3
         },
         {
           path: 'process',

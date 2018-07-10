@@ -110,11 +110,16 @@
                           <table id="example2" cellspacing="0" width="100%" class="table table-gray-100 table-hover display">
                             <thead>
                               <tr>
-                                <th scope="col" class="align-middle">#</th>
-                                <th scope="col" class="align-middle">代碼</th>
-                                <th scope="col" class="align-middle">稅籍ID</th>
-                                <th scope="col" class="align-middle">聯絡人</th>
-                                <th scope="col" class="align-middle">操作</th>
+                                <th scope="col" class="text-center">#</th>
+                                <th scope="col" class="text-center">號碼</th>
+                                <th scope="col" class="text-center">說明</th>
+                                <th scope="col" class="text-center">基礎數量</th>
+                                <th scope="col" class="text-center">計畫數量</th>
+                                <th scope="col" class="text-center">計量單位名稱</th>
+                                <th scope="col" class="text-center">倉庫</th>
+                                <th scope="col" class="text-center">發貨方法</th>
+                                <th scope="col" class="text-center">出貨數量</th>
+                                <th scope="col" class="text-center">操作</th>
                               </tr>
                             </thead>
                           </table>
@@ -174,10 +179,6 @@ export default {
     // dataTables - 列表
     (function () {
       dataTableObj = $(dataTableDom).DataTable({
-        'select': {
-          selector: 'td:not(:first-child)',
-          style: 'os'
-        },
         'ajax': apiProductionPreparationIndex2,
         'scrollX': true,
         'bPaginate': false,
@@ -236,19 +237,23 @@ export default {
     // dataTables - 列表Modal
     (function () {
       dataTableObj2 = $(dataTable2Dom).DataTable({
-        'select': {
-          selector: 'td:not(:first-child)',
-          style: 'os'
-        },
-        'ajax': apiDataTableCopyTemplateGetAll,
+        'ajax': apiProductionPreparationIndex,
         'scrollX': true,
         'bPaginate': false,
         'searching': false,
+        'drawCallback': function (settings) {
+          UpdateIndex(dataTable2Dom)
+        },
         'columns': [
           {},
-          { 'data': 'mainData_1' },
-          { 'data': 'mainData_2' },
-          { 'data': 'mainData_3' },
+          { data: 'sonStockNumber' },
+          { data: 'itemName' },
+          { data: 'baseQty' },
+          { data: 'detailPlannedQty' },
+          { data: 'uomCode' },
+          { data: 'warehouse' },
+          { data: 'issueType' },
+          { data: 'issuedQty' },
           {}
         ],
         'order': [
@@ -260,7 +265,7 @@ export default {
             'data': '',
             'orderable': false,
             'render': function (data, type, row, meta) {
-              return ('<button type="button" class="btn btn-primary details-control">展開明細</button>')
+              return ('<span class="badge badge-pill badge-primary"></span>')
             }
           },
           {
@@ -268,18 +273,20 @@ export default {
             'data': '',
             'orderable': false,
             'render': function (data, type, row, meta) {
-              return (
-                '<div class="btn-group">' +
-                '<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">操作</button>' +
-                '<div class="dropdown-menu">' +
-                '  <a class="dropdown-item" href="//?={{id}}">編輯</a>' +
-                '  <a class="dropdown-item" href="//?={{id}}">刪除</a>' +
-                '</div>' +
-                '</div>'
-              ).replace(/{{id}}/g, '')
+              return ('<i class="fa fa-minus-square text-red" aria-hidden="true"></i>')
             }
           }
         ],
+        // 刪除單筆資料
+        'initComplete': function (oSettings) {
+          $(this).on('click', 'i.fa.fa-minus-square', function (e) {
+            var confirm2 = confirm('確定刪除?')
+            if (confirm2) {
+              dataTableObj2.row($(this).closest('tr')).remove().draw()
+              UpdateIndex()
+            }
+          })
+        },
         'language': language
         // 'language': dataTablesModule.language()
       })
