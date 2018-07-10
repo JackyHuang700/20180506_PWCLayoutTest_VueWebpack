@@ -73,7 +73,7 @@ import {
   language
 } from '../config/dataTable'
 import {
-// apiOrderProcessManagementGetThisOrderDetail
+  apiOrderProcessManagementGetThisOrderDetail
 } from '../api/api'
 export default {
   name: 'orderprocessmanagement',
@@ -87,13 +87,16 @@ export default {
           style: 'os'
         },
         'ajax': {
-          'url': '/OrderProcessManagement/GetThisOrderDetail',
+          'url': apiOrderProcessManagementGetThisOrderDetail,
+          // 'url': '/OrderProcessManagement/GetThisOrderDetail',
           'data': function () {
             return {
               aa: 'bb'
             }
           }
         },
+        'scrollX': true,
+        'scrollY': '500px',
         'columns': [
           { 'data': 'detailNumber' },
           { 'data': 'productName' },
@@ -129,6 +132,10 @@ export default {
                 case '0':
                 case 0:
                   aDomList += '<a class="dropdown-item" href="OrderProcessManagement/Create?id={{supplyStrategy}}">建立</a>'
+
+                  // test
+                  aDomList += '<a class="dropdown-item" href="OrderProcessManagement/Update?id={{supplyStrategy}}">更新</a>'
+                  aDomList += '<a class="dropdown-item" href="OrderProcessManagement/Detail?id={{supplyStrategy}}">詳細</a>'
                   break
                 default:
                   aDomList += '<a class="dropdown-item" href="OrderProcessManagement/Update?id={{supplyStrategy}}">更新</a>'
@@ -155,4 +162,5 @@ export default {
 </script>
 <style lang="css" >
 @import 'datatables.net-bs4/css/dataTables.bootstrap4.css';
+@import '../assets/dataTables/dataTables.css';
 </style>

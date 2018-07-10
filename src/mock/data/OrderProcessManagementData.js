@@ -15,6 +15,10 @@ let dataTableList = {
   ]
 }
 
+for (let index = 0; index < 100; index++) {
+  dataTableList.data.push(dataTableList.data[0])
+}
+
 let dataTableList2 = {
   data: [
     {
