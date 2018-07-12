@@ -18,6 +18,7 @@ export const apiOrderProcessManagementSubDetail = '/api/OrderProcessManagement/S
 export const apiProDuctIndex = '/api/Product/Index'
 export const apiProcess3Insert = '/api/Process3/Insert'
 export const apiPurchase3Insert = '/api/Purchase3/Insert'
+export const apiPurchase4Index = '/api/Purchase4/Index'
 export const apiProductionPreparationIndex = '/api/ProductionPreparation/Index'
 export const apiProductionPreparationIndex2 = '/api/ProductionPreparation/Index2'
 

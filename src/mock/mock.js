@@ -4,17 +4,29 @@ import MockAdapter from 'axios-mock-adapter'
 // import 'jquery-mockjax/src/jquery.mockjax.js'
 // import 'jquery-mockjax'
 
-import { dataTableList } from './data/OrderIndex2Data'
-import { dataTableList as ComplaintsData } from './data/ComplaintsData'
-import { dataTableList as SupplierData } from './data/SupplierData'
-import { dataTableList as CopyTemplateData } from './data/CopyTemplateData'
-import { dataTableList as ComplaintsCreateData } from './data/ComplaintsCreateData'
+import {
+  dataTableList
+} from './data/OrderIndex2Data'
+import {
+  dataTableList as ComplaintsData
+} from './data/ComplaintsData'
+import {
+  dataTableList as SupplierData
+} from './data/SupplierData'
+import {
+  dataTableList as CopyTemplateData
+} from './data/CopyTemplateData'
+import {
+  dataTableList as ComplaintsCreateData
+} from './data/ComplaintsCreateData'
 import {
   dataTableList as ProductDataIndexData,
   dataTableList2 as ProductDataIndexData2,
   dataTableList3 as ProductDataIndexData3
 } from './data/ProductData'
-import { dataTableList as ProcessDataInsertData } from './data/ProcessData'
+import {
+  dataTableList as ProcessDataInsertData
+} from './data/ProcessData'
 import {
   dataTableList as OrderProcessManagementData,
   dataTableList2 as OrderProcessManagementData2
@@ -22,9 +34,12 @@ import {
 import {
   dataTableList as PurchaseData,
   dataTableList2 as PurchaseAutoCompleteData,
-  dataTableList3 as Purchase3InsertData
+  dataTableList3 as Purchase3InsertData,
+  dataTableList4 as Purchase4IndextData
 } from './data/PurchaseData'
-import { select2List } from './data/select2List'
+import {
+  select2List
+} from './data/select2List'
 import {
   dataTableList as CollectionData,
   dataTableList2 as CollectionData2
@@ -46,6 +61,7 @@ import {
   apiOrderProcessManagementGetThisOrderDetail,
   apiProcess3Insert,
   apiPurchase3Insert,
+  apiPurchase4Index,
   apiProDuctIndex,
   apiProductionPreparationIndex,
   apiProductionPreparationIndex2
@@ -73,6 +89,23 @@ export default {
 
         // 回應
         this.responseText = Purchase3InsertData
+      }
+    })
+
+    // 採購報價
+    $.mockjax({
+      type: 'GET',
+      url: apiPurchase4Index,
+      status: 200,
+      dataType: 'json',
+      responseTime: 150,
+      contentType: 'application/json',
+      response: function (setting) {
+        console.log('setting', setting)
+        console.log('setting.data', setting.data)
+
+        // 回應
+        this.responseText = Purchase4IndextData
       }
     })
 
@@ -348,7 +381,10 @@ export default {
       responseTime: 750,
       contentType: 'application/json',
       response: function (settings) {
-        var { queryStr, pageNo } = settings.data
+        var {
+          queryStr,
+          pageNo
+        } = settings.data
 
         var items = pagination(select2List, queryStr, pageNo || 1)
         for (var i in items[0]) {
