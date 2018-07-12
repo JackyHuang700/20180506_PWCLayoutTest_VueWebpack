@@ -408,27 +408,27 @@ export default {
 </script>
 <style lang="css">
 @import 'datatables.net-bs4/css/dataTables.bootstrap4.css';
-
 @import '../assets/dataTables/dataTables.css';
 
 /* modal  另外添加*/
 .dataTable {
-  width: 100% !important;
-}
-.dataTables_scrollHeadInner {
-  width: unset !important;
-}
-
-.modal-lg {
-  max-width: 85%;
-}
-@media screen and (max-width: 750px) {
+    width: 100% !important;
+  }
+  .dataTables_scrollHeadInner {
+    width: unset !important;
+  }
+  
   .modal-lg {
-    max-width: 100%;
+    max-width: 85%;
+  }
+  @media screen and (max-width: 750px) {
+    .modal-lg {
+      max-width: 100%;
+    }
+  
+    .dataTables_wrapper {
+      width: 100%;
+    }
   }
 
-  .dataTables_wrapper {
-    width: 100%;
-  }
-}
 </style>

@@ -1,4 +1,23 @@
 
+.dataTables_scrollBody{
+  border: 1.5px solid rgba(0, 0, 0, 0.172);
+}
+
+.dataTables_scrollHead{
+  border-top-style: solid !important;
+  border-top-width: 1.5px !important;
+  border-top-color: rgba(10, 10, 10, 0.172) !important;
+  border-left-style: solid !important;
+  border-left-width: 1.5px !important;
+  border-left-color: rgba(10, 10, 10, 0.172) !important;
+  border-right-style: solid !important;
+  border-right-width: 1.5px !important;
+  border-right-color: rgba(0, 0, 0, 0.172) !important;
+}
+.dataTables_scrollHeadInner{
+  margin-top: -6px;
+}
+
 .dataTables_wrapper.dataTables_wrapper {
   margin: 0 auto;
   padding: 0 0;
@@ -9,15 +28,22 @@
 }
 
 
-@media (min-width: 1901px) {
-  .dataTables_wrapper {
-    width: 82vw;
+@media (min-width: 2000px){
+  .dataTables_wrapper.dataTables_wrapper th {
+    min-width: 210px;
   }
 }
 
-@media screen and (max-width: 1900px){
+
+@media (min-width: 1901px) {
   .dataTables_wrapper {
-    width: 80vw;
+      width: 79vw;
+  }
+}
+
+@media screen and (max-width: 1900px) {
+  .dataTables_wrapper {
+      width: 80vw;
   }
 }
 
@@ -63,3 +89,5 @@
     width: 55vw;
   }
 }
+
+

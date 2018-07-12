@@ -66,7 +66,7 @@
           </div>
           <div class="card-body">
 
-            <table id="example" cellspacing="0" width="100%" class="table table-gray-100 table-hover display">
+            <table id="example" cellspacing="0" width="100%" class="table table-striped table-hover table-bordered">
               <thead>
                 <tr>
                   <th scope="col" class="align-middle">#</th>
@@ -200,6 +200,5 @@ export default {
 </script>
 <style lang="css">
 @import 'datatables.net-bs4/css/dataTables.bootstrap4.css';
-
 @import '../assets/dataTables/dataTables.css';
 </style>

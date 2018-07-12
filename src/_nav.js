@@ -205,6 +205,11 @@ export default {
       name: '採購原物料建立',
       url: '/Materials',
       icon: 'icon-star'
+    },
+    {
+      name: '採購報價',
+      url: '/Purchase4',
+      icon: 'icon-star'
     }
     ]
   },

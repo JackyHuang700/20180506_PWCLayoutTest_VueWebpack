@@ -10,6 +10,7 @@ import {
   Purchase,
   Purchase2,
   Purchase3,
+  Purchase4,
   Materials,
   OrderProcessManagement,
   OrderProcessManagement2,
@@ -142,6 +143,11 @@ export default new Router({
           path: 'purchase3',
           name: 'Purchase3',
           component: Purchase3
+        },
+        {
+          path: 'purchase4',
+          name: 'Purchase4',
+          component: Purchase4
         },
         {
           path: 'materials',

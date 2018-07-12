@@ -40,7 +40,7 @@
           </div>
           <div class="card-body">
 
-            <table id="example" cellspacing="0" width="100%" class="table table-gray-100 table-hover display">
+            <table id="example" cellspacing="0" width="100%" class="table table-striped table-hover table-bordered">
               <thead>
                 <tr>
                   <th scope="col" class="align-middle">明細編號</th>
