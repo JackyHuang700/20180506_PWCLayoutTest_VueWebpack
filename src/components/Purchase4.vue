@@ -183,11 +183,12 @@ export default {
   name: 'copytemplate',
   created () { },
   mounted () {
+    // 被選中的資料
+    var selectIdList = [];
     // dataTables
     (function () {
       var dataTableDom = document.getElementById('example')
       var dataTableObj
-      var selectIdList = []
       //
       dataTableObj = $(dataTableDom).DataTable({
         'ajax': apiPurchase4Index,
@@ -229,9 +230,11 @@ export default {
             'render': function (data, type, row, meta) {
               return (
                 '<div class="custom-control custom-checkbox">' +
-                '  <input type="checkbox" class="custom-control-input selectInfo" id="customCheck1" data-id={{id}}>' +
-                '  <label class="custom-control-label" for="customCheck1"></label>' +
-                '</div>').replace(/{{id}}/g, 10)
+                '  <input type="checkbox" class="custom-control-input selectInfo" id="{{id}}" data-id={{dataId}}>' +
+                '  <label class="custom-control-label" for="{{id}}"></label>' +
+                '</div>')
+                .replace(/{{id}}/g, ('checkbox' + meta.row))
+                .replace(/{{dataId}}/g, meta.row)
             }
           },
           {
@@ -328,26 +331,44 @@ export default {
     // Modal - updateInexampleModal
     (function () {
       var updateInexampleModalDom = document.getElementById('updateInexampleModal')
+      var exampleModalDom = document.getElementById('exampleModal')
       var exampleModal_PriceDom = document.getElementById('exampleModal_Price')
 
       $(updateInexampleModalDom).on('click', function (e) {
         if (confirm('確認完畢?')) {
-
+          cancelCheckbox()
+          $(exampleModalDom).modal('hide')
         }
       })
     }());
     // Modal - updateInexampleModal2
     (function () {
       var updateInexampleModal2Dom = document.getElementById('updateInexampleModal2')
+      var exampleModal2Dom = document.getElementById('exampleModal2')
       var exampleModal2_NameDom = document.getElementById('exampleModal2_Name')
       var exampleModal2_CodeDom = document.getElementById('exampleModal2_Code')
 
       $(updateInexampleModal2Dom).on('click', function (e) {
         if (confirm('確認完畢?')) {
-
+          cancelCheckbox()
+          $(exampleModal2Dom).modal('hide')
         }
       })
-    }());
+    }())
+
+    // 共用 - 所有checkbox取消選取
+    function cancelCheckbox (params) {
+      var checkboxDomList = document.getElementsByClassName('selectInfo')
+      for (var i = 0; i < checkboxDomList.length; i++) {
+        var checkboxDom = checkboxDomList[i]
+        if (checkboxDom.checked) {
+          checkboxDom.checked = false
+        }
+      }
+
+      selectIdList = []
+    }
+
     // test
     (function () {
       // document.getElementById('button1112').click()

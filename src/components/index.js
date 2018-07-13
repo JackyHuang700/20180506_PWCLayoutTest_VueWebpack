@@ -1,3 +1,4 @@
+import Account from './Account.vue'
 import Aside from './Aside.vue'
 import Breadcrumb from './Breadcrumb.vue'
 import Callout from './Callout.vue'
@@ -65,6 +66,7 @@ export {
   Order,
   Order2,
   Order3,
+  Account,
   Aside,
   Breadcrumb,
   Callout,

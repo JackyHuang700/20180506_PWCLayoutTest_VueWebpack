@@ -293,6 +293,14 @@ export default {
       icon: 'icon-star'
     }
     ]
+  }, {
+    name: '帳號',
+    url: '/Process',
+    children: [{
+      name: '帳號綁定供應商',
+      url: '/Account',
+      icon: 'icon-star'
+    }]
   }
     // {
     //   name: 'Icons',
