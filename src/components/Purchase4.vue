@@ -379,4 +379,8 @@ export default {
 <style lang="css">
 @import 'datatables.net-bs4/css/dataTables.bootstrap4.css';
 @import '../assets/dataTables/dataTables.css';
+
+.dataTables_wrapper.dataTables_wrapper th:nth-child(1){
+  min-width: 30px;
+}
 </style>
