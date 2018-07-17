@@ -171,112 +171,115 @@
 <script>
 import 'datatables.net'
 import 'datatables.net-bs4'
-import {
-  language
-} from '../config/dataTable'
-import {
-  apiPurchase4Index
-} from '../api/api'
+import { language } from '../config/dataTable'
+import { apiPurchase4Index } from '../api/api'
 import '../assets/dataTables/dataTables.js'
 
 export default {
   name: 'copytemplate',
-  created () { },
+  created () {},
   mounted () {
     // 被選中的資料
-    var selectIdList = [];
+    var selectIdList = []
     // dataTables
-    (function () {
+    ;(function () {
       var dataTableDom = document.getElementById('example')
       var dataTableObj
       //
       dataTableObj = $(dataTableDom).DataTable({
-        'ajax': apiPurchase4Index,
-        'scrollX': true,
-        'bPaginate': false,
-        'columns': [
+        ajax: apiPurchase4Index,
+        scrollX: true,
+        bPaginate: false,
+        columns: [
           {},
-          { 'data': 'purchasePartNumber' },
+          { data: 'purchasePartNumber' },
           {},
-          { 'data': 'shopName' },
-          { 'data': 'customerName' },
-          { 'data': 'purchasePartStatus' },
-          { 'data': 'currency' },
-          { 'data': 'total' },
-          { 'data': 'owner' },
-          { 'data': 'arrivalDate' },
-          { 'data': 'productName' },
-          { 'data': 'productImg' },
-          { 'data': 'tailoredNumber' },
-          { 'data': 'deliveryDate' },
-          { 'data': 'timeLimit' },
-          { 'data': 'detailNumber' },
-          { 'data': 'stockNumber' },
-          { 'data': 'skuCode' },
-          { 'data': 'colorCode' },
-          { 'data': 'productSize' },
-          { 'data': 'quantity' },
-          { 'data': 'purchasePartDetailNumber' },
-          { 'data': 'supplyStrategy' }
+          { data: 'shopName' },
+          { data: 'customerName' },
+          { data: 'purchasePartStatus' },
+          { data: 'currency' },
+          { data: 'total' },
+          { data: 'owner' },
+          { data: 'arrivalDate' },
+          { data: 'productName' },
+          { data: 'productImg' },
+          { data: 'tailoredNumber' },
+          { data: 'deliveryDate' },
+          { data: 'timeLimit' },
+          { data: 'detailNumber' },
+          { data: 'stockNumber' },
+          { data: 'skuCode' },
+          { data: 'colorCode' },
+          { data: 'productSize' },
+          { data: 'quantity' },
+          { data: 'purchasePartDetailNumber' },
+          { data: 'supplyStrategy' }
         ],
-        'order': [
-          [1, 'asc']
-        ],
-        'columnDefs': [
+        order: [[1, 'asc']],
+        columnDefs: [
           {
-            'targets': 0,
-            'data': '',
-            'orderable': false,
-            'render': function (data, type, row, meta) {
+            targets: 0,
+            data: '',
+            orderable: false,
+            render: function (data, type, row, meta) {
               return (
                 '<div class="custom-control custom-checkbox">' +
                 '  <input type="checkbox" class="custom-control-input selectInfo" id="{{id}}" data-id={{dataId}}>' +
                 '  <label class="custom-control-label" for="{{id}}"></label>' +
-                '</div>')
-                .replace(/{{id}}/g, ('checkbox' + meta.row))
+                '</div>'
+              )
+                .replace(/{{id}}/g, 'checkbox' + meta.row)
                 .replace(/{{dataId}}/g, meta.row)
             }
           },
           {
-            'targets': 2,
-            'data': '',
-            'orderable': false,
-            'render': function (data, type, row, meta) {
-              return ('<a href="/OrderManagement/Display?OrderNumber=' + row.orderNumber + '" target="_blank">' + row.orderNumber + '</a>'
+            targets: 2,
+            data: '',
+            orderable: false,
+            render: function (data, type, row, meta) {
+              return (
+                '<a href="/OrderManagement/Display?OrderNumber=' +
+                row.orderNumber +
+                '" target="_blank">' +
+                row.orderNumber +
+                '</a>'
               )
             }
           },
           {
-            'targets': 11,
-            'data': '',
-            'orderable': false,
-            'render': function (data, type, row, meta) {
+            targets: 11,
+            data: '',
+            orderable: false,
+            render: function (data, type, row, meta) {
               if (row.haveTailored) {
-                return ('<img src="/Tailored/GetTailoredImg?file={{src}}" alt="" height="42" width="42">')
-                  .replace(/{{src}}/g, row.productImg)
+                return '<img src="/Tailored/GetTailoredImg?file={{src}}" alt="" height="42" width="42">'.replace(
+                  /{{src}}/g,
+                  row.productImg
+                )
               } else {
-                return ('<img src="http://fakeimg.pl/42x42/" alt="" height="42" width="42">')
+                return '<img src="http://fakeimg.pl/42x42/" alt="" height="42" width="42">'
               }
             }
           },
           {
-            'targets': 12,
-            'data': '',
-            'orderable': false,
-            'render': function (data, type, row, meta) {
+            targets: 12,
+            data: '',
+            orderable: false,
+            render: function (data, type, row, meta) {
               if (row.haveTailored) {
-                return ('<a target="_blank" href="/Tailored/Display?DetailNumber={{link}}">{{text}}</a>')
-                  .replace(/{{link}}/g, row.detailNumber).replace(/{{text}}/g, row.tailoredNumber)
+                return '<a target="_blank" href="/Tailored/Display?DetailNumber={{link}}">{{text}}</a>'
+                  .replace(/{{link}}/g, row.detailNumber)
+                  .replace(/{{text}}/g, row.tailoredNumber)
               } else {
-                return ('無')
+                return '無'
               }
             }
           },
           {
-            'targets': -1,
-            'data': '',
-            'orderable': false,
-            'render': function (data, type, row, meta) {
+            targets: -1,
+            data: '',
+            orderable: false,
+            render: function (data, type, row, meta) {
               var SupplyStrategyWord = ''
               switch (row.supplyStrategy) {
                 case '0':
@@ -306,11 +309,11 @@ export default {
                   break
               }
 
-              return (SupplyStrategyWord)
+              return SupplyStrategyWord
             }
           }
         ],
-        'language': language
+        language: language
         // 'language': dataTablesModule.language()
       })
 
@@ -327,10 +330,12 @@ export default {
           }
         }
       })
-    }());
+    })()
     // Modal - updateInexampleModal
-    (function () {
-      var updateInexampleModalDom = document.getElementById('updateInexampleModal')
+    ;(function () {
+      var updateInexampleModalDom = document.getElementById(
+        'updateInexampleModal'
+      )
       var exampleModalDom = document.getElementById('exampleModal')
       var exampleModal_PriceDom = document.getElementById('exampleModal_Price')
 
@@ -340,10 +345,12 @@ export default {
           $(exampleModalDom).modal('hide')
         }
       })
-    }());
+    })()
     // Modal - updateInexampleModal2
-    (function () {
-      var updateInexampleModal2Dom = document.getElementById('updateInexampleModal2')
+    ;(function () {
+      var updateInexampleModal2Dom = document.getElementById(
+        'updateInexampleModal2'
+      )
       var exampleModal2Dom = document.getElementById('exampleModal2')
       var exampleModal2_NameDom = document.getElementById('exampleModal2_Name')
       var exampleModal2_CodeDom = document.getElementById('exampleModal2_Code')
@@ -354,7 +361,7 @@ export default {
           $(exampleModal2Dom).modal('hide')
         }
       })
-    }())
+    })()
 
     // 共用 - 所有checkbox取消選取
     function cancelCheckbox (params) {
@@ -370,9 +377,9 @@ export default {
     }
 
     // test
-    (function () {
+    ;(function () {
       // document.getElementById('button1112').click()
-    }())
+    })()
   }
 }
 </script>
@@ -380,7 +387,7 @@ export default {
 @import 'datatables.net-bs4/css/dataTables.bootstrap4.css';
 @import '../assets/dataTables/dataTables.css';
 
-.dataTables_wrapper.dataTables_wrapper th:nth-child(1){
+.dataTables_wrapper.dataTables_wrapper th:nth-child(1) {
   min-width: 30px;
 }
 </style>
