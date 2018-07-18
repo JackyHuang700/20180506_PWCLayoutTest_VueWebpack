@@ -327,6 +327,12 @@ export default {
         }
       })
     }());
+    // 視窗彈出
+    (function () {
+      $('#exampleModal').on('show.bs.modal', function (e) {
+        console.log('eeeeeeee')
+      })
+    }());
     // Modal Button Event
     (function () {
       var updateBtnDom = document.getElementById('updateBtn')
@@ -412,23 +418,22 @@ export default {
 
 /* modal  另外添加*/
 .dataTable {
-    width: 100% !important;
-  }
-  .dataTables_scrollHeadInner {
-    width: unset !important;
-  }
-  
+  width: 100% !important;
+}
+.dataTables_scrollHeadInner {
+  width: unset !important;
+}
+
+.modal-lg {
+  max-width: 85%;
+}
+@media screen and (max-width: 750px) {
   .modal-lg {
-    max-width: 85%;
-  }
-  @media screen and (max-width: 750px) {
-    .modal-lg {
-      max-width: 100%;
-    }
-  
-    .dataTables_wrapper {
-      width: 100%;
-    }
+    max-width: 100%;
   }
 
+  .dataTables_wrapper {
+    width: 100%;
+  }
+}
 </style>

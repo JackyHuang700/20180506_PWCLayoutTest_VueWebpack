@@ -29,19 +29,19 @@
                 <div class="form-group row">
                   <div class="col-sm-12 mb-2">
                     <div class="form-row">
-                      <div class="form-group col-md-3">
+                      <div class="form-group col-sm-3">
                         <label class="float-left" for="inputText">編號</label>
                         <input type="text" class="form-control" id="inputText" placeholder="">
                       </div>
-                      <div class="form-group col-md-3">
+                      <div class="form-group col-sm-3">
                         <label class="float-left" for="inputText2">編號</label>
                         <input type="text" class="form-control" id="inputText2" placeholder="">
                       </div>
-                      <div class="form-group col-md-3">
+                      <div class="form-group col-sm-3">
                         <label class="float-left" for="inputText3">到期日(起)</label>
                         <input type="text" class="form-control" id="inputText3" placeholder="">
                       </div>
-                      <div class="form-group col-md-3">
+                      <div class="form-group col-sm-3">
                         <label class="float-left" for="inputText4">到期日(迄)</label>
                         <input type="text" class="form-control" id="inputText4" placeholder="">
                       </div>
@@ -118,7 +118,7 @@ export default {
           { 'data': 'mainData_1' },
           { 'data': 'mainData_2' },
           { 'data': 'mainData_3' },
-          {}
+          {},
         ],
         'order': [
           [1, 'asc']
@@ -147,7 +147,7 @@ export default {
                 '</div>'
               ).replace(/{{id}}/g, '')
             }
-          }
+          },
         ],
         'language': language
         // 'language': dataTablesModule.language()

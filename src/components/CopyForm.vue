@@ -37,6 +37,16 @@
                 <label for="template5">單據內部標識</label>
                 <input type="text" class="form-control" name="template5" id="template5" placeholder="">
               </div>
+              <div class="form-group col-sm-3">
+                <div class="row">
+                  <label class="float-left col-sm-12" for="inputText6">到期日(未完成))</label>
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control rangeInput" id="inputText6" placeholder="">
+                    <span class="rangeInputSpan">~</span> 
+                    <input type="text" class="form-control rangeInput" id="inputText7" placeholder="">
+                  </div>
+                </div>
+              </div>
               <!-- 空白 -->
               <div class="form-group col-sm-9 d-none d-sm-block"></div>
               <!-- 空白 -->
@@ -138,4 +148,32 @@ export default {
 }
 </script>
 <style lang="css" scoped>
+/* .rangeInput {
+  width: 47%;
+  display: inline-block;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.rangeInputSpan{
+  width: 2%;
+}
+
+@media screen and (min-width: 1920px){
+   .rangeInput{
+    width: 48.5%;
+  }
+}
+
+@media screen and (max-width: 1200px){
+   .rangeInput{
+    width: 48%;
+  }
+}
+
+@media screen and (max-width: 575px){
+  .rangeInput{
+    width: 100%;
+  }
+} */
 </style>

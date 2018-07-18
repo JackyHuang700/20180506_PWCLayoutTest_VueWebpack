@@ -189,7 +189,6 @@ export default {
       dataTableObj = $(dataTableDom).DataTable({
         ajax: apiPurchase4Index,
         scrollX: true,
-        bPaginate: false,
         columns: [
           {},
           { data: 'purchasePartNumber' },
