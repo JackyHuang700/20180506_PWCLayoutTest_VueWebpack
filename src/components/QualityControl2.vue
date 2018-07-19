@@ -98,9 +98,25 @@
               <thead>
                 <tr>
                   <th scope="col" class="align-middle">#</th>
-                  <th scope="col" class="align-middle">代碼</th>
-                  <th scope="col" class="align-middle">稅籍ID</th>
-                  <th scope="col" class="align-middle">聯絡人</th>
+                  <th scope="col" class="align-middle">訂製唯一碼</th>
+                  <th scope="col" class="align-middle">BARCODE2</th>
+                  <th scope="col" class="align-middle">廠商名稱</th>
+                  <th scope="col" class="align-middle">項目號碼</th>
+                  <th scope="col" class="align-middle">暫收總數量</th>
+                  <th scope="col" class="align-middle">暫收數量</th>
+                  <th scope="col" class="align-middle">取消質檢</th>
+                  <th scope="col" class="align-middle">暫收次數</th>
+                  <th scope="col" class="align-middle">合格數量</th>
+                  <th scope="col" class="align-middle">新增合格數量</th>
+                  <th scope="col" class="align-middle">單元重量</th>
+                  <th scope="col" class="align-middle">不合格數量</th>
+                  <th scope="col" class="align-middle">不量原因</th>
+                  <th scope="col" class="align-middle">質檢備註</th>
+                  <th scope="col" class="align-middle">質檢日期時間</th>
+                  <th scope="col" class="align-middle">質檢人員</th>
+                  <th scope="col" class="align-middle">來源單號</th>
+                  <th scope="col" class="align-middle">採購列號</th>
+                  <th scope="col" class="align-middle">入庫狀態</th>
                 </tr>
               </thead>
             </table>
@@ -120,7 +136,7 @@ import {
   language
 } from '../config/dataTable'
 import {
-  apiDataTableCopyTemplateGetAll
+  apiQualityControl2Index
 } from '../api/api'
 
 export default {
@@ -135,13 +151,29 @@ export default {
           selector: 'td:not(:first-child)',
           style: 'os'
         },
-        'ajax': apiDataTableCopyTemplateGetAll,
+        'ajax': apiQualityControl2Index,
         'scrollX': true,
         'columns': [
           {},
           { 'data': 'mainData_1' },
           { 'data': 'mainData_2' },
           { 'data': 'mainData_3' },
+          { 'data': 'mainData_4' },
+          { 'data': 'mainData_5' },
+          { 'data': 'mainData_6' },
+          { 'data': 'mainData_7' },
+          { 'data': 'mainData_8' },
+          { 'data': 'mainData_9' },
+          { 'data': 'mainData_10' },
+          { 'data': 'mainData_11' },
+          { 'data': 'mainData_12' },
+          { 'data': 'mainData_13' },
+          { 'data': 'mainData_14' },
+          { 'data': 'mainData_15' },
+          { 'data': 'mainData_16' },
+          { 'data': 'mainData_17' },
+          { 'data': 'mainData_18' },
+          { 'data': 'mainData_19' },
         ],
         'order': [
           [1, 'asc']

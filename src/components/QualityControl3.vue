@@ -91,9 +91,24 @@
               <thead>
                 <tr>
                   <th scope="col" class="align-middle">#</th>
-                  <th scope="col" class="align-middle">代碼</th>
-                  <th scope="col" class="align-middle">稅籍ID</th>
-                  <th scope="col" class="align-middle">聯絡人</th>
+                  <th scope="col" class="align-middle">訂製唯一碼</th>
+                  <th scope="col" class="align-middle">廠商名稱</th>
+                  <th scope="col" class="align-middle">項目號碼</th>
+                  <th scope="col" class="align-middle">業務名稱</th>
+                  <th scope="col" class="align-middle">義務代碼</th>
+                  <th scope="col" class="align-middle">暫收總數量</th>
+                  <th scope="col" class="align-middle">倉庫別</th>
+                  <th scope="col" class="align-middle">儲位</th>
+                  <th scope="col" class="align-middle">暫收次數</th>
+                  <th scope="col" class="align-middle">合格數量</th>
+                  <th scope="col" class="align-middle">新增合格數量</th>
+                  <th scope="col" class="align-middle">入庫日期時間</th>
+                  <th scope="col" class="align-middle">入庫人員</th>
+                  <th scope="col" class="align-middle">來源單號</th>
+                  <th scope="col" class="align-middle">採購列號</th>
+                  <th scope="col" class="align-middle">收穫↑編號</th>
+                  <th scope="col" class="align-middle">入庫狀態</th>
+
                 </tr>
               </thead>
             </table>
@@ -113,7 +128,7 @@ import {
   language
 } from '../config/dataTable'
 import {
-  apiDataTableCopyTemplateGetAll
+  apiQualityControl3Index
 } from '../api/api'
 
 export default {
@@ -128,12 +143,26 @@ export default {
           selector: 'td:not(:first-child)',
           style: 'os'
         },
-        'ajax': apiDataTableCopyTemplateGetAll,
+        'ajax': apiQualityControl3Index,
         'scrollX': true,
         'columns': [
           {},
           { 'data': 'mainData_1' },
           { 'data': 'mainData_2' },
+          { 'data': 'mainData_3' },
+          { 'data': 'mainData_3' },
+          { 'data': 'mainData_3' },
+          { 'data': 'mainData_3' },
+          { 'data': 'mainData_3' },
+          { 'data': 'mainData_3' },
+          { 'data': 'mainData_3' },
+          { 'data': 'mainData_3' },
+          { 'data': 'mainData_3' },
+          { 'data': 'mainData_3' },
+          { 'data': 'mainData_3' },
+          { 'data': 'mainData_3' },
+          { 'data': 'mainData_3' },
+          { 'data': 'mainData_3' },
           { 'data': 'mainData_3' },
         ],
         'order': [
@@ -153,47 +182,6 @@ export default {
                 .replace(/{{checked}}/g, 'checked')
             }
           },
-          // {
-          //   'targets': 7,
-          //   'data': '',
-          //   'orderable': false,
-          //   'render': function (data, type, row, meta) {
-          //     return (
-          //       '<input type="text" class="form-control" id="" name="" value="{{value}}">'
-          //     ).replace(/{{value}}/g, '2018-07-12')
-          //   }
-          // },
-          // {
-          //   'targets': 9,
-          //   'data': '',
-          //   'orderable': false,
-          //   'render': function (data, type, row, meta) {
-          //     var optionList = ''
-          //     var min = 1
-          //     var max = 34
-          //     // set option
-          //     for (var i = min; i <= max; i++) {
-          //       optionList += (
-          //         '<option value={{value}}>{{text}}</option>'
-          //       ).replace('{{value}}', i)
-          //         .replace('{{text}}', i)
-          //     }
-
-          //     return (
-          //       "<select class='form-control'>" + optionList + '</select>'
-          //     )
-          //   }
-          // },
-          // {
-          //   'targets': 11,
-          //   'data': '',
-          //   'orderable': false,
-          //   'render': function (data, type, row, meta) {
-          //     return (
-          //       '<input type="text" class="form-control" id="" name="" value="{{value}}">'
-          //     ).replace(/{{value}}/g, '0')
-          //   }
-          // },
 
         ],
         'language': language

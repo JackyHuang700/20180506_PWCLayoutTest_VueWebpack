@@ -6,6 +6,8 @@ import MockAdapter from 'axios-mock-adapter'
 
 import {
   dataTableList as QualityControlData,
+  dataTableList2 as QualityControl2Data,
+  dataTableList3 as QualityControl3Data,
 } from './data/QualityControlData'
 import {
   dataTableList
@@ -81,7 +83,21 @@ export default {
   // jquery mock
   //
   init_jquery () {
-    // 質檢 -外發
+    // 質檢 - 入庫
+    $.mockjax({
+      type: 'GET',
+      url: apiQualityControl3Index,
+      status: 200,
+      dataType: 'json',
+      responseTime: 150,
+      contentType: 'application/json',
+      response: function (setting) {
+        // 回應
+        this.responseText = QualityControl3Data
+      }
+    })
+
+    // 質檢 - 外發
     $.mockjax({
       type: 'GET',
       url: apiQualityControlIndex,
@@ -90,11 +106,22 @@ export default {
       responseTime: 150,
       contentType: 'application/json',
       response: function (setting) {
-        console.log('setting', setting)
-        console.log('setting.data', setting.data)
-
         // 回應
         this.responseText = QualityControlData
+      }
+    })
+
+    // 質檢 - 質檢
+    $.mockjax({
+      type: 'GET',
+      url: apiQualityControl2Index,
+      status: 200,
+      dataType: 'json',
+      responseTime: 150,
+      contentType: 'application/json',
+      response: function (setting) {
+        // 回應
+        this.responseText = QualityControl2Data
       }
     })
 
@@ -107,9 +134,6 @@ export default {
       responseTime: 150,
       contentType: 'application/json',
       response: function (setting) {
-        console.log('setting', setting)
-        console.log('setting.data', setting.data)
-
         // 回應
         this.responseText = Purchase3InsertData
       }
@@ -124,9 +148,6 @@ export default {
       responseTime: 150,
       contentType: 'application/json',
       response: function (setting) {
-        console.log('setting', setting)
-        console.log('setting.data', setting.data)
-
         // 回應
         this.responseText = Purchase4IndextData
       }
@@ -489,8 +510,8 @@ function pagination (array, queryStr, pageNo) {
   // 分頁
   newList.push(
     offset + pageSize >= array.length
-    ? array.slice(offset, array.length)
-    : array.slice(offset, offset + pageSize)
+      ? array.slice(offset, array.length)
+      : array.slice(offset, offset + pageSize)
   )
   return newList
 }
