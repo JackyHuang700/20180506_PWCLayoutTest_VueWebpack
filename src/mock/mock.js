@@ -5,6 +5,9 @@ import MockAdapter from 'axios-mock-adapter'
 // import 'jquery-mockjax'
 
 import {
+  dataTableList as QualityControlData,
+} from './data/QualityControlData'
+import {
   dataTableList
 } from './data/OrderIndex2Data'
 import {
@@ -45,6 +48,9 @@ import {
   dataTableList2 as CollectionData2
 } from './data/CollectionData'
 import {
+  apiQualityControlIndex,
+  apiQualityControl2Index,
+  apiQualityControl3Index,
   apiDataTablePurchase,
   apiDataTablePurchaseAutoComplete,
   apiDataJQueryUIJQueryUIGetAll,
@@ -75,6 +81,23 @@ export default {
   // jquery mock
   //
   init_jquery () {
+    // 質檢 -外發
+    $.mockjax({
+      type: 'GET',
+      url: apiQualityControlIndex,
+      status: 200,
+      dataType: 'json',
+      responseTime: 150,
+      contentType: 'application/json',
+      response: function (setting) {
+        console.log('setting', setting)
+        console.log('setting.data', setting.data)
+
+        // 回應
+        this.responseText = QualityControlData
+      }
+    })
+
     // 採購分單
     $.mockjax({
       type: 'GET',
@@ -466,8 +489,8 @@ function pagination (array, queryStr, pageNo) {
   // 分頁
   newList.push(
     offset + pageSize >= array.length
-      ? array.slice(offset, array.length)
-      : array.slice(offset, offset + pageSize)
+    ? array.slice(offset, array.length)
+    : array.slice(offset, offset + pageSize)
   )
   return newList
 }

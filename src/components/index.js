@@ -42,9 +42,13 @@ import Process3 from './Process3.vue'
 import Process4 from './Process4.vue'
 import ProductionPreparation from './ProductionPreparation.vue'
 import QualityControl from './QualityControl.vue'
+import QualityControl2 from './QualityControl2.vue'
+import QualityControl3 from './QualityControl3.vue'
 
 export {
   QualityControl,
+  QualityControl2,
+  QualityControl3,
   ProductionPreparation,
   Product,
   Product2,

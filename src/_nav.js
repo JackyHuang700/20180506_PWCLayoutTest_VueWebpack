@@ -314,6 +314,16 @@ export default {
         url: '/QualityControl',
         icon: 'icon-star'
       },
+      {
+        name: '質檢',
+        url: '/QualityControl2',
+        icon: 'icon-star'
+      },
+      {
+        name: '/收貨',
+        url: '/QualityControl3',
+        icon: 'icon-star'
+      },
     ]
   },
     // {

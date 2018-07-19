@@ -21,6 +21,9 @@ export const apiPurchase3Insert = '/api/Purchase3/Insert'
 export const apiPurchase4Index = '/api/Purchase4/Index'
 export const apiProductionPreparationIndex = '/api/ProductionPreparation/Index'
 export const apiProductionPreparationIndex2 = '/api/ProductionPreparation/Index2'
+export const apiQualityControlIndex = '/api/QualityControl/Index'
+export const apiQualityControl2Index = '/api/QualityControl2/Index'
+export const apiQualityControl3Index = '/api/QualityControl3/Index'
 
 export const methodGetSelect2Select24GetAll = params => {
   return axios.get(apiDataTableDataTableGetAll, {

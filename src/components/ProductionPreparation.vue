@@ -226,7 +226,7 @@ export default {
             'orderable': false,
             'render': function (data, type, row, meta) {
               return (
-                '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">備料</button>'
+                '<button type="button" class="btn btn-primary ppBtn" data-toggle="modal">備料</button>'
               )
             }
           }
@@ -329,6 +329,10 @@ export default {
     }());
     // 視窗彈出
     (function () {
+      $(document).on('click', '.ppBtn', function (e) {
+        console.log('as')
+        $('#exampleModal').modal('show')
+      })
       $('#exampleModal').on('show.bs.modal', function (e) {
         console.log('eeeeeeee')
       })
