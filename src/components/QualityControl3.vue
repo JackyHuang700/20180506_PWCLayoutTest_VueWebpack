@@ -86,35 +86,40 @@
             列表
           </div>
           <div class="card-body">
+            <div class="row">
+                <div class="col-12 saveBtnGroup text-right mb-4">
+                  <button type="button" class="btn btn-success saveBtn col-2">儲存</button>
+                </div>
+              <div class="col-12">
+                <table id="example" cellspacing="0" width="100%" class="table table-striped table-hover table-bordered">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="align-middle checkBoxColumn">#</th>
+                      <th scope="col" class="align-middle">訂製唯一碼</th>
+                      <th scope="col" class="align-middle">廠商名稱</th>
+                      <th scope="col" class="align-middle">項目號碼</th>
+                      <th scope="col" class="align-middle">業務名稱</th>
+                      <th scope="col" class="align-middle">義務代碼</th>
+                      <th scope="col" class="align-middle">暫收總數量</th>
+                      <th scope="col" class="align-middle">倉庫別</th>
+                      <th scope="col" class="align-middle">儲位</th>
+                      <th scope="col" class="align-middle">暫收次數</th>
+                      <th scope="col" class="align-middle">合格數量</th>
+                      <th scope="col" class="align-middle">新增合格數量</th>
+                      <th scope="col" class="align-middle">入庫日期時間</th>
+                      <th scope="col" class="align-middle">入庫人員</th>
+                      <th scope="col" class="align-middle">來源單號</th>
+                      <th scope="col" class="align-middle">採購列號</th>
+                      <th scope="col" class="align-middle">收穫編號</th>
+                      <th scope="col" class="align-middle">入庫狀態</th>
 
-            <table id="example" cellspacing="0" width="100%" class="table table-striped table-hover table-bordered">
-              <thead>
-                <tr>
-                  <th scope="col" class="align-middle">#</th>
-                  <th scope="col" class="align-middle">訂製唯一碼</th>
-                  <th scope="col" class="align-middle">廠商名稱</th>
-                  <th scope="col" class="align-middle">項目號碼</th>
-                  <th scope="col" class="align-middle">業務名稱</th>
-                  <th scope="col" class="align-middle">義務代碼</th>
-                  <th scope="col" class="align-middle">暫收總數量</th>
-                  <th scope="col" class="align-middle">倉庫別</th>
-                  <th scope="col" class="align-middle">儲位</th>
-                  <th scope="col" class="align-middle">暫收次數</th>
-                  <th scope="col" class="align-middle">合格數量</th>
-                  <th scope="col" class="align-middle">新增合格數量</th>
-                  <th scope="col" class="align-middle">入庫日期時間</th>
-                  <th scope="col" class="align-middle">入庫人員</th>
-                  <th scope="col" class="align-middle">來源單號</th>
-                  <th scope="col" class="align-middle">採購列號</th>
-                  <th scope="col" class="align-middle">收穫↑編號</th>
-                  <th scope="col" class="align-middle">入庫狀態</th>
-
-                </tr>
-              </thead>
-            </table>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+            </div>
 
           </div>
-          <div class="card-footer"></div>
         </div>
       </div>
 
@@ -145,6 +150,7 @@ export default {
         },
         'ajax': apiQualityControl3Index,
         'scrollX': true,
+        'bPaginate': false,
         'columns': [
           {},
           { 'data': 'mainData_1' },

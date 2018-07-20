@@ -42,7 +42,7 @@
                   <label class="float-left col-sm-12" for="inputText6">到期日(未完成))</label>
                   <div class="col-sm-12">
                     <input type="text" class="form-control rangeInput" id="inputText6" placeholder="">
-                    <span class="rangeInputSpan">~</span> 
+                    <span class="rangeInputSpan">~</span>
                     <input type="text" class="form-control rangeInput" id="inputText7" placeholder="">
                   </div>
                 </div>
@@ -125,6 +125,14 @@
               </div>
               <div class="col-sm">
                 <input type="text" class="form-control" placeholder="Zip">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                  Check me out
+                </label>
               </div>
             </div>
           </div>

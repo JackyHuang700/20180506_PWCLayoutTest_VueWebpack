@@ -22,6 +22,8 @@ let dataTableList = {
     mainData_20: '',
     mainData_21: '未入庫',
     // 新增欄位
+    mainData_22: '',
+    mainData_23: 'N',
   }]
 }
 

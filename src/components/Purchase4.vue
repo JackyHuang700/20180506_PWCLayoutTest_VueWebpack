@@ -70,7 +70,7 @@
                   <table id="example" cellspacing="0" width="100%" class="table table-striped table-hover table-bordered">
                     <thead>
                       <tr>
-                        <th scope="col" class="align-middle">選取</th>
+                        <th scope="col" class="align-middle checkBoxColumn">選取</th>
                         <th scope="col" class="align-middle">採購分單編號</th>
                         <th scope="col" class="align-middle">訂單編號</th>
                         <th scope="col" class="align-middle">店鋪名稱</th>
@@ -386,7 +386,5 @@ export default {
 @import 'datatables.net-bs4/css/dataTables.bootstrap4.css';
 @import '../assets/dataTables/dataTables.css';
 
-.dataTables_wrapper.dataTables_wrapper th:nth-child(1) {
-  min-width: 30px;
-}
+
 </style>
