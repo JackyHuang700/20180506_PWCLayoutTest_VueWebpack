@@ -12,7 +12,7 @@
             <div class="form-group row">
               <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">銷貨單號</label>
               <div class="col-sm-4">
-                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="">
+                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" />
               </div>
 
               <label for="exampleFormControlSelect1" class="col-sm-2 col-form-label col-form-label-sm">訂單渠道</label>
@@ -48,7 +48,7 @@
               </div>
               <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">店鋪訂單號</label>
               <div class="col-sm-4">
-                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled value="141425225">
+                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled value="141425225" />
               </div>
             </div>
 
@@ -62,7 +62,7 @@
 
               <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">電商訂單狀態</label>
               <div class="col-sm-4">
-                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled>
+                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled />
               </div>
             </div>
 
@@ -92,7 +92,7 @@
               </div>
               <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">運送天數</label>
               <div class="col-sm-4">
-                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled>
+                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled />
               </div>
             </div>
 
@@ -106,29 +106,29 @@
               </div>
               <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">到貨日期</label>
               <div class="col-sm-4">
-                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled>
+                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled />
               </div>
             </div>
 
             <div class="form-group row">
               <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">帳單人</label>
               <div class="col-sm-4">
-                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled>
+                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled />
               </div>
               <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">帳單電話</label>
               <div class="col-sm-4">
-                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled>
+                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled />
               </div>
             </div>
 
             <div class="form-group row">
               <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">收貨人</label>
               <div class="col-sm-4">
-                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled>
+                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled />
               </div>
               <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">收貨電話</label>
               <div class="col-sm-4">
-                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled>
+                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled />
               </div>
             </div>
 
@@ -160,7 +160,7 @@
                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">展開</button>
                     </td>
                     <td class="align-middle d-none d-sm-table-cell">
-                      <img class="" src="http://fakeimg.pl/45x60/" alt="" width="45" height="60">
+                      <img class="" src="http://fakeimg.pl/45x60/" alt="" width="45" height="60" />
                     </td>
                     <td class="align-middle">180113000-01</td>
                     <td class="align-middle">產品1</td>

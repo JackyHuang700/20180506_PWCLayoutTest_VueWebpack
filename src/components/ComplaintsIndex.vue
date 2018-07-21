@@ -29,45 +29,45 @@
                   <div class="form-group col-md-3">
                     <label for="input1">...</label>
                     <div class="input-group">
-                      <input type="text" class="form-control col-sm-6 mr-3" id="input1" placeholder="">
-                      <input type="text" class="form-control col-sm-6" id="input11" placeholder="">
+                      <input type="text" class="form-control col-sm-6 mr-3" id="input1" placeholder="" />
+                      <input type="text" class="form-control col-sm-6" id="input11" placeholder="" />
                     </div>
                   </div>
                   <div class="form-group col-md-3">
                     <label for="input2">...</label>
-                    <input type="text" class="form-control" id="input2" placeholder="">
+                    <input type="text" class="form-control" id="input2" placeholder="" />
                   </div>
                   <div class="form-group col-md-3">
                     <label for="input3">...</label>
-                    <input type="text" class="form-control" id="input3" placeholder="">
+                    <input type="text" class="form-control" id="input3" placeholder="" />
                   </div>
                   <div class="form-group col-md-3">
                     <label for="input4">...</label>
-                    <input type="text" class="form-control" id="input4" placeholder="">
+                    <input type="text" class="form-control" id="input4" placeholder="" />
                   </div>
                   <div class="form-group col-md-3">
                     <label for="input5">...</label>
-                    <input type="text" class="form-control" id="input5" placeholder="">
+                    <input type="text" class="form-control" id="input5" placeholder="" />
                   </div>
                   <div class="form-group col-md-3">
                     <label for="input6">...</label>
-                    <input type="text" class="form-control" id="input6" placeholder="">
+                    <input type="text" class="form-control" id="input6" placeholder="" />
                   </div>
                   <div class="form-group col-md-3">
                     <label for="input7">...</label>
-                    <input type="text" class="form-control" id="input7" placeholder="">
+                    <input type="text" class="form-control" id="input7" placeholder="" />
                   </div>
                   <div class="form-group col-md-3">
                     <label for="input8">...</label>
-                    <input type="text" class="form-control" id="input8" placeholder="">
+                    <input type="text" class="form-control" id="input8" placeholder="" />
                   </div>
                   <div class="form-group col-md-3">
                     <label for="input9">...</label>
-                    <input type="text" class="form-control" id="input9" placeholder="">
+                    <input type="text" class="form-control" id="input9" placeholder="" />
                   </div>
                   <div class="form-group col-md-3">
                     <label for="input10">...</label>
-                    <input type="text" class="form-control" id="input10" placeholder="">
+                    <input type="text" class="form-control" id="input10" placeholder="" />
                   </div>
                   <div class="form-group col-12 text-right">
                     <button type="button" class="btn btn-primary">查詢</button>

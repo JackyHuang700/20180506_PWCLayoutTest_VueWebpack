@@ -15,7 +15,7 @@
                     <button type="button" class="close closeImgBtn position-absolute closeImgBtn-position" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
-                    <img alt="" class="img-thumbnail round mb-3 img-fluid showImg" src="https://fakeimg.pl/610x226/?text=Choose%20file&font=museo">
+                    <img alt="" class="img-thumbnail round mb-3 img-fluid showImg" src="https://fakeimg.pl/610x226/?text=Choose%20file&font=museo" />
                   </div>
                   <div class="custom-file">
                     <!-- <input type="hidden" class="urlHidden" name="PositiveUrl" id="PositiveUrl" value="https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg"> -->
@@ -30,7 +30,7 @@
                     <button type="button" class="close closeImgBtn position-absolute closeImgBtn-position" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
-                    <img alt="" class="img-thumbnail round mb-3 img-fluid showImg" src="https://fakeimg.pl/610x226/?text=Choose%20file&font=museo">
+                    <img alt="" class="img-thumbnail round mb-3 img-fluid showImg" src="https://fakeimg.pl/610x226/?text=Choose%20file&font=museo" />
                   </div>
                   <div class="custom-file">
                     <!-- <input type="hidden" class="urlHidden" name="PositiveUrl" id="PositiveUrl" value="https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg"> -->
@@ -45,7 +45,7 @@
                     <button type="button" class="close closeImgBtn position-absolute closeImgBtn-position" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
-                    <img alt="" class="img-thumbnail round mb-3 img-fluid showImg" src="https://fakeimg.pl/610x226/?text=Choose%20file&font=museo">
+                    <img alt="" class="img-thumbnail round mb-3 img-fluid showImg" src="https://fakeimg.pl/610x226/?text=Choose%20file&font=museo" />
                   </div>
                   <div class="custom-file">
                     <!-- <input type="hidden" class="urlHidden" name="PositiveUrl" id="PositiveUrl" value="https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg"> -->
@@ -60,7 +60,7 @@
                     <button type="button" class="close closeImgBtn position-absolute closeImgBtn-position" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
-                    <img alt="" class="img-thumbnail round mb-3 img-fluid showImg" src="https://fakeimg.pl/610x226/?text=Choose%20file&font=museo">
+                    <img alt="" class="img-thumbnail round mb-3 img-fluid showImg" src="https://fakeimg.pl/610x226/?text=Choose%20file&font=museo" />
                   </div>
                   <div class="custom-file">
                     <!-- <input type="hidden" class="urlHidden" name="PositiveUrl" id="PositiveUrl" value="https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg"> -->
@@ -75,7 +75,7 @@
                     <button type="button" class="close closeImgBtn position-absolute closeImgBtn-position" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
-                    <img alt="" class="img-thumbnail round mb-3 img-fluid showImg" src="https://fakeimg.pl/610x226/?text=Choose%20file&font=museo">
+                    <img alt="" class="img-thumbnail round mb-3 img-fluid showImg" src="https://fakeimg.pl/610x226/?text=Choose%20file&font=museo" />
                   </div>
                   <div class="custom-file">
                     <!-- <input type="hidden" class="urlHidden" name="PositiveUrl" id="PositiveUrl" value="https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg"> -->
@@ -90,7 +90,7 @@
                     <button type="button" class="close closeImgBtn position-absolute closeImgBtn-position" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
-                    <img alt="" class="img-thumbnail round mb-3 img-fluid showImg" src="https://fakeimg.pl/610x226/?text=Choose%20file&font=museo">
+                    <img alt="" class="img-thumbnail round mb-3 img-fluid showImg" src="https://fakeimg.pl/610x226/?text=Choose%20file&font=museo" />
                   </div>
                   <div class="custom-file">
                     <!-- <input type="hidden" class="urlHidden" name="PositiveUrl" id="PositiveUrl" value="https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg"> -->
@@ -105,7 +105,7 @@
                     <button type="button" class="close closeImgBtn position-absolute closeImgBtn-position" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
-                    <img alt="" class="img-thumbnail round mb-3 img-fluid showImg" src="https://fakeimg.pl/610x226/?text=Choose%20file&font=museo">
+                    <img alt="" class="img-thumbnail round mb-3 img-fluid showImg" src="https://fakeimg.pl/610x226/?text=Choose%20file&font=museo" />
                   </div>
                   <div class="custom-file">
                     <!-- <input type="hidden" class="urlHidden" name="PositiveUrl" id="PositiveUrl" value="https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg"> -->
@@ -127,7 +127,7 @@
       <!-- <div class="col-12 mt-4">
         <form id="form1" runat="server">
           <input type='file' id="imgInp" />
-          <img id="target" src="#" alt="your image" />
+          <img id="target" src="#" alt="your image" / />
         </form>
       </div> -->
     </div>

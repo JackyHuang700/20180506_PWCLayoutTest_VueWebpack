@@ -12,44 +12,44 @@
             <div class="form-group row">
               <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">收款編號</label>
               <div class="col-sm-4">
-                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled>
+                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled />
               </div>
               <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">客戶</label>
               <div class="col-sm-4">
-                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled>
+                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled />
               </div>
             </div>
 
             <div class="form-group row">
               <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">收款日期</label>
               <div class="col-sm-4">
-                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled>
+                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled />
               </div>
               <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">支付方式</label>
               <div class="col-sm-4">
-                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled>
+                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled />
               </div>
             </div>
 
             <div class="form-group row">
               <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">店鋪訂單號</label>
               <div class="col-sm-4">
-                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled>
+                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled />
               </div>
               <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">幣種</label>
               <div class="col-sm-4">
-                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled>
+                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled />
               </div>
             </div>
 
             <div class="form-group row">
               <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">交易編號</label>
               <div class="col-sm-4">
-                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled>
+                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled />
               </div>
               <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">收款金額</label>
               <div class="col-sm-4">
-                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled>
+                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled />
               </div>
             </div>
 
@@ -74,7 +74,7 @@
             <div class="form-group row">
               <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">沖帳帳號</label>
               <div class="col-sm-4">
-                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled>
+                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled />
               </div>
               <label for="exampleFormControlSelect1" class="col-sm-2 col-form-label col-form-label-sm">沖帳狀態</label>
               <div class="col-sm-4">
@@ -93,7 +93,7 @@
               </div>
               <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">沖帳日期</label>
               <div class="col-sm-4">
-                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled>
+                <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="" disabled />
               </div>
             </div>
 

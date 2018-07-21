@@ -11,19 +11,19 @@
             <div class="form-row">
               <div class="form-group col-sm-3">
                 <label for="template1">銷售單號</label>
-                <input type="text" class="form-control" id="..." name="..." placeholder="" value="1800001" readonly>
+                <input type="text" class="form-control" id="..." name="..." placeholder="" value="1800001" readonly />
               </div>
               <div class="form-group col-sm-3">
                 <label for="...">明細編號</label>
-                <input type="text" class="form-control" id="..." name="..." placeholder="" value="1800001-001" readonly>
+                <input type="text" class="form-control" id="..." name="..." placeholder="" value="1800001-001" readonly />
               </div>
               <div class="form-group col-sm-3">
                 <label for="...">產品名稱</label>
-                <input type="text" class="form-control" id="..." name="..." placeholder="" value="Ace花邊裙擺" readonly>
+                <input type="text" class="form-control" id="..." name="..." placeholder="" value="Ace花邊裙擺" readonly />
               </div>
               <div class="form-group col-sm-3">
                 <label for="template1">正面圖</label>
-                <img src="http://fakeimg.pl/304x136/" class="img-thumbnail form-control" alt="Cinque Terre" width="304" height="236">
+                <img src="http://fakeimg.pl/304x136/" class="img-thumbnail form-control" alt="Cinque Terre" width="304" height="236" />
               </div>
 
               <div class="form-group col-sm-3">
@@ -104,11 +104,11 @@
                   <div class="form-row">
                     <div class="form-group col-sm-3">
                       <label for="template11">搜尋供應商</label>
-                      <input type="text" class="form-control" id="searchSupplier" placeholder="">
+                      <input type="text" class="form-control" id="searchSupplier" placeholder="" />
                     </div>
                     <div class="form-group col-sm-3">
                       <label for="template111">搜尋原物料</label>
-                      <input type="text" class="form-control" id="searchRawmaterial" placeholder="">
+                      <input type="text" class="form-control" id="searchRawmaterial" placeholder="" />
                     </div>
                   </div>
                 </div>

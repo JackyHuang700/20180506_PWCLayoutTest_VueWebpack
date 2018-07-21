@@ -34,8 +34,8 @@
                   <div class="form-group col-sm-3">
                     <label for="input1">收款日期</label>
                     <div class="input-group">
-                      <input type="text" class="form-control col-sm-6 mr-2" id="input1" placeholder="">
-                      <input type="text" class="form-control col-sm-6" id="input11" placeholder="">
+                      <input type="text" class="form-control col-sm-6 mr-2" id="input1" placeholder="" />
+                      <input type="text" class="form-control col-sm-6" id="input11" placeholder="" />
                     </div>
                   </div>
                   <div class="form-group col-sm-3">
@@ -47,7 +47,7 @@
                   </div>
                   <div class="form-group col-sm-3">
                     <label for="input3">收款編號</label>
-                    <input type="text" class="form-control" id="input3" placeholder="">
+                    <input type="text" class="form-control" id="input3" placeholder="" />
                   </div>
                   <div class="form-group col-sm-3">
                     <label for="input4">幣種</label>
@@ -59,29 +59,29 @@
                   <div class="form-group col-sm-3">
                     <label for="input5">收款金額</label>
                     <div class="input-group">
-                      <input type="text" class="form-control col-sm-6 mr-2" id="input5" placeholder="">
-                      <input type="text" class="form-control col-sm-6" id="input51" placeholder="">
+                      <input type="text" class="form-control col-sm-6 mr-2" id="input5" placeholder="" />
+                      <input type="text" class="form-control col-sm-6" id="input51" placeholder="" />
                     </div>
                   </div>
                   <div class="form-group col-sm-3">
                     <label for="input6">店鋪訂單號</label>
-                    <input type="text" class="form-control" id="input6" placeholder="">
+                    <input type="text" class="form-control" id="input6" placeholder="" />
                   </div>
                   <div class="form-group col-sm-3">
                     <label for="input7">交易編號</label>
-                    <input type="text" class="form-control" id="input7" placeholder="">
+                    <input type="text" class="form-control" id="input7" placeholder="" />
                   </div>
                   <div class="form-group col-sm-3">
                     <label for="input8">支付方式</label>
-                    <input type="text" class="form-control" id="input8" placeholder="">
+                    <input type="text" class="form-control" id="input8" placeholder="" />
                   </div>
                   <div class="form-group col-sm-3">
                     <label for="input9">客戶</label>
-                    <input type="text" class="form-control" id="input9" placeholder="">
+                    <input type="text" class="form-control" id="input9" placeholder="" />
                   </div>
                   <div class="form-group col-sm-3">
                     <label for="input10">訂單銷貨單號</label>
-                    <input type="text" class="form-control" id="input10" placeholder="">
+                    <input type="text" class="form-control" id="input10" placeholder="" />
                   </div>
                   <div class="form-group col-sm-3">
                     <label for="input11">訂單部門</label>
@@ -92,13 +92,13 @@
                   </div>
                   <div class="form-group col-sm-3">
                     <label for="input12">訂單持有人</label>
-                    <input type="text" class="form-control" id="input12" placeholder="">
+                    <input type="text" class="form-control" id="input12" placeholder="" />
                   </div>
                   <div class="form-group col-sm-3">
                     <label for="input13">訂單應付金額</label>
                     <div class="input-group">
-                      <input type="text" class="form-control col-sm-6 mr-2" id="input13" placeholder="">
-                      <input type="text" class="form-control col-sm-6" id="input131" placeholder="">
+                      <input type="text" class="form-control col-sm-6 mr-2" id="input13" placeholder="" />
+                      <input type="text" class="form-control col-sm-6" id="input131" placeholder="" />
                     </div>
                   </div>
                   <div class="form-group col-12 text-right">
@@ -215,7 +215,7 @@
                       <td class="text-right align-middle originalMoney">123456.00</td>
                       <td class="text-right align-middle offsetMoney">100000</td>
                       <td class="align-middle">
-                        <input type="text" class="form-control text-right collectionMoney" value="100" />
+                        <input type="text" class="form-control text-right collectionMoney" value="100" / />
                       </td>
                       <td class="text-right totalMoney">0.00</td>
                     </tr>
@@ -232,7 +232,7 @@
                       <td class="text-right align-middle originalMoney">&nbsp;</td>
                       <td class="text-right align-middle offsetMoney">&nbsp;</td>
                       <td class="align-middle">
-                        <input type="text" class="form-control text-right collectionMoney" value="0" />
+                        <input type="text" class="form-control text-right collectionMoney" value="0" / />
                       </td>
                       <td class="text-right align-middle totalMoney">&nbsp;</td>
                     </tr>
@@ -566,8 +566,7 @@ export default {
         '  <td class="text-right originalMoney">{{templateCC}}</td>' +
         '  <td class="text-right offsetMoney">100000</td>' +
         '  <td>' +
-        '    <input type="text" class="form-control text-right collectionMoney" value="{{templateDD}}" />' +
-        '  </td>' +
+        '    <input type="text" class="form-control text-right collectionMoney" value="{{templateDD}}" />' / +'  </td>' +
         '  <td class="text-right totalMoney">0.0</td>' +
         '</tr>' +
         '<tr>' +
@@ -576,8 +575,7 @@ export default {
         '  <td class="text-right originalMoney">{{templateGG}}</td>' +
         '  <td class="text-right offsetMoney">113.47</td>' +
         '  <td>' +
-        '    <input type="text" class="form-control text-right collectionMoney" value="{{templateHH}}" />' +
-        '  </td>' +
+        '    <input type="text" class="form-control text-right collectionMoney" value="{{templateHH}}" />' / +'  </td>' +
         '  <td class="text-right totalMoney">0.0</td>' +
         '</tr>'
       ).replace('{{templateAA}}', dataF)
@@ -624,8 +622,7 @@ export default {
         '<td class="text-right align-middle originalMoney">{{templateCC}}</td>' +
         '<td class="text-right align-middle offsetMoney">{{templateDD}}</td>' +
         '<td class="align-middle">' +
-        '  <input type="text" class="form-control text-right collectionMoney" value="0" />' +
-        '</td>' +
+        '  <input type="text" class="form-control text-right collectionMoney" value="0" />' / +'</td>' +
         '<td class="text-right totalMoney">{{templateEE}}</td>'
       ).replace('{{templateAA}}', dataC)
         .replace('{{templateBB}}', dataD)

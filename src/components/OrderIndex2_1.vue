@@ -62,19 +62,19 @@
                       <div class="form-row">
                         <div class="form-group col-md-3">
                           <label class="float-left" for="inputText">Email</label>
-                          <input type="text" class="form-control" id="inputText" placeholder="Email">
+                          <input type="text" class="form-control" id="inputText" placeholder="Email" />
                         </div>
                         <div class="form-group col-md-3">
                           <label class="float-left" for="inputText2">Password</label>
-                          <input type="text" class="form-control" id="inputText2" placeholder="Password">
+                          <input type="text" class="form-control" id="inputText2" placeholder="Password" />
                         </div>
                         <div class="form-group col-md-3">
                           <label class="float-left" for="inputText3">Password</label>
-                          <input type="text" class="form-control" id="inputText3" placeholder="Password">
+                          <input type="text" class="form-control" id="inputText3" placeholder="Password" />
                         </div>
                         <div class="form-group col-md-3">
                           <label class="float-left" for="inputText4">Password</label>
-                          <input type="text" class="form-control" id="inputText4" placeholder="Password">
+                          <input type="text" class="form-control" id="inputText4" placeholder="Password" />
                         </div>
                       </div>
                     </div>
@@ -82,11 +82,11 @@
                       <div class="form-row">
                         <div class="form-group col-md-3">
                           <label class="float-left" for="inputText5">Email</label>
-                          <input type="text" class="form-control" id="inputText5" placeholder="Email">
+                          <input type="text" class="form-control" id="inputText5" placeholder="Email" />
                         </div>
                         <div class="form-group col-md-3">
                           <label class="float-left" for="inputText6">Password</label>
-                          <input type="text" class="form-control" id="inputText6" placeholder="Password">
+                          <input type="text" class="form-control" id="inputText6" placeholder="Password" />
                         </div>
                         <div class="form-group col-md-3">
                           <label class="float-left" for="inputState">State</label>
@@ -97,13 +97,13 @@
                         </div>
                         <div class="form-group col-md-3">
                           <label class="float-left" for="inputText8">Password</label>
-                          <input type="text" class="form-control" id="inputText8" placeholder="Password">
+                          <input type="text" class="form-control" id="inputText8" placeholder="Password" />
                         </div>
                       </div>
                     </div>
                     <label for="searchInput" class="col-sm-1 col-form-label pr-0 text-left">專案編號:</label>
                     <div class="col-sm-11">
-                      <input type="text" class="form-control" id="searchInput" placeholder="searchInput">
+                      <input type="text" class="form-control" id="searchInput" placeholder="searchInput" />
                     </div>
                   </div>
                 </div>

@@ -8,7 +8,7 @@
 
             <form action="" method="post" id="commentForm2">
 
-              <input type="hidden" name="id" id="id" value="">
+              <input type="hidden" name="id" id="id" value="" />
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="name" class=" col-form-label-sm text-right">收款編號</label>
@@ -24,19 +24,19 @@
               <div class="form-group row">
                 <label for="position" class="col-sm-2 col-form-label">Email</label>
                 <div class="col-sm-10">
-                  <input type="email" class="form-control" id="position" placeholder="Email">
+                  <input type="email" class="form-control" id="position" placeholder="Email" />
                 </div>
               </div>
               <div class="form-group row">
                 <label for="name" class="col-sm-2 col-form-label">Password</label>
                 <div class="col-sm-10">
-                  <input type="password" class="form-control" id="name" placeholder="Password">
+                  <input type="password" class="form-control" id="name" placeholder="Password" />
                 </div>
               </div>
 
               <div class="form-group">
                 <label for="inputAddress">Address</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" />
               </div>
 
               <div class="form-row">
@@ -57,8 +57,8 @@
 
               <div class="form-group">
                 <div class="col-12 text-right">
-                  <input class="submit btn btn-primary" type="submit" value="Submit">
-                  <input class="submit btn btn-danger" type="button" value="Reset" id="reset">
+                  <input class="submit btn btn-primary" type="submit" value="Submit" />
+                  <input class="submit btn btn-danger" type="button" value="Reset" id="reset" />
                 </div>
               </div>
 

@@ -12,7 +12,7 @@
               <div class="form-row">
                 <div class="form-group col-sm-3">
                   <label for="">代碼</label>
-                  <input type="text" class="form-control" id="" value="">
+                  <input type="text" class="form-control" id="" value="" />
                 </div>
                 <div class="form-group col-sm-3">
                   <label for="">幣別</label>
@@ -35,7 +35,7 @@
                 </div>
                 <div class="form-group col-sm-3">
                   <label for="">稅籍ID</label>
-                  <input type="text" class="form-control" id="" value="">
+                  <input type="text" class="form-control" id="" value="" />
                 </div>
               </div>
 
@@ -53,27 +53,27 @@
               <div class="form-row">
                 <div class="form-group col-sm-3">
                   <label for="">電話</label>
-                  <input type="text" class="form-control" id="" value="">
+                  <input type="text" class="form-control" id="" value="" />
                 </div>
                 <div class="form-group col-sm-3">
                   <label for="">行動電話</label>
-                  <input type="text" class="form-control" id="" value="">
+                  <input type="text" class="form-control" id="" value="" />
                 </div>
                 <div class="form-group col-sm-3">
                   <label for="">傳真</label>
-                  <input type="text" class="form-control" id="" value="">
+                  <input type="text" class="form-control" id="" value="" />
                 </div>
                 <div class="form-group col-sm-3">
                   <label for="">電子郵件</label>
-                  <input type="text" class="form-control" id="" value="">
+                  <input type="text" class="form-control" id="" value="" />
                 </div>
                 <div class="form-group col-sm-3">
                   <label for="">聯絡人</label>
-                  <input type="text" class="form-control" id="" value="">
+                  <input type="text" class="form-control" id="" value="" />
                 </div>
                 <div class="form-group col-sm-3">
                   <label for="">統一稅籍ID</label>
-                  <input type="text" class="form-control" id="" value="">
+                  <input type="text" class="form-control" id="" value="" />
                 </div>
               </div>
 

@@ -31,15 +31,15 @@
                     <div class="form-row">
                       <div class="form-group col-md-3">
                         <label class="float-left" for="inputText">代碼</label>
-                        <input type="text" class="form-control" id="inputText" placeholder="">
+                        <input type="text" class="form-control" id="inputText" placeholder="" />
                       </div>
                       <div class="form-group col-md-3">
                         <label class="float-left" for="inputText2">名稱</label>
-                        <input type="text" class="form-control" id="inputText2" placeholder="">
+                        <input type="text" class="form-control" id="inputText2" placeholder="" />
                       </div>
                       <div class="form-group col-md-3">
                         <label class="float-left" for="inputText3">工作次序</label>
-                        <input type="text" class="form-control" id="inputText3" placeholder="">
+                        <input type="text" class="form-control" id="inputText3" placeholder="" />
                       </div>
                       <div class="form-group col-sm-3">
                         <label for="inputText4">啟用</label>

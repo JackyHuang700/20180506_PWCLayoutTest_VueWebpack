@@ -19,19 +19,19 @@
                     <div class="form-row">
                       <div class="form-group col-md-3">
                         <label class="float-left" for="inputText">訂單編號</label>
-                        <input type="text" class="form-control" id="inputText" placeholder="">
+                        <input type="text" class="form-control" id="inputText" placeholder="" />
                       </div>
                       <div class="form-group col-md-3">
                         <label class="float-left" for="inputText2">採購分單編號</label>
-                        <input type="text" class="form-control" id="inputText2" placeholder="">
+                        <input type="text" class="form-control" id="inputText2" placeholder="" />
                       </div>
                       <div class="form-group col-md-3">
                         <label class="float-left" for="inputText3">到期日(起)</label>
-                        <input type="text" class="form-control" id="inputText3" placeholder="">
+                        <input type="text" class="form-control" id="inputText3" placeholder="" />
                       </div>
                       <div class="form-group col-md-3">
                         <label class="float-left" for="inputText4">到期日(迄)</label>
-                        <input type="text" class="form-control" id="inputText4" placeholder="">
+                        <input type="text" class="form-control" id="inputText4" placeholder="" />
                       </div>
                     </div>
                   </div>
@@ -119,7 +119,7 @@
                 <div class="form-group row">
                   <label for="exampleModal_Price" class="col-sm-2 col-form-label">價格</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="exampleModal_Price" placeholder="請輸入">
+                    <input type="text" class="form-control" id="exampleModal_Price" placeholder="請輸入" />
                   </div>
                 </div>
               </div>
@@ -146,13 +146,13 @@
                 <div class="form-group row">
                   <label for="exampleModal2_Name" class="col-sm-2 col-form-label">物流名稱</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="exampleModal2_Name" placeholder="請輸入">
+                    <input type="text" class="form-control" id="exampleModal2_Name" placeholder="請輸入" />
                   </div>
                 </div>
                 <div class="form-group row">
                   <label for="exampleModal2_Code" class="col-sm-2 col-form-label">物流代號</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="exampleModal2_Code" placeholder="請輸入">
+                    <input type="text" class="form-control" id="exampleModal2_Code" placeholder="請輸入" />
                   </div>
                 </div>
               </div>
@@ -223,8 +223,7 @@ export default {
             render: function (data, type, row, meta) {
               return (
                 '<div class="custom-control custom-checkbox">' +
-                '  <input type="checkbox" class="custom-control-input selectInfo" id="{{id}}" data-id={{dataId}}>' +
-                '  <label class="custom-control-label" for="{{id}}"></label>' +
+                '  <input type="checkbox" class="custom-control-input selectInfo" id="{{id}}" data-id={{dataId}}>' / +'  <label class="custom-control-label" for="{{id}}"></label>' +
                 '</div>'
               )
                 .replace(/{{id}}/g, 'checkbox' + meta.row)

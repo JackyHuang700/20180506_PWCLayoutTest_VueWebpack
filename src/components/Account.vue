@@ -19,19 +19,19 @@
                     <div class="form-row">
                       <div class="form-group col-md-3">
                         <label class="float-left" for="inputText">編號</label>
-                        <input type="text" class="form-control" id="inputText" placeholder="" readonly>
+                        <input type="text" class="form-control" id="inputText" placeholder="" readonly />
                       </div>
                       <div class="form-group col-md-3">
                         <label class="float-left" for="inputText2">編號</label>
-                        <input type="text" class="form-control" id="inputText2" placeholder="" readonly>
+                        <input type="text" class="form-control" id="inputText2" placeholder="" readonly />
                       </div>
                       <div class="form-group col-md-3">
                         <label class="float-left" for="inputText3">到期日(起)</label>
-                        <input type="text" class="form-control" id="inputText3" placeholder="" readonly>
+                        <input type="text" class="form-control" id="inputText3" placeholder="" readonly />
                       </div>
                       <div class="form-group col-md-3">
                         <label class="float-left" for="inputText4">到期日(迄)</label>
-                        <input type="text" class="form-control" id="inputText4" placeholder="" readonly>
+                        <input type="text" class="form-control" id="inputText4" placeholder="" readonly />
                       </div>
                     </div>
                   </div>
@@ -113,8 +113,7 @@ export default {
             'render': function (data, type, row, meta) {
               var dom = (
                 '<div class="custom-control custom-checkbox">' +
-                '  <input type="checkbox" class="custom-control-input" id="customCheckDisabled">' +
-                '  <label class="custom-control-label" for="customCheckDisabled"></label>' +
+                '  <input type="checkbox" class="custom-control-input" id="customCheckDisabled">' / +'  <label class="custom-control-label" for="customCheckDisabled"></label>' +
                 '</div>')
 
               return (dom)

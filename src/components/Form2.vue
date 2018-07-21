@@ -10,19 +10,19 @@
               <div class="form-group row">
                 <label for="position" class="col-sm-2 col-form-label">Email</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="position" name="position" value="">
+                  <input type="text" class="form-control" id="position" name="position" value="" />
                 </div>
               </div>
               <div class="form-group row">
                 <label for="salary" class="col-sm-2 col-form-label">Password</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="salary" name="salary" placeholder="" value="">
+                  <input type="text" class="form-control" id="salary" name="salary" placeholder="" value="" />
                 </div>
               </div>
 
               <div class="col-12 text-right">
-                <input class="submit btn btn-primary" type="submit" value="Submit">
-                <input class="submit btn btn-danger" type="button" value="Reset" id="reset">
+                <input class="submit btn btn-primary" type="submit" value="Submit" />
+                <input class="submit btn btn-danger" type="button" value="Reset" id="reset" />
               </div>
             </form>
 

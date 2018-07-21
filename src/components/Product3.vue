@@ -12,19 +12,19 @@
                 <div class="form-group col-sm-3 d-none d-sm-block"></div>
                 <div class="form-group col-sm-2">
                   <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input addList" id="template1">
+                    <input type="checkbox" class="custom-control-input addList" id="template1" />
                     <label class="custom-control-label" for="template1">保留報工者</label>
                   </div>
                 </div>
                 <div class="form-group col-sm-2">
                   <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input addList" id="template2">
+                    <input type="checkbox" class="custom-control-input addList" id="template2" />
                     <label class="custom-control-label" for="template2">保留工序</label>
                   </div>
                 </div>
                 <div class="form-group col-sm-2">
                   <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input addList" id="template3">
+                    <input type="checkbox" class="custom-control-input addList" id="template3" />
                     <label class="custom-control-label" for="template3">保留狀態</label>
                   </div>
                 </div>
@@ -35,28 +35,28 @@
                 <div class="form-group col-sm-3 d-none d-sm-block"></div>
                 <label for="template4" class="col-sm-1 col-form-label">報工者: </label>
                 <div class="col-sm-4">
-                  <input type="text" class="form-control" id="template4" value="">
+                  <input type="text" class="form-control" id="template4" value="" />
                 </div>
               </div>
               <div class="form-group row">
                 <div class="form-group col-sm-3 d-none d-sm-block"></div>
                 <label for="template5" class="col-sm-1 col-form-label">工單條碼: </label>
                 <div class="col-sm-4">
-                  <input type="text" class="form-control" id="template5" value="">
+                  <input type="text" class="form-control" id="template5" value="" />
                 </div>
               </div>
               <div class="form-group row">
                 <div class="form-group col-sm-3 d-none d-sm-block"></div>
                 <label for="template5" class="col-sm-1 col-form-label">工序: </label>
                 <div class="col-sm-4">
-                  <input type="text" class="form-control" id="template5" value="">
+                  <input type="text" class="form-control" id="template5" value="" />
                 </div>
               </div>
               <div class="form-group row">
                 <div class="form-group col-sm-3 d-none d-sm-block"></div>
                 <label for="template5" class="col-sm-1 col-form-label">狀態: </label>
                 <div class="col-sm-4">
-                  <input type="text" class="form-control" id="template5" value="">
+                  <input type="text" class="form-control" id="template5" value="" />
                 </div>
               </div>
             </form>

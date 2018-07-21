@@ -12,41 +12,41 @@
             <div class="form-row">
               <div class="form-group col-lg-3">
                 <label for="input4">銷貨單號1</label>
-                <input type="text" class="form-control" id="input4" placeholder="">
+                <input type="text" class="form-control" id="input4" placeholder="" />
               </div>
               <div class="form-group col-lg-3">
                 <label for="input5">部門1</label>
-                <input type="text" class="form-control" id="input5" placeholder="">
+                <input type="text" class="form-control" id="input5" placeholder="" />
               </div>
               <div class="form-group col-lg-3">
                 <label for="input6">銷貨單號2</label>
-                <input type="text" class="form-control" id="input6" placeholder="">
+                <input type="text" class="form-control" id="input6" placeholder="" />
               </div>
               <div class="form-group col-lg-3">
                 <label for="input7">部門2</label>
-                <input type="text" class="form-control" id="input7" placeholder="">
+                <input type="text" class="form-control" id="input7" placeholder="" />
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-group col-lg-4">
                 <label for="input8">銷貨單號</label>
-                <input type="text" class="form-control" id="input8" placeholder="">
+                <input type="text" class="form-control" id="input8" placeholder="" />
               </div>
               <div class="form-group col-lg-4">
                 <label for="input9">部門</label>
-                <input type="text" class="form-control" id="input9" placeholder="">
+                <input type="text" class="form-control" id="input9" placeholder="" />
               </div>
               <div class="form-group col-lg-4">
                 <label for="input10">銷貨單號</label>
-                <input type="text" class="form-control" id="input10" placeholder="">
+                <input type="text" class="form-control" id="input10" placeholder="" />
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-group col-lg-6">
                 <label for="input8">持有人</label>
-                <input type="text" class="form-control" id="input8">
+                <input type="text" class="form-control" id="input8" />
               </div>
               <div class="form-group col-lg-3">
                 <label for="input9">狀態</label>
@@ -57,7 +57,7 @@
               </div>
               <div class="form-group col-lg-3">
                 <label for="input10">Zip</label>
-                <input type="text" class="form-control" id="input10">
+                <input type="text" class="form-control" id="input10" />
               </div>
             </div>
 
@@ -71,7 +71,7 @@
 
             <div class="form-group">
               <label for="input1">傳真</label>
-              <input type="text" class="form-control" id="input1" placeholder="">
+              <input type="text" class="form-control" id="input1" placeholder="" />
             </div>
 
             <div class="form-group">
@@ -80,7 +80,7 @@
             </div>
 
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
               <label class="form-check-label" for="inlineCheckbox1">1</label>
             </div>
 

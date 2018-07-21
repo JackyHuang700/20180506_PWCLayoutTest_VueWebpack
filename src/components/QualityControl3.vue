@@ -2,9 +2,8 @@
   <div class="container-fluid">
     <div class="row">
 
-      <!-- 複製過去要刪除 -->
       <div class="col-12">
-        <h1>入庫作業</h1>
+        <h1>複製過去要刪除 - 入庫作業</h1>
       </div>
 
       <div class="col-12">
@@ -25,19 +24,19 @@
 
                       <div class="form-group col-sm-3">
                         <label class="float-left" for="inputText2">供應商名稱/編號</label>
-                        <input type="text" class="form-control" id="inputText2" placeholder="">
+                        <input type="text" class="form-control" id="inputText2" placeholder="" />
                       </div>
                       <div class="form-group col-sm-3">
                         <label class="float-left" for="inputText7">Barcode2</label>
-                        <input type="text" class="form-control" id="inputText7" placeholder="">
+                        <input type="text" class="form-control" id="inputText7" placeholder="" />
                       </div>
                       <div class="form-group col-sm-3">
                         <label class="float-left" for="inputText5">訂製唯一碼</label>
-                        <input type="text" class="form-control" id="inputText5" placeholder="">
+                        <input type="text" class="form-control" id="inputText5" placeholder="" />
                       </div>
                       <div class="form-group col-sm-3">
                         <label class="float-left" for="inputText5">收貨編號</label>
-                        <input type="text" class="form-control" id="inputText6" placeholder="">
+                        <input type="text" class="form-control" id="inputText6" placeholder="" />
                       </div>
                       <div class="form-group col-sm-3">
                         <label class="float-left" for="inputText">狀態</label>
@@ -48,15 +47,15 @@
                       </div>
                       <div class="form-group col-sm-3">
                         <label class="float-left" for="inputText9">填寫寫入庫儲位</label>
-                        <input type="text" class="form-control" id="inputText9" placeholder="">
+                        <input type="text" class="form-control" id="inputText9" placeholder="" />
                       </div>
                       <div class="form-group col-sm-3">
                         <label class="float-left" for="inputText3">收貨日期(起)</label>
-                        <input type="text" class="form-control" id="inputText3" placeholder="">
+                        <input type="text" class="form-control" id="inputText3" placeholder="" />
                       </div>
                       <div class="form-group col-sm-3">
                         <label class="float-left" for="inputText3">收貨日期(迄)</label>
-                        <input type="text" class="form-control" id="inputText4" placeholder="">
+                        <input type="text" class="form-control" id="inputText4" placeholder="" />
                       </div>
 
                       <div class="form-group col-sm-3">

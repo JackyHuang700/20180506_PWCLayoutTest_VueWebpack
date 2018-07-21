@@ -32,7 +32,7 @@ import {
   Process4,
   CopyForm,
   CopyTemplate,
-  HomeIndex,
+  // HomeIndex,
   HomeIndeV2,
   OrderIndex2,
   OrderIndex2_1,

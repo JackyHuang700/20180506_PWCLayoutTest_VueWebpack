@@ -10,15 +10,15 @@
             <div class="form-row">
               <div class="form-group col-sm-3">
                 <label for="template1">代碼</label>
-                <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="WCH">
+                <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="WCH" />
               </div>
               <div class="form-group col-sm-3">
                 <label for="template2">名稱</label>
-                <input type="text" class="form-control" id="template2" name="template2" placeholder="" value="車花">
+                <input type="text" class="form-control" id="template2" name="template2" placeholder="" value="車花" />
               </div>
               <div class="form-group col-sm-3">
                 <label for="template3">工作次序</label>
-                <input type="text" class="form-control" id="template3" name="template3" placeholder="" value="1">
+                <input type="text" class="form-control" id="template3" name="template3" placeholder="" value="1" />
               </div>
               <div class="form-group col-sm-3">&nbsp;</div>
               <div class="form-group col-sm-3">

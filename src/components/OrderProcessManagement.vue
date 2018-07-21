@@ -14,7 +14,7 @@
             <div class="form-row">
               <div class="form-group col-sm-3">
                 <label for="template1">...</label>
-                <input type="text" class="form-control" id="template1" name="template1" placeholder="" readonly>
+                <input type="text" class="form-control" id="template1" name="template1" placeholder="" readonly />
               </div>
               <div class="form-group col-sm-3">
                 <label for="template6">...</label>

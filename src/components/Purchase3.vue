@@ -10,19 +10,19 @@
             <div class="form-row">
               <div class="form-group col-sm-3">
                 <label for="template1">...</label>
-                <input type="text" class="form-control" id="template1" name="template1" placeholder="">
+                <input type="text" class="form-control" id="template1" name="template1" placeholder="" />
               </div>
               <div class="form-group col-sm-3">
                 <label for="template2">...</label>
-                <input type="text" class="form-control" id="template2" name="template2" placeholder="">
+                <input type="text" class="form-control" id="template2" name="template2" placeholder="" />
               </div>
               <div class="form-group col-sm-3">
                 <label for="template3">...</label>
-                <input type="text" class="form-control" id="template3" name="template3" placeholder="">
+                <input type="text" class="form-control" id="template3" name="template3" placeholder="" />
               </div>
               <div class="form-group col-sm-3">
                 <label for="template4">...</label>
-                <input type="text" class="form-control" id="template4" name="template4" placeholder="">
+                <input type="text" class="form-control" id="template4" name="template4" placeholder="" />
               </div>
             </div>
           </div>

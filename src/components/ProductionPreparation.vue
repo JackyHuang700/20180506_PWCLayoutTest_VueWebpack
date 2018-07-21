@@ -19,19 +19,19 @@
                     <div class="form-row">
                       <div class="form-group col-md-3">
                         <label class="float-left" for="inputText">編號</label>
-                        <input type="text" class="form-control" id="inputText" placeholder="">
+                        <input type="text" class="form-control" id="inputText" placeholder="" />
                       </div>
                       <div class="form-group col-md-3">
                         <label class="float-left" for="inputText2">編號</label>
-                        <input type="text" class="form-control" id="inputText2" placeholder="">
+                        <input type="text" class="form-control" id="inputText2" placeholder="" />
                       </div>
                       <div class="form-group col-md-3">
                         <label class="float-left" for="inputText3">到期日(起)</label>
-                        <input type="text" class="form-control" id="inputText3" placeholder="">
+                        <input type="text" class="form-control" id="inputText3" placeholder="" />
                       </div>
                       <div class="form-group col-md-3">
                         <label class="float-left" for="inputText4">到期日(迄)</label>
-                        <input type="text" class="form-control" id="inputText4" placeholder="">
+                        <input type="text" class="form-control" id="inputText4" placeholder="" />
                       </div>
                     </div>
                   </div>

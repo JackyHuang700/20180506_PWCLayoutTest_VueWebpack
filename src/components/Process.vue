@@ -31,19 +31,19 @@
                     <div class="form-row">
                       <div class="form-group col-md-3">
                         <label class="float-left" for="inputText">Email</label>
-                        <input type="text" class="form-control" id="inputText" placeholder="Email">
+                        <input type="text" class="form-control" id="inputText" placeholder="Email" />
                       </div>
                       <div class="form-group col-md-3">
                         <label class="float-left" for="inputText2">Password</label>
-                        <input type="text" class="form-control" id="inputText2" placeholder="Password">
+                        <input type="text" class="form-control" id="inputText2" placeholder="Password" />
                       </div>
                       <div class="form-group col-md-3">
                         <label class="float-left" for="inputText3">Password</label>
-                        <input type="text" class="form-control" id="inputText3" placeholder="Password">
+                        <input type="text" class="form-control" id="inputText3" placeholder="Password" />
                       </div>
                       <div class="form-group col-md-3">
                         <label class="float-left" for="inputText4">Password</label>
-                        <input type="text" class="form-control" id="inputText4" placeholder="Password">
+                        <input type="text" class="form-control" id="inputText4" placeholder="Password" />
                       </div>
                     </div>
                   </div>

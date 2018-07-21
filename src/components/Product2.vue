@@ -11,40 +11,40 @@
             <div class="form-row">
               <div class="form-group col-sm-3">
                 <label for="template1">銷售訂單</label>
-                <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="1805300059" readonly>
+                <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="1805300059" readonly />
               </div>
 
               <div class="form-group col-sm-3">
                 <label for="template1">產品號碼</label>
-                <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="CW000024-COCO0070#-UK10" readonly>
+                <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="CW000024-COCO0070#-UK10" readonly />
               </div>
               <div class="form-group col-sm-3">
                 <label for="template1">產品說明</label>
-                <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="Wedding Dress" readonly>
+                <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="Wedding Dress" readonly />
               </div>
               <div class="form-group col-sm-3">
                 <label for="template1">計畫數量</label>
-                <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="1">
+                <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="1" />
               </div>
               <div class="form-group col-sm-3">
                 <label for="template1">倉庫</label>
-                <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="SZCP">
+                <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="SZCP" />
               </div>
               <div class="form-group col-sm-3">
                 <label for="template1">號碼</label>
-                <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="6876" readonly>
+                <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="6876" readonly />
               </div>
               <div class="form-group col-sm-3">
                 <label for="template1">訂單日期</label>
-                <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="2018-05-31" readonly>
+                <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="2018-05-31" readonly />
               </div>
               <div class="form-group col-sm-3">
                 <label for="template1">開始日期</label>
-                <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="2018-05-31">
+                <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="2018-05-31" />
               </div>
               <div class="form-group col-sm-3">
                 <label for="template1">到期日</label>
-                <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="2018-06-29">
+                <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="2018-06-29" />
               </div>
               <div class="form-group col-sm-3">
                 <label for="template6">使用者</label>
@@ -55,7 +55,7 @@
               </div>
               <div class="form-group col-sm-3">
                 <label for="template1">來源</label>
-                <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="銷售訂單" readonly>
+                <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="銷售訂單" readonly />
               </div>
               <div class="form-group col-sm-3">
                 <label for="template6">狀態</label>
@@ -82,7 +82,7 @@
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">加入</button>
               </div>
               <div class="form-group col-sm-12 BomTable">
-                <hr class="mb-3">
+                <hr class="mb-3" />
                 <div class="col-12">
                   <table id="bonTable" class="display" width="100%" cellspacing="0">
                     <thead>
@@ -166,11 +166,11 @@
                 <div class="form-row">
                   <div class="form-group col-sm-3">
                     <label for="template11">搜尋供應商</label>
-                    <input type="text" class="form-control" id="searchSupplier" placeholder="">
+                    <input type="text" class="form-control" id="searchSupplier" placeholder="" />
                   </div>
                   <div class="form-group col-sm-3">
                     <label for="template111">搜尋原物料</label>
-                    <input type="text" class="form-control" id="searchRawmaterial" placeholder="">
+                    <input type="text" class="form-control" id="searchRawmaterial" placeholder="" />
                   </div>
                 </div>
               </div>
@@ -211,11 +211,11 @@
                 <div class="form-row">
                   <div class="form-group col-sm-3">
                     <label for="template11">搜尋供應商</label>
-                    <input type="text" class="form-control" id="searchSupplier2" placeholder="">
+                    <input type="text" class="form-control" id="searchSupplier2" placeholder="" />
                   </div>
                   <div class="form-group col-sm-3">
                     <label for="template111">搜尋工序</label>
-                    <input type="text" class="form-control" id="searchRawmaterial2" placeholder="">
+                    <input type="text" class="form-control" id="searchRawmaterial2" placeholder="" />
                   </div>
                 </div>
               </div>

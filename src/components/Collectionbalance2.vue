@@ -12,35 +12,35 @@
             <div class="form-row">
               <div class="form-group col-sm-3">
                 <label for="">收款编号</label>
-                <input type="text" class="form-control" id="" value="">
+                <input type="text" class="form-control" id="" value="" />
               </div>
               <div class="form-group col-sm-3">
                 <label for="">收款日期</label>
-                <input type="text" class="form-control" id="" value="">
+                <input type="text" class="form-control" id="" value="" />
               </div>
               <div class="form-group col-sm-3">
                 <label for="">店鋪訂單號</label>
-                <input type="text" class="form-control" id="" value="">
+                <input type="text" class="form-control" id="" value="" />
               </div>
               <div class="form-group col-sm-3">
                 <label for="">支付方式</label>
-                <input type="text" class="form-control" id="" value="">
+                <input type="text" class="form-control" id="" value="" />
               </div>
               <div class="form-group col-sm-3">
                 <label for="">交易編號</label>
-                <input type="text" class="form-control" id="" value="">
+                <input type="text" class="form-control" id="" value="" />
               </div>
               <div class="form-group col-sm-3">
                 <label for="">幣種</label>
-                <input type="text" class="form-control" id="" value="">
+                <input type="text" class="form-control" id="" value="" />
               </div>
               <div class="form-group col-sm-3">
                 <label for="">收款金額</label>
-                <input type="text" class="form-control" id="" value="">
+                <input type="text" class="form-control" id="" value="" />
               </div>
               <div class="form-group col-sm-3">
                 <label for="">客戶</label>
-                <input type="text" class="form-control" id="" value="">
+                <input type="text" class="form-control" id="" value="" />
               </div>
               <div class="form-group col-sm-12">
                 <label for="">備註</label>
@@ -70,11 +70,11 @@
               </div>
               <div class="form-group col-sm-3">
                 <label for="">自動匹配訂單</label>
-                <input type="text" class="form-control" id="" value="">
+                <input type="text" class="form-control" id="" value="" />
               </div>
               <div class="form-group col-sm-3">
                 <label for="">沖帳編號</label>
-                <input type="text" class="form-control" id="" value="">
+                <input type="text" class="form-control" id="" value="" />
               </div>
               <div class="form-group col-sm-3">
                 <label for="">沖帳狀態</label>
@@ -85,7 +85,7 @@
               </div>
               <div class="form-group col-sm-3">
                 <label for="">沖帳日期</label>
-                <input type="text" class="form-control" id="" value="">
+                <input type="text" class="form-control" id="" value="" />
               </div>
               <div class="form-group col-sm-3">
                 <label for="">拋轉日期</label>
