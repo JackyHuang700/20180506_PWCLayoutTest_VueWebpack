@@ -255,7 +255,6 @@ export default {
         var index = dataTableObj.row(this).index()
         selectTrIndex = index
         console.log(selectTrIndex)
-        // $('#exampleModal').modal('show')
       })
 
       //
@@ -304,7 +303,7 @@ export default {
         if (rowData) {
           dataTableObj.row(nowSelectTrIndex).data(rowData).draw()
           clickDetailscontrol()
-          console.log(dataTableObj.row(nowSelectTrIndex).data())
+          // console.log(dataTableObj.row(nowSelectTrIndex).data())
         }
 
         $('#exampleModal').modal('hide')
@@ -346,6 +345,7 @@ export default {
         return templateStr
       }
 
+      // 顯示詳細項目
       function clickDetailscontrol () {
         var domList = document.getElementsByClassName('details-control')
         for (var i = 0; i < domList.length; ++i) {
