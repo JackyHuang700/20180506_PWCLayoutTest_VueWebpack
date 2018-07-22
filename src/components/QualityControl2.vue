@@ -254,7 +254,6 @@ export default {
       $(document).on('click', '#example tbody tr', function (e) {
         var index = dataTableObj.row(this).index()
         selectTrIndex = index
-        console.log(selectTrIndex)
       })
 
       //
@@ -272,12 +271,9 @@ export default {
           var inputDom = template.querySelector('#' + key)
           inputDom.checked = rowData.badReasonList[key]
           template.querySelector('#' + key).replaceWith(inputDom)
-          console.log('跑完了')
         }
 
         badReasonListDom.childNodes[0].replaceWith(template)
-
-        console.log('open')
 
         $('#exampleModal').modal('show')
       })
