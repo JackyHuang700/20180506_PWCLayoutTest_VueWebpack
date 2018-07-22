@@ -730,6 +730,12 @@ export default {
         // 'language': dataTablesModule.language()
       })
 
+      $(document).on('click', '#example tbody tr', function (e) {
+        var index = dataTableObj.row(this).index()
+        console.log(index)
+        $('#exampleModal').modal('show')
+      })
+
       // 明細
       $('#example tbody').on('click', '.details-control', function () {
         var tr = $(this).closest('tr')
@@ -744,6 +750,7 @@ export default {
         }
       })
 
+      //
       function childRows (d) {
         var templateStr = document.getElementById('badReasonList').children[0].cloneNode(true)
 
