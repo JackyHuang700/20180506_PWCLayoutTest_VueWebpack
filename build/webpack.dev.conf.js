@@ -9,6 +9,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
+const bundleConfig = require("../static/bundle-config.json")//调入生成的的路径json
 
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
@@ -55,7 +56,10 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'index.html',
-      inject: true
+      inject: true,
+      libJsName:bundleConfig.libs.js,
+      libCssName:bundleConfig.libs.css,
+      env:config.dev.env,
     }),
     // copy custom static assets
     new CopyWebpackPlugin([

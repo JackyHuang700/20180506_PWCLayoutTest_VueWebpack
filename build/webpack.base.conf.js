@@ -84,7 +84,13 @@ module.exports = {
         'jQuery': "jquery",
         "window.jQuery": "jquery",
         'Popper': 'popper.js'
-    })
+    }),
+    // 添加DllReferencePlugin插件
+    new webpack.DllReferencePlugin({
+      context: __dirname,
+      manifest: require('../static/libs-mainfest.json') // 指向生成的manifest.json
+    }),
+
   ],
   node: {
     // prevent webpack from injecting useless setImmediate polyfill because Vue
