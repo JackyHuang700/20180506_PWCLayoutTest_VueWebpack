@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="row">
 
-      <div class="col-12">
+      <div class="col-12 text-red">
         <h1>複製過去要刪除 - 質檢作業</h1>
       </div>
 

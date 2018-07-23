@@ -2,49 +2,7 @@
   <div class="container-fluid">
     <div class="row">
 
-      <div class="col-12">
-        <div class="accordion" id="accordion">
-          <div class="card">
-            <div class="card-header" id="headingOne">
-              <i class="fa fa-wpforms" aria-hidden="true"></i>
-              進階查詢
-              <button class="btn btn-primary float-right" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                <i class="fa fa-bars" aria-hidden="true"></i>
-              </button>
-            </div>
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-              <div class="card-body">
-                <div class="form-group row">
-                  <div class="col-sm-12 mb-2">
-                    <div class="form-row">
-                      <div class="form-group col-md-3">
-                        <label class="float-left" for="inputText">編號</label>
-                        <input type="text" class="form-control" id="inputText" placeholder="" />
-                      </div>
-                      <div class="form-group col-md-3">
-                        <label class="float-left" for="inputText2">編號</label>
-                        <input type="text" class="form-control" id="inputText2" placeholder="" />
-                      </div>
-                      <div class="form-group col-md-3">
-                        <label class="float-left" for="inputText3">到期日(起)</label>
-                        <input type="text" class="form-control" id="inputText3" placeholder="" />
-                      </div>
-                      <div class="form-group col-md-3">
-                        <label class="float-left" for="inputText4">到期日(迄)</label>
-                        <input type="text" class="form-control" id="inputText4" placeholder="" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-12 mb-2 text-right">
-                  <button type="button" class="btn btn-primary">查詢</button>
-                  <button type="button" class="btn btn-danger">重置</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <ProductionPreparation1 />
 
       <div class="col-12">
         <div class="card">
@@ -54,10 +12,10 @@
           </div>
           <div class="card-body">
 
-            <table id="example" cellspacing="0" width="100%" class="table table-gray-100 table-hover display">
+            <table id="example" cellspacing="0" width="100%" class="table table-striped table-hover table-bordered">
               <thead>
                 <tr>
-                  <th scope="col" class="align-middle">#</th>
+                  <th scope="col" class="align-middle checkBoxColumn">#</th>
                   <th scope="col" class="align-middle">生產工單編號</th>
                   <th scope="col" class="align-middle">訂單編號</th>
                   <th scope="col" class="align-middle">物料編號</th>
@@ -75,81 +33,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12">
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">備料</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <div class="conatiner-fluid">
-                  <div class="row">
-                    <div class="col-12">
-                      <div class="card">
-                        <div class="card-header">
-                          <i class="fa fa-wpforms" aria-hidden="true"></i>
-                          生產工單資料
-                        </div>
-                        <div class="card-body">
-                          Mars
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-12 mt-3">
-                      <div class="card">
-                        <div class="card-header">
-                          <i class="fa fa-wpforms" aria-hidden="true"></i>
-                          原物料管理
-                        </div>
-                        <div class="card-body">
-                          <table id="example2" cellspacing="0" width="100%" class="table table-gray-100 table-hover display">
-                            <thead>
-                              <tr>
-                                <th scope="col" class="text-center">#</th>
-                                <th scope="col" class="text-center">號碼</th>
-                                <th scope="col" class="text-center">說明</th>
-                                <th scope="col" class="text-center">基礎數量</th>
-                                <th scope="col" class="text-center">計畫數量</th>
-                                <th scope="col" class="text-center">計量單位名稱</th>
-                                <th scope="col" class="text-center">倉庫</th>
-                                <th scope="col" class="text-center">發貨方法</th>
-                                <th scope="col" class="text-center">已撿貨數量</th>
-                                <th scope="col" class="text-center">出貨數量</th>
-                                <th scope="col" class="text-center">操作</th>
-                              </tr>
-                            </thead>
-                          </table>
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <div class="conatiner-fluid w-100">
-                  <div class="row">
-                    <div class="col-6 text-left">
-                      <button type="button" class="btn btn-warning" id="updateBtn">更新</button>
-                      <button type="button" class="btn btn-warning" id="maintainBtn">採購維護工令材料計劃需求</button>
-                    </div>
-                    <div class="col-6 text-right">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
-                      <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+   
 
     </div>
   </div>
@@ -161,14 +45,19 @@ import {
   language
 } from '../config/dataTable'
 import {
-  apiDataTableCopyTemplateGetAll,
   apiProductionPreparationIndex,
   apiProductionPreparationIndex2
 } from '../api/api'
+import ProductionPreparation1 from '../components_sub/ProductionPreparation1.vue'
+import ProductionPreparation2 from '../components_sub/ProductionPreparation2.vue'
 
 export default {
   name: 'productionpreparation',
   created () { },
+  components: {
+    ProductionPreparation2,
+    ProductionPreparation1,
+  },
   mounted () {
     // datatable Obj
     var dataTableObj
@@ -229,7 +118,7 @@ export default {
                 '<button type="button" class="btn btn-primary ppBtn" data-toggle="modal">備料</button>'
               )
             }
-          }
+          },
         ],
         'language': language
         // 'language': dataTablesModule.language()
@@ -420,12 +309,22 @@ export default {
 @import 'datatables.net-bs4/css/dataTables.bootstrap4.css';
 @import '../assets/dataTables/dataTables.css';
 
-/* modal  另外添加*/
-.dataTable {
+/* innerStyle */
+.serchBtnMGroup {
+  margin-top: 26px;
+}
+
+#example2 {
   width: 100% !important;
 }
+
 .dataTables_scrollHeadInner {
-  width: unset !important;
+  width: 100% !important;
+}
+
+/* modal  另外添加*/
+.dataTables_scrollHeadInner {
+  width: 100% !important;
 }
 
 .modal-lg {

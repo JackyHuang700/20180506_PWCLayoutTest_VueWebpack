@@ -2,238 +2,244 @@
   <div class="container-fluid mt-4">
     <div class="row">
       <div class="col-12">
-        <div class="card">
-          <div class="card-header">
-            <i class="fa fa-wpforms" aria-hidden="true"></i>建立
-          </div>
-          <div class="card-body">
+        <form method="post" id="form1" action="/ProductionOrder/Update">
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-header">
+                  <i class="fa fa-wpforms" aria-hidden="true"></i>建立
+                </div>
+                <div class="card-body">
 
-            <div class="form-row">
-              <div class="form-group col-sm-3">
-                <label for="template1">銷售訂單</label>
-                <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="1805300059" readonly />
-              </div>
+                  <div class="form-row">
+                    <div class="form-group col-sm-3">
+                      <label for="template1">銷售訂單</label>
+                      <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="1805300059" readonly />
+                    </div>
 
-              <div class="form-group col-sm-3">
-                <label for="template1">產品號碼</label>
-                <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="CW000024-COCO0070#-UK10" readonly />
-              </div>
-              <div class="form-group col-sm-3">
-                <label for="template1">產品說明</label>
-                <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="Wedding Dress" readonly />
-              </div>
-              <div class="form-group col-sm-3">
-                <label for="template1">計畫數量</label>
-                <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="1" />
-              </div>
-              <div class="form-group col-sm-3">
-                <label for="template1">倉庫</label>
-                <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="SZCP" />
-              </div>
-              <div class="form-group col-sm-3">
-                <label for="template1">號碼</label>
-                <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="6876" readonly />
-              </div>
-              <div class="form-group col-sm-3">
-                <label for="template1">訂單日期</label>
-                <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="2018-05-31" readonly />
-              </div>
-              <div class="form-group col-sm-3">
-                <label for="template1">開始日期</label>
-                <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="2018-05-31" />
-              </div>
-              <div class="form-group col-sm-3">
-                <label for="template1">到期日</label>
-                <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="2018-06-29" />
-              </div>
-              <div class="form-group col-sm-3">
-                <label for="template6">使用者</label>
-                <select id="template6" name="template6" class="form-control">
-                  <option selected>Cindy</option>
-                  <option>Keven</option>
-                </select>
-              </div>
-              <div class="form-group col-sm-3">
-                <label for="template1">來源</label>
-                <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="銷售訂單" readonly />
-              </div>
-              <div class="form-group col-sm-3">
-                <label for="template6">狀態</label>
-                <select id="template6" name="template6" class="form-control">
-                  <option selected>已核發</option>
-                </select>
+                    <div class="form-group col-sm-3">
+                      <label for="template1">產品號碼</label>
+                      <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="CW000024-COCO0070#-UK10" readonly />
+                    </div>
+                    <div class="form-group col-sm-3">
+                      <label for="template1">產品說明</label>
+                      <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="Wedding Dress" readonly />
+                    </div>
+                    <div class="form-group col-sm-3">
+                      <label for="template1">計畫數量</label>
+                      <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="1" />
+                    </div>
+                    <div class="form-group col-sm-3">
+                      <label for="template1">倉庫</label>
+                      <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="SZCP" />
+                    </div>
+                    <div class="form-group col-sm-3">
+                      <label for="template1">號碼</label>
+                      <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="6876" readonly />
+                    </div>
+                    <div class="form-group col-sm-3">
+                      <label for="template1">訂單日期</label>
+                      <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="2018-05-31" readonly />
+                    </div>
+                    <div class="form-group col-sm-3">
+                      <label for="template1">開始日期</label>
+                      <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="2018-05-31" />
+                    </div>
+                    <div class="form-group col-sm-3">
+                      <label for="template1">到期日</label>
+                      <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="2018-06-29" />
+                    </div>
+                    <div class="form-group col-sm-3">
+                      <label for="template6">使用者</label>
+                      <select id="template6" name="template6" class="form-control">
+                        <option selected>Cindy</option>
+                        <option>Keven</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-sm-3">
+                      <label for="template1">來源</label>
+                      <input type="text" class="form-control" id="template1" name="template1" placeholder="" value="銷售訂單" readonly />
+                    </div>
+                    <div class="form-group col-sm-3">
+                      <label for="template6">狀態</label>
+                      <select id="template6" name="template6" class="form-control">
+                        <option selected>已核發</option>
+                      </select>
+                    </div>
+                  </div>
+
+                </div>
+
               </div>
             </div>
+            <div class="col-12">
+              <div class="card">
+                <div class="card-header">
+                  <i class="fa fa-wpforms" aria-hidden="true"></i>原物料管理
+                </div>
+                <div class="card-body">
 
-          </div>
+                  <div class="form-row">
 
-        </div>
-      </div>
-      <div class="col-12">
-        <div class="card">
-          <div class="card-header">
-            <i class="fa fa-wpforms" aria-hidden="true"></i>原物料管理
-          </div>
-          <div class="card-body">
+                    <div class="form-group col-sm-12">
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">加入</button>
+                    </div>
+                    <div class="form-group col-sm-12 BomTable">
+                      <hr class="mb-3" />
+                      <div class="col-12">
+                        <table id="bonTable" class="display" width="100%" cellspacing="0">
+                          <thead>
+                            <tr>
+                              <th scope="col" class="text-center">號碼</th>
+                              <th class="text-center">說明</th>
+                              <th class="text-center">基礎數量</th>
+                              <th class="text-center">計畫數量</th>
+                              <th class="text-center">計量單位名稱</th>
+                              <th class="text-center">倉庫</th>
+                              <th class="text-center">在倉庫中的數量</th>
+                              <th class="text-center">發貨方法</th>
+                              <th class="text-center">操作</th>
+                            </tr>
+                          </thead>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
 
-            <div class="form-row">
-
-              <div class="form-group col-sm-12">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">加入</button>
+                </div>
               </div>
-              <div class="form-group col-sm-12 BomTable">
-                <hr class="mb-3" />
+            </div>
+            <div class="col-12">
+              <div class="card">
+                <div class="card-header">
+                  <i class="fa fa-wpforms" aria-hidden="true"></i>工序管理
+                </div>
+                <div class="card-body">
+
+                  <div class="form-row">
+
+                    <div class="form-group col-sm-12">
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">加入</button>
+                    </div>
+                    <div class="form-group col-sm-12 BomTable">
+                      <hr class="mb-3">
+                      <div class="col-12">
+                        <table id="bonTable2" class="display" width="100%" cellspacing="0">
+                          <thead>
+                            <tr>
+                              <th scope="col" class="text-center">號碼</th>
+                              <th class="text-center">說明</th>
+                              <th class="text-center">基礎數量</th>
+                              <th class="text-center">計畫數量</th>
+                              <th class="text-center">計量單位名稱</th>
+                              <th class="text-center">倉庫</th>
+                              <th class="text-center">在倉庫中的數量</th>
+                              <th class="text-center">發貨方法</th>
+                              <th class="text-center">操作</th>
+                            </tr>
+                          </thead>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-12 text-right mb-4">
+              <button type="submit" class="btn btn-success col-2">儲存</button>
+              <button type="button" class="btn btn-danger col-1">取消</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-12">
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">加入原物料</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+
                 <div class="col-12">
-                  <table id="bonTable" class="display" width="100%" cellspacing="0">
+                  <div class="form-row">
+                    <div class="form-group col-sm-3">
+                      <label for="template11">搜尋供應商</label>
+                      <input type="text" class="form-control" id="searchSupplier" placeholder="" />
+                    </div>
+                    <div class="form-group col-sm-3">
+                      <label for="template111">搜尋原物料</label>
+                      <input type="text" class="form-control" id="searchRawmaterial" placeholder="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <table id="supplierDataShowTable" cellspacing="0" width="100%" class="table table-gray-100 table-hover display">
                     <thead>
                       <tr>
-                        <th scope="col" class="text-center">號碼</th>
-                        <th class="text-center">說明</th>
-                        <th class="text-center">基礎數量</th>
-                        <th class="text-center">計畫數量</th>
-                        <th class="text-center">計量單位名稱</th>
-                        <th class="text-center">倉庫</th>
-                        <th class="text-center">在倉庫中的數量</th>
-                        <th class="text-center">發貨方法</th>
-                        <th class="text-center">操作</th>
+                        <th scope="col" class="align-middle">#</th>
+                        <th scope="col" class="align-middle">供應商名稱</th>
                       </tr>
                     </thead>
                   </table>
+
                 </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
               </div>
             </div>
-
           </div>
         </div>
       </div>
       <div class="col-12">
-        <div class="card">
-          <div class="card-header">
-            <i class="fa fa-wpforms" aria-hidden="true"></i>工序管理
-          </div>
-          <div class="card-body">
-
-            <div class="form-row">
-
-              <div class="form-group col-sm-12">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">加入</button>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModal2Label" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModal2Label">加入工序</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
               </div>
-              <div class="form-group col-sm-12 BomTable">
-                <hr class="mb-3">
+              <div class="modal-body">
+
                 <div class="col-12">
-                  <table id="bonTable2" class="display" width="100%" cellspacing="0">
+                  <div class="form-row">
+                    <div class="form-group col-sm-3">
+                      <label for="template11">搜尋供應商</label>
+                      <input type="text" class="form-control" id="searchSupplier2" placeholder="" />
+                    </div>
+                    <div class="form-group col-sm-3">
+                      <label for="template111">搜尋工序</label>
+                      <input type="text" class="form-control" id="searchRawmaterial2" placeholder="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <table id="supplierDataShowTable2" cellspacing="0" width="100%" class="table table-gray-100 table-hover display">
                     <thead>
                       <tr>
-                        <th scope="col" class="text-center">號碼</th>
-                        <th class="text-center">說明</th>
-                        <th class="text-center">基礎數量</th>
-                        <th class="text-center">計畫數量</th>
-                        <th class="text-center">計量單位名稱</th>
-                        <th class="text-center">倉庫</th>
-                        <th class="text-center">在倉庫中的數量</th>
-                        <th class="text-center">發貨方法</th>
-                        <th class="text-center">操作</th>
+                        <th scope="col" class="align-middle">#</th>
+                        <th scope="col" class="align-middle">供應商名稱</th>
                       </tr>
                     </thead>
                   </table>
+
                 </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-      <div class="col-12 text-right mb-4">
-        <button type="submit" class="btn btn-success col-2">儲存</button>
-        <button type="button" class="btn btn-danger col-1">取消</button>
-      </div>
-    </div>
-
-    <div class="col-12">
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">加入原物料</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-
-              <div class="col-12">
-                <div class="form-row">
-                  <div class="form-group col-sm-3">
-                    <label for="template11">搜尋供應商</label>
-                    <input type="text" class="form-control" id="searchSupplier" placeholder="" />
-                  </div>
-                  <div class="form-group col-sm-3">
-                    <label for="template111">搜尋原物料</label>
-                    <input type="text" class="form-control" id="searchRawmaterial" placeholder="" />
-                  </div>
-                </div>
-              </div>
-              <div class="col-12">
-                <table id="supplierDataShowTable" cellspacing="0" width="100%" class="table table-gray-100 table-hover display">
-                  <thead>
-                    <tr>
-                      <th scope="col" class="align-middle">#</th>
-                      <th scope="col" class="align-middle">供應商名稱</th>
-                    </tr>
-                  </thead>
-                </table>
 
               </div>
-
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-12">
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModal2Label" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModal2Label">加入工序</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-
-              <div class="col-12">
-                <div class="form-row">
-                  <div class="form-group col-sm-3">
-                    <label for="template11">搜尋供應商</label>
-                    <input type="text" class="form-control" id="searchSupplier2" placeholder="" />
-                  </div>
-                  <div class="form-group col-sm-3">
-                    <label for="template111">搜尋工序</label>
-                    <input type="text" class="form-control" id="searchRawmaterial2" placeholder="" />
-                  </div>
-                </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
               </div>
-              <div class="col-12">
-                <table id="supplierDataShowTable2" cellspacing="0" width="100%" class="table table-gray-100 table-hover display">
-                  <thead>
-                    <tr>
-                      <th scope="col" class="align-middle">#</th>
-                      <th scope="col" class="align-middle">供應商名稱</th>
-                    </tr>
-                  </thead>
-                </table>
-
-              </div>
-
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
             </div>
           </div>
         </div>

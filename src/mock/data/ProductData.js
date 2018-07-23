@@ -60,7 +60,7 @@ let dataTableList2 = {
 
 let dataTableList3 = {
   'data': [{
-    'productionOrderNumber': 'PDO-1807080001ZZ-11',
+    'productionOrderNumber': 'PD-180718011807180002ZZ-11111111111111111111111111111111111111111111111',
     'orderNumber': '1807080001',
     'stockNumber': 'CB000052-COCO0052#-UK20',
     'stockName': 'B',
@@ -71,7 +71,7 @@ let dataTableList3 = {
     'status': '未確認'
   },
   {
-    'productionOrderNumber': 'PDO-1807080001ZZ-11',
+    'productionOrderNumber': 'PD-180718011807180002ZZ-11',
     'orderNumber': '1807080001',
     'stockNumber': 'CB000052-COCO0052#-UK20',
     'stockName': 'B',

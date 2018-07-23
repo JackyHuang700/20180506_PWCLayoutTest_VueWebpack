@@ -320,7 +320,7 @@ export default {
         icon: 'icon-star'
       },
       {
-        name: '/收貨',
+        name: '入庫',
         url: '/QualityControl3',
         icon: 'icon-star'
       },

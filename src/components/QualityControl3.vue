@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="row">
 
-      <div class="col-12">
+      <div class="col-12 text-red">
         <h1>複製過去要刪除 - 入庫作業</h1>
       </div>
 
@@ -46,24 +46,12 @@
                         </select>
                       </div>
                       <div class="form-group col-sm-3">
-                        <label class="float-left" for="inputText9">填寫寫入庫儲位</label>
-                        <input type="text" class="form-control" id="inputText9" placeholder="" />
-                      </div>
-                      <div class="form-group col-sm-3">
                         <label class="float-left" for="inputText3">收貨日期(起)</label>
                         <input type="text" class="form-control" id="inputText3" placeholder="" />
                       </div>
                       <div class="form-group col-sm-3">
                         <label class="float-left" for="inputText3">收貨日期(迄)</label>
                         <input type="text" class="form-control" id="inputText4" placeholder="" />
-                      </div>
-
-                      <div class="form-group col-sm-3">
-                        <label class="float-left" for="inputText8">選擇列印內容選項</label>
-                        <select id="inputText8" name="inputText8" class="form-control">
-                          <option selected>條碼標籤</option>
-                          <option>外包裝標註說明</option>
-                        </select>
                       </div>
                     </div>
                   </div>
@@ -86,9 +74,25 @@
           </div>
           <div class="card-body">
             <div class="row">
-                <div class="col-12 saveBtnGroup text-right mb-4">
-                  <button type="button" class="btn btn-success saveBtn col-2">儲存</button>
+              <div class="col-12 saveBtnGroup text-right mb-4">
+                <button type="button" class="btn btn-success saveBtn col-2">儲存</button>
+              </div>
+              <div class="col-12">
+                <div class="form-group row">
+                  <div class="form-group col-sm-3">
+                    <label class="float-left" for="inputText8">選擇列印內容選項</label>
+                    <select id="inputText8" name="inputText8" class="form-control">
+                      <option selected>條碼標籤</option>
+                      <option>外包裝標註說明</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-sm-3">
+                    <label class="float-left" for="inputText9">填寫寫入庫儲位</label>
+                    <input type="text" class="form-control" id="inputText9" placeholder="" />
+                  </div>
+
                 </div>
+              </div>
               <div class="col-12">
                 <table id="example" cellspacing="0" width="100%" class="table table-striped table-hover table-bordered">
                   <thead>

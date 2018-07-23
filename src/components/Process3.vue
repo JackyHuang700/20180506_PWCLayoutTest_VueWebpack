@@ -39,7 +39,7 @@
           </div>
           <div class="card-body">
 
-            <table id="example" class="display" width="100%" cellspacing="0">
+            <table id="example" class="table table-striped table-hover table-bordered" width="100%" cellspacing="0">
               <thead>
                 <tr>
                   <th>#</th>
