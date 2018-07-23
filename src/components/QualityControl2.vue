@@ -188,6 +188,7 @@ export default {
           style: 'os'
         },
         'ajax': apiQualityControl2Index,
+        //  'ajax': '/Demo/TestQualityControl2API',
         'scrollX': true,
         'bPaginate': false,
         'columns': [
@@ -260,11 +261,9 @@ export default {
       $(document).on('click', '.openModal', function (e) {
         var self = e.target
         self.parentElement.parentElement.click()
-
         // update model checkbox status
         var badReasonListDom = document.getElementById('badReasonList')
-
-        var template = badReasonListDom.children[0].cloneNode(true)
+        var template = badReasonListDom.querySelector('.row').cloneNode(true)
         var rowData = dataTableObj.row(selectTrIndex).data()
 
         for (var key in rowData.badReasonList) {
@@ -273,8 +272,7 @@ export default {
           template.querySelector('#' + key).replaceWith(inputDom)
         }
 
-        badReasonListDom.childNodes[0].replaceWith(template)
-
+        badReasonListDom.querySelector('.row').replaceWith(template)
         $('#exampleModal').modal('show')
       })
 
@@ -287,15 +285,21 @@ export default {
         var checkboxList = badReasonListDom.querySelectorAll('input[type=checkbox]')
 
         for (var i = 0; i < checkboxList.length; ++i) {
+          console.log('checkboxList.length', checkboxList.length)
           var checkboxDom = checkboxList[i]
           var id = checkboxDom.id
           for (var key in rowData.badReasonList) {
             if (key === id) {
+              console.log(key)
+              console.log(rowData.badReasonList[key])
+              console.log(checkboxDom.checked)
+              console.log('rowData.badReasonList[key]', rowData.badReasonList[key])
               rowData.badReasonList[key] = checkboxDom.checked
             }
           }
         }
 
+        console.log(rowData.badReasonList)
         if (rowData) {
           dataTableObj.row(nowSelectTrIndex).data(rowData).draw()
           clickDetailscontrol()

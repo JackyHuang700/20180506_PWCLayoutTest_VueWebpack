@@ -122,6 +122,7 @@ export default {
       response: function (setting) {
         // 回應
         this.responseText = QualityControl2Data
+        console.log(this.responseText)
       }
     })
 
