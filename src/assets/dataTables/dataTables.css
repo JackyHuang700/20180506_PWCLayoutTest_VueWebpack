@@ -44,107 +44,112 @@ tr.shown td.details-control {
   border-color: #dee2e6;
 }
 
+table.table-bordered.dataTable tbody td {
+border-width: 1px;
+}
 
+/* table.th - checkbox */
 /* .dataTables_wrapper.dataTables_wrapper th:nth-child(1), */
-.dataTables_wrapper.dataTables_wrapper .checkBoxColumn
- {
+.dataTables_wrapper.dataTables_wrapper .checkBoxColumn {
   min-width: 30px;
 }
 
+/* table.th - 計數資料筆數 */
+.dataTables_wrapper.dataTables_wrapper .countColumn {
+  min-width: 50px;
+  max-width: 100%;
+}
+
 /* RWD */
-
-.saveBtnGroup{
-padding-right: 1%;
+.saveBtnGroup {
+  padding-right: 1%;
 }
 
-.dataTables_scrollBody{
-border: 1.5px solid rgba(0, 0, 0, 0.172);
+.dataTables_scrollBody {
+  border: 1.5px solid rgba(0, 0, 0, 0.172);
 }
 
-.dataTables_scrollHead{
-border-top-style: solid !important;
-border-top-width: 1.5px !important;
-border-top-color: rgba(10, 10, 10, 0.172) !important;
-border-left-style: solid !important;
-border-left-width: 1.5px !important;
-border-left-color: rgba(10, 10, 10, 0.172) !important;
-border-right-style: solid !important;
-border-right-width: 1.5px !important;
-border-right-color: rgba(0, 0, 0, 0.172) !important;
+.dataTables_scrollHead {
+  border-top-style: solid !important;
+  border-top-width: 1.5px !important;
+  border-top-color: rgba(10, 10, 10, 0.172) !important;
+  border-left-style: solid !important;
+  border-left-width: 1.5px !important;
+  border-left-color: rgba(10, 10, 10, 0.172) !important;
+  border-right-style: solid !important;
+  border-right-width: 1.5px !important;
+  border-right-color: rgba(0, 0, 0, 0.172) !important;
 }
-.dataTables_scrollHeadInner{
-margin-top: -6px;
+
+.dataTables_scrollHeadInner {
+  margin-top: -6px;
 }
 
 .dataTables_wrapper.dataTables_wrapper {
-margin: 0 auto;
-padding: 0 0;
+  margin: 0 auto;
+  padding: 0 0;
 }
 
-.dataTables_wrapper.dataTables_wrapper th {
-min-width: 130px;
+  .dataTables_wrapper.dataTables_wrapper th {
+      min-width: 130px;
+  }
+
+@media (min-width: 2000px) {
+  .dataTables_wrapper.dataTables_wrapper th {
+      min-width: 210px;
+  }
 }
 
-@media screen and (max-width: 450px){
-.dataTables_wrapper {
-  width: 55vw;
-}
-}
-
-@media screen and (max-width: 700px){
-.dataTables_wrapper {
-  width: 70vw;
-}
-}
-
-
-@media screen and (max-width: 1000px){
-.dataTables_wrapper {
-  width: 79vw;
-}
-}
-
-@media screen and (max-width: 1100px){
-.dataTables_wrapper {
-  width: 65vw;
-}
-}
-
-@media screen and (max-width: 1300px){
-.dataTables_wrapper {
-  width: 69vw;
-}
-}
-
-@media screen and (max-width: 1500px){
-.dataTables_wrapper {
-  width: 74vw;
-}
-}
-
-@media screen and (max-width: 1700px){
-.dataTables_wrapper {
-  width: 77vw;
-}
+@media screen and (max-width: 1901px) {
+  .dataTables_wrapper {
+      width: 79vw;
+  }
 }
 
 @media screen and (max-width: 1900px) {
-.dataTables_wrapper {
-    width: 80vw;
-}
-}
-
-
-@media screen and (max-width: 1901px) {
-.dataTables_wrapper {
-    width: 79vw;
-}
+  .dataTables_wrapper {
+      width: 80vw;
+  }
 }
 
-
-@media (min-width: 2000px){
-.dataTables_wrapper.dataTables_wrapper th {
-  min-width: 210px;
+@media screen and (max-width: 1700px) {
+  .dataTables_wrapper {
+      width: 77vw;
+  }
 }
 
+@media screen and (max-width: 1500px) {
+  .dataTables_wrapper {
+      width: 74vw;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .dataTables_wrapper {
+      width: 69vw;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .dataTables_wrapper {
+      width: 65vw;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .dataTables_wrapper {
+      width: 79vw;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .dataTables_wrapper {
+      width: 70vw;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .dataTables_wrapper {
+      width: 55vw;
+  }
 }
