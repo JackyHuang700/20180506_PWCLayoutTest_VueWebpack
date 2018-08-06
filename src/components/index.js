@@ -44,8 +44,16 @@ import ProductionPreparation from './ProductionPreparation.vue'
 import QualityControl from './QualityControl.vue'
 import QualityControl2 from './QualityControl2.vue'
 import QualityControl3 from './QualityControl3.vue'
+import Logistics from './Logistics.vue'
+import Logistics2 from './Logistics2.vue'
+import Logistics3 from './Logistics3.vue'
+import Logistics4 from './Logistics4.vue'
 
 export {
+  Logistics4,
+  Logistics3,
+  Logistics2,
+  Logistics,
   QualityControl,
   QualityControl2,
   QualityControl3,

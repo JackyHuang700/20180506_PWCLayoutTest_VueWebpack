@@ -6,6 +6,10 @@ import Full from '@/containers/Full'
 
 // Views
 import {
+  Logistics,
+  Logistics2,
+  Logistics3,
+  Logistics4,
   QualityControl,
   QualityControl2,
   QualityControl3,
@@ -58,6 +62,26 @@ export default new Router({
       name: 'Home',
       component: Full,
       children: [
+        {
+          path: 'logistics',
+          name: 'Logistics',
+          component: Logistics
+        },
+        {
+          path: 'logistics2',
+          name: 'Logistics2',
+          component: Logistics2
+        },
+        {
+          path: 'logistics3',
+          name: 'Logistics3',
+          component: Logistics3
+        },
+        {
+          path: 'logistics4',
+          name: 'Logistics4',
+          component: Logistics4
+        },
         {
           path: 'qualitycontrol',
           name: 'QualityControl',

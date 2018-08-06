@@ -323,6 +323,32 @@ export default {
     },
     ]
   },
+  {
+    name: '物流',
+    url: '/Logistics',
+    children: [
+      {
+        name: '撿貨業務放行',
+        url: '/Logistics',
+        icon: 'icon-star'
+      },
+      {
+        name: '撿貨財務放行',
+        url: '/Logistics2',
+        icon: 'icon-star'
+      },
+      {
+        name: '撿貨物流作業',
+        url: '/Logistics3',
+        icon: 'icon-star'
+      },
+      {
+        name: '出貨作業',
+        url: '/Logistics4',
+        icon: 'icon-star'
+      },
+    ]
+  }
     // {
     //   name: 'Icons',
     //   url: '/icons',
