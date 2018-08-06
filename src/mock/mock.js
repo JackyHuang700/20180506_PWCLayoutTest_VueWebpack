@@ -511,8 +511,8 @@ function pagination (array, queryStr, pageNo) {
   // 分頁
   newList.push(
     offset + pageSize >= array.length
-      ? array.slice(offset, array.length)
-      : array.slice(offset, offset + pageSize)
+    ? array.slice(offset, array.length)
+    : array.slice(offset, offset + pageSize)
   )
   return newList
 }

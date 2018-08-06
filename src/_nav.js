@@ -297,33 +297,30 @@ export default {
   {
     name: '帳號',
     url: '/Process',
-    children: [
-      {
-        name: '帳號綁定供應商',
-        url: '/Account',
-        icon: 'icon-star'
-      },
-    ]
+    children: [{
+      name: '帳號綁定供應商',
+      url: '/Account',
+      icon: 'icon-star'
+    }, ]
   },
   {
     name: '質檢',
     url: '/QualityControl',
-    children: [
-      {
-        name: '收貨',
-        url: '/QualityControl',
-        icon: 'icon-star'
-      },
-      {
-        name: '質檢',
-        url: '/QualityControl2',
-        icon: 'icon-star'
-      },
-      {
-        name: '入庫',
-        url: '/QualityControl3',
-        icon: 'icon-star'
-      },
+    children: [{
+      name: '收貨',
+      url: '/QualityControl',
+      icon: 'icon-star'
+    },
+    {
+      name: '質檢',
+      url: '/QualityControl2',
+      icon: 'icon-star'
+    },
+    {
+      name: '入庫',
+      url: '/QualityControl3',
+      icon: 'icon-star'
+    },
     ]
   },
     // {

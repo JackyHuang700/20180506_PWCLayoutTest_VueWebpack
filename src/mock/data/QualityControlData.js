@@ -331,45 +331,52 @@ let dataTableList2 = {
       badReason76: false,
 
     }
-  }]
+  }
+  ]
 }
 
 let dataTableList3 = {
   data: [{
     id: '0',
-    mainData_1: '1',
-    mainData_2: '2',
-    mainData_3: '3',
-    mainData_4: 'Y',
-    detail: [{
-      subData_1: '1',
-      subData_2: '2',
-      subData_3: '3'
-    },
-    {
-      subData_1: '1',
-      subData_2: '2',
-      subData_3: '3'
-    }
-    ]
+    mainData_1: '171203011-01',
+    mainData_2: '弘利緣婚紗禮服',
+    mainData_3: 'CB000003-COCO0062#-UK6',
+    mainData_4: '沈思逸',
+    mainData_5: '23',
+    mainData_6: '1.00',
+    mainData_7: 'SZCP',
+    mainData_8: '',
+    mainData_9: '1',
+    mainData_10: '1',
+    mainData_11: '0',
+    mainData_12: '2018-07-25',
+    mainData_13: '沈債莉',
+    mainData_14: '1210',
+    mainData_15: '1',
+    mainData_16: '1310',
+    mainData_17: '已入庫',
+
   },
   {
     id: '1',
-    mainData_1: '1',
-    mainData_2: '2',
-    mainData_3: '3',
-    mainData_4: 'Y',
-    detail: [{
-      subData_1: '1',
-      subData_2: '2',
-      subData_3: '3'
-    },
-    {
-      subData_1: '1',
-      subData_2: '2',
-      subData_3: '3'
-    }
-    ]
+    mainData_1: '171203011-01',
+    mainData_2: '弘緣婚紗禮服',
+    mainData_3: 'CB000003-COCO0062#-UK6',
+    mainData_4: '沈思逸',
+    mainData_5: '23',
+    mainData_6: '1.00',
+    mainData_7: 'SZCP',
+    mainData_8: '',
+    mainData_9: '1',
+    mainData_10: '1',
+    mainData_11: '0',
+    mainData_12: '2018-07-25',
+    mainData_13: '沈債莉',
+    mainData_14: '1210',
+    mainData_15: '1',
+    mainData_16: '1310',
+    mainData_17: '已入庫',
+
   }
   ]
 }

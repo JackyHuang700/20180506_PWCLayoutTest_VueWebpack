@@ -132,71 +132,104 @@
 <script>
 import 'datatables.net'
 import 'datatables.net-bs4'
-import {
-  language
-} from '../config/dataTable'
-import {
-  apiQualityControl3Index
-} from '../api/api'
+import { language } from '../config/dataTable'
+import { apiQualityControl3Index } from '../api/api'
 
 export default {
   name: 'qualitycontrol3',
-  created () { },
+  created () {},
   mounted () {
     // dataTables
     (function () {
       //
       var dataTableObj = $('#example').DataTable({
-        'select': {
+        select: {
           selector: 'td:not(:first-child)',
           style: 'os'
         },
-        'ajax': apiQualityControl3Index,
-        'scrollX': true,
-        'bPaginate': false,
-        'columns': [
+        ajax: apiQualityControl3Index,
+        scrollX: true,
+        bPaginate: false,
+        // drawCallback: function (settings) {
+        //           registerPickday()
+        //       },
+        columns: [
           {},
-          { 'data': 'mainData_1' },
-          { 'data': 'mainData_2' },
-          { 'data': 'mainData_3' },
-          { 'data': 'mainData_3' },
-          { 'data': 'mainData_3' },
-          { 'data': 'mainData_3' },
-          { 'data': 'mainData_3' },
-          { 'data': 'mainData_3' },
-          { 'data': 'mainData_3' },
-          { 'data': 'mainData_3' },
-          { 'data': 'mainData_3' },
-          { 'data': 'mainData_3' },
-          { 'data': 'mainData_3' },
-          { 'data': 'mainData_3' },
-          { 'data': 'mainData_3' },
-          { 'data': 'mainData_3' },
-          { 'data': 'mainData_3' },
+          { data: 'mainData_1' },
+          { data: 'mainData_2' },
+          { data: 'mainData_3' },
+          { data: 'mainData_4' },
+          { data: 'mainData_5' },
+          { data: 'mainData_6' },
+          { data: 'mainData_7' },
+          { data: 'mainData_8' },
+          { data: 'mainData_9' },
+          { data: 'mainData_10' },
+          { data: 'mainData_11' },
+          { data: 'mainData_12' },
+          { data: 'mainData_13' },
+          { data: 'mainData_14' },
+          { data: 'mainData_15' },
+          { data: 'mainData_16' },
+          { data: 'mainData_17' }
         ],
-        'order': [
-          [1, 'asc']
-        ],
-        'columnDefs': [
+        order: [[1, 'asc']],
+        columnDefs: [
           {
-            'targets': 0,
-            'data': '',
-            'orderable': false,
-            'render': function (data, type, row, meta) {
-              return ('<div class="custom-control custom-checkbox">' +
+            targets: 0,
+            data: '',
+            orderable: false,
+            render: function (data, type, row, meta) {
+              return (
+                '<div class="custom-control custom-checkbox">' +
                 '  <input type="checkbox" class="custom-control-input" id="{{id}}" {{checked}}>' +
                 '  <label class="custom-control-label" for="{{id}}"></label>' +
                 '</div>'
-              ).replace(/{{id}}/g, 'checkgoxid' + row.id)
+              )
+                .replace(/{{id}}/g, 'checkgoxid' + row.id)
                 .replace(/{{checked}}/g, 'checked')
             }
           },
-
+          {
+            targets: 12,
+            data: '',
+            orderable: false,
+            render: function (data, type, row, meta) {
+              return '<input type="text" class="form-control" name="" id="" placeholder="" value={{value}} />'.replace(
+                '{{value}}',
+                row.mainData_12
+              )
+            }
+          }
         ],
-        'language': language
+        language: language
         // 'language': dataTablesModule.language()
       })
-    }())
+
+      //
+      //  function registerPickday() {
+      //           window.shareConfig = {
+      //               field: '',
+      //               firstDay: 1,
+      //               minDate: pikadayModule.minDate(),
+      //               maxDate: pikadayModule.maxDate(),
+      //               yearRange: pikadayModule.yearRange(),
+      //               format: pikadayModule.formatToYYYYMMDD_Baseline(),
+      //               showDaysInNextAndPreviousMonths: true,
+      //               enableSelectionDaysInNextAndPreviousMonths: true,
+      //               showWeekNumber: true,
+      //               i18n: pikadayModule.i18n(),
+      //           }
+
+      //           var pikadayDomList = document.getElementsByClassName('pikaday')
+      //           for (var i = 0; i < pikadayDomList.length; ++i) {
+
+      //               var newConfig = JSON.parse(JSON.stringify(window.shareConfig))
+      //               newConfig.field = pikadayDomList[i]
+      //               new Pikaday(newConfig)
+      //           }
+      //       }
+    })()
   }
 }
 </script>
