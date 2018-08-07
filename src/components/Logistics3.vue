@@ -74,6 +74,40 @@
                   <th scope="col" class="align-middle">稅籍ID</th>
                   <th scope="col" class="align-middle">聯絡人</th>
                   <th scope="col" class="align-middle">操作</th>
+                  
+
+                  <!-- <th scope="col" class="align-middle">	主訂單號	</th>
+<th scope="col" class="align-middle">	訂單號碼	</th>
+<th scope="col" class="align-middle">	定製唯一碼	</th>
+<th scope="col" class="align-middle">	料品代號	</th>
+<th scope="col" class="align-middle">	料品名稱	</th>
+<th scope="col" class="align-middle">	放行數量	</th>
+<th scope="col" class="align-middle">	應付金額	</th>
+<th scope="col" class="align-middle">	已支付额	</th>
+<th scope="col" class="align-middle">	存貨?	</th>
+<th scope="col" class="align-middle">	交貨日期	</th>
+<th scope="col" class="align-middle">	客戶代碼	</th>
+<th scope="col" class="align-middle">	快遞類別	</th>
+<th scope="col" class="align-middle">	快遞名稱(物流公司)	</th>
+<th scope="col" class="align-middle">	付款狀態	</th>
+<th scope="col" class="align-middle">	未撿貨數	</th>
+<th scope="col" class="align-middle">	客戶名稱	</th>
+<th scope="col" class="align-middle">	訂單數量	</th>
+<th scope="col" class="align-middle">	經手人	</th>
+<th scope="col" class="align-middle">	經手ID	</th>
+<th scope="col" class="align-middle">	業務部門	</th>
+<th scope="col" class="align-middle">	市場	</th>
+<th scope="col" class="align-middle">	國別	</th>
+<th scope="col" class="align-middle">	PickingID	</th>
+<th scope="col" class="align-middle">	PrintDate	</th>
+<th scope="col" class="align-middle">	撿貨日期	</th>
+<th scope="col" class="align-middle">	倉庫代碼	</th>
+<th scope="col" class="align-middle">	儲格	</th>
+<th scope="col" class="align-middle">	批次	</th>
+<th scope="col" class="align-middle">	庫存量	</th>
+<th scope="col" class="align-middle">	揀貨數量	</th>
+<th scope="col" class="align-middle">	己撿貨	</th> -->
+
                 </tr>
               </thead>
             </table>
@@ -93,7 +127,7 @@ import {
   language
 } from '../config/dataTable'
 import {
-  apiDataTableCopyTemplateGetAll
+  dataTableList3
 } from '../api/api'
 
 export default {
@@ -108,7 +142,7 @@ export default {
           selector: 'td:not(:first-child)',
           style: 'os'
         },
-        'ajax': apiDataTableCopyTemplateGetAll,
+        'ajax': dataTableList3,
         'scrollX': true,
         // 'scrollY': '500px',
         // 'bPaginate': false,
@@ -118,6 +152,39 @@ export default {
           { 'data': 'mainData_1' },
           { 'data': 'mainData_2' },
           { 'data': 'mainData_3' },
+
+          // { 'data': 'mainData_1' },
+          // { 'data': 'mainData_2' },
+          // { 'data': 'mainData_3' },
+          // { 'data': 'mainData_4' },
+          // { 'data': 'mainData_5' },
+          // { 'data': 'mainData_6' },
+          // { 'data': 'mainData_7' },
+          // { 'data': 'mainData_8' },
+          // { 'data': 'mainData_9' },
+          // { 'data': 'mainData_10' },
+          // { 'data': 'mainData_11' },
+          // { 'data': 'mainData_12' },
+          // { 'data': 'mainData_13' },
+          // { 'data': 'mainData_14' },
+          // { 'data': 'mainData_15' },
+          // { 'data': 'mainData_16' },
+          // { 'data': 'mainData_17' },
+          // { 'data': 'mainData_18' },
+          // { 'data': 'mainData_19' },
+          // { 'data': 'mainData_20' },
+          // { 'data': 'mainData_21' },
+          // { 'data': 'mainData_22' },
+          // { 'data': 'mainData_23' },
+          // { 'data': 'mainData_24' },
+          // { 'data': 'mainData_25' },
+          // { 'data': 'mainData_26' },
+          // { 'data': 'mainData_27' },
+          // { 'data': 'mainData_28' },
+          // { 'data': 'mainData_29' },
+          // { 'data': 'mainData_30' },
+          // { 'data': 'mainData_31' },
+
           {},
         ],
         'order': [

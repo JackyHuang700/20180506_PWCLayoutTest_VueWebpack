@@ -132,7 +132,7 @@ import {
   language
 } from '../config/dataTable'
 import {
-  apiDataTableCopyTemplateGetAll
+  apiLogisticsIndex
 } from '../api/api'
 
 export default {
@@ -147,13 +147,50 @@ export default {
           selector: 'td:not(:first-child)',
           style: 'os'
         },
-        'ajax': apiDataTableCopyTemplateGetAll,
+        'ajax': apiLogisticsIndex,
         'scrollX': true,
         'columns': [
           {},
           { 'data': 'mainData_1' },
           { 'data': 'mainData_2' },
           { 'data': 'mainData_3' },
+
+          //           { 'data': 'mainData_1' },
+          // { 'data': 'mainData_2' },
+          // { 'data': 'mainData_3' },
+          // { 'data': 'mainData_4' },
+          // { 'data': 'mainData_5' },
+          // { 'data': 'mainData_6' },
+          // { 'data': 'mainData_7' },
+          // { 'data': 'mainData_8' },
+          // { 'data': 'mainData_9' },
+          // { 'data': 'mainData_10' },
+          // { 'data': 'mainData_11' },
+          // { 'data': 'mainData_12' },
+          // { 'data': 'mainData_13' },
+          // { 'data': 'mainData_14' },
+          // { 'data': 'mainData_15' },
+          // { 'data': 'mainData_16' },
+          // { 'data': 'mainData_17' },
+          // { 'data': 'mainData_18' },
+          // { 'data': 'mainData_19' },
+          // { 'data': 'mainData_20' },
+          // { 'data': 'mainData_21' },
+          // { 'data': 'mainData_22' },
+          // { 'data': 'mainData_23' },
+          // { 'data': 'mainData_24' },
+          // { 'data': 'mainData_25' },
+          // { 'data': 'mainData_26' },
+          // { 'data': 'mainData_27' },
+          // { 'data': 'mainData_28' },
+          // { 'data': 'mainData_29' },
+          // { 'data': 'mainData_30' },
+          // { 'data': 'mainData_31' },
+          // { 'data': 'mainData_32' },
+          // { 'data': 'mainData_33' },
+          // { 'data': 'mainData_34' },
+          // { 'data': 'mainData_35' },
+
         ],
         'columnDefs': [
           {

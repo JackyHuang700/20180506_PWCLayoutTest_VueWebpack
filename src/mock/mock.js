@@ -5,33 +5,27 @@ import MockAdapter from 'axios-mock-adapter'
 // import 'jquery-mockjax'
 
 import {
+  dataTableList,
+  dataTableList2,
+  dataTableList3,
+  dataTableList4
+} from './data/LogisticsData'
+import {
   dataTableList as QualityControlData,
   dataTableList2 as QualityControl2Data,
-  dataTableList3 as QualityControl3Data,
+  dataTableList3 as QualityControl3Data
 } from './data/QualityControlData'
-import {
-  dataTableList
-} from './data/OrderIndex2Data'
-import {
-  dataTableList as ComplaintsData
-} from './data/ComplaintsData'
-import {
-  dataTableList as SupplierData
-} from './data/SupplierData'
-import {
-  dataTableList as CopyTemplateData
-} from './data/CopyTemplateData'
-import {
-  dataTableList as ComplaintsCreateData
-} from './data/ComplaintsCreateData'
+// import { dataTableList } from './data/OrderIndex2Data'
+import { dataTableList as ComplaintsData } from './data/ComplaintsData'
+import { dataTableList as SupplierData } from './data/SupplierData'
+import { dataTableList as CopyTemplateData } from './data/CopyTemplateData'
+import { dataTableList as ComplaintsCreateData } from './data/ComplaintsCreateData'
 import {
   dataTableList as ProductDataIndexData,
   dataTableList2 as ProductDataIndexData2,
   dataTableList3 as ProductDataIndexData3
 } from './data/ProductData'
-import {
-  dataTableList as ProcessDataInsertData
-} from './data/ProcessData'
+import { dataTableList as ProcessDataInsertData } from './data/ProcessData'
 import {
   dataTableList as OrderProcessManagementData,
   dataTableList2 as OrderProcessManagementData2
@@ -42,9 +36,7 @@ import {
   dataTableList3 as Purchase3InsertData,
   dataTableList4 as Purchase4IndextData
 } from './data/PurchaseData'
-import {
-  select2List
-} from './data/select2List'
+import { select2List } from './data/select2List'
 import {
   dataTableList as CollectionData,
   dataTableList2 as CollectionData2
@@ -72,7 +64,11 @@ import {
   apiPurchase4Index,
   apiProDuctIndex,
   apiProductionPreparationIndex,
-  apiProductionPreparationIndex2
+  apiProductionPreparationIndex2,
+  apiLogisticsIndex,
+  apiLogistics2Index,
+  apiLogistics3Index,
+  apiLogistics4Index
 } from '../api/api'
 
 export default {
@@ -83,6 +79,62 @@ export default {
   // jquery mock
   //
   init_jquery () {
+    // 物流 - 撿貨業務放行
+    $.mockjax({
+      type: 'GET',
+      url: apiLogisticsIndex,
+      status: 200,
+      dataType: 'json',
+      responseTime: 150,
+      contentType: 'application/json',
+      response: function (setting) {
+        // 回應
+        this.responseText = dataTableList
+      }
+    })
+
+    // 物流 - 撿貨財務放行
+    $.mockjax({
+      type: 'GET',
+      url: apiLogistics2Index,
+      status: 200,
+      dataType: 'json',
+      responseTime: 150,
+      contentType: 'application/json',
+      response: function (setting) {
+        // 回應
+        this.responseText = dataTableList2
+      }
+    })
+
+    // 物流 - 撿貨物流作業
+    $.mockjax({
+      type: 'GET',
+      url: apiLogistics3Index,
+      status: 200,
+      dataType: 'json',
+      responseTime: 150,
+      contentType: 'application/json',
+      response: function (setting) {
+        // 回應
+        this.responseText = dataTableList3
+      }
+    })
+
+    // 物流 - 出貨作業
+    $.mockjax({
+      type: 'GET',
+      url: apiLogistics4Index,
+      status: 200,
+      dataType: 'json',
+      responseTime: 150,
+      contentType: 'application/json',
+      response: function (setting) {
+        // 回應
+        this.responseText = dataTableList4
+      }
+    })
+
     // 質檢 - 入庫
     $.mockjax({
       type: 'GET',
@@ -177,10 +229,7 @@ export default {
       responseTime: 750,
       contentType: 'application/json',
       response: function (settings) {
-        var {
-          queryStr,
-          pageNo
-        } = settings.data
+        var { queryStr, pageNo } = settings.data
 
         var items = pagination(ComplaintsCreateData, queryStr, pageNo || 1)
         for (var i in items[0]) {
@@ -246,10 +295,7 @@ export default {
       responseTime: 750,
       contentType: 'application/json',
       response: function (settings) {
-        let {
-          supplier,
-          rawmaterial
-        } = settings.data
+        let { supplier, rawmaterial } = settings.data
         console.log('settings.data', settings.data)
 
         var newList = OrderProcessManagementData2.data.filter(c => {
@@ -402,10 +448,7 @@ export default {
       responseTime: 750,
       contentType: 'application/json',
       response: function (settings) {
-        var {
-          term,
-          buyingState
-        } = settings.data
+        var { term, buyingState } = settings.data
         console.log(buyingState)
 
         var results = PurchaseAutoCompleteData.filter(function (item) {
@@ -426,10 +469,7 @@ export default {
       responseTime: 750,
       contentType: 'application/json',
       response: function (settings) {
-        var {
-          queryStr,
-          pageNo
-        } = settings.data
+        var { queryStr, pageNo } = settings.data
 
         var items = pagination(select2List, queryStr, pageNo || 1)
         for (var i in items[0]) {
@@ -453,9 +493,7 @@ export default {
       contentType: 'application/json',
       response: function (settings) {
         // console.log('settings:', settings)
-        const {
-          id
-        } = settings.data
+        const { id } = settings.data
 
         // const updateData = dataTableList['data'].slice(0, 1)
         const updateData = dataTableList['data'].find(c => c.id === `${id}`)
@@ -492,7 +530,7 @@ function paginationToDataTable (array, queryStr, pageNo, pageSize) {
   var offset = (pageNo - 1) * pageSize
   // 搜尋
   // 分頁
-  var newItems = array.slice(pageNo, (pageNo + pageSize))
+  var newItems = array.slice(pageNo, pageNo + pageSize)
 
   for (var i in newItems) {
     newList.push(newItems[i])
@@ -511,8 +549,8 @@ function pagination (array, queryStr, pageNo) {
   // 分頁
   newList.push(
     offset + pageSize >= array.length
-    ? array.slice(offset, array.length)
-    : array.slice(offset, offset + pageSize)
+      ? array.slice(offset, array.length)
+      : array.slice(offset, offset + pageSize)
   )
   return newList
 }

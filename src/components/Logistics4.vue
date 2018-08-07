@@ -93,7 +93,7 @@ import {
   language
 } from '../config/dataTable'
 import {
-  apiDataTableCopyTemplateGetAll
+  dataTableList4
 } from '../api/api'
 
 export default {
@@ -108,7 +108,7 @@ export default {
           selector: 'td:not(:first-child)',
           style: 'os'
         },
-        'ajax': apiDataTableCopyTemplateGetAll,
+        'ajax': dataTableList4,
         'scrollX': true,
         // 'scrollY': '500px',
         // 'bPaginate': false,
