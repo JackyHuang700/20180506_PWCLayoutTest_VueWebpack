@@ -69,11 +69,24 @@
             <table id="example" cellspacing="0" width="100%" class="table table-striped table-hover table-bordered">
               <thead>
                 <tr>
-                  <th scope="col" class="align-middle">#</th>
-                  <th scope="col" class="align-middle">代碼</th>
-                  <th scope="col" class="align-middle">稅籍ID</th>
-                  <th scope="col" class="align-middle">聯絡人</th>
-                  <th scope="col" class="align-middle">操作</th>
+                               <th scope="col" class="align-middle checkBoxColumn">#</th>
+                  <th scope="col" class="align-middle">主訂單號</th>
+                  <th scope="col" class="align-middle">快遞類別</th>
+                  <th scope="col" class="align-middle">快遞名稱</th>
+                  <th scope="col" class="align-middle">客戶代碼</th>
+                  <th scope="col" class="align-middle">客戶名稱</th>
+                  <th scope="col" class="align-middle">業務代碼</th>
+                  <th scope="col" class="align-middle">業務姓名</th>
+                  <th scope="col" class="align-middle">收貨地址</th>
+                  <th scope="col" class="align-middle">收貨郵編</th>
+                  <th scope="col" class="align-middle">收貨省</th>
+                  <th scope="col" class="align-middle">收貨市</th>
+                  <th scope="col" class="align-middle">收貨街道</th>
+                  <th scope="col" class="align-middle">收貨國家</th>
+                  <th scope="col" class="align-middle">收貨電話</th>
+                  <th scope="col" class="align-middle">收貨人</th>
+                  <th scope="col" class="align-middle">收貨人電郵</th>
+
                 </tr>
               </thead>
             </table>
@@ -89,113 +102,59 @@
 <script>
 import 'datatables.net'
 import 'datatables.net-bs4'
-import {
-  language
-} from '../config/dataTable'
-import {
-  dataTableList4
-} from '../api/api'
+import { language } from '../config/dataTable'
+import { apiLogistics4Index } from '../api/api'
 
 export default {
   name: 'logistics4',
-  created () { },
+  created () {},
   mounted () {
     // dataTables
-    (function () {
+    ;(function () {
       //
       var dataTableObj = $('#example').DataTable({
-        'select': {
+        select: {
           selector: 'td:not(:first-child)',
           style: 'os'
         },
-        'ajax': dataTableList4,
-        'scrollX': true,
+        ajax: apiLogistics4Index,
+        scrollX: true,
         // 'scrollY': '500px',
         // 'bPaginate': false,
         // 'searching': false,
-        'columns': [
+        columns: [
           {},
-          { 'data': 'mainData_1' },
-          { 'data': 'mainData_2' },
-          { 'data': 'mainData_3' },
-          {},
+          { data: 'mainData_1' },
+          { data: 'mainData_2' },
+          { data: 'mainData_3' },
+          { data: 'mainData_4' },
+          { data: 'mainData_5' },
+          { data: 'mainData_6' },
+          { data: 'mainData_7' },
+          { data: 'mainData_8' },
+          { data: 'mainData_9' },
+          { data: 'mainData_10' },
+          { data: 'mainData_11' },
+          { data: 'mainData_12' },
+          { data: 'mainData_13' },
+          { data: 'mainData_14' },
+          { data: 'mainData_15' },
+          { data: 'mainData_16' }
         ],
-        'order': [
-          [1, 'asc']
-        ],
-        'columnDefs': [
+        columnDefs: [
           {
-            'targets': 0,
-            'data': '',
-            'orderable': false,
-            'render': function (data, type, row, meta) {
-              return ('<button type="button" class="btn btn-primary details-control">展開明細</button>')
-            }
-          },
-          {
-            'targets': -1,
-            'data': '',
-            'orderable': false,
-            'render': function (data, type, row, meta) {
-              return (
-                '<div class="btn-group">' +
-                '<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">操作</button>' +
-                '<div class="dropdown-menu">' +
-                '  <a class="dropdown-item" href="//?={{id}}">編輯</a>' +
-                '  <a class="dropdown-item" href="//?={{id}}">刪除</a>' +
-                '</div>' +
-                '</div>'
-              ).replace(/{{id}}/g, '')
+            targets: 0,
+            data: '',
+            orderable: false,
+            render: function (data, type, row, meta) {
+              return '<button type="button" class="btn btn-primary details-control">展開明細</button>'
             }
           },
         ],
-        'language': language
+        language: language
         // 'language': dataTablesModule.language()
       })
-
-      // 明細
-      $('#example tbody').on('click', '.details-control', function () {
-        var tr = $(this).closest('tr')
-        var row = dataTableObj.row(tr)
-
-        if (row.child.isShown()) {
-          row.child.hide()
-          tr.removeClass('shown')
-        } else {
-          row.child(childRows(row.data().detail)).show()
-          tr.addClass('shown')
-        }
-      })
-
-      // 明細
-      function childRows (d) {
-        d = d || []
-
-        var trTemplate = ''
-        if (d.length) {
-          d.map(function (data, index) {
-            trTemplate += (
-              '<tr>' +
-              '  <td>{{subData_1}}</td>' +
-              '  <td>{{subData_2}}</td>' +
-              '  <td>{{subData_3}}</td>' +
-              '</tr>'
-            ).replace(/{{subData_1}}/g, '')
-              .replace(/{{subData_2}}/g, '')
-              .replace(/{{subData_3}}/g, '')
-          })
-        }
-
-        return (
-          '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;" class="table table-striped">' +
-          '  <tr>' +
-          '    <td scope="col">....</td>' +
-          '    <td scope="col">....</td>' +
-          '    <td scope="col">....</td>' +
-          '  </tr>' + trTemplate +
-          '</table>')
-      }
-    }())
+    })()
   }
 }
 </script>

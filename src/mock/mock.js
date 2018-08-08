@@ -5,10 +5,10 @@ import MockAdapter from 'axios-mock-adapter'
 // import 'jquery-mockjax'
 
 import {
-  dataTableList,
-  dataTableList2,
-  dataTableList3,
-  dataTableList4
+  dataTableList as LogisticsData,
+  dataTableList2 as LogisticsData2,
+  dataTableList3 as LogisticsData3,
+  dataTableList4 as LogisticsData4,
 } from './data/LogisticsData'
 import {
   dataTableList as QualityControlData,
@@ -89,7 +89,7 @@ export default {
       contentType: 'application/json',
       response: function (setting) {
         // 回應
-        this.responseText = dataTableList
+        this.responseText = LogisticsData
       }
     })
 
@@ -103,7 +103,7 @@ export default {
       contentType: 'application/json',
       response: function (setting) {
         // 回應
-        this.responseText = dataTableList2
+        this.responseText = LogisticsData2
       }
     })
 
@@ -117,7 +117,7 @@ export default {
       contentType: 'application/json',
       response: function (setting) {
         // 回應
-        this.responseText = dataTableList3
+        this.responseText = LogisticsData3
       }
     })
 
@@ -131,7 +131,7 @@ export default {
       contentType: 'application/json',
       response: function (setting) {
         // 回應
-        this.responseText = dataTableList4
+        this.responseText = LogisticsData4
       }
     })
 
