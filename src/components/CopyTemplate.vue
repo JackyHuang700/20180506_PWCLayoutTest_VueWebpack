@@ -69,7 +69,7 @@
             <table id="example" cellspacing="0" width="100%" class="table table-striped table-hover table-bordered">
               <thead>
                 <tr>
-                  <th scope="col" class="align-middle">#</th>
+                  <th scope="col" class="align-middle checkBoxColumn">#</th>
                   <th scope="col" class="align-middle">代碼</th>
                   <th scope="col" class="align-middle">稅籍ID</th>
                   <th scope="col" class="align-middle">聯絡人</th>
