@@ -9,6 +9,7 @@ import {
   dataTableList2 as LogisticsData2,
   dataTableList3 as LogisticsData3,
   dataTableList4 as LogisticsData4,
+  dataTableList6 as LogisticsData6,
 } from './data/LogisticsData'
 import {
   dataTableList as QualityControlData,
@@ -68,7 +69,8 @@ import {
   apiLogisticsIndex,
   apiLogistics2Index,
   apiLogistics3Index,
-  apiLogistics4Index
+  apiLogistics4Index,
+  apiLogistics6Index,
 } from '../api/api'
 
 export default {
@@ -79,6 +81,20 @@ export default {
   // jquery mock
   //
   init_jquery () {
+    // 物流 -
+    $.mockjax({
+      type: 'GET',
+      url: apiLogistics6Index,
+      status: 200,
+      dataType: 'json',
+      responseTime: 150,
+      contentType: 'application/json',
+      response: function (setting) {
+        // 回應
+        this.responseText = LogisticsData6
+      }
+    })
+
     // 物流 - 撿貨業務放行
     $.mockjax({
       type: 'GET',

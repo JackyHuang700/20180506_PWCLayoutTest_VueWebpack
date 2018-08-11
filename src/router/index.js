@@ -10,6 +10,10 @@ import {
   Logistics2,
   Logistics3,
   Logistics4,
+  Logistics5,
+  Logistics6,
+  Logistics7,
+  Logistics8,
   QualityControl,
   QualityControl2,
   QualityControl3,
@@ -81,6 +85,26 @@ export default new Router({
           path: 'logistics4',
           name: 'Logistics4',
           component: Logistics4
+        },
+        {
+          path: 'logistics5',
+          name: 'Logistics5',
+          component: Logistics5
+        },
+        {
+          path: 'logistics6',
+          name: 'Logistics6',
+          component: Logistics6
+        },
+        {
+          path: 'logistics7',
+          name: 'Logistics7',
+          component: Logistics7
+        },
+        {
+          path: 'logistics8',
+          name: 'Logistics8',
+          component: Logistics8
         },
         {
           path: 'qualitycontrol',

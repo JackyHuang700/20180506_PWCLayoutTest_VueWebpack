@@ -347,6 +347,26 @@ export default {
         url: '/Logistics4',
         icon: 'icon-star'
       },
+      {
+        name: '出貨列印',
+        url: '/Logistics5',
+        icon: 'icon-star'
+      },
+      {
+        name: '出貨確認',
+        url: '/Logistics6',
+        icon: 'icon-star'
+      },
+      {
+        name: '出貨作業(色卡)',
+        url: '/Logistics7',
+        icon: 'icon-star'
+      },
+      {
+        name: '出貨列印(色卡)',
+        url: '/Logistics8',
+        icon: 'icon-star'
+      },
     ]
   }
     // {

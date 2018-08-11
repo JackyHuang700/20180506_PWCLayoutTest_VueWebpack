@@ -16,13 +16,62 @@
               <div class="card-body">
 
                 <div class="form-group row">
+
                   <Logistics42 />
-                  <Logistics41 />
+
+                  <!-- 色卡物流匯出 -->
+                  <div class="col-sm-12 mb-2">
+                    <div class="form-row">
+                      <div class="form-group col-sm-3">
+                        <label class="float-left" for="inputText17">快遞類別</label>
+                        <select id="inputText17" name="inputText17" class="form-control">
+                          <option selected></option>
+                          <option>DHL</option>
+                          <option>DHL(德遊小包)</option>
+                          <option>本地單號</option>
+                          <option>國際EUB</option>
+                          <option>國內快遞</option>
+                          <option>郵政</option>
+                          <option>專線</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-sm-3">
+                        <label class="float-left" for="inputText18">快遞名稱(物流公司)</label>
+                        <select id="inputText18" name="inputText18" class="form-control">
+                          <option selected></option>
+                          <option>BBX</option>
+                          <option>CNE掛號小包</option>
+                          <option>CNE歐洲專線</option>
+                          <option>CNE全球特惠</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-sm-3">
+                        <label class="float-left" for="inputText19">快遞匯出模板</label>
+                        <select id="inputText19" name="inputText19" class="form-control">
+                          <option selected>通用</option>
+                          <option>DHL</option>
+                          <option>CNE</option>
+                        </select>
+                      </div>
+
+                      <div class="col-sm-3 d-none d-sm-block"></div>
+
+                      <div class="form-group col-sm-3">
+                        <label class="float-left" for="inputText20">訂單日期(起)</label>
+                        <input type="text" class="form-control" id="inputText20" />
+                      </div>
+                      <div class="form-group col-sm-3">
+                        <label class="float-left" for="inputText21">訂單日期(迄)</label>
+                        <input type="text" class="form-control" id="inputText21" />
+                      </div>
+                    </div>
+
+                  </div>
+
                 </div>
                 <div class="col-sm-12 mb-2 text-right">
-                  <button type="button" class="btn btn-primary col-2">查詢</button>
+                  <button type="button" class="btn btn-primary">查詢</button>
                   <button type="button" class="btn btn-danger">重置</button>
-                  <button type="button" class="btn btn-success">匯出資料</button>
                 </div>
               </div>
             </div>
@@ -42,20 +91,24 @@
             </div>
             <div id="collapseTwo" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion2">
               <div class="card-body">
-                <!-- 物流資料匯入 - 沒有確定按鈕-->
+                <!-- 色卡物流匯入 - 沒有確定按鈕 -->
                 <div class="row">
                   <div class="col-sm-12 mb-2">
                     <div class="form-row">
+
                       <div class="form-group col-sm-3">
                         <label class="float-left" for="">指定資料檔</label>
+
                         <div class="custom-file">
-                          <label class="custom-file-label" for="inputText">請選擇...</label>
-                          <input type="file" class="custom-file-input" id="inputText" name="inputText" />
+                          <label class="custom-file-label" for="inputText13">請選擇...</label>
+                          <input type="file" class="custom-file-input" id="inputText13" name="inputText13" />
                         </div>
+
                       </div>
                       <div class="form-group col-sm-3 btnAlignMiddle">
                         <button type="button" class="btn btn-primary">匯入資料</button>
                       </div>
+
                     </div>
                   </div>
                 </div>
@@ -92,6 +145,7 @@
                   <th scope="col" class="align-middle">收貨電話</th>
                   <th scope="col" class="align-middle">收貨人</th>
                   <th scope="col" class="align-middle">收貨人電郵</th>
+
                 </tr>
               </thead>
             </table>
@@ -108,11 +162,10 @@ import 'datatables.net'
 import 'datatables.net-bs4'
 import { language } from '../config/dataTable'
 import { apiLogistics4Index } from '../api/api'
-import Logistics41 from '../components_sub/Logistics41.vue'
 import Logistics42 from '../components_sub/Logistics42.vue'
 
 export default {
-  name: 'logistics4',
+  name: 'logistics5',
   created () {},
   mounted () {
     // dataTables
@@ -122,7 +175,6 @@ export default {
         ajax: apiLogistics4Index,
         // ajax: '/Demo/TestLogisticsAPI4',
         scrollX: true,
-        bPaginate: false,
         columns: [
           { data: 'mainData_1' },
           { data: 'mainData_2' },
@@ -141,14 +193,12 @@ export default {
           { data: 'mainData_15' },
           { data: 'mainData_16' }
         ],
-
         language: language
         // 'language': dataTablesModule.language()
       })
     })()
   },
   components: {
-    Logistics41,
     Logistics42
   }
 }

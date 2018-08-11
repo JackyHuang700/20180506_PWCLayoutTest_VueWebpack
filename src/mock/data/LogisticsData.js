@@ -53,7 +53,7 @@ let dataTableList = {
       mainData_12: 'DHL',
       mainData_13: 'DHL常規',
       mainData_14:
-        'Tyler Neal 1014 Morningside Dr Lufkin Texas 75904 US T:9035593800        ',
+        'Tyler Neal 1014 Morningside Dr Lufkin Texas 75904 US T:9035593800',
       mainData_15: 'hinds.tyler@gmail.com',
       mainData_16: 'Y',
       mainData_17: 'Tyler Neal',
@@ -127,7 +127,8 @@ let dataTableList = {
       mainData_11: 'C0110',
       mainData_12: '专线',
       mainData_13: '法国DHL',
-      mainData_14: 'Song Chu Bichlweg 6 Villach 9500 AT T:0043 660 300 8866/43 650 635 2524',
+      mainData_14:
+        'Song Chu Bichlweg 6 Villach 9500 AT T:0043 660 300 8866/43 650 635 2524',
       mainData_15: 'j.schneeweiss@flanevo.at',
       mainData_16: 'Y',
       mainData_17: 'Julia',
@@ -245,7 +246,8 @@ let dataTableList2 = {
       mainData_11: '1803230006',
       mainData_12: 'DHL',
       mainData_13: 'DHL常規',
-      mainData_14: 'Maggie Worsley 127 Genesis Dr Huntsville Alabama 35811 US T:7064100255',
+      mainData_14:
+        'Maggie Worsley 127 Genesis Dr Huntsville Alabama 35811 US T:7064100255',
       mainData_15: 'rockcece@gmail.com',
       mainData_16: 'Y',
       mainData_17: '1',
@@ -257,7 +259,7 @@ let dataTableList2 = {
       mainData_23: '',
       mainData_24: 'US',
       mainData_25: '194c5abc-35da-45b2-966b-8597a1b83ff6',
-      mainData_26: '',
+      mainData_26: ''
     },
     {
       mainData_1: '1803230006',
@@ -273,7 +275,8 @@ let dataTableList2 = {
       mainData_11: '1803230006',
       mainData_12: 'DHL',
       mainData_13: 'DHL常規',
-      mainData_14: 'Maggie Worsley 127 Genesis Dr Huntsville Alabama 35811 US T:7064100255',
+      mainData_14:
+        'Maggie Worsley 127 Genesis Dr Huntsville Alabama 35811 US T:7064100255',
       mainData_15: 'rockcece@gmail.com',
       mainData_16: 'Y',
       mainData_17: '1',
@@ -285,7 +288,7 @@ let dataTableList2 = {
       mainData_23: '',
       mainData_24: 'US',
       mainData_25: 'cf1523a1-11e5-433d-a58c-81cf794dbb6e',
-      mainData_26: '',
+      mainData_26: ''
     },
     {
       mainData_1: '1803230006',
@@ -301,7 +304,8 @@ let dataTableList2 = {
       mainData_11: '1803230006',
       mainData_12: 'DHL',
       mainData_13: 'DHL常規',
-      mainData_14: 'Maggie Worsley 127 Genesis Dr Huntsville Alabama 35811 US T:7064100255',
+      mainData_14:
+        'Maggie Worsley 127 Genesis Dr Huntsville Alabama 35811 US T:7064100255',
       mainData_15: 'rockcece@gmail.com',
       mainData_16: 'Y',
       mainData_17: '1',
@@ -313,37 +317,37 @@ let dataTableList2 = {
       mainData_23: '',
       mainData_24: 'US',
       mainData_25: 'e4a81139-69ec-447e-9daa-987f09751034',
-      mainData_26: '',
+      mainData_26: ''
     },
     {
-      mainData_1:	'1804010037',
-      mainData_2:	'1804010037',
-      mainData_3:	'1804010037-01',
-      mainData_4:	'1804010037-01-COCO0069#-CM',
-      mainData_5:	'婚纱禮服',
-      mainData_6:	'1',
-      mainData_7:	'275.78',
-      mainData_8:	'525.78',
-      mainData_9:	'Y',
-      mainData_10:	'2018-7-7',
-      mainData_11:	'1804010037',
-      mainData_12:	'DHL',
-      mainData_13:	'DHL常規',
-      mainData_14:	'Katie Turner 130 Featherwood Dr Cornelia Georgia 30531 US T:2298694750',
-      mainData_15:	'katherine.turner10@gmail.com',
-      mainData_16:	'',
-      mainData_17:	'1',
-      mainData_18:	'Katie Turner',
-      mainData_19:	'1',
-      mainData_20:	'沈倩莉',
-      mainData_21:	'15',
-      mainData_22:	'英語組',
-      mainData_23:	'',
-      mainData_24:	'US',
-      mainData_25:	'cdbfe76f-7b78-446b-b946-6ea6b2503def',
-      mainData_26:	'',
-
-    },
+      mainData_1: '1804010037',
+      mainData_2: '1804010037',
+      mainData_3: '1804010037-01',
+      mainData_4: '1804010037-01-COCO0069#-CM',
+      mainData_5: '婚纱禮服',
+      mainData_6: '1',
+      mainData_7: '275.78',
+      mainData_8: '525.78',
+      mainData_9: 'Y',
+      mainData_10: '2018-7-7',
+      mainData_11: '1804010037',
+      mainData_12: 'DHL',
+      mainData_13: 'DHL常規',
+      mainData_14:
+        'Katie Turner 130 Featherwood Dr Cornelia Georgia 30531 US T:2298694750',
+      mainData_15: 'katherine.turner10@gmail.com',
+      mainData_16: '',
+      mainData_17: '1',
+      mainData_18: 'Katie Turner',
+      mainData_19: '1',
+      mainData_20: '沈倩莉',
+      mainData_21: '15',
+      mainData_22: '英語組',
+      mainData_23: '',
+      mainData_24: 'US',
+      mainData_25: 'cdbfe76f-7b78-446b-b946-6ea6b2503def',
+      mainData_26: ''
+    }
   ]
 }
 
@@ -380,8 +384,7 @@ let dataTableList3 = {
       mainData_28: '-------',
       mainData_29: '-------',
       mainData_30: '無庫存量!',
-      mainData_31: 'FALSE',
-
+      mainData_31: 'FALSE'
     }
   ]
 }
@@ -396,7 +399,8 @@ let dataTableList4 = {
       mainData_5: 'Alex',
       mainData_6: '22',
       mainData_7: '張媛媛',
-      mainData_8: 'Alex Äußere Münchener Straße 23 Rosenheim 83026 T:+49 162 3000 863',
+      mainData_8:
+        'Alex Äußere Münchener Straße 23 Rosenheim 83026 T:+49 162 3000 863',
       mainData_9: '83026',
       mainData_10: '',
       mainData_11: 'Rosenheim',
@@ -404,8 +408,7 @@ let dataTableList4 = {
       mainData_13: '',
       mainData_14: '+49 162 3000 863',
       mainData_15: 'Alex',
-      mainData_16: 'office@yourdress.at',
-
+      mainData_16: 'office@yourdress.at'
     },
     {
       mainData_1: '1712070041',
@@ -415,7 +418,8 @@ let dataTableList4 = {
       mainData_5: 'Alex',
       mainData_6: '22',
       mainData_7: '張媛媛',
-      mainData_8: 'Alex Äußere Münchener Straße 23 Rosenheim 83026 T:+49 162 3000 863',
+      mainData_8:
+        'Alex Äußere Münchener Straße 23 Rosenheim 83026 T:+49 162 3000 863',
       mainData_9: '83026',
       mainData_10: '',
       mainData_11: 'Rosenheim',
@@ -423,8 +427,7 @@ let dataTableList4 = {
       mainData_13: '',
       mainData_14: '+49 162 3000 863',
       mainData_15: 'Alex',
-      mainData_16: 'office@yourdress.at',
-
+      mainData_16: 'office@yourdress.at'
     },
     {
       mainData_1: '1712070041',
@@ -434,7 +437,8 @@ let dataTableList4 = {
       mainData_5: 'Alex',
       mainData_6: '22',
       mainData_7: '張媛媛',
-      mainData_8: 'Alex Äußere Münchener Straße 23 Rosenheim 83026 T:+49 162 3000 863',
+      mainData_8:
+        'Alex Äußere Münchener Straße 23 Rosenheim 83026 T:+49 162 3000 863',
       mainData_9: '83026',
       mainData_10: '',
       mainData_11: 'Rosenheim',
@@ -442,8 +446,7 @@ let dataTableList4 = {
       mainData_13: '',
       mainData_14: '+49 162 3000 863',
       mainData_15: 'Alex',
-      mainData_16: 'office@yourdress.at',
-
+      mainData_16: 'office@yourdress.at'
     },
     {
       mainData_1: '1712070041',
@@ -453,7 +456,8 @@ let dataTableList4 = {
       mainData_5: 'Alex',
       mainData_6: '22',
       mainData_7: '張媛媛',
-      mainData_8: 'Alex Äußere Münchener Straße 23 Rosenheim 83026 T:+49 162 3000 863',
+      mainData_8:
+        'Alex Äußere Münchener Straße 23 Rosenheim 83026 T:+49 162 3000 863',
       mainData_9: '83026',
       mainData_10: '',
       mainData_11: 'Rosenheim',
@@ -461,8 +465,7 @@ let dataTableList4 = {
       mainData_13: '',
       mainData_14: '+49 162 3000 863',
       mainData_15: 'Alex',
-      mainData_16: 'office@yourdress.at',
-
+      mainData_16: 'office@yourdress.at'
     },
     {
       mainData_1: '1712070041',
@@ -472,7 +475,8 @@ let dataTableList4 = {
       mainData_5: 'Alex',
       mainData_6: '22',
       mainData_7: '張媛媛',
-      mainData_8: 'Alex Äußere Münchener Straße 23 Rosenheim 83026 T:+49 162 3000 863',
+      mainData_8:
+        'Alex Äußere Münchener Straße 23 Rosenheim 83026 T:+49 162 3000 863',
       mainData_9: '83026',
       mainData_10: '',
       mainData_11: 'Rosenheim',
@@ -480,8 +484,7 @@ let dataTableList4 = {
       mainData_13: '',
       mainData_14: '+49 162 3000 863',
       mainData_15: 'Alex',
-      mainData_16: 'office@yourdress.at',
-
+      mainData_16: 'office@yourdress.at'
     },
     {
       mainData_1: '1712080043',
@@ -491,7 +494,8 @@ let dataTableList4 = {
       mainData_5: 'Alex',
       mainData_6: '22',
       mainData_7: '張媛媛',
-      mainData_8: 'Alex Äußere Münchener Straße 23 Rosenheim 83026 DE T:+49 162 3000 863',
+      mainData_8:
+        'Alex Äußere Münchener Straße 23 Rosenheim 83026 DE T:+49 162 3000 863',
       mainData_9: '83026',
       mainData_10: '',
       mainData_11: 'Rosenheim',
@@ -499,10 +503,62 @@ let dataTableList4 = {
       mainData_13: 'DE',
       mainData_14: '+49 162 3000 863',
       mainData_15: 'Alex',
-      mainData_16: 'office@yourdress.at',
+      mainData_16: 'office@yourdress.at'
+    }
+  ]
+}
 
+let dataTableList6 = {
+  data: [
+    {
+      mainData_1: '1712110047-01',
+      mainData_2: 'CW000006-COCO0070#-UK24',
+      mainData_3: 'Wedding Dress',
+      mainData_4: '1',
+      mainData_5: '0'
+    },
+    {
+      mainData_1: '1712120036-01',
+      mainData_2: '1712120036-01-COCO0084#-CM',
+      mainData_3: 'Mens Accessories',
+      mainData_4: '1',
+      mainData_5: '0'
+    },
+    {
+      mainData_1: '1712150007-01',
+      mainData_2: '1712150007-01-COCO1038#-CM',
+      mainData_3: 'Wedding Dress',
+      mainData_4: '1',
+      mainData_5: '0'
+    },
+    {
+      mainData_1: '1712150010-01',
+      mainData_2: '1712150010-01-COCO0070#-CM',
+      mainData_3: 'Wedding Dress',
+      mainData_4: '1',
+      mainData_5: '0'
+    },
+    {
+      mainData_1: '1712150012-01',
+      mainData_2: '1712150012-01-COCO0070#-UK16',
+      mainData_3: 'Wedding Dress',
+      mainData_4: '1',
+      mainData_5: '0'
+    },
+    {
+      mainData_1: '1712150014-02',
+      mainData_2: 'CJ000035-COCO0070#',
+      mainData_3: 'Wedding Dress',
+      mainData_4: '1',
+      mainData_5: '0'
     },
   ]
 }
 
-export { dataTableList, dataTableList2, dataTableList3, dataTableList4 }
+export {
+  dataTableList,
+  dataTableList2,
+  dataTableList3,
+  dataTableList4,
+  dataTableList6
+}

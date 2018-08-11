@@ -21,6 +21,10 @@ import '@coreui/ajax/AJAX_Full_Project_GULP/src/css/style.min.css'
 import BootstrapVue from 'bootstrap-vue'
 
 import mock from './mock'
+
+// 全域style
+import './assets/globalStyle.css'
+
 Vue.use(BootstrapVue)
 require('jquery-mockjax')(jquery, window)
 mock.init_jquery()

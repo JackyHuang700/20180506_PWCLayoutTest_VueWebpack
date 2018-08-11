@@ -16,13 +16,29 @@
               <div class="card-body">
 
                 <div class="form-group row">
+
                   <Logistics42 />
-                  <Logistics41 />
+
+                  <!-- 色卡檢貨清單 - 沒有確定按鈕 -->
+                  <div class="col-sm-12 mb-2">
+                    <div class="form-row">
+
+                      <div class="form-group col-sm-3">
+                        <label class="float-left" for="inputText15">檢貨日期(起)</label>
+                        <input type="text" class="form-control" id="inputText15" />
+                      </div>
+                      <div class="form-group col-sm-3">
+                        <label class="float-left" for="inputText16">檢貨日期(迄)</label>
+                        <input type="text" class="form-control" id="inputText16" />
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
                 <div class="col-sm-12 mb-2 text-right">
                   <button type="button" class="btn btn-primary col-2">查詢</button>
                   <button type="button" class="btn btn-danger">重置</button>
-                  <button type="button" class="btn btn-success">匯出資料</button>
+                                    <button type="button" class="btn btn-success">匯出資料</button>
                 </div>
               </div>
             </div>
@@ -30,40 +46,6 @@
         </div>
       </div>
 
-      <div class="col-12">
-        <div class="accordion" id="accordion2">
-          <div class="card">
-            <div class="card-header" id="headingOne">
-              <i class="fa fa-wpforms" aria-hidden="true"></i>
-              匯入
-              <button class="btn btn-primary float-right" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                <i class="fa fa-bars" aria-hidden="true"></i>
-              </button>
-            </div>
-            <div id="collapseTwo" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion2">
-              <div class="card-body">
-                <!-- 物流資料匯入 - 沒有確定按鈕-->
-                <div class="row">
-                  <div class="col-sm-12 mb-2">
-                    <div class="form-row">
-                      <div class="form-group col-sm-3">
-                        <label class="float-left" for="">指定資料檔</label>
-                        <div class="custom-file">
-                          <label class="custom-file-label" for="inputText">請選擇...</label>
-                          <input type="file" class="custom-file-input" id="inputText" name="inputText" />
-                        </div>
-                      </div>
-                      <div class="form-group col-sm-3 btnAlignMiddle">
-                        <button type="button" class="btn btn-primary">匯入資料</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       <div class="col-12">
         <div class="card">
@@ -92,6 +74,7 @@
                   <th scope="col" class="align-middle">收貨電話</th>
                   <th scope="col" class="align-middle">收貨人</th>
                   <th scope="col" class="align-middle">收貨人電郵</th>
+
                 </tr>
               </thead>
             </table>
@@ -108,11 +91,10 @@ import 'datatables.net'
 import 'datatables.net-bs4'
 import { language } from '../config/dataTable'
 import { apiLogistics4Index } from '../api/api'
-import Logistics41 from '../components_sub/Logistics41.vue'
 import Logistics42 from '../components_sub/Logistics42.vue'
 
 export default {
-  name: 'logistics4',
+  name: 'logistics5',
   created () {},
   mounted () {
     // dataTables
@@ -122,7 +104,6 @@ export default {
         ajax: apiLogistics4Index,
         // ajax: '/Demo/TestLogisticsAPI4',
         scrollX: true,
-        bPaginate: false,
         columns: [
           { data: 'mainData_1' },
           { data: 'mainData_2' },
@@ -141,14 +122,12 @@ export default {
           { data: 'mainData_15' },
           { data: 'mainData_16' }
         ],
-
         language: language
         // 'language': dataTablesModule.language()
       })
     })()
   },
   components: {
-    Logistics41,
     Logistics42
   }
 }

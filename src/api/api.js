@@ -28,6 +28,7 @@ export const apiLogisticsIndex = '/api/Logistics/Index'
 export const apiLogistics2Index = '/api/Logistics2/Index'
 export const apiLogistics3Index = '/api/Logistics3/Index'
 export const apiLogistics4Index = '/api/Logistics4/Index'
+export const apiLogistics6Index = '/api/Logistics6/Index'
 
 export const methodGetSelect2Select24GetAll = params => {
   return axios.get(apiDataTableDataTableGetAll, {
