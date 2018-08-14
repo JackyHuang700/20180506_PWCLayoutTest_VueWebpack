@@ -368,6 +368,16 @@ export default {
         icon: 'icon-star'
       },
     ]
+  }, {
+    name: '系統',
+    url: '/System',
+    children: [
+      {
+        name: '系統目錄(父)管理',
+        url: '/System',
+        icon: 'icon-star'
+      },
+    ]
   }
     // {
     //   name: 'Icons',

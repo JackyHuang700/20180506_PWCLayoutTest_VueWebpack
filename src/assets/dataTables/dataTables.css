@@ -54,6 +54,11 @@ border-width: 1px;
   min-width: 10px;
 }
 
+
+.dataTables_wrapper.dataTables_wrapper .selectColumn {
+  min-width: 120px;
+}
+
 /* table.th - 計數資料筆數 */
 .dataTables_wrapper.dataTables_wrapper .countColumn {
   min-width: 50px;

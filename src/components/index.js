@@ -52,8 +52,10 @@ import Logistics5 from './Logistics5.vue'
 import Logistics6 from './Logistics6.vue'
 import Logistics7 from './Logistics7.vue'
 import Logistics8 from './Logistics8.vue'
+import System from './System.vue'
 
 export {
+  System,
   Logistics5,
   Logistics6,
   Logistics7,

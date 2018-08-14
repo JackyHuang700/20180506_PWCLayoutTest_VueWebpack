@@ -53,7 +53,8 @@ import {
   Form2,
   Supplier,
   Supplier2,
-  FileUpload
+  FileUpload,
+  System
 } from '@/components'
 
 Vue.use(Router)
@@ -66,6 +67,11 @@ export default new Router({
       name: 'Home',
       component: Full,
       children: [
+        {
+          path: 'system',
+          name: 'System',
+          component: System
+        },
         {
           path: 'logistics',
           name: 'Logistics',

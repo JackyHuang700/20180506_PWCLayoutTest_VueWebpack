@@ -126,29 +126,39 @@
           </div>
           <div class="card-body">
 
-            <table id="example" cellspacing="0" width="100%" class="table table-striped table-hover table-bordered">
-              <thead>
-                <tr>
-                  <th scope="col" class="align-middle">主訂單號</th>
-                  <th scope="col" class="align-middle">快遞類別</th>
-                  <th scope="col" class="align-middle">快遞名稱</th>
-                  <th scope="col" class="align-middle">客戶代碼</th>
-                  <th scope="col" class="align-middle">客戶名稱</th>
-                  <th scope="col" class="align-middle">業務代碼</th>
-                  <th scope="col" class="align-middle">業務姓名</th>
-                  <th scope="col" class="align-middle">收貨地址</th>
-                  <th scope="col" class="align-middle">收貨郵編</th>
-                  <th scope="col" class="align-middle">收貨省</th>
-                  <th scope="col" class="align-middle">收貨市</th>
-                  <th scope="col" class="align-middle">收貨街道</th>
-                  <th scope="col" class="align-middle">收貨國家</th>
-                  <th scope="col" class="align-middle">收貨電話</th>
-                  <th scope="col" class="align-middle">收貨人</th>
-                  <th scope="col" class="align-middle">收貨人電郵</th>
-
-                </tr>
-              </thead>
-            </table>
+            <form action="">
+              <div class="row">
+                <div class="col-12 text-right mb-4">
+                  <button type="submit" class="btn btn-success col-2">儲存</button>
+                </div>
+                <div class="col-12">
+                  <table id="example" cellspacing="0" width="100%" class="table table-striped table-hover table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col" class="align-middle">#</th>
+                        <th scope="col" class="align-middle">主訂單號</th>
+                        <th scope="col" class="align-middle selectColumn">簽單號碼</th>
+                        <th scope="col" class="align-middle selectColumn">快遞類別</th>
+                        <th scope="col" class="align-middle">快遞名稱</th>
+                        <th scope="col" class="align-middle">客戶代碼</th>
+                        <th scope="col" class="align-middle">客戶名稱</th>
+                        <th scope="col" class="align-middle">業務代碼</th>
+                        <th scope="col" class="align-middle">業務姓名</th>
+                        <th scope="col" class="align-middle">收貨地址</th>
+                        <th scope="col" class="align-middle">收貨郵編</th>
+                        <th scope="col" class="align-middle">收貨省</th>
+                        <th scope="col" class="align-middle">收貨市</th>
+                        <th scope="col" class="align-middle">收貨街道</th>
+                        <th scope="col" class="align-middle">收貨國家</th>
+                        <th scope="col" class="align-middle">收貨電話</th>
+                        <th scope="col" class="align-middle">收貨人</th>
+                        <th scope="col" class="align-middle">收貨人電郵</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </form>
 
           </div>
         </div>
@@ -176,7 +186,9 @@ export default {
         // ajax: '/Demo/TestLogisticsAPI4',
         scrollX: true,
         columns: [
+          {},
           { data: 'mainData_1' },
+          {},
           { data: 'mainData_2' },
           { data: 'mainData_3' },
           { data: 'mainData_4' },
@@ -192,6 +204,70 @@ export default {
           { data: 'mainData_14' },
           { data: 'mainData_15' },
           { data: 'mainData_16' }
+        ],
+        columnDefs: [
+          {
+            targets: 0,
+            data: '',
+            orderable: false,
+            render: function (data, type, row, meta) {
+              return (
+                '<div class="custom-control custom-checkbox">' +
+                '  <input type="checkbox" class="custom-control-input" id="{{id}}" data-id="{{dataId}}" {{checked}}>' +
+                '  <label class="custom-control-label" for="{{id}}"></label>' +
+                '</div>'
+              )
+                .replace(/{{id}}/g, 'checkgoxid' + row.id)
+                .replace(/{{dataId}}/g, row.id)
+                .replace(/{{checked}}/g, 'checked')
+            }
+          },
+          {
+            targets: 2,
+            data: '',
+            orderable: false,
+            render: function (data, type, row, meta) {
+              return '<input type="text" class="form-control" value="{{value}}" />'.replace(
+                '{{value}}',
+                ''
+              )
+            }
+          },
+          {
+            targets: 3,
+            data: '',
+            orderable: false,
+            render: function (data, type, row, meta) {
+              // 注意: 此欄位有可能為readonly
+
+              var dataArray = [
+                'DHL',
+                'DHL(德遊小包)',
+                '本地單號',
+                '國際EUB',
+                '國內快遞',
+                '郵政',
+                '專線'
+              ]
+              var optionList = ''
+              var min = 0
+              var max = 6
+
+              // set option
+              for (var i = min; i <= max; i++) {
+                optionList += '<option value={{value}} selected="{{selected}}">{{text}}</option>'
+                  .replace('{{value}}', dataArray[i])
+                  .replace('{{text}}', dataArray[i])
+                  .replace('{{selected}}', false)
+              }
+
+              return (
+                "<select class='form-control' {{readonly}}>" +
+                optionList +
+                '</select>'
+              ).replace('{{readonly}}', '')
+            }
+          }
         ],
         language: language
         // 'language': dataTablesModule.language()

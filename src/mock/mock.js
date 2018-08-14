@@ -43,6 +43,9 @@ import {
   dataTableList2 as CollectionData2
 } from './data/CollectionData'
 import {
+  dataTableList as SystemData,
+} from './data/SystemData'
+import {
   apiQualityControlIndex,
   apiQualityControl2Index,
   apiQualityControl3Index,
@@ -71,6 +74,7 @@ import {
   apiLogistics3Index,
   apiLogistics4Index,
   apiLogistics6Index,
+  apiSystemIndex,
 } from '../api/api'
 
 export default {
@@ -81,6 +85,33 @@ export default {
   // jquery mock
   //
   init_jquery () {
+    // 系統 - 系統目錄(父)管理
+    $.mockjax({
+      type: 'GET',
+      url: apiSystemIndex,
+      status: 200,
+      dataType: 'json',
+      responseTime: 150,
+      contentType: 'application/json',
+      response: function (setting) {
+        // 回應
+        this.responseText = SystemData
+      }
+    })
+
+    // 物流 -
+    $.mockjax({
+      type: 'GET',
+      url: apiLogistics6Index,
+      status: 200,
+      dataType: 'json',
+      responseTime: 150,
+      contentType: 'application/json',
+      response: function (setting) {
+        // 回應
+        this.responseText = LogisticsData6
+      }
+    })
     // 物流 -
     $.mockjax({
       type: 'GET',
