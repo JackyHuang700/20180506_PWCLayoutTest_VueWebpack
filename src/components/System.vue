@@ -66,7 +66,7 @@
           </div>
           <div class="card-body">
 
-            <table id="example" cellspacing="0" width="100%" class="table table-striped table-hover table-bordered">
+            <table id="example" cellspacing="0" width="100%" class="table table-striped table-hover table-bordered w-100">
               <thead>
                 <tr>
                   <th scope="col">執行名稱</th>
@@ -79,7 +79,6 @@
               </thead>
             </table>
           </div>
-          <div class="card-footer"></div>
         </div>
       </div>
 
@@ -98,7 +97,7 @@ export default {
   mounted () {
     // dataTables
     ;(function () {
-      var dataTableObj = $('#example').DataTable({
+      var table = $('#example').DataTable({
         scrollX: true,
         scrollY: '500px',
         select: {
