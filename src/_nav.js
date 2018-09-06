@@ -378,6 +378,22 @@ export default {
         icon: 'icon-star'
       },
     ]
+  },
+  {
+    name: '用戶管理',
+    url: '/Manage',
+    children: [
+      {
+        name: '帳戶資訊',
+        url: '/Manage',
+        icon: 'icon-star'
+      },
+      {
+        name: '忘記密碼',
+        url: '/ChangePassword',
+        icon: 'icon-star'
+      },
+    ]
   }
     // {
     //   name: 'Icons',

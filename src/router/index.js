@@ -6,6 +6,8 @@ import Full from '@/containers/Full'
 
 // Views
 import {
+  Manage,
+  ChangePassword,
   Logistics,
   Logistics2,
   Logistics3,
@@ -67,6 +69,16 @@ export default new Router({
       name: 'Home',
       component: Full,
       children: [
+        {
+          path: 'manage',
+          name: 'manage',
+          component: Manage
+        },
+        {
+          path: 'changepassword',
+          name: 'changepassword',
+          component: ChangePassword
+        },
         {
           path: 'system',
           name: 'System',

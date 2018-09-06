@@ -53,8 +53,12 @@ import Logistics6 from './Logistics6.vue'
 import Logistics7 from './Logistics7.vue'
 import Logistics8 from './Logistics8.vue'
 import System from './System.vue'
+import Manage from './Manage.vue'
+import ChangePassword from './ChangePassword.vue'
 
 export {
+  Manage,
+  ChangePassword,
   System,
   Logistics5,
   Logistics6,
